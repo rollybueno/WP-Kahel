@@ -1,0 +1,99 @@
+$section-max-width: 1346px;
+$section-margin: 0 auto;
+$heading-color: #3C3C3C;
+body{
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+    background-color: #FFFFFF;
+    header{
+        height: 1080px;
+        background-image: url("../images/image@2x.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+        padding-top: 30px;
+        button{
+            &.wp-kahel-primary-button{
+                color: #FFFFFF;
+                font-size: 20px;
+                background: #F19600;
+                border-radius: 30px;
+                width: 192px;
+                height: 57px;
+                border: 2px #C0B02D;
+            }
+        }
+
+        .navbar{
+            height: 57px;
+            font-size: 20px;
+            max-width: $section-max-width;
+            margin: $section-margin;
+            ul{
+                margin-bottom: 0;
+                padding: 0;
+                li{
+                    display: inline-block;
+                    margin-right: 50px;
+                    a{
+                        text-decoration: none;
+                        color: #9a8c8c;
+                        &.active{
+                            color: #FCAF26;
+                            text-decoration: underline;
+                        }
+                    }
+                }
+            }
+        }
+        .heading{
+            color: $heading-color;
+            padding-top: 300px;
+            max-width: $section-max-width;
+            margin: $section-margin;
+            h1{
+                font-size: 56px;
+                font-weight: bold;
+            }
+            p{
+                &.subtitle{
+                    max-width: 711px;
+                }
+            }
+            div{
+                &.heading-button{
+                    max-width: 711px;
+                    text-align: center;
+                    margin-top: 48px;
+                }
+            }
+        }
+    }
+    section{
+        padding-bottom: 80px;
+        padding-top: 80px;
+        h2{
+            color: $heading-color; 
+            font-weight: 32px;
+            font-weight: bold;
+            text-align: center;
+            padding-bottom: 13px;
+        }
+        hr{
+            &.under-heading{
+                width: 100px;
+                color: #CFCFCF;
+                margin: 0 auto;
+                border-bottom: 2px solid #CFCFCF;
+            }
+        }
+        .sub-heading{
+            margin: 30px auto;
+            text-align: center;
+            font-weight: 600;
+        }
+        &.content{
+            &.content-grid{
+            }
+        }
+    }
+}

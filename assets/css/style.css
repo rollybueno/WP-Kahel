@@ -1,0 +1,99 @@
+body {
+  font-family: 'Poppins', sans-serif;
+  font-size: 16px;
+  background-color: #FFFFFF;
+}
+
+body header {
+  height: 1080px;
+  background-image: url("../images/image@2x.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding-top: 30px;
+}
+
+body header button.wp-kahel-primary-button {
+  color: #FFFFFF;
+  font-size: 20px;
+  background: #F19600;
+  border-radius: 30px;
+  width: 192px;
+  height: 57px;
+  border: 2px #C0B02D;
+}
+
+body header .navbar {
+  height: 57px;
+  font-size: 20px;
+  max-width: 1346px;
+  margin: 0 auto;
+}
+
+body header .navbar ul {
+  margin-bottom: 0;
+  padding: 0;
+}
+
+body header .navbar ul li {
+  display: inline-block;
+  margin-right: 50px;
+}
+
+body header .navbar ul li a {
+  text-decoration: none;
+  color: #9a8c8c;
+}
+
+body header .navbar ul li a.active {
+  color: #FCAF26;
+  text-decoration: underline;
+}
+
+body header .heading {
+  color: #3C3C3C;
+  padding-top: 300px;
+  max-width: 1346px;
+  margin: 0 auto;
+}
+
+body header .heading h1 {
+  font-size: 56px;
+  font-weight: bold;
+}
+
+body header .heading p.subtitle {
+  max-width: 711px;
+}
+
+body header .heading div.heading-button {
+  max-width: 711px;
+  text-align: center;
+  margin-top: 48px;
+}
+
+body section {
+  padding-bottom: 80px;
+  padding-top: 80px;
+}
+
+body section h2 {
+  color: #3C3C3C;
+  font-weight: 32px;
+  font-weight: bold;
+  text-align: center;
+  padding-bottom: 13px;
+}
+
+body section hr.under-heading {
+  width: 100px;
+  color: #CFCFCF;
+  margin: 0 auto;
+  border-bottom: 2px solid #CFCFCF;
+}
+
+body section .sub-heading {
+  margin: 30px auto;
+  text-align: center;
+  font-weight: 600;
+}
+/*# sourceMappingURL=style.css.map */
