@@ -23,6 +23,21 @@ body .sub-heading {
   margin: 30px auto;
   text-align: center;
   font-weight: 600;
+  max-width: 700px;
+}
+
+body button.wp-kahel-primary-button {
+  color: #FFFFFF;
+  font-size: 20px;
+  background: #F19600;
+  border-radius: 30px;
+  width: 192px;
+  height: 57px;
+  border: 2px #C0B02D;
+}
+
+body p {
+  font-weight: 300;
 }
 
 body header {
@@ -31,16 +46,6 @@ body header {
   background-repeat: no-repeat;
   background-size: cover;
   padding-top: 30px;
-}
-
-body header button.wp-kahel-primary-button {
-  color: #FFFFFF;
-  font-size: 20px;
-  background: #F19600;
-  border-radius: 30px;
-  width: 192px;
-  height: 57px;
-  border: 2px #C0B02D;
 }
 
 body header .navbar {
@@ -93,8 +98,44 @@ body header .heading div.heading-button {
 }
 
 body section {
-  padding-bottom: 80px;
-  padding-top: 80px;
+  padding-bottom: 50px;
+  padding-top: 50px;
+}
+
+body section.content .wp-kahel-container {
+  padding: 0;
+  max-width: 1346px;
+}
+
+body section.content .wp-kahel-container .row .wp-kahel-col {
+  border: 1px #000;
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+body section.content .wp-kahel-container .row .wp-kahel-col .wp-kahel-grid-item .image-wrapper {
+  text-align: center;
+}
+
+body section.content .wp-kahel-container .row .wp-kahel-col .wp-kahel-grid-item img {
+  width: 100%;
+}
+
+body section.content .wp-kahel-container .row .wp-kahel-col .wp-kahel-grid-item img.icon {
+  width: 56px;
+  margin: 0 auto;
+}
+
+body section.content .wp-kahel-container .row .wp-kahel-col .wp-kahel-grid-item h3 {
+  font-weight: 700;
+  font-size: 20px;
+  padding: 25px;
+  margin: 0;
+  text-align: center;
+}
+
+body section.content .wp-kahel-container .row .wp-kahel-col .wp-kahel-grid-item .button-wrapper {
+  text-align: center;
 }
 
 body footer {
@@ -117,8 +158,8 @@ body footer ul li a {
 }
 
 body footer .footer-upper {
-  padding-top: 130px;
-  padding-bottom: 130px;
+  padding-top: 50px;
+  padding-bottom: 50px;
 }
 
 body footer .footer-upper .container-footer {
@@ -139,6 +180,7 @@ body footer .footer-lower {
   background: #707070;
   padding: 20px 0px 5px 0px;
   border: 1px solid #707070;
+  color: #FFFFFF;
 }
 
 body footer .footer-lower .container-footer {

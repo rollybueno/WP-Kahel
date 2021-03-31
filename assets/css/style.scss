@@ -25,6 +25,21 @@ body{
         margin: 30px auto;
         text-align: center;
         font-weight: 600;
+        max-width: 700px;
+    }
+    button{
+        &.wp-kahel-primary-button{
+            color: #FFFFFF;
+            font-size: 20px;
+            background: #F19600;
+            border-radius: 30px;
+            width: 192px;
+            height: 57px;
+            border: 2px #C0B02D;
+        }
+    }
+    p{
+        font-weight: 300;
     }
 
     header{
@@ -33,17 +48,6 @@ body{
         background-repeat: no-repeat;
         background-size: cover;
         padding-top: 30px;
-        button{
-            &.wp-kahel-primary-button{
-                color: #FFFFFF;
-                font-size: 20px;
-                background: #F19600;
-                border-radius: 30px;
-                width: 192px;
-                height: 57px;
-                border: 2px #C0B02D;
-            }
-        }
 
         .navbar{
             height: 57px;
@@ -91,11 +95,44 @@ body{
         }
     }
     section{
-        padding-bottom: 80px;
-        padding-top: 80px;
+        padding-bottom: 50px;
+        padding-top: 50px;
         &.content{
-            &.content-grid{
+            .wp-kahel-container{
+                padding: 0;
+                max-width: 1346px;
+                .row{
+                    .wp-kahel-col{
+                        border: 1px #000;
+                        max-width: 400px;
+                        margin: 0 auto;
+                        .wp-kahel-grid-item{
+                            .image-wrapper{
+                                text-align: center;
+                            }
+                            img{
+                                width: 100%;
+                                &.icon{
+                                    width: 56px;
+                                    margin: 0 auto;
+                                }
+                            }
+                            h3{
+                                font-weight: 700;
+                                font-size: 20px;
+                                padding: 25px;
+                                margin: 0;
+                                text-align: center;
+                            }
+                            .button-wrapper{
+                                text-align: center;
+                            }
+                        }
+                    }
+                }
             }
+            
+            
         }
     }
 
@@ -115,9 +152,10 @@ body{
                 }
             }
         }
+
         .footer-upper{
-            padding-top: 130px;
-            padding-bottom: 130px;
+            padding-top: 50px;
+            padding-bottom: 50px;
 
             .container-footer{
                 max-width: $section-max-width;
@@ -136,6 +174,7 @@ body{
             background: #707070;
             padding: 20px 0px 5px 0px;
             border: 1px solid #707070;
+            color: #FFFFFF;
             .container-footer{
                 max-width: $section-max-width;
                 margin: $section-margin;
