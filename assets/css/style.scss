@@ -8,7 +8,7 @@ body{
 
     h2{
         color: $heading-color; 
-        font-weight: 32px;
+        font-size: 32px;
         font-weight: bold;
         text-align: center;
         padding-bottom: 13px;
@@ -40,6 +40,10 @@ body{
     }
     p{
         font-weight: 300;
+    }
+    ul{
+        font-weight: 300;
+        list-style-type: none;
     }
 
     header{
@@ -99,8 +103,10 @@ body{
         padding-top: 50px;
         &.content{
             .wp-kahel-container{
-                padding: 0;
-                max-width: 1346px;
+                @media(max-width:1920px){
+                    max-width: 100%;
+                    margin: 0;
+                }
                 .row{
                     .wp-kahel-col{
                         border: 1px #000;
@@ -126,6 +132,36 @@ body{
                             }
                             .button-wrapper{
                                 text-align: center;
+                            }
+                        }
+                    }
+                    &.zig-zag{
+                        @media(max-width:1920px){
+                            max-width: 100%;
+                            margin: 0;
+                            ul{
+                                font-weight: 300;
+                                font-size: 25px;
+                                list-style-type: none;
+                                line-height: 45px;
+                            }
+                        }
+                        max-width: 1346px;
+                        margin: 0;
+                        h2{
+                            margin: 15px;
+                            padding-top: 13px;
+                        }
+                        .sub-heading{
+                            margin-top: 15px;
+                        }
+                        
+                        .wp-kahel-col{
+                            max-width: 100%;
+                            padding: 0;
+                            text-align: center;
+                            img{
+                                width: 100%;
                             }
                         }
                     }

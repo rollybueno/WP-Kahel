@@ -6,7 +6,7 @@ body {
 
 body h2 {
   color: #3C3C3C;
-  font-weight: 32px;
+  font-size: 32px;
   font-weight: bold;
   text-align: center;
   padding-bottom: 13px;
@@ -38,6 +38,11 @@ body button.wp-kahel-primary-button {
 
 body p {
   font-weight: 300;
+}
+
+body ul {
+  font-weight: 300;
+  list-style-type: none;
 }
 
 body header {
@@ -102,9 +107,11 @@ body section {
   padding-top: 50px;
 }
 
-body section.content .wp-kahel-container {
-  padding: 0;
-  max-width: 1346px;
+@media (max-width: 1920px) {
+  body section.content .wp-kahel-container {
+    max-width: 100%;
+    margin: 0;
+  }
 }
 
 body section.content .wp-kahel-container .row .wp-kahel-col {
@@ -136,6 +143,43 @@ body section.content .wp-kahel-container .row .wp-kahel-col .wp-kahel-grid-item 
 
 body section.content .wp-kahel-container .row .wp-kahel-col .wp-kahel-grid-item .button-wrapper {
   text-align: center;
+}
+
+body section.content .wp-kahel-container .row.zig-zag {
+  max-width: 1346px;
+  margin: 0;
+}
+
+@media (max-width: 1920px) {
+  body section.content .wp-kahel-container .row.zig-zag {
+    max-width: 100%;
+    margin: 0;
+  }
+  body section.content .wp-kahel-container .row.zig-zag ul {
+    font-weight: 300;
+    font-size: 25px;
+    list-style-type: none;
+    line-height: 45px;
+  }
+}
+
+body section.content .wp-kahel-container .row.zig-zag h2 {
+  margin: 15px;
+  padding-top: 13px;
+}
+
+body section.content .wp-kahel-container .row.zig-zag .sub-heading {
+  margin-top: 15px;
+}
+
+body section.content .wp-kahel-container .row.zig-zag .wp-kahel-col {
+  max-width: 100%;
+  padding: 0;
+  text-align: center;
+}
+
+body section.content .wp-kahel-container .row.zig-zag .wp-kahel-col img {
+  width: 100%;
 }
 
 body footer {
