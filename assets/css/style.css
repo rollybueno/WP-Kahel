@@ -4,6 +4,12 @@ body {
   background-color: #FFFFFF;
 }
 
+body h1 {
+  color: #3C3C3C;
+  font-size: 56px;
+  font-weight: bold;
+}
+
 body h2 {
   color: #3C3C3C;
   font-size: 32px;
@@ -38,6 +44,7 @@ body button.wp-kahel-primary-button {
 
 body p {
   font-weight: 300;
+  line-height: 28px;
 }
 
 body ul {
@@ -45,16 +52,15 @@ body ul {
   list-style-type: none;
 }
 
-body header {
+body header.homepage-hero {
   height: 1080px;
   background-image: url("../images/image@2x.jpg");
   background-repeat: no-repeat;
   background-size: cover;
-  padding-top: 30px;
 }
 
 body header .navbar {
-  height: 57px;
+  height: 73px;
   font-size: 20px;
   max-width: 1346px;
   margin: 0 auto;
@@ -87,11 +93,6 @@ body header .heading {
   margin: 0 auto;
 }
 
-body header .heading h1 {
-  font-size: 56px;
-  font-weight: bold;
-}
-
 body header .heading p.subtitle {
   max-width: 711px;
 }
@@ -107,8 +108,35 @@ body section {
   padding-top: 50px;
 }
 
+body section.content.content-article-hero {
+  padding-top: 0;
+}
+
+body section.content.content-article-hero .row {
+  --bs-gutter-x: 0;
+}
+
+body section.content.content-article-hero img.article-hero {
+  max-height: 500px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+body section.content.content-article {
+  padding-top: 0;
+}
+
+body section.content.content-article h1 {
+  font-size: 45px;
+}
+
+body section.content .wp-kahel-container {
+  max-width: 1346px;
+  margin: 0 auto;
+}
+
 @media (max-width: 1920px) {
-  body section.content .wp-kahel-container {
+  body section.content .wp-kahel-container.zig-zag {
     max-width: 100%;
     margin: 0;
   }

@@ -6,6 +6,11 @@ body{
     font-size: 16px;
     background-color: #FFFFFF;
 
+    h1{
+        color: $heading-color;
+        font-size: 56px;
+        font-weight: bold;
+    }
     h2{
         color: $heading-color; 
         font-size: 32px;
@@ -40,6 +45,7 @@ body{
     }
     p{
         font-weight: 300;
+        line-height: 28px;
     }
     ul{
         font-weight: 300;
@@ -47,14 +53,15 @@ body{
     }
 
     header{
-        height: 1080px;
-        background-image: url("../images/image@2x.jpg");
-        background-repeat: no-repeat;
-        background-size: cover;
-        padding-top: 30px;
+        &.homepage-hero{
+            height: 1080px;
+            background-image: url("../images/image@2x.jpg");
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
 
         .navbar{
-            height: 57px;
+            height: 73px;
             font-size: 20px;
             max-width: $section-max-width;
             margin: $section-margin;
@@ -80,10 +87,6 @@ body{
             padding-top: 300px;
             max-width: $section-max-width;
             margin: $section-margin;
-            h1{
-                font-size: 56px;
-                font-weight: bold;
-            }
             p{
                 &.subtitle{
                     max-width: 711px;
@@ -102,10 +105,32 @@ body{
         padding-bottom: 50px;
         padding-top: 50px;
         &.content{
+            &.content-article-hero{
+                padding-top: 0;
+                .row{
+                    --bs-gutter-x: 0;
+                }
+                img{
+                    &.article-hero{
+                        max-height: 500px;
+                        object-fit: cover;
+                    }
+                }
+            }
+            &.content-article{
+                padding-top: 0;
+                h1{
+                    font-size: 45px;
+                }
+            }
             .wp-kahel-container{
-                @media(max-width:1920px){
-                    max-width: 100%;
-                    margin: 0;
+                max-width: $section-max-width;
+                margin: $section-margin;
+                &.zig-zag{
+                    @media(max-width:1920px){
+                        max-width: 100%;
+                        margin: 0;
+                    }
                 }
                 .row{
                     .wp-kahel-col{
