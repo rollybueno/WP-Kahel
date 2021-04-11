@@ -139,6 +139,7 @@ body section.content .wp-kahel-container {
   body section.content .wp-kahel-container.zig-zag {
     max-width: 100%;
     margin: 0;
+    padding: 0;
   }
 }
 
