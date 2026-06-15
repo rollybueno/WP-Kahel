@@ -1,0 +1,27 @@
+/* WordPress 404.php — not found template styles */
+
+.not-found{padding:96px 0 104px;background:var(--bg-accent);border-bottom:1px solid var(--border-light);min-height:calc(100vh - 82px - 1px);display:flex;align-items:center}
+.not-found-inner{max-width:640px;margin:0 auto;text-align:center}
+.not-found-code{font-family:var(--font-heading);font-size:clamp(96px,14vw,148px);line-height:1;font-weight:800;letter-spacing:-.05em;color:var(--kahel-700);margin-bottom:20px}
+.not-found-title{font-size:clamp(32px,4vw,48px);line-height:1.08;letter-spacing:-.03em;font-weight:800;color:var(--text-primary);margin-bottom:20px}
+.not-found-text{font-size:18px;line-height:1.6;color:var(--text-secondary);margin-bottom:36px}
+.not-found-actions{justify-content:center;margin-bottom:48px}
+
+.not-found-search{max-width:480px;margin:0 auto 48px;display:flex;gap:12px}
+.not-found-search input{flex:1;height:48px;border:1px solid var(--border-default);border-radius:var(--radius-md);padding:0 16px;font-size:15px;font-family:var(--font-body);color:var(--text-primary);background:var(--bg-primary);transition:border-color var(--duration-fast) var(--ease-out),box-shadow var(--duration-fast) var(--ease-out)}
+.not-found-search input::placeholder{color:var(--text-muted)}
+.not-found-search input:focus{border-color:var(--kahel-700);outline:none;box-shadow:0 0 0 3px rgba(234,88,12,.15)}
+.not-found-search .btn{flex-shrink:0}
+
+.not-found-links{border-top:1px solid var(--kahel-200);padding-top:36px}
+.not-found-links-label{font-size:12px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--text-brand);margin-bottom:18px}
+.not-found-links-list{display:flex;align-items:center;justify-content:center;flex-wrap:wrap;gap:12px 28px}
+.not-found-links-list a{font-size:15px;font-weight:600;color:var(--kahel-700);transition:color var(--duration-fast) var(--ease-out)}
+.not-found-links-list a:hover{color:var(--kahel-800)}
+
+@media(max-width:768px){
+  .not-found{padding:72px 0 80px;min-height:auto}
+  .not-found-text{font-size:17px}
+  .not-found-search{flex-direction:column;align-items:stretch}
+  .not-found-links-list{flex-direction:column;gap:14px}
+}

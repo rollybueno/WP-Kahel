@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Page not found — Chronicle Press</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,700;0,9..144,800;1,9..144,700&family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/kahel.css">
+<link rel="stylesheet" href="css/404.css">
+</head>
+
+<body class="error404">
+
+<div data-include="partials/header.html"></div>
+
+<main class="page">
+
+<!-- Maps to 404.php -->
+
+<section class="not-found">
+  <div class="container">
+    <div class="not-found-inner">
+      <p class="not-found-code" aria-hidden="true">404</p>
+      <!-- the_title() fallback or static heading -->
+      <h1 class="not-found-title">This page isn’t in the story</h1>
+      <p class="not-found-text">The link may be broken, the page may have moved, or the URL might be mistyped. Let’s get you back to something worth reading.</p>
+
+      <div class="button-row not-found-actions">
+        <a href="homepage.html" class="btn btn-primary">Back to home</a>
+        <a href="page.html" class="btn">About us</a>
+      </div>
+
+      <!-- get_search_form() -->
+      <form class="not-found-search" role="search" aria-label="Site search">
+        <input type="search" name="s" placeholder="Search the site" aria-label="Search">
+        <button type="submit" class="btn">Search</button>
+      </form>
+
+      <nav class="not-found-links" aria-label="Helpful links">
+        <p class="not-found-links-label">Popular destinations</p>
+        <div class="not-found-links-list">
+          <a href="homepage.html">Home</a>
+          <a href="page.html">About us</a>
+          <a href="single.html">Latest story</a>
+          <a href="#">Contact</a>
+        </div>
+      </nav>
+    </div>
+  </div>
+</section>
+
+<div data-include="partials/footer.html"></div>
+
+</main>
+<script src="js/includes.js"></script>
+</body>
+</html>
