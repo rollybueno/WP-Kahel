@@ -1,0 +1,544 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Chronicle Press</title>
+
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+:root{--black:#050505;--text:#111;--border:#ececec;--soft:#d9d9d9;--soft-dark:#bfbfbf;--container:1280px;--gutter:72px}
+body{font-family:Arial,Helvetica,sans-serif;color:var(--black);background:#fff}
+a{color:inherit;text-decoration:none}
+.page{width:100%;overflow:hidden}
+.container{max-width:var(--container);margin:0 auto;padding:0 var(--gutter)}
+.section{padding:100px 0}
+.section-bordered{border-top:1px solid var(--border)}
+.section-label{font-size:13px;font-weight:700;letter-spacing:-.02em;margin-bottom:22px}
+.section-title{font-size:clamp(44px,4vw,60px);line-height:1;letter-spacing:-.055em;font-weight:800}
+.section-kicker,.text-sm{font-size:14px;line-height:1.45;letter-spacing:-.02em;color:var(--text)}
+.section-kicker{font-size:16px}
+.button-row{display:flex;align-items:center;gap:12px;flex-wrap:wrap}
+.btn{min-width:84px;height:48px;border:1px solid #111;padding:0 22px;display:inline-flex;align-items:center;justify-content:center;font-size:14px;background:transparent}
+.btn-primary{background:#000;color:#fff}
+.text-link{display:inline-flex;align-items:center;gap:14px;font-size:14px}
+.image-placeholder{background:var(--soft);display:flex;align-items:center;justify-content:center}
+.placeholder-icon{width:116px;height:88px;border-radius:10px;background:var(--soft-dark);position:relative;opacity:.85}
+.placeholder-icon:before{content:"";position:absolute;left:24px;top:42px;width:38px;height:28px;background:#e9e9e9;clip-path:polygon(0 100%,45% 20%,72% 70%,100% 35%,100% 100%)}
+.placeholder-icon:after{content:"";position:absolute;left:32px;top:22px;width:18px;height:18px;border-radius:50%;background:#e9e9e9}
+.placeholder-icon-sm{width:72px;height:54px;border-radius:7px}
+.placeholder-icon-sm:before{left:15px;top:26px;width:25px;height:18px}
+.placeholder-icon-sm:after{left:21px;top:14px;width:11px;height:11px}
+
+.logo-row{display:flex;align-items:center;gap:28px;flex-wrap:wrap}
+.logo-item{display:flex;align-items:center;gap:10px;white-space:nowrap;font-size:20px;font-weight:800;letter-spacing:-.04em}
+.webflow-mark{width:32px;height:20px;background:#000;clip-path:polygon(0 68%,17% 30%,32% 30%,26% 47%,43% 30%,57% 30%,48% 68%,64% 30%,100% 30%,84% 68%)}
+.relume-mark{width:29px;height:29px;border:5px solid #000;transform:rotate(30deg);border-radius:4px}
+
+/* NAV */
+.site-header{position:sticky;top:0;z-index:100;background:rgba(255,255,255,.96);border-bottom:1px solid var(--border);backdrop-filter:blur(12px)}
+.main-nav{height:82px;display:flex;align-items:center;justify-content:space-between;gap:32px;position:relative}
+.brand-logo{font-size:24px;font-weight:800;letter-spacing:-.06em}
+.nav-menu{display:flex;align-items:center;gap:34px}
+.nav-item{position:static}
+.nav-link{font-size:14px;font-weight:700;letter-spacing:-.02em;display:inline-flex;align-items:center;min-height:82px}
+.has-mega>.nav-link:after{content:"›";margin-left:8px;transform:rotate(90deg)}
+.nav-actions{display:flex;align-items:center;gap:22px}
+.mega-menu{position:absolute;left:0;right:0;top:82px;background:#fff;border:1px solid #111;padding:44px;opacity:0;visibility:hidden;transform:translateY(12px);transition:.2s ease;box-shadow:0 28px 60px rgba(0,0,0,.08)}
+.has-mega:hover .mega-menu,.has-mega:focus-within .mega-menu{opacity:1;visibility:visible;transform:translateY(0)}
+.mega-grid{display:grid;grid-template-columns:1.15fr .75fr .75fr .9fr;gap:48px}
+.mega-grid-simple{grid-template-columns:1.2fr .8fr .8fr}
+.mega-intro h3{font-size:34px;line-height:1;letter-spacing:-.055em;font-weight:800;max-width:390px;margin-bottom:22px}
+.mega-intro p:last-child,.mega-card p{font-size:14px;line-height:1.45;letter-spacing:-.02em}
+.mega-column,.mega-card{display:flex;flex-direction:column;align-items:flex-start}
+.mega-column h4,.mega-card h4{font-size:15px;font-weight:800;margin-bottom:24px}
+.mega-column a{font-size:14px;margin-bottom:18px}
+.mega-card{border-left:1px solid #111;padding-left:28px}
+.mega-card-label{font-size:12px;font-weight:800;margin-bottom:18px}
+.mega-card .text-link{margin-top:24px}
+.nav-toggle,.nav-toggle-label{display:none}
+
+/* HERO */
+.hero{padding:104px 0 118px}
+.hero-grid{display:grid;grid-template-columns:.85fr 1.25fr .95fr;gap:32px;align-items:start}
+.hero-copy{min-height:590px;display:flex;flex-direction:column;justify-content:space-between}
+.hero-title{max-width:350px}
+.hero-text{max-width:285px}
+.hero-text p{margin-bottom:28px}
+.hero-image-large{height:590px}
+.hero-image-small{height:290px}
+
+/* LOGOS */
+.logos-section{border-top:1px solid var(--border);border-bottom:1px solid var(--border);padding:58px 0 70px;overflow:hidden}
+.logos-title{text-align:center;font-size:15px;font-weight:700;margin-bottom:52px}
+.logo-track{display:flex;gap:76px;width:max-content;animation:scrollLogos 24s linear infinite}
+@keyframes scrollLogos{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+
+/* SHARED */
+.split-header,.services-header,.section-heading-split,.process-grid,.origin-grid{display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:start}
+.split-header,.services-header,.section-heading{margin-bottom:76px}
+.split-copy{max-width:520px}
+.split-copy p{margin-bottom:28px}
+.section-heading-center{max-width:760px;margin-left:auto;margin-right:auto;text-align:center}
+.section-heading-center .section-title{margin-bottom:28px}
+.section-heading-center .section-kicker{max-width:520px;margin:0 auto}
+
+/* RESULTS */
+.stats-grid{display:grid;grid-template-columns:repeat(3,1fr)}
+.stat{border-left:1px solid #111;padding-left:30px;min-height:126px;display:flex;flex-direction:column;justify-content:center}
+.stat-number{font-size:clamp(64px,7vw,82px);line-height:.92;letter-spacing:-.07em;font-weight:800;margin-bottom:20px}
+.stat-label{font-size:16px;font-weight:700}
+
+/* SERVICES */
+.services,.advantage{padding:96px 0 94px}
+.services-kicker{max-width:520px}
+.services-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:56px;margin-bottom:72px}
+.service-card{max-width:245px}
+.icon,.feature-icon{width:34px;height:34px;color:#000}
+.icon svg,.feature-icon svg{width:100%;height:100%;fill:none;stroke:currentColor;stroke-width:2.25;stroke-linecap:round;stroke-linejoin:round}
+.service-icon{margin-bottom:32px}
+.service-title{font-size:21px;line-height:1.12;letter-spacing:-.04em;font-weight:800;margin-bottom:18px}
+
+/* PROCESS */
+.process{padding:96px 0 120px}
+.process-intro .button-row{margin-top:30px}
+.timeline{max-width:650px;margin-left:auto}
+.timeline-item{display:grid;grid-template-columns:56px 1fr;gap:38px;position:relative;padding-bottom:64px}
+.timeline-item:last-child{padding-bottom:0}
+.timeline-item:before{content:"";position:absolute;left:27px;top:48px;bottom:14px;width:1px;background:#111}
+.timeline-item:last-child:before{display:none}
+.timeline-marker{width:34px;height:34px;border:3px solid #000;border-radius:50%;display:flex;align-items:center;justify-content:center;margin-left:10px;background:#fff;z-index:1;position:relative}
+.timeline-marker svg{width:17px;height:17px;stroke:#000;stroke-width:2.4;fill:none}
+.timeline-title{font-size:18px;font-weight:800;margin-bottom:18px}
+.timeline-text{max-width:430px}
+
+/* ADVANTAGE */
+.feature-grid{display:grid;gap:72px;margin-bottom:72px}
+.feature-grid-3{grid-template-columns:repeat(3,1fr)}
+.feature-card{max-width:370px}
+.feature-icon{margin-bottom:34px}
+.feature-title{font-size:31px;line-height:1.08;letter-spacing:-.055em;font-weight:800;margin-bottom:24px}
+.feature-text{max-width:350px}
+
+/* STORIES */
+.stories{padding:104px 0 92px}
+.story-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:30px;margin-bottom:74px}
+.story-image{height:240px;margin-bottom:22px}
+.story-meta{display:flex;align-items:center;gap:18px;font-size:12px;font-weight:700;margin-bottom:18px}
+.story-meta span:first-child{background:#f1f1f1;padding:6px 8px}
+.story-title{font-size:24px;line-height:1.12;letter-spacing:-.05em;font-weight:800;margin-bottom:16px}
+.story-text{margin-bottom:26px}
+.center-action{display:flex;justify-content:center}
+
+/* TESTIMONIAL */
+.testimonial{padding:106px 0 108px;text-align:center}
+.testimonial-inner{max-width:700px;margin:0 auto}
+.testimonial-logo{justify-content:center;margin-bottom:42px}
+.testimonial-quote{font-size:24px;line-height:1.25;letter-spacing:-.045em;font-weight:800;max-width:680px;margin:0 auto 34px}
+.author-avatar{width:56px;height:56px;border-radius:50%;background:#ddd;margin:0 auto 18px;display:flex;align-items:center;justify-content:center}
+.author-avatar span{width:10px;height:10px;border:2px solid #bcbcbc;border-radius:2px}
+.author-name{font-size:13px;font-weight:800;margin-bottom:4px}
+.author-role{font-size:12px}
+
+/* ORIGIN */
+.origin{padding:100px 0 104px}
+.origin-image{height:535px}
+.origin-content{align-self:center;max-width:560px}
+.origin-content .section-title{margin-bottom:28px}
+.origin-content .section-kicker{margin-bottom:36px;max-width:540px}
+.origin-logos{margin-bottom:42px}
+.origin-logos .logo-item{font-size:18px}
+
+/* CTA FOOTER */
+.cta{padding:88px 0 116px}
+.cta-inner{text-align:center;max-width:900px;margin:0 auto}
+.cta .section-title{margin-bottom:24px}
+.cta .section-kicker{margin-bottom:32px}
+.cta-actions{justify-content:center;margin-bottom:86px}
+.cta-logos{justify-content:center;gap:44px}
+.footer{padding:72px 0 38px}
+.footer-grid{display:grid;grid-template-columns:1.65fr .6fr .6fr .7fr;gap:80px;align-items:start;margin-bottom:86px}
+.footer-logo{display:inline-block;font-family:Georgia,serif;font-style:italic;font-size:31px;font-weight:700;margin-bottom:36px;letter-spacing:-.06em}
+.footer-copy{margin-bottom:24px}
+.subscribe-form{display:flex;align-items:stretch;gap:14px;margin-bottom:14px}
+.subscribe-form input{width:100%;max-width:335px;height:42px;border:1px solid #111;padding:0 16px;font:inherit;font-size:14px;background:transparent}
+.subscribe-form .btn{height:42px}
+.footer-note{font-size:11px;line-height:1.35}
+.footer-nav{display:flex;flex-direction:column;align-items:flex-start}
+.footer-nav h3{font-size:13px;font-weight:800;margin-bottom:26px}
+.footer-nav a{font-size:13px;margin-bottom:20px}
+.footer-social a{display:grid;grid-template-columns:20px 1fr;gap:12px;align-items:center}
+.social-icon{font-size:16px;font-weight:800;display:inline-flex;align-items:center;justify-content:center}
+.footer-bottom{border-top:1px solid #111;padding-top:32px;display:flex;justify-content:space-between;gap:40px;font-size:12px}
+.footer-legal{display:flex;gap:32px;flex-wrap:wrap}
+.footer-legal a{text-decoration:underline;text-underline-offset:2px}
+
+@media(max-width:1024px){
+:root{--gutter:40px}
+.main-nav{height:76px}
+.nav-toggle-label{display:flex;width:42px;height:42px;border:1px solid #111;align-items:center;justify-content:center;flex-direction:column;gap:5px;cursor:pointer;margin-left:auto}
+.nav-toggle-label span{width:18px;height:2px;background:#111;display:block}
+.nav-menu,.nav-actions{display:none}
+.nav-toggle:checked~.nav-menu{display:flex;position:absolute;left:0;right:0;top:76px;background:#fff;border:1px solid #111;padding:28px;flex-direction:column;align-items:flex-start;gap:0}
+.nav-toggle:checked~.nav-actions{display:flex;position:absolute;left:0;right:0;top:520px;background:#fff;border:1px solid #111;border-top:0;padding:0 28px 28px;align-items:flex-start}
+.nav-link{min-height:auto;padding:16px 0;font-size:18px}
+.mega-menu{position:static;opacity:1;visibility:visible;transform:none;box-shadow:none;border:0;border-top:1px solid var(--border);padding:24px 0;display:none}
+.has-mega:hover .mega-menu,.has-mega:focus-within .mega-menu{display:block}
+.mega-grid,.mega-grid-simple{grid-template-columns:1fr;gap:28px}
+.mega-card{border-left:0;border-top:1px solid #111;padding-left:0;padding-top:24px}
+.hero-grid,.split-header,.services-header,.section-heading-split,.process-grid,.origin-grid{grid-template-columns:1fr}
+.hero-copy{min-height:auto;gap:80px}
+.hero-image-large,.origin-image{height:520px}
+.hero-image-small{height:360px}
+.services-grid,.feature-grid-3,.story-grid,.footer-grid{grid-template-columns:repeat(2,1fr)}
+.stats-grid{grid-template-columns:1fr;gap:40px}
+.timeline{margin-left:0}
+.cta-logos{gap:32px}
+}
+@media(max-width:768px){
+:root{--gutter:24px}
+.section,.services,.process,.advantage,.stories,.testimonial,.origin,.cta,.footer{padding:72px 0}
+.hero{padding:72px 0 88px}
+.hero-grid,.services-grid,.feature-grid-3,.story-grid,.footer-grid{grid-template-columns:1fr}
+.section-title{font-size:44px}
+.hero-image-large,.hero-image-small,.story-image,.origin-image{height:360px}
+.section-heading-center{text-align:left}
+.section-heading-center .section-kicker{margin-left:0}
+.feature-title{font-size:28px}
+.testimonial-quote{font-size:21px}
+.cta-logos{justify-content:flex-start}
+.subscribe-form{flex-direction:column;align-items:stretch}
+.subscribe-form input{max-width:100%}
+.footer-bottom{flex-direction:column}
+.footer-legal{gap:18px}
+}
+</style>
+</head>
+
+<body>
+
+<header class="site-header">
+  <div class="container">
+    <nav class="main-nav" aria-label="Main navigation">
+      <a href="#" class="brand-logo">Chronicle</a>
+
+      <input type="checkbox" id="nav-toggle" class="nav-toggle">
+      <label for="nav-toggle" class="nav-toggle-label">
+        <span></span><span></span><span></span>
+      </label>
+
+      <div class="nav-menu">
+        <div class="nav-item has-mega">
+          <a href="#" class="nav-link">Services</a>
+          <div class="mega-menu">
+            <div class="mega-grid">
+              <div class="mega-intro">
+                <p class="section-label">Services</p>
+                <h3>Editorial support for stories that need to land clearly.</h3>
+                <p>From planning to final polish, Chronicle Press helps shape sharper stories for publishers, newsrooms, and independent teams.</p>
+              </div>
+              <div class="mega-column">
+                <h4>Editorial</h4>
+                <a href="#">Editorial strategy</a>
+                <a href="#">Story planning</a>
+                <a href="#">Content editing</a>
+                <a href="#">Narrative architecture</a>
+              </div>
+              <div class="mega-column">
+                <h4>Research</h4>
+                <a href="#">Investigative research</a>
+                <a href="#">Fact checking</a>
+                <a href="#">Source review</a>
+                <a href="#">Reporting support</a>
+              </div>
+              <div class="mega-card">
+                <p class="mega-card-label">Featured service</p>
+                <h4>Deep editorial review</h4>
+                <p>For long-form investigations, reports, and complex stories that need structure, clarity, and momentum.</p>
+                <a href="#" class="text-link">Learn more <span>›</span></a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="nav-item has-mega">
+          <a href="#" class="nav-link">Work</a>
+          <div class="mega-menu">
+            <div class="mega-grid mega-grid-simple">
+              <div class="mega-intro">
+                <p class="section-label">Stories</p>
+                <h3>Real work, real results.</h3>
+                <p>Explore selected stories shaped through research, editing, and strategy.</p>
+              </div>
+              <div class="mega-column">
+                <h4>Case studies</h4>
+                <a href="#">Politics</a>
+                <a href="#">Business</a>
+                <a href="#">Culture</a>
+                <a href="#">Investigations</a>
+              </div>
+              <div class="mega-column">
+                <h4>Results</h4>
+                <a href="#">Reader engagement</a>
+                <a href="#">Publication growth</a>
+                <a href="#">Editorial clarity</a>
+                <a href="#">Audience strategy</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <a href="#" class="nav-link">Process</a>
+        <a href="#" class="nav-link">About</a>
+        <a href="#" class="nav-link">Contact</a>
+      </div>
+
+      <div class="nav-actions">
+        <a href="#" class="text-link">Log in</a>
+        <a href="#" class="btn btn-primary">Start now</a>
+      </div>
+    </nav>
+  </div>
+</header>
+
+<main class="page">
+
+<section class="hero">
+  <div class="container">
+    <div class="hero-grid">
+      <div class="hero-copy">
+        <h1 class="section-title hero-title">Stories that matter, told with precision</h1>
+        <div class="hero-text">
+          <p class="section-kicker">Chronicle Press brings clarity to complex narratives. We transform raw information into compelling stories that resonate with your audience and drive real results.</p>
+          <div class="button-row">
+            <a href="#" class="btn btn-primary">Start now</a>
+            <a href="#" class="btn">Learn more</a>
+          </div>
+        </div>
+      </div>
+      <div class="image-placeholder hero-image-large"><div class="placeholder-icon"></div></div>
+      <div class="image-placeholder hero-image-small"><div class="placeholder-icon placeholder-icon-sm"></div></div>
+    </div>
+  </div>
+</section>
+
+<section class="logos-section">
+  <div class="logos-title">Trusted by newsrooms and publishers worldwide</div>
+  <div class="logo-track">
+    <div class="logo-item"><span class="webflow-mark"></span><span>Webflow</span></div>
+    <div class="logo-item"><span class="relume-mark"></span><span>Relume</span></div>
+    <div class="logo-item"><span class="webflow-mark"></span><span>Webflow</span></div>
+    <div class="logo-item"><span class="relume-mark"></span><span>Relume</span></div>
+    <div class="logo-item"><span class="webflow-mark"></span><span>Webflow</span></div>
+    <div class="logo-item"><span class="relume-mark"></span><span>Relume</span></div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="split-header">
+      <div>
+        <div class="section-label">Results</div>
+        <h2 class="section-title">Stories that move readers</h2>
+      </div>
+      <div class="split-copy">
+        <p class="section-kicker">Our clients see measurable impact on engagement and reach</p>
+        <div class="button-row">
+          <a href="#" class="btn">Explore</a>
+          <a href="#" class="text-link">Discover <span>›</span></a>
+        </div>
+      </div>
+    </div>
+    <div class="stats-grid">
+      <div class="stat"><div class="stat-number">87%</div><div class="stat-label">Higher reader engagement</div></div>
+      <div class="stat"><div class="stat-number">340</div><div class="stat-label">Publications served</div></div>
+      <div class="stat"><div class="stat-number">2.1B</div><div class="stat-label">Stories published annually</div></div>
+    </div>
+  </div>
+</section>
+
+<section class="services section-bordered">
+  <div class="container">
+    <div class="services-header">
+      <div>
+        <div class="section-label">Services</div>
+        <h2 class="section-title">What we do for you</h2>
+      </div>
+      <p class="section-kicker services-kicker">Chronicle Press handles the craft so you handle the truth</p>
+    </div>
+
+    <div class="services-grid">
+      <article class="service-card"><h3 class="service-title">Editorial strategy and planning</h3><p class="text-sm">We map your narrative arc before the first word lands</p></article>
+      <article class="service-card"><h3 class="service-title">Investigative research and reporting</h3><p class="text-sm">Deep dives into stories that demand precision and rigor</p></article>
+      <article class="service-card"><h3 class="service-title">Content editing and refinement</h3><p class="text-sm">Every sentence sharpened for clarity and impact</p></article>
+      <article class="service-card"><h3 class="service-title">Narrative architecture from ground up</h3><p class="text-sm">We build the skeleton of your story before prose begins</p></article>
+    </div>
+
+    <div class="button-row">
+      <a href="#" class="btn">Learn</a>
+      <a href="#" class="text-link">Learn <span>›</span></a>
+    </div>
+  </div>
+</section>
+
+<section class="process section-bordered">
+  <div class="container">
+    <div class="process-grid">
+      <div class="process-intro">
+        <div class="section-label">Process</div>
+        <h2 class="section-title">You share your angle and audience</h2>
+        <div class="button-row">
+          <a href="#" class="btn">Start</a>
+          <a href="#" class="text-link">Explore <span>›</span></a>
+        </div>
+      </div>
+      <div class="timeline">
+        <div class="timeline-item"><div class="timeline-marker"></div><div><h3 class="timeline-title">Subheading one</h3><p class="text-sm timeline-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique.</p></div></div>
+        <div class="timeline-item"><div class="timeline-marker"></div><div><h3 class="timeline-title">Subheading two</h3><p class="text-sm timeline-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique.</p></div></div>
+        <div class="timeline-item"><div class="timeline-marker"></div><div><h3 class="timeline-title">Subheading three</h3><p class="text-sm timeline-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique.</p></div></div>
+        <div class="timeline-item"><div class="timeline-marker"></div><div><h3 class="timeline-title">Subheading four</h3><p class="text-sm timeline-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique.</p></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="advantage section-bordered">
+  <div class="container">
+    <div class="section-heading section-heading-split">
+      <div>
+        <div class="section-label">Advantage</div>
+        <h2 class="section-title">Why we stand apart</h2>
+      </div>
+      <p class="section-kicker">We don’t just write. We understand what makes stories stick</p>
+    </div>
+    <div class="feature-grid feature-grid-3">
+      <article class="feature-card"><h3 class="feature-title">Reporting that goes deeper than the surface</h3><p class="text-sm feature-text">We verify, cross-check, and dig until the real story emerges</p></article>
+      <article class="feature-card"><h3 class="feature-title">Writing that readers actually finish</h3><p class="text-sm feature-text">Every paragraph pulls forward. No filler, no waste, just momentum</p></article>
+      <article class="feature-card"><h3 class="feature-title">Strategy that matches your audience</h3><p class="text-sm feature-text">We know who reads what and why they stay or leave</p></article>
+    </div>
+    <div class="button-row">
+      <a href="#" class="btn">Learn</a>
+      <a href="#" class="text-link">Learn <span>›</span></a>
+    </div>
+  </div>
+</section>
+
+<section class="stories section-bordered">
+  <div class="container">
+    <div class="section-heading section-heading-center">
+      <div class="section-label">Stories</div>
+      <h2 class="section-title">Real work, real results</h2>
+      <p class="section-kicker">See how we’ve shaped narratives that matter</p>
+    </div>
+    <div class="story-grid">
+      <article class="story-card"><div class="image-placeholder story-image"><div class="placeholder-icon placeholder-icon-sm"></div></div><div class="story-meta"><span>Politics</span><span>8 min read</span></div><h3 class="story-title">How one investigation changed the conversation</h3><p class="text-sm story-text">A deep dive that moved readers and shifted perspective</p><a href="#" class="text-link">Read more <span>›</span></a></article>
+      <article class="story-card"><div class="image-placeholder story-image"><div class="placeholder-icon placeholder-icon-sm"></div></div><div class="story-meta"><span>Business</span><span>6 min read</span></div><h3 class="story-title">From scattered facts to a story that sold</h3><p class="text-sm story-text">We took raw data and made it resonate with readers</p><a href="#" class="text-link">Read more <span>›</span></a></article>
+      <article class="story-card"><div class="image-placeholder story-image"><div class="placeholder-icon placeholder-icon-sm"></div></div><div class="story-meta"><span>Culture</span><span>7 min read</span></div><h3 class="story-title">The story behind the story that went viral</h3><p class="text-sm story-text">Strategic reporting that connected with millions</p><a href="#" class="text-link">Read more <span>›</span></a></article>
+    </div>
+    <div class="center-action"><a href="#" class="btn">View all</a></div>
+  </div>
+</section>
+
+<section class="testimonial section-bordered">
+  <div class="container">
+    <div class="testimonial-inner">
+      <div class="logo-row testimonial-logo"><div class="logo-item"><span class="webflow-mark"></span><span>Webflow</span></div></div>
+      <blockquote class="testimonial-quote">“Chronicle Press didn’t just edit our investigation, they sharpened our thinking. The story landed harder because they understood what we were really trying to say.” — Sarah Chen, Editor, Metro News</blockquote>
+      <div class="author-avatar"><span></span></div>
+      <div class="author-name">Sarah Chen</div>
+      <div class="author-role">Editor, Metro News</div>
+    </div>
+  </div>
+</section>
+
+<section class="origin section-bordered">
+  <div class="container">
+    <div class="origin-grid">
+      <div class="image-placeholder origin-image"><div class="placeholder-icon"></div></div>
+      <div class="origin-content">
+        <div class="section-label">Origin</div>
+        <h2 class="section-title">Built by reporters who still believe in the work</h2>
+        <p class="section-kicker">Chronicle Press came from a simple frustration. Too many stories got buried under poor editing and muddled thinking. We started this to fix that. We work with newsrooms and independent publishers who refuse to settle for less than their best.</p>
+        <div class="logo-row origin-logos">
+          <div class="logo-item"><span class="webflow-mark"></span><span>Webflow</span></div>
+          <div class="logo-item"><span class="relume-mark"></span><span>Relume</span></div>
+          <div class="logo-item"><span class="webflow-mark"></span><span>Webflow</span></div>
+          <div class="logo-item"><span class="relume-mark"></span><span>Relume</span></div>
+        </div>
+        <div class="button-row">
+          <a href="#" class="btn">Learn more</a>
+          <a href="#" class="text-link">About us <span>›</span></a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="cta section-bordered">
+  <div class="container">
+    <div class="cta-inner">
+      <h2 class="section-title">Ready to tell better stories?</h2>
+      <p class="section-kicker">Let’s talk about what you’re working on and how we can help you get there</p>
+      <div class="button-row cta-actions">
+        <a href="#" class="btn btn-primary">Start now</a>
+        <a href="#" class="btn">Learn more</a>
+      </div>
+      <div class="logo-row cta-logos">
+        <div class="logo-item"><span class="webflow-mark"></span><span>Webflow</span></div>
+        <div class="logo-item"><span class="relume-mark"></span><span>Relume</span></div>
+        <div class="logo-item"><span class="webflow-mark"></span><span>Webflow</span></div>
+        <div class="logo-item"><span class="relume-mark"></span><span>Relume</span></div>
+        <div class="logo-item"><span class="webflow-mark"></span><span>Webflow</span></div>
+        <div class="logo-item"><span class="relume-mark"></span><span>Relume</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="footer section-bordered">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="#" class="footer-logo">Logo</a>
+        <p class="text-sm footer-copy">Get the latest news and updates delivered weekly.</p>
+        <form class="subscribe-form">
+          <input type="email" placeholder="Your email">
+          <button type="submit" class="btn">Subscribe</button>
+        </form>
+        <p class="footer-note">We respect your privacy and only send what matters.</p>
+      </div>
+
+      <nav class="footer-nav">
+        <h3>Company</h3>
+        <a href="#">About us</a><a href="#">Services</a><a href="#">Case studies</a><a href="#">Contact</a><a href="#">Careers</a>
+      </nav>
+
+      <nav class="footer-nav">
+        <h3>Resources</h3>
+        <a href="#">Blog</a><a href="#">Guides</a><a href="#">Templates</a><a href="#">Support</a><a href="#">FAQ</a>
+      </nav>
+
+      <nav class="footer-nav footer-social">
+        <h3>Follow us</h3>
+        <a href="#"><span class="social-icon">f</span><span>Facebook</span></a>
+        <a href="#"><span class="social-icon">◎</span><span>Instagram</span></a>
+        <a href="#"><span class="social-icon">𝕏</span><span>X</span></a>
+        <a href="#"><span class="social-icon">in</span><span>LinkedIn</span></a>
+        <a href="#"><span class="social-icon">▶</span><span>YouTube</span></a>
+      </nav>
+    </div>
+
+    <div class="footer-bottom">
+      <p>© 2025 Chronicle Press. All rights reserved.</p>
+      <div class="footer-legal">
+        <a href="#">Privacy policy</a>
+        <a href="#">Terms of service</a>
+        <a href="#">Cookies settings</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+</main>
+</body>
+</html>
