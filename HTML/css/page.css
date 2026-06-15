@@ -1,5 +1,7 @@
 /* WordPress page.php — single Page template styles */
 
+.page{--content-width:1440px}
+
 .page-header{padding:56px 0 48px;background:var(--bg-accent);border-bottom:1px solid var(--border-light)}
 .page-header-inner{max-width:var(--content-width);margin:0 auto}
 .page-header .breadcrumb{display:flex;align-items:center;flex-wrap:wrap;gap:8px;font-size:13px;font-weight:600;color:var(--text-muted);margin-bottom:24px}
@@ -9,7 +11,7 @@
 .page-title,.entry-title{font-size:clamp(40px,4.5vw,60px);line-height:1.06;letter-spacing:-.03em;font-weight:800;color:var(--text-primary)}
 
 .page-featured{padding:48px 0 0}
-.page-featured-inner{max-width:960px;margin:0 auto}
+.page-featured-inner{max-width:var(--content-width);margin:0 auto}
 .page-featured-image{height:clamp(260px,38vw,480px);border-radius:var(--radius-md);overflow:hidden;box-shadow:var(--shadow-md)}
 
 .page-content-wrap{padding:64px 0 88px}
