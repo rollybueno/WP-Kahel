@@ -76,21 +76,31 @@ a:focus-visible,.btn:focus-visible,input:focus-visible{outline:2px solid var(--f
 .brand-logo{font-size:24px;font-weight:800;letter-spacing:-.03em}
 .nav-menu{display:flex;align-items:center;gap:34px}
 .nav-item{position:static}
-.nav-link{font-size:14px;font-weight:600;letter-spacing:0;display:inline-flex;align-items:center;min-height:82px}
-.has-mega>.nav-link:after{content:"›";margin-left:8px;transform:rotate(90deg)}
+.nav-link{font-size:14px;font-weight:600;letter-spacing:0;display:inline-flex;align-items:center;min-height:82px;transition:color var(--duration-fast) var(--ease-out)}
+.has-mega>.nav-link{gap:2px}
+.has-mega>.nav-link:after{content:"";width:7px;height:7px;margin-left:8px;border-right:2px solid currentColor;border-bottom:2px solid currentColor;transform:rotate(45deg) translateY(-2px);transition:transform var(--duration-normal) var(--ease-out),border-color var(--duration-fast) var(--ease-out)}
+.has-mega:hover>.nav-link,.has-mega:focus-within>.nav-link{color:var(--kahel-700)}
+.has-mega:hover>.nav-link:after,.has-mega:focus-within>.nav-link:after{transform:rotate(-135deg) translateY(-2px);border-color:var(--kahel-700)}
 .nav-actions{display:flex;align-items:center;gap:22px}
-.mega-menu{position:absolute;left:0;right:0;top:82px;background:var(--bg-primary);border:1px solid var(--border-strong);border-radius:0 0 var(--radius-md) var(--radius-md);padding:44px;opacity:0;visibility:hidden;transform:translateY(8px);transition:opacity var(--duration-normal) var(--ease-out),visibility var(--duration-normal) var(--ease-out),transform var(--duration-normal) var(--ease-out);box-shadow:var(--shadow-md)}
-.has-mega:hover .mega-menu,.has-mega:focus-within .mega-menu{opacity:1;visibility:visible;transform:translateY(0)}
-.mega-grid{display:grid;grid-template-columns:1.15fr .75fr .75fr .9fr;gap:48px}
-.mega-grid-simple{grid-template-columns:1.2fr .8fr .8fr}
-.mega-intro h3{font-size:34px;line-height:1.05;letter-spacing:-.03em;font-weight:800;max-width:390px;margin-bottom:22px}
-.mega-intro p:last-child,.mega-card p{font-size:14px;line-height:1.5;letter-spacing:0}
+.mega-menu{position:absolute;left:50%;top:82px;width:100vw;background:var(--bg-primary);border-top:2px solid var(--kahel-700);border-bottom:1px solid var(--border-light);padding:0;opacity:0;visibility:hidden;transform:translateX(-50%) translateY(8px);transition:opacity var(--duration-normal) var(--ease-out),visibility var(--duration-normal) var(--ease-out),transform var(--duration-normal) var(--ease-out);box-shadow:var(--shadow-md)}
+.has-mega:hover .mega-menu,.has-mega:focus-within .mega-menu{opacity:1;visibility:visible;transform:translateX(-50%) translateY(0)}
+.mega-menu-inner{padding:48px 0}
+.mega-grid{display:grid;grid-template-columns:1.2fr .85fr .85fr 1fr;gap:40px;align-items:start}
+.mega-grid-simple{grid-template-columns:1.25fr 1fr 1fr}
+.mega-intro{padding-right:32px;border-right:1px solid var(--border-light)}
+.mega-intro .section-label{margin-bottom:16px}
+.mega-intro h3{font-size:clamp(26px,2.2vw,32px);line-height:1.12;letter-spacing:-.03em;font-weight:800;max-width:360px;margin-bottom:16px;color:var(--text-primary)}
+.mega-intro p:last-child{font-size:15px;line-height:1.55;color:var(--text-muted);max-width:340px}
 .mega-column,.mega-card{display:flex;flex-direction:column;align-items:flex-start}
-.mega-column h4,.mega-card h4{font-size:15px;font-weight:700;margin-bottom:24px}
-.mega-column a{font-size:14px;margin-bottom:18px}
-.mega-card{border-left:3px solid var(--kahel-700);padding-left:28px}
-.mega-card-label{font-size:12px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;margin-bottom:18px}
-.mega-card .text-link{margin-top:24px}
+.mega-column h4,.mega-card h4{font-family:var(--font-body);font-size:11px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--text-muted);margin-bottom:12px;padding-bottom:14px;border-bottom:1px solid var(--border-light);width:100%}
+.mega-card h4{font-size:18px;font-family:var(--font-heading);font-weight:700;letter-spacing:-.02em;text-transform:none;color:var(--text-primary);border-bottom:0;padding-bottom:0;margin-bottom:12px}
+.mega-link{display:block;width:100%;padding:9px 0;font-size:15px;font-weight:600;color:var(--text-primary);transition:color var(--duration-fast) var(--ease-out),padding-left var(--duration-normal) var(--ease-out)}
+.mega-link:hover{color:var(--kahel-700);padding-left:6px}
+.mega-card{background:var(--bg-accent);border:1px solid var(--kahel-100);border-radius:var(--radius-md);padding:28px;box-shadow:var(--shadow-sm);align-self:stretch;transition:box-shadow var(--duration-normal) var(--ease-out),transform var(--duration-normal) var(--ease-out)}
+.mega-card:hover{box-shadow:var(--shadow-secondary-hover);transform:translateY(-2px)}
+.mega-card p{font-size:14px;line-height:1.55;color:var(--text-muted);margin-bottom:4px}
+.mega-card-label{font-size:11px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;margin-bottom:12px;color:var(--text-brand)}
+.mega-card .text-link{margin-top:20px}
 .nav-toggle,.nav-toggle-label{display:none}
 
 /* HERO */
@@ -236,10 +246,15 @@ a:focus-visible,.btn:focus-visible,input:focus-visible{outline:2px solid var(--f
 .nav-toggle:checked~.nav-menu{display:flex;position:absolute;left:0;right:0;top:76px;background:var(--bg-primary);border:1px solid var(--border-strong);padding:28px;flex-direction:column;align-items:flex-start;gap:0}
 .nav-toggle:checked~.nav-actions{display:flex;position:absolute;left:0;right:0;top:520px;background:var(--bg-primary);border:1px solid var(--border-strong);border-top:0;padding:0 28px 28px;align-items:flex-start}
 .nav-link{min-height:auto;padding:16px 0;font-size:18px}
-.mega-menu{position:static;opacity:1;visibility:visible;transform:none;box-shadow:none;border:0;border-top:1px solid var(--border-light);padding:24px 0;display:none}
-.has-mega:hover .mega-menu,.has-mega:focus-within .mega-menu{display:block}
+.mega-menu{position:static;width:auto;margin-left:0;transform:none;box-shadow:none;border:0;border-top:1px solid var(--border-light);padding:0;display:none;opacity:1;visibility:visible}
+.has-mega:hover .mega-menu,.has-mega:focus-within .mega-menu{display:block;transform:none}
+.mega-menu-inner{padding:24px 0}
 .mega-grid,.mega-grid-simple{grid-template-columns:1fr;gap:28px}
-.mega-card{border-left:0;border-top:3px solid var(--kahel-700);padding-left:0;padding-top:24px}
+.mega-intro{padding-right:0;border-right:0;padding-bottom:8px;border-bottom:1px solid var(--border-light)}
+.mega-link{padding:12px 0}
+.mega-link:hover{padding-left:0}
+.mega-card{border-left:0;padding:24px}
+.mega-card:hover{transform:none}
 .hero-grid,.split-header,.services-header,.section-heading-split,.process-grid,.origin-grid{grid-template-columns:1fr}
 .hero-copy{min-height:auto;gap:80px}
 .hero-image-large,.origin-image{height:520px}
@@ -268,8 +283,9 @@ a:focus-visible,.btn:focus-visible,input:focus-visible{outline:2px solid var(--f
 }
 @media(prefers-reduced-motion:reduce){
 .logo-track{animation:none}
-.btn,.btn-primary,.text-link,.text-link span,.story-card,.story-image,.nav-toggle-label,.nav-toggle-label span,.mega-menu{transition:none}
-.btn:hover,.btn-primary:hover,.story-card:hover,.nav-toggle-label:hover{transform:none}
+.btn,.btn-primary,.text-link,.text-link span,.story-card,.story-image,.nav-toggle-label,.nav-toggle-label span,.mega-menu,.mega-card,.mega-link{transition:none}
+.btn:hover,.btn-primary:hover,.story-card:hover,.nav-toggle-label:hover,.mega-card:hover{transform:none}
+.mega-link:hover{padding-left:0}
 }
 </style>
 </head>
@@ -288,8 +304,9 @@ a:focus-visible,.btn:focus-visible,input:focus-visible{outline:2px solid var(--f
 
       <div class="nav-menu">
         <div class="nav-item has-mega">
-          <a href="#" class="nav-link">Services</a>
+          <a href="#" class="nav-link" aria-haspopup="true">Services</a>
           <div class="mega-menu">
+            <div class="mega-menu-inner container">
             <div class="mega-grid">
               <div class="mega-intro">
                 <p class="section-label">Services</p>
@@ -298,17 +315,17 @@ a:focus-visible,.btn:focus-visible,input:focus-visible{outline:2px solid var(--f
               </div>
               <div class="mega-column">
                 <h4>Editorial</h4>
-                <a href="#">Editorial strategy</a>
-                <a href="#">Story planning</a>
-                <a href="#">Content editing</a>
-                <a href="#">Narrative architecture</a>
+                <a href="#" class="mega-link">Editorial strategy</a>
+                <a href="#" class="mega-link">Story planning</a>
+                <a href="#" class="mega-link">Content editing</a>
+                <a href="#" class="mega-link">Narrative architecture</a>
               </div>
               <div class="mega-column">
                 <h4>Research</h4>
-                <a href="#">Investigative research</a>
-                <a href="#">Fact checking</a>
-                <a href="#">Source review</a>
-                <a href="#">Reporting support</a>
+                <a href="#" class="mega-link">Investigative research</a>
+                <a href="#" class="mega-link">Fact checking</a>
+                <a href="#" class="mega-link">Source review</a>
+                <a href="#" class="mega-link">Reporting support</a>
               </div>
               <div class="mega-card">
                 <p class="mega-card-label">Featured service</p>
@@ -317,12 +334,14 @@ a:focus-visible,.btn:focus-visible,input:focus-visible{outline:2px solid var(--f
                 <a href="#" class="text-link">Learn more <span>›</span></a>
               </div>
             </div>
+            </div>
           </div>
         </div>
 
         <div class="nav-item has-mega">
-          <a href="#" class="nav-link">Work</a>
+          <a href="#" class="nav-link" aria-haspopup="true">Work</a>
           <div class="mega-menu">
+            <div class="mega-menu-inner container">
             <div class="mega-grid mega-grid-simple">
               <div class="mega-intro">
                 <p class="section-label">Stories</p>
@@ -331,18 +350,19 @@ a:focus-visible,.btn:focus-visible,input:focus-visible{outline:2px solid var(--f
               </div>
               <div class="mega-column">
                 <h4>Case studies</h4>
-                <a href="#">Politics</a>
-                <a href="#">Business</a>
-                <a href="#">Culture</a>
-                <a href="#">Investigations</a>
+                <a href="#" class="mega-link">Politics</a>
+                <a href="#" class="mega-link">Business</a>
+                <a href="#" class="mega-link">Culture</a>
+                <a href="#" class="mega-link">Investigations</a>
               </div>
               <div class="mega-column">
                 <h4>Results</h4>
-                <a href="#">Reader engagement</a>
-                <a href="#">Publication growth</a>
-                <a href="#">Editorial clarity</a>
-                <a href="#">Audience strategy</a>
+                <a href="#" class="mega-link">Reader engagement</a>
+                <a href="#" class="mega-link">Publication growth</a>
+                <a href="#" class="mega-link">Editorial clarity</a>
+                <a href="#" class="mega-link">Audience strategy</a>
               </div>
+            </div>
             </div>
           </div>
         </div>
