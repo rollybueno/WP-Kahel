@@ -1,0 +1,490 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>How one investigation changed the conversation — Chronicle Press</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,700;0,9..144,800;1,9..144,700&family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet">
+
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+html{overflow-x:clip}
+:root{
+  --kahel-50:#FFF7ED;--kahel-100:#FFEDD5;--kahel-200:#FED7AA;--kahel-600:#EA580C;--kahel-700:#C2410C;--kahel-800:#9A3412;
+  --stone-50:#FAFAF9;--stone-100:#F5F5F4;--stone-200:#E7E5E4;--stone-300:#D6D3D1;--stone-400:#A8A29E;--stone-600:#57534E;--stone-900:#1C1917;
+  --bg-primary:#FFFFFF;--bg-secondary:#FAFAF9;--bg-accent:#FFF7ED;--bg-inverse:#1C1917;
+  --text-primary:#1C1917;--text-secondary:#44403C;--text-muted:#57534E;--text-inverse:#FFFFFF;--text-brand:#C2410C;
+  --border-light:#E7E5E4;--border-default:#D6D3D1;--border-strong:#1C1917;
+  --btn-primary-bg:#C2410C;--btn-primary-hover:#9A3412;--btn-primary-text:#FFFFFF;
+  --link:#C2410C;--link-hover:#9A3412;--focus-ring:#EA580C;
+  --font-body:"Source Sans 3",system-ui,-apple-system,sans-serif;
+  --font-heading:"Fraunces",Georgia,serif;
+  --radius-md:8px;
+  --ease-out:cubic-bezier(.22,1,.36,1);
+  --duration-fast:.2s;
+  --duration-normal:.28s;
+  --shadow-sm:0 1px 2px rgba(28,25,23,.05);
+  --shadow-md:0 4px 16px rgba(28,25,23,.08);
+  --shadow-secondary:0 1px 3px rgba(194,65,12,.06);
+  --shadow-secondary-hover:0 4px 14px rgba(194,65,12,.14);
+  --shadow-primary:0 2px 10px rgba(194,65,12,.22);
+  --shadow-primary-hover:0 8px 24px rgba(194,65,12,.32);
+  --container:1280px;--gutter:72px;
+  --content-width:720px
+}
+body{font-family:var(--font-body);font-size:16px;line-height:1.5;color:var(--text-primary);background:var(--bg-primary);-webkit-font-smoothing:antialiased}
+h1,h2,h3,h4,h5,h6,.brand-logo,.footer-logo,.post-title,.pullquote{font-family:var(--font-heading);font-weight:700}
+a{color:inherit;text-decoration:none}
+a:focus-visible,.btn:focus-visible,input:focus-visible{outline:2px solid var(--focus-ring);outline-offset:2px}
+.page{width:100%;overflow:hidden}
+.container{max-width:var(--container);margin:0 auto;padding:0 var(--gutter)}
+.section-label{font-size:13px;font-weight:700;letter-spacing:.06em;margin-bottom:22px;color:var(--text-brand);text-transform:uppercase}
+.section-title{font-size:clamp(36px,3.5vw,52px);line-height:1.05;letter-spacing:-.03em;font-weight:800;color:var(--text-primary)}
+.section-kicker,.text-sm{font-size:14px;line-height:1.5;color:var(--text-muted)}
+.button-row{display:flex;align-items:center;gap:12px;flex-wrap:wrap}
+.btn{min-width:84px;height:48px;border:1px solid var(--kahel-700);border-radius:var(--radius-md);padding:0 22px;display:inline-flex;align-items:center;justify-content:center;font-size:14px;font-weight:600;background:transparent;color:var(--kahel-700);box-shadow:var(--shadow-secondary);transition:background var(--duration-fast) var(--ease-out),border-color var(--duration-fast) var(--ease-out),color var(--duration-fast) var(--ease-out),box-shadow var(--duration-normal) var(--ease-out),transform var(--duration-fast) var(--ease-out)}
+.btn:hover{background:var(--kahel-50);border-color:var(--kahel-800);color:var(--kahel-800);box-shadow:var(--shadow-secondary-hover);transform:translateY(-1px)}
+.btn:active{transform:translateY(0);box-shadow:var(--shadow-secondary);transition-duration:.1s}
+.btn-primary{background:var(--btn-primary-bg);border-color:var(--btn-primary-bg);color:var(--btn-primary-text);box-shadow:var(--shadow-primary)}
+.btn-primary:hover{background:var(--btn-primary-hover);border-color:var(--btn-primary-hover);color:var(--btn-primary-text);box-shadow:var(--shadow-primary-hover);transform:translateY(-1px)}
+.text-link{display:inline-flex;align-items:center;gap:14px;font-size:14px;font-weight:600;color:var(--link);transition:color var(--duration-fast) var(--ease-out),gap var(--duration-normal) var(--ease-out)}
+.text-link:hover{color:var(--link-hover);gap:18px}
+.text-link span{display:inline-block;transition:transform var(--duration-normal) var(--ease-out)}
+.text-link:hover span{transform:translateX(3px)}
+.image-placeholder{background:var(--stone-100);display:flex;align-items:center;justify-content:center}
+.placeholder-icon{width:116px;height:88px;border-radius:10px;background:var(--stone-200);position:relative;opacity:.85}
+.placeholder-icon:before{content:"";position:absolute;left:24px;top:42px;width:38px;height:28px;background:var(--stone-100);clip-path:polygon(0 100%,45% 20%,72% 70%,100% 35%,100% 100%)}
+.placeholder-icon:after{content:"";position:absolute;left:32px;top:22px;width:18px;height:18px;border-radius:50%;background:var(--stone-100)}
+.placeholder-icon-sm{width:72px;height:54px;border-radius:7px}
+.placeholder-icon-sm:before{left:15px;top:26px;width:25px;height:18px}
+.placeholder-icon-sm:after{left:21px;top:14px;width:11px;height:11px}
+
+/* NAV */
+.site-header{position:sticky;top:0;z-index:100;background:rgba(255,255,255,.96);border-bottom:1px solid var(--border-light);backdrop-filter:blur(12px);box-shadow:var(--shadow-sm)}
+.main-nav{height:82px;display:flex;align-items:center;justify-content:space-between;gap:32px;position:relative}
+.brand-logo{font-size:24px;font-weight:800;letter-spacing:-.03em}
+.nav-menu{display:flex;align-items:center;gap:34px}
+.nav-item{position:static}
+.nav-link{font-size:14px;font-weight:600;display:inline-flex;align-items:center;min-height:82px;transition:color var(--duration-fast) var(--ease-out)}
+.has-mega>.nav-link{gap:2px}
+.has-mega>.nav-link:after{content:"";width:7px;height:7px;margin-left:8px;border-right:2px solid currentColor;border-bottom:2px solid currentColor;transform:rotate(45deg) translateY(-2px);transition:transform var(--duration-normal) var(--ease-out)}
+.has-mega:hover>.nav-link,.has-mega:focus-within>.nav-link{color:var(--kahel-700)}
+.has-mega:hover>.nav-link:after,.has-mega:focus-within>.nav-link:after{transform:rotate(-135deg) translateY(-2px)}
+.nav-actions{display:flex;align-items:center;gap:22px}
+.mega-menu{position:fixed;left:0;right:0;top:82px;background:var(--bg-primary);border-top:2px solid var(--kahel-700);border-bottom:1px solid var(--border-light);opacity:0;visibility:hidden;transform:translateY(8px);transition:opacity var(--duration-normal) var(--ease-out),visibility var(--duration-normal) var(--ease-out),transform var(--duration-normal) var(--ease-out);box-shadow:var(--shadow-md);z-index:90}
+.has-mega:hover .mega-menu,.has-mega:focus-within .mega-menu{opacity:1;visibility:visible;transform:translateY(0)}
+.mega-menu-inner{padding:48px 0}
+.mega-grid{display:grid;grid-template-columns:1.2fr .85fr .85fr 1fr;gap:40px}
+.mega-intro{padding-right:32px;border-right:1px solid var(--border-light)}
+.mega-intro h3{font-size:clamp(26px,2.2vw,32px);line-height:1.12;font-weight:800;margin-bottom:16px}
+.mega-column h4{font-size:11px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--text-muted);margin-bottom:12px;padding-bottom:14px;border-bottom:1px solid var(--border-light);width:100%}
+.mega-link{display:block;padding:9px 0;font-size:15px;font-weight:600;color:var(--text-primary);transition:color var(--duration-fast) var(--ease-out),padding-left var(--duration-normal) var(--ease-out)}
+.mega-link:hover{color:var(--kahel-700);padding-left:6px}
+.mega-card{background:var(--bg-accent);border:1px solid var(--kahel-100);border-radius:var(--radius-md);padding:28px;box-shadow:var(--shadow-sm)}
+.mega-card h4{font-size:18px;font-family:var(--font-heading);margin-bottom:12px}
+.mega-card-label{font-size:11px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--text-brand);margin-bottom:12px}
+.nav-toggle,.nav-toggle-label{display:none}
+
+/* SINGLE POST */
+.post-hero{padding:56px 0 48px;background:var(--bg-accent);border-bottom:1px solid var(--border-light)}
+.post-hero-inner{max-width:var(--content-width);margin:0 auto}
+.breadcrumb{display:flex;align-items:center;flex-wrap:wrap;gap:8px;font-size:13px;font-weight:600;color:var(--text-muted);margin-bottom:24px}
+.breadcrumb a{color:var(--kahel-700);transition:color var(--duration-fast) var(--ease-out)}
+.breadcrumb a:hover{color:var(--kahel-800)}
+.breadcrumb span{opacity:.45}
+.post-meta{display:flex;align-items:center;flex-wrap:wrap;gap:14px;margin-bottom:28px}
+.post-category{background:var(--kahel-100);color:var(--kahel-800);padding:6px 10px;border-radius:4px;font-size:12px;font-weight:700}
+.post-meta-item{font-size:13px;font-weight:600;color:var(--text-muted)}
+.post-title{font-size:clamp(38px,4.5vw,56px);line-height:1.06;letter-spacing:-.03em;font-weight:800;margin-bottom:24px;color:var(--text-primary)}
+.post-deck{font-size:20px;line-height:1.55;color:var(--text-secondary);margin-bottom:36px}
+.post-byline{display:flex;align-items:center;gap:16px;padding-top:28px;border-top:1px solid var(--kahel-200)}
+.post-author-avatar{width:52px;height:52px;border-radius:50%;background:var(--kahel-200);flex-shrink:0;display:flex;align-items:center;justify-content:center}
+.post-author-avatar span{width:10px;height:10px;border:2px solid var(--kahel-700);border-radius:2px}
+.post-author-name{font-size:15px;font-weight:700;color:var(--text-primary);margin-bottom:2px}
+.post-author-name a{color:var(--kahel-700)}
+.post-author-name a:hover{color:var(--kahel-800)}
+.post-author-role{font-size:13px;color:var(--text-muted)}
+
+.post-featured{padding:48px 0 0}
+.post-featured-inner{max-width:960px;margin:0 auto}
+.post-featured-image{height:clamp(280px,42vw,520px);border-radius:var(--radius-md);overflow:hidden;box-shadow:var(--shadow-md)}
+.post-featured-caption{font-size:13px;line-height:1.45;color:var(--text-muted);margin-top:14px;text-align:center}
+
+.post-layout{padding:64px 0 88px}
+.post-layout-inner{display:grid;grid-template-columns:minmax(0,var(--content-width));justify-content:center;gap:64px}
+.entry-content{font-size:18px;line-height:1.7;color:var(--text-secondary)}
+.entry-content>*+*{margin-top:1.35em}
+.entry-content h2{font-size:clamp(28px,3vw,36px);line-height:1.15;letter-spacing:-.03em;font-weight:800;color:var(--text-primary);margin-top:2em}
+.entry-content h3{font-size:24px;line-height:1.2;font-weight:700;color:var(--text-primary);margin-top:1.75em}
+.entry-content p{margin-top:1.35em}
+.entry-content a{color:var(--link);text-decoration:underline;text-underline-offset:3px;transition:color var(--duration-fast) var(--ease-out)}
+.entry-content a:hover{color:var(--link-hover)}
+.entry-content ul,.entry-content ol{padding-left:1.4em;margin-top:1.25em}
+.entry-content li+li{margin-top:.5em}
+.entry-content li::marker{color:var(--kahel-700)}
+.entry-content blockquote{margin:2em 0;padding:28px 32px;background:var(--bg-accent);border-left:4px solid var(--kahel-700);border-radius:0 var(--radius-md) var(--radius-md) 0;font-family:var(--font-heading);font-size:22px;line-height:1.4;font-weight:700;color:var(--text-primary)}
+.entry-content blockquote p{margin:0}
+.entry-content figure{margin:2.5em 0}
+.entry-content .content-image{height:360px;border-radius:var(--radius-md);overflow:hidden}
+.entry-content figcaption{font-size:13px;color:var(--text-muted);margin-top:12px;text-align:center}
+.entry-content hr{border:0;border-top:1px solid var(--border-light);margin:2.5em 0}
+
+.post-tags{display:flex;align-items:center;flex-wrap:wrap;gap:10px;margin-top:48px;padding-top:32px;border-top:1px solid var(--border-light)}
+.post-tags-label{font-size:12px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--text-muted);margin-right:4px}
+.post-tag{display:inline-flex;padding:7px 12px;border:1px solid var(--border-light);border-radius:999px;font-size:13px;font-weight:600;color:var(--text-primary);background:var(--bg-primary);transition:background var(--duration-fast) var(--ease-out),border-color var(--duration-fast) var(--ease-out),color var(--duration-fast) var(--ease-out)}
+.post-tag:hover{background:var(--kahel-50);border-color:var(--kahel-200);color:var(--kahel-800)}
+
+.post-share{display:flex;align-items:center;flex-wrap:wrap;gap:14px;margin-top:28px}
+.post-share-label{font-size:12px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--text-muted)}
+.share-btn{width:40px;height:40px;border:1px solid var(--border-light);border-radius:var(--radius-md);display:inline-flex;align-items:center;justify-content:center;font-size:14px;font-weight:700;color:var(--text-primary);transition:background var(--duration-fast) var(--ease-out),border-color var(--duration-fast) var(--ease-out),color var(--duration-fast) var(--ease-out),transform var(--duration-fast) var(--ease-out)}
+.share-btn:hover{background:var(--kahel-50);border-color:var(--kahel-200);color:var(--kahel-700);transform:translateY(-1px)}
+
+.author-box{margin-top:56px;padding:32px;background:var(--bg-secondary);border:1px solid var(--border-light);border-radius:var(--radius-md)}
+.author-box-inner{display:flex;gap:24px;align-items:flex-start}
+.author-box-avatar{width:72px;height:72px;border-radius:50%;background:var(--kahel-200);flex-shrink:0;display:flex;align-items:center;justify-content:center}
+.author-box-avatar span{width:12px;height:12px;border:2px solid var(--kahel-700);border-radius:2px}
+.author-box-label{font-size:11px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--text-brand);margin-bottom:8px}
+.author-box-name{font-size:22px;font-family:var(--font-heading);font-weight:700;margin-bottom:8px}
+.author-box-bio{font-size:15px;line-height:1.55;color:var(--text-muted);margin-bottom:16px;max-width:520px}
+.author-box .text-link{font-size:14px}
+
+.post-nav{margin-top:64px;padding-top:40px;border-top:1px solid var(--border-light);display:grid;grid-template-columns:1fr 1fr;gap:32px}
+.post-nav-item{display:flex;flex-direction:column;gap:10px;padding:24px;border:1px solid var(--border-light);border-radius:var(--radius-md);transition:background var(--duration-fast) var(--ease-out),border-color var(--duration-fast) var(--ease-out),box-shadow var(--duration-normal) var(--ease-out),transform var(--duration-fast) var(--ease-out)}
+.post-nav-item:hover{background:var(--kahel-50);border-color:var(--kahel-200);box-shadow:var(--shadow-sm);transform:translateY(-2px)}
+.post-nav-item.next{align-items:flex-end;text-align:right}
+.post-nav-label{font-size:11px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--text-brand)}
+.post-nav-title{font-size:18px;font-family:var(--font-heading);font-weight:700;line-height:1.2;color:var(--text-primary)}
+
+.related-posts{padding:88px 0;background:var(--bg-secondary);border-top:1px solid var(--border-light)}
+.related-posts-header{max-width:var(--content-width);margin:0 auto 48px}
+.story-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:30px;max-width:var(--container);margin:0 auto;padding:0 var(--gutter)}
+.story-card{border-radius:var(--radius-md);transition:transform var(--duration-normal) var(--ease-out),box-shadow var(--duration-normal) var(--ease-out)}
+.story-card:hover{transform:translateY(-3px);box-shadow:var(--shadow-md)}
+.story-image{height:220px;margin-bottom:22px;border-radius:var(--radius-md);overflow:hidden}
+.story-meta{display:flex;align-items:center;gap:18px;font-size:12px;font-weight:600;margin-bottom:18px}
+.story-meta span:first-child{background:var(--kahel-100);color:var(--kahel-800);padding:6px 8px;border-radius:4px}
+.story-title{font-size:22px;line-height:1.15;font-family:var(--font-heading);font-weight:700;margin-bottom:16px}
+.story-text{margin-bottom:26px}
+
+.cta{padding:88px 0;background:var(--bg-accent)}
+.cta-inner{text-align:center;max-width:760px;margin:0 auto;padding:0 var(--gutter)}
+.cta .section-title{margin-bottom:24px}
+.cta .section-kicker{margin-bottom:32px}
+.cta-actions{justify-content:center}
+
+/* FOOTER */
+.footer{padding:72px 0 38px;background:var(--bg-inverse);color:var(--text-inverse)}
+.footer a{color:var(--stone-200);transition:color .2s ease}
+.footer a:hover{color:var(--kahel-200)}
+.footer .text-sm,.footer-note{color:var(--stone-400)}
+.footer .btn{border-color:var(--stone-400);color:var(--text-inverse);box-shadow:none}
+.footer .btn:hover{background:rgba(255,255,255,.08);border-color:var(--kahel-200);color:var(--text-inverse)}
+.footer .btn-primary{border-color:var(--btn-primary-bg);color:var(--btn-primary-text);box-shadow:var(--shadow-primary)}
+.footer-grid{display:grid;grid-template-columns:1.65fr .6fr .6fr .7fr;gap:80px;margin-bottom:86px}
+.footer-logo{display:inline-block;font-style:italic;font-size:31px;font-weight:700;margin-bottom:36px}
+.footer-copy{margin-bottom:24px}
+.subscribe-form{display:flex;gap:14px;margin-bottom:14px}
+.subscribe-form input{width:100%;max-width:335px;height:42px;border:1px solid var(--stone-600);border-radius:var(--radius-md);padding:0 16px;font:inherit;font-size:14px;background:transparent;color:var(--text-inverse)}
+.subscribe-form .btn{height:42px}
+.footer-nav{display:flex;flex-direction:column}
+.footer-nav h3{font-size:13px;font-weight:700;letter-spacing:.04em;text-transform:uppercase;margin-bottom:26px}
+.footer-nav a{font-size:13px;margin-bottom:20px}
+.footer-bottom{border-top:1px solid var(--stone-600);padding-top:32px;display:flex;justify-content:space-between;gap:40px;font-size:12px;color:var(--stone-400)}
+.footer-legal{display:flex;gap:32px;flex-wrap:wrap}
+
+@media(max-width:1024px){
+:root{--gutter:40px}
+.main-nav{height:76px}
+.mega-menu{top:76px}
+.nav-toggle-label{display:flex;width:42px;height:42px;border:1px solid var(--kahel-700);border-radius:var(--radius-md);align-items:center;justify-content:center;flex-direction:column;gap:5px;cursor:pointer;margin-left:auto}
+.nav-toggle-label span{width:18px;height:2px;background:var(--kahel-700);display:block}
+.nav-menu,.nav-actions{display:none}
+.nav-toggle:checked~.nav-menu{display:flex;position:absolute;left:0;right:0;top:76px;background:var(--bg-primary);border:1px solid var(--border-strong);padding:28px;flex-direction:column;align-items:flex-start}
+.nav-toggle:checked~.nav-actions{display:flex;position:absolute;left:0;right:0;top:520px;background:var(--bg-primary);border:1px solid var(--border-strong);border-top:0;padding:0 28px 28px}
+.nav-link{min-height:auto;padding:16px 0;font-size:18px}
+.mega-menu{position:static;transform:none;opacity:1;visibility:visible;display:none;box-shadow:none;border:0;border-top:1px solid var(--border-light)}
+.has-mega:hover .mega-menu,.has-mega:focus-within .mega-menu{display:block}
+.mega-grid{grid-template-columns:1fr}
+.story-grid{grid-template-columns:repeat(2,1fr)}
+.footer-grid{grid-template-columns:repeat(2,1fr)}
+}
+@media(max-width:768px){
+:root{--gutter:24px}
+.post-hero{padding:40px 0 36px}
+.post-deck{font-size:18px}
+.post-layout{padding:48px 0 64px}
+.entry-content{font-size:17px}
+.entry-content blockquote{font-size:19px;padding:22px 24px}
+.author-box-inner{flex-direction:column}
+.post-nav{grid-template-columns:1fr}
+.post-nav-item.next{align-items:flex-start;text-align:left}
+.story-grid,.footer-grid{grid-template-columns:1fr}
+.subscribe-form{flex-direction:column}
+.footer-bottom{flex-direction:column}
+}
+@media(prefers-reduced-motion:reduce){
+.btn,.text-link,.text-link span,.story-card,.post-nav-item,.share-btn{transition:none}
+.btn:hover,.story-card:hover,.post-nav-item:hover,.share-btn:hover{transform:none}
+}
+</style>
+</head>
+
+<body>
+
+<header class="site-header">
+  <div class="container">
+    <nav class="main-nav" aria-label="Main navigation">
+      <a href="homepage.html" class="brand-logo">Chronicle</a>
+
+      <input type="checkbox" id="nav-toggle" class="nav-toggle">
+      <label for="nav-toggle" class="nav-toggle-label" aria-label="Open menu">
+        <span></span><span></span><span></span>
+      </label>
+
+      <div class="nav-menu">
+        <div class="nav-item has-mega">
+          <a href="#" class="nav-link" aria-haspopup="true">Services</a>
+          <div class="mega-menu">
+            <div class="mega-menu-inner container">
+              <div class="mega-grid">
+                <div class="mega-intro">
+                  <p class="section-label">Services</p>
+                  <h3>Editorial support for stories that need to land clearly.</h3>
+                </div>
+                <div class="mega-column">
+                  <h4>Editorial</h4>
+                  <a href="#" class="mega-link">Editorial strategy</a>
+                  <a href="#" class="mega-link">Story planning</a>
+                  <a href="#" class="mega-link">Content editing</a>
+                </div>
+                <div class="mega-column">
+                  <h4>Research</h4>
+                  <a href="#" class="mega-link">Investigative research</a>
+                  <a href="#" class="mega-link">Fact checking</a>
+                  <a href="#" class="mega-link">Source review</a>
+                </div>
+                <div class="mega-card">
+                  <p class="mega-card-label">Featured</p>
+                  <h4>Deep editorial review</h4>
+                  <a href="#" class="text-link">Learn more <span>›</span></a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <a href="#" class="nav-link">Work</a>
+        <a href="#" class="nav-link">Process</a>
+        <a href="#" class="nav-link">About</a>
+        <a href="#" class="nav-link">Contact</a>
+      </div>
+
+      <div class="nav-actions">
+        <a href="#" class="text-link">Log in</a>
+        <a href="#" class="btn btn-primary">Start now</a>
+      </div>
+    </nav>
+  </div>
+</header>
+
+<main class="page">
+
+<article class="single-post">
+
+  <header class="post-hero">
+    <div class="container">
+      <div class="post-hero-inner">
+        <nav class="breadcrumb" aria-label="Breadcrumb">
+          <a href="homepage.html">Home</a>
+          <span>›</span>
+          <a href="#">Stories</a>
+          <span>›</span>
+          <span aria-current="page">Politics</span>
+        </nav>
+        <div class="post-meta">
+          <span class="post-category">Politics</span>
+          <span class="post-meta-item">June 12, 2025</span>
+          <span class="post-meta-item">8 min read</span>
+        </div>
+        <h1 class="post-title">How one investigation changed the conversation</h1>
+        <p class="post-deck">A six-month reporting effort uncovered patterns that officials had dismissed for years. Here is how the story was built, edited, and published to reach the audiences who needed it most.</p>
+        <div class="post-byline">
+          <div class="post-author-avatar" aria-hidden="true"><span></span></div>
+          <div>
+            <p class="post-author-name">By <a href="#">Sarah Chen</a></p>
+            <p class="post-author-role">Editor, Metro News</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <div class="post-featured">
+    <div class="container">
+      <div class="post-featured-inner">
+        <div class="image-placeholder post-featured-image"><div class="placeholder-icon"></div></div>
+        <p class="post-featured-caption">Capitol reporters review documents ahead of publication. Photo placeholder for featured image.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="post-layout">
+    <div class="container">
+      <div class="post-layout-inner">
+
+        <div class="entry-content">
+          <p>When the first tip arrived, it read like dozens of others — vague, urgent, and impossible to verify in a single afternoon. What made this one different was not the claim itself, but the trail of public records behind it.</p>
+          <p>Over the next six months, our team mapped contracts, cross-checked testimony, and rebuilt a timeline that showed how a single policy decision rippled through agencies, budgets, and communities. The reporting did not chase outrage. It chased clarity.</p>
+
+          <h2>Building the timeline</h2>
+          <p>Every strong investigation starts with chronology. We organized more than four hundred documents into a working timeline before writing a single narrative paragraph. That discipline kept the story legible for readers who do not live inside government structures.</p>
+          <p>Editors challenged every causal claim. If a paragraph implied intent without evidence, it was cut or reframed. The result was a story that moved quickly without sacrificing rigor.</p>
+
+          <blockquote>
+            <p>“The reporting did not chase outrage. It chased clarity.”</p>
+          </blockquote>
+
+          <h2>Editing for impact</h2>
+          <p>Long investigations fail when the opening buries the reader. We restructured the first thousand words three times before landing on a lead that named the stakes in plain language and promised a path forward.</p>
+
+          <figure>
+            <div class="image-placeholder content-image"><div class="placeholder-icon placeholder-icon-sm"></div></div>
+            <figcaption>Annotated records used to verify key dates in the investigation.</figcaption>
+          </figure>
+
+          <h3>What changed after publication</h3>
+          <p>Within two weeks, the story had been cited in committee hearings, referenced by local radio, and shared across community groups that had been following the issue for years. Reader engagement held above our benchmark for investigative work — a sign the structure worked.</p>
+          <ul>
+            <li>Committee testimony cited the reporting within 14 days</li>
+            <li>Average engaged read time exceeded eight minutes</li>
+            <li>Follow-up coverage extended the story into regional outlets</li>
+          </ul>
+          <p>The lesson is not that every investigation will break open on day one. It is that careful editing and patient reporting give important stories a chance to land when they finally do.</p>
+
+          <div class="post-tags">
+            <span class="post-tags-label">Tags</span>
+            <a href="#" class="post-tag">Investigations</a>
+            <a href="#" class="post-tag">Politics</a>
+            <a href="#" class="post-tag">Editorial</a>
+            <a href="#" class="post-tag">Reporting</a>
+          </div>
+
+          <div class="post-share">
+            <span class="post-share-label">Share</span>
+            <a href="#" class="share-btn" aria-label="Share on X">𝕏</a>
+            <a href="#" class="share-btn" aria-label="Share on LinkedIn">in</a>
+            <a href="#" class="share-btn" aria-label="Share on Facebook">f</a>
+            <a href="#" class="share-btn" aria-label="Copy link">⧉</a>
+          </div>
+
+          <aside class="author-box">
+            <div class="author-box-inner">
+              <div class="author-box-avatar" aria-hidden="true"><span></span></div>
+              <div>
+                <p class="author-box-label">Written by</p>
+                <h2 class="author-box-name">Sarah Chen</h2>
+                <p class="author-box-bio">Sarah leads investigative projects at Metro News. She has spent fifteen years editing long-form reporting on politics, public policy, and institutional accountability.</p>
+                <a href="#" class="text-link">More from Sarah <span>›</span></a>
+              </div>
+            </div>
+          </aside>
+
+          <nav class="post-nav" aria-label="Post navigation">
+            <a href="#" class="post-nav-item prev">
+              <span class="post-nav-label">Previous</span>
+              <span class="post-nav-title">From scattered facts to a story that sold</span>
+            </a>
+            <a href="#" class="post-nav-item next">
+              <span class="post-nav-label">Next</span>
+              <span class="post-nav-title">The story behind the story that went viral</span>
+            </a>
+          </nav>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+</article>
+
+<section class="related-posts">
+  <div class="related-posts-header">
+    <p class="section-label">Related stories</p>
+    <h2 class="section-title">Keep reading</h2>
+  </div>
+  <div class="story-grid">
+    <article class="story-card">
+      <div class="image-placeholder story-image"><div class="placeholder-icon placeholder-icon-sm"></div></div>
+      <div class="story-meta"><span>Business</span><span>6 min read</span></div>
+      <h3 class="story-title">From scattered facts to a story that sold</h3>
+      <p class="text-sm story-text">We took raw data and made it resonate with readers</p>
+      <a href="#" class="text-link">Read more <span>›</span></a>
+    </article>
+    <article class="story-card">
+      <div class="image-placeholder story-image"><div class="placeholder-icon placeholder-icon-sm"></div></div>
+      <div class="story-meta"><span>Culture</span><span>7 min read</span></div>
+      <h3 class="story-title">The story behind the story that went viral</h3>
+      <p class="text-sm story-text">Strategic reporting that connected with millions</p>
+      <a href="#" class="text-link">Read more <span>›</span></a>
+    </article>
+    <article class="story-card">
+      <div class="image-placeholder story-image"><div class="placeholder-icon placeholder-icon-sm"></div></div>
+      <div class="story-meta"><span>Investigations</span><span>9 min read</span></div>
+      <h3 class="story-title">What public records actually reveal</h3>
+      <p class="text-sm story-text">A practical guide to building stories from documents</p>
+      <a href="#" class="text-link">Read more <span>›</span></a>
+    </article>
+  </div>
+</section>
+
+<section class="cta">
+  <div class="cta-inner">
+    <h2 class="section-title">Ready to tell better stories?</h2>
+    <p class="section-kicker">Let’s talk about what you’re working on and how we can help you get there</p>
+    <div class="button-row cta-actions">
+      <a href="#" class="btn btn-primary">Start now</a>
+      <a href="homepage.html" class="btn">Back to home</a>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="homepage.html" class="footer-logo">Logo</a>
+        <p class="text-sm footer-copy">Get the latest news and updates delivered weekly.</p>
+        <form class="subscribe-form">
+          <input type="email" placeholder="Your email">
+          <button type="submit" class="btn">Subscribe</button>
+        </form>
+        <p class="footer-note">We respect your privacy and only send what matters.</p>
+      </div>
+      <nav class="footer-nav">
+        <h3>Company</h3>
+        <a href="#">About us</a><a href="#">Services</a><a href="#">Case studies</a><a href="#">Contact</a>
+      </nav>
+      <nav class="footer-nav">
+        <h3>Resources</h3>
+        <a href="#">Blog</a><a href="#">Guides</a><a href="#">Support</a><a href="#">FAQ</a>
+      </nav>
+      <nav class="footer-nav">
+        <h3>Follow us</h3>
+        <a href="#">LinkedIn</a><a href="#">X</a><a href="#">YouTube</a>
+      </nav>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2025 Chronicle Press. All rights reserved.</p>
+      <div class="footer-legal">
+        <a href="#">Privacy policy</a>
+        <a href="#">Terms of service</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+</main>
+</body>
+</html>
