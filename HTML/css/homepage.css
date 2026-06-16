@@ -1,14 +1,15 @@
 /* Homepage — page-specific sections */
 
-.hero{padding:96px 0 112px}
+.hero{padding:88px 0 96px;background:var(--bg-accent);border-bottom:1px solid var(--kahel-200)}
 .hero-grid{display:grid;grid-template-columns:minmax(300px,.85fr) 1.45fr 1fr;gap:40px;align-items:start}
 .hero-copy{min-height:620px;display:flex;flex-direction:column;justify-content:space-between}
-.hero-title{max-width:400px}
-.hero-text{max-width:340px}
+.hero-copy-top .section-label{margin-bottom:22px}
+.hero-title{max-width:480px}
+.hero-text{max-width:420px}
 .hero-text p{margin-bottom:28px}
-.hero-image-large{height:620px}
+.hero-image-large{height:620px;border-radius:var(--radius-md);overflow:hidden}
 .hero-images-stack{display:flex;flex-direction:column;gap:40px;height:620px}
-.hero-image-small{flex:1;min-height:0}
+.hero-image-small{flex:1;min-height:0;border-radius:var(--radius-md);overflow:hidden}
 
 .logos-section{border-top:1px solid var(--border-light);border-bottom:1px solid var(--border-light);padding:58px 0 70px;overflow:hidden;background:var(--bg-secondary)}
 .logos-title{text-align:center;font-size:15px;font-weight:600;margin-bottom:52px}
@@ -81,7 +82,7 @@
 
 @media(max-width:1024px){
   .hero-grid,.split-header,.services-header,.section-heading-split,.process-grid,.origin-grid{grid-template-columns:1fr}
-  .hero-copy{min-height:auto;gap:80px}
+  .hero-copy{min-height:auto;gap:48px}
   .hero-image-large,.origin-image{height:520px}
   .hero-images-stack{height:520px}
   .services-grid,.feature-grid-3{grid-template-columns:repeat(2,1fr)}
@@ -92,8 +93,10 @@
 
 @media(max-width:768px){
   .section,.services,.process,.advantage,.stories,.testimonial,.origin,.cta,.footer{padding:72px 0}
-  .hero{padding:72px 0 88px}
+  .hero{padding:64px 0 72px}
   .hero-grid,.services-grid,.feature-grid-3{grid-template-columns:1fr}
+  .hero-copy{gap:32px}
+  .hero-title,.hero-text{max-width:none}
   .section-title{font-size:44px}
   .hero-image-large,.hero-image-small,.story-image,.origin-image{height:360px}
   .hero-images-stack{height:auto;gap:24px}
