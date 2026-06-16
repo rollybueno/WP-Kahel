@@ -37,7 +37,7 @@ a:focus-visible,.btn:focus-visible,input:focus-visible{outline:2px solid var(--f
 .page{width:100%;overflow:hidden}
 .container{max-width:var(--container);margin:0 auto;padding:0 var(--gutter)}
 .section{padding:100px 0}
-.section-bordered{border-top:1px solid var(--orange)}
+.section-bordered{border-top:1px solid var(--kahel-500)}
 .section-label{font-size:13px;font-weight:700;letter-spacing:.06em;margin-bottom:22px;color:var(--text-brand);text-transform:uppercase}
 .section-title{font-size:clamp(44px,4vw,60px);line-height:1.05;letter-spacing:-.03em;font-weight:800;color:var(--text-primary)}
 .section-kicker,.text-sm{font-size:14px;line-height:1.5;letter-spacing:0;color:var(--text-muted)}
