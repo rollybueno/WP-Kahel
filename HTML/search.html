@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Search: investigation — Chronicle Press</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,700;0,9..144,800;1,9..144,700&family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/kahel.css">
+<link rel="stylesheet" href="css/search.css">
+</head>
+
+<body class="search search-results">
+
+<header class="site-header">
+  <div class="container">
+    <nav class="main-nav" aria-label="Main navigation">
+      <a href="homepage.html" class="brand-logo">Chronicle</a>
+
+      <input type="checkbox" id="nav-toggle" class="nav-toggle">
+      <label for="nav-toggle" class="nav-toggle-label" aria-label="Open menu">
+        <span></span><span></span><span></span>
+      </label>
+
+      <div class="nav-menu">
+        <div class="nav-item has-mega">
+          <a href="#" class="nav-link" aria-haspopup="true">Services</a>
+          <div class="mega-menu">
+            <div class="mega-menu-inner container">
+              <div class="mega-grid">
+                <div class="mega-intro">
+                  <p class="section-label">Services</p>
+                  <h3>Editorial support for stories that need to land clearly.</h3>
+                  <p>From planning to final polish, Chronicle Press helps shape sharper stories for publishers, newsrooms, and independent teams.</p>
+                </div>
+                <div class="mega-column">
+                  <h4>Editorial</h4>
+                  <a href="#" class="mega-link">Editorial strategy</a>
+                  <a href="#" class="mega-link">Story planning</a>
+                  <a href="#" class="mega-link">Content editing</a>
+                  <a href="#" class="mega-link">Narrative architecture</a>
+                </div>
+                <div class="mega-column">
+                  <h4>Research</h4>
+                  <a href="#" class="mega-link">Investigative research</a>
+                  <a href="#" class="mega-link">Fact checking</a>
+                  <a href="#" class="mega-link">Source review</a>
+                  <a href="#" class="mega-link">Reporting support</a>
+                </div>
+                <div class="mega-card">
+                  <p class="mega-card-label">Featured service</p>
+                  <h4>Deep editorial review</h4>
+                  <p>For long-form investigations, reports, and complex stories that need structure, clarity, and momentum.</p>
+                  <a href="#" class="text-link">Learn more <span>›</span></a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="nav-item has-mega">
+          <a href="#" class="nav-link" aria-haspopup="true">Work</a>
+          <div class="mega-menu">
+            <div class="mega-menu-inner container">
+              <div class="mega-grid mega-grid-simple">
+                <div class="mega-intro">
+                  <p class="section-label">Stories</p>
+                  <h3>Real work, real results.</h3>
+                  <p>Explore selected stories shaped through research, editing, and strategy.</p>
+                </div>
+                <div class="mega-column">
+                  <h4>Case studies</h4>
+                  <a href="#" class="mega-link">Politics</a>
+                  <a href="#" class="mega-link">Business</a>
+                  <a href="#" class="mega-link">Culture</a>
+                  <a href="#" class="mega-link">Investigations</a>
+                </div>
+                <div class="mega-column">
+                  <h4>Results</h4>
+                  <a href="#" class="mega-link">Reader engagement</a>
+                  <a href="#" class="mega-link">Publication growth</a>
+                  <a href="#" class="mega-link">Editorial clarity</a>
+                  <a href="#" class="mega-link">Audience strategy</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <a href="#" class="nav-link">Process</a>
+        <a href="#" class="nav-link">About</a>
+        <a href="#" class="nav-link">Contact</a>
+      </div>
+
+      <div class="nav-actions">
+        <a href="#" class="text-link">Log in</a>
+        <a href="#" class="btn btn-primary">Start now</a>
+      </div>
+    </nav>
+  </div>
+</header>
+
+
+<main class="page">
+
+<!-- Maps to search.php — search results -->
+
+<header class="search-header">
+  <div class="container">
+    <div class="search-header-inner">
+      <nav class="breadcrumb" aria-label="Breadcrumb">
+        <a href="homepage.html">Home</a>
+        <span>›</span>
+        <span aria-current="page">Search</span>
+      </nav>
+
+      <p class="section-label">Search</p>
+      <!-- printf( 'Results for %s', get_search_query() ) -->
+      <h1 class="search-title">Results for <em>investigation</em></h1>
+
+      <!-- get_search_form() -->
+      <form class="search-form" role="search" aria-label="Refine search">
+        <input type="search" name="s" value="investigation" placeholder="Search stories, topics, authors…" aria-label="Search">
+        <button type="submit" class="btn">Search</button>
+      </form>
+
+      <!-- $wp_query->found_posts -->
+      <p class="search-count">5 results found</p>
+    </div>
+  </div>
+</header>
+
+<section class="search-loop">
+  <div class="container">
+    <!-- if ( have_posts() ) : while ( have_posts() ) : the_post(); -->
+    <div class="story-grid">
+      <article class="story-card">
+        <div class="image-placeholder story-image"><div class="placeholder-icon placeholder-icon-sm"></div></div>
+        <div class="story-meta"><span>Politics</span><span>8 min read</span></div>
+        <h2 class="story-title"><a href="single.html">How one investigation changed the conversation</a></h2>
+        <p class="text-sm story-text">A deep dive that moved readers and shifted perspective</p>
+        <a href="single.html" class="text-link">Read more <span>›</span></a>
+      </article>
+      <article class="story-card">
+        <div class="image-placeholder story-image"><div class="placeholder-icon placeholder-icon-sm"></div></div>
+        <div class="story-meta"><span>Investigations</span><span>9 min read</span></div>
+        <h2 class="story-title"><a href="#">The hearing that reset the narrative</a></h2>
+        <p class="text-sm story-text">How structured reporting shaped committee testimony</p>
+        <a href="#" class="text-link">Read more <span>›</span></a>
+      </article>
+      <article class="story-card">
+        <div class="image-placeholder story-image"><div class="placeholder-icon placeholder-icon-sm"></div></div>
+        <div class="story-meta"><span>Politics</span><span>10 min read</span></div>
+        <h2 class="story-title"><a href="#">When local reporting reaches national impact</a></h2>
+        <p class="text-sm story-text">A regional investigation that extended into wider coverage</p>
+        <a href="#" class="text-link">Read more <span>›</span></a>
+      </article>
+      <article class="story-card">
+        <div class="image-placeholder story-image"><div class="placeholder-icon placeholder-icon-sm"></div></div>
+        <div class="story-meta"><span>Research</span><span>6 min read</span></div>
+        <h2 class="story-title"><a href="#">What public records actually reveal</a></h2>
+        <p class="text-sm story-text">A practical guide to building stories from documents</p>
+        <a href="#" class="text-link">Read more <span>›</span></a>
+      </article>
+      <article class="story-card">
+        <div class="image-placeholder story-image"><div class="placeholder-icon placeholder-icon-sm"></div></div>
+        <div class="story-meta"><span>Culture</span><span>7 min read</span></div>
+        <h2 class="story-title"><a href="#">The story behind the story that went viral</a></h2>
+        <p class="text-sm story-text">Strategic reporting that connected with millions</p>
+        <a href="#" class="text-link">Read more <span>›</span></a>
+      </article>
+    </div>
+    <!-- endwhile; else : -->
+    <!--
+    <div class="search-empty">
+      <h2 class="search-empty-title">No stories matched your search</h2>
+      <p class="search-empty-text">Try different keywords, check your spelling, or browse our latest stories from the homepage.</p>
+      <div class="button-row">
+        <a href="homepage.html" class="btn btn-primary">Back to home</a>
+        <a href="archive.html" class="btn">Browse stories</a>
+      </div>
+    </div>
+    -->
+    <!-- endif -->
+
+    <!-- the_posts_pagination() -->
+    <nav class="search-pagination" aria-label="Search results pagination">
+      <span class="current" aria-current="page">1</span>
+    </nav>
+  </div>
+</section>
+
+<section class="cta search-cta">
+  <div class="cta-inner">
+    <h2 class="section-title">Ready to tell better stories?</h2>
+    <p class="section-kicker">Let’s talk about what you’re working on and how we can help you get there</p>
+    <div class="button-row cta-actions">
+      <a href="#" class="btn btn-primary">Start now</a>
+      <a href="homepage.html" class="btn">Back to home</a>
+    </div>
+  </div>
+</section>
+
+<footer class="footer section-bordered">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="homepage.html" class="footer-logo">Logo</a>
+        <p class="text-sm footer-copy">Get the latest news and updates delivered weekly.</p>
+        <form class="subscribe-form">
+          <input type="email" placeholder="Your email">
+          <button type="submit" class="btn">Subscribe</button>
+        </form>
+        <p class="footer-note">We respect your privacy and only send what matters.</p>
+      </div>
+
+      <nav class="footer-nav">
+        <h3>Company</h3>
+        <a href="#">About us</a><a href="#">Services</a><a href="#">Case studies</a><a href="#">Contact</a><a href="#">Careers</a>
+      </nav>
+
+      <nav class="footer-nav">
+        <h3>Resources</h3>
+        <a href="#">Blog</a><a href="#">Guides</a><a href="#">Templates</a><a href="#">Support</a><a href="#">FAQ</a>
+      </nav>
+
+      <nav class="footer-nav footer-social">
+        <h3>Follow us</h3>
+        <a href="#"><span class="social-icon">f</span><span>Facebook</span></a>
+        <a href="#"><span class="social-icon">◎</span><span>Instagram</span></a>
+        <a href="#"><span class="social-icon">𝕏</span><span>X</span></a>
+        <a href="#"><span class="social-icon">in</span><span>LinkedIn</span></a>
+        <a href="#"><span class="social-icon">▶</span><span>YouTube</span></a>
+      </nav>
+    </div>
+
+    <div class="footer-bottom">
+      <p>© 2025 Chronicle Press. All rights reserved.</p>
+      <div class="footer-legal">
+        <a href="#">Privacy policy</a>
+        <a href="#">Terms of service</a>
+        <a href="#">Cookies settings</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+</main>
+</body>
+</html>
