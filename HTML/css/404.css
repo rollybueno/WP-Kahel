@@ -10,7 +10,7 @@
 .not-found-search{max-width:480px;margin:0 auto 48px;display:flex;gap:12px}
 .not-found-search input{flex:1;height:48px;border:1px solid var(--border-default);border-radius:var(--radius-md);padding:0 16px;font-size:15px;font-family:var(--font-body);color:var(--text-primary);background:var(--bg-primary);transition:border-color var(--duration-fast) var(--ease-out),box-shadow var(--duration-fast) var(--ease-out)}
 .not-found-search input::placeholder{color:var(--text-muted)}
-.not-found-search input:focus{border-color:var(--kahel-700);outline:none;box-shadow:0 0 0 3px rgba(234,88,12,.15)}
+.not-found-search input:focus{border-color:var(--kahel-700);outline:none;box-shadow:var(--focus-glow)}
 .not-found-search .btn{flex-shrink:0}
 
 .not-found-links{border-top:1px solid var(--kahel-200);padding-top:36px}
