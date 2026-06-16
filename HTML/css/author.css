@@ -1,0 +1,46 @@
+/* WordPress author.php — author archive */
+
+.author-header{padding:56px 0 48px;background:var(--bg-accent);border-bottom:1px solid var(--border-light)}
+.author-header-inner{max-width:var(--content-width);margin:0 auto}
+.author-header .breadcrumb{display:flex;align-items:center;flex-wrap:wrap;gap:8px;font-size:13px;font-weight:600;color:var(--text-muted);margin-bottom:32px}
+.author-header .breadcrumb a{color:var(--kahel-700);transition:color var(--duration-fast) var(--ease-out)}
+.author-header .breadcrumb a:hover{color:var(--kahel-800)}
+.author-header .breadcrumb span{opacity:.45}
+
+.author-header-grid{display:grid;grid-template-columns:auto 1fr;gap:40px;align-items:start}
+.author-header-avatar{width:120px;height:120px;border-radius:50%;background:var(--kahel-200);flex-shrink:0;display:flex;align-items:center;justify-content:center;border:3px solid var(--bg-primary);box-shadow:var(--shadow-md)}
+.author-header-avatar span{width:16px;height:16px;border:2px solid var(--kahel-700);border-radius:2px}
+.author-header-content{max-width:640px}
+.author-header .section-label{margin-bottom:18px}
+.author-header .archive-title{font-size:clamp(40px,4.5vw,60px);line-height:1.06;letter-spacing:-.03em;font-weight:800;color:var(--text-primary);margin-bottom:12px}
+.author-header-role{font-size:16px;font-weight:600;color:var(--text-brand);margin-bottom:20px}
+.author-header .archive-description{font-size:18px;line-height:1.6;color:var(--text-secondary);margin-bottom:20px}
+.author-header .archive-count{font-size:14px;font-weight:600;color:var(--text-muted)}
+
+.author-loop{padding:72px 0 88px}
+.author-loop .story-grid{margin-bottom:64px}
+.author-loop .story-image{height:220px}
+.author-loop .story-title{font-family:var(--font-heading)}
+
+.author-pagination{display:flex;align-items:center;justify-content:center;flex-wrap:wrap;gap:8px}
+.author-pagination a,.author-pagination span{min-width:44px;height:44px;padding:0 14px;border:1px solid var(--border-light);border-radius:var(--radius-md);display:inline-flex;align-items:center;justify-content:center;font-size:14px;font-weight:600;color:var(--text-primary);background:var(--bg-primary);transition:background var(--duration-fast) var(--ease-out),border-color var(--duration-fast) var(--ease-out),color var(--duration-fast) var(--ease-out),box-shadow var(--duration-normal) var(--ease-out),transform var(--duration-fast) var(--ease-out)}
+.author-pagination a:hover{background:var(--kahel-50);border-color:var(--kahel-200);color:var(--kahel-800);box-shadow:var(--shadow-sm);transform:translateY(-1px)}
+.author-pagination .current{background:var(--kahel-700);border-color:var(--kahel-700);color:var(--text-inverse);box-shadow:var(--shadow-primary)}
+.author-pagination .dots{border-color:transparent;background:transparent;min-width:auto;padding:0 4px;color:var(--text-muted)}
+.author-pagination .prev,.author-pagination .next{min-width:auto;padding:0 18px}
+
+.author-cta{padding-bottom:88px}
+
+@media(max-width:768px){
+  .author-header{padding:40px 0 36px}
+  .author-header-grid{grid-template-columns:1fr;gap:24px}
+  .author-header-avatar{width:96px;height:96px}
+  .author-header .archive-description{font-size:17px}
+  .author-loop{padding:56px 0 72px}
+  .author-loop .story-grid{margin-bottom:48px}
+}
+
+@media(prefers-reduced-motion:reduce){
+  .author-pagination a{transition:none}
+  .author-pagination a:hover{transform:none}
+}
