@@ -96,6 +96,21 @@ a:focus-visible,.btn:focus-visible,input:focus-visible{outline:2px solid var(--f
 .site-header .btn-primary:hover{background:var(--stone-600);border-color:var(--stone-600);color:var(--text-inverse);box-shadow:0 8px 24px rgba(28,25,23,.2)}
 .nav-toggle,.nav-toggle-label{display:none}
 
+/* Block theme header — mirror wireframe .container + .main-nav */
+.site-header .container{width:100%;max-width:var(--container);margin:0 auto;padding:0 var(--gutter)}
+.site-header .main-nav{width:100%;min-height:82px;gap:32px}
+.site-header .main-nav>.wp-block-site-logo{flex-shrink:0}
+.site-header .main-nav>.wp-block-navigation{flex:1;justify-content:center}
+.site-header .main-nav>.wp-block-buttons{flex-shrink:0;margin:0}
+.site-header .wp-block-navigation .wp-block-navigation-item__content{font-size:14px;font-weight:600;color:var(--text-primary)}
+.site-header .wp-block-navigation .wp-block-navigation__responsive-container-open{align-items:center;justify-content:center;width:42px;height:42px;border:1px solid var(--text-primary);border-radius:var(--radius-md);padding:0}
+.site-header .wp-block-navigation .wp-block-navigation__responsive-container-open svg{fill:var(--text-primary)}
+.site-header .wp-block-buttons .wp-block-button__link{min-height:48px;padding:0 22px;font-size:14px;font-weight:600}
+.site-header .wp-block-button.is-style-outline .wp-block-button__link{background:transparent;border-color:var(--text-primary);color:var(--text-primary);box-shadow:none}
+.site-header .wp-block-button.is-style-outline .wp-block-button__link:hover{background:rgba(28,25,23,.06);border-color:var(--text-primary);color:var(--text-primary)}
+.site-header .wp-block-button:not(.is-style-outline) .wp-block-button__link{background:var(--text-primary);border-color:var(--text-primary);color:var(--text-inverse)}
+.site-header .wp-block-button:not(.is-style-outline) .wp-block-button__link:hover{background:var(--stone-600);border-color:var(--stone-600);color:var(--text-inverse)}
+
 .mega-menu{position:fixed;left:0;right:0;top:82px;width:auto;background:var(--bg-primary);border-top:2px solid var(--orange-dark);border-bottom:1px solid var(--border-light);padding:0;opacity:0;visibility:hidden;transform:translateY(8px);transition:opacity var(--duration-normal) var(--ease-out),visibility var(--duration-normal) var(--ease-out),transform var(--duration-normal) var(--ease-out);box-shadow:var(--shadow-md);z-index:90}
 .has-mega:hover .mega-menu,.has-mega:focus-within .mega-menu{opacity:1;visibility:visible;transform:translateY(0)}
 .mega-menu-inner{padding:48px 0}
@@ -177,6 +192,9 @@ a:focus-visible,.btn:focus-visible,input:focus-visible{outline:2px solid var(--f
 @media(max-width:1024px){
   :root{--gutter:40px}
   .main-nav{height:76px}
+  .site-header .main-nav{min-height:76px}
+  .site-header .main-nav>.wp-block-navigation{flex:0 1 auto;justify-content:flex-end}
+  .site-header .nav-actions{display:none}
   .mega-menu{top:76px}
   .nav-toggle-label{display:flex;width:42px;height:42px;border:1px solid var(--text-primary);border-radius:var(--radius-md);align-items:center;justify-content:center;flex-direction:column;gap:5px;cursor:pointer;margin-left:auto;box-shadow:none;transition:background var(--duration-fast) var(--ease-out),box-shadow var(--duration-normal) var(--ease-out),transform var(--duration-fast) var(--ease-out)}
   .nav-toggle-label:hover{background:rgba(28,25,23,.06);box-shadow:0 4px 14px rgba(28,25,23,.1);transform:translateY(-1px)}
