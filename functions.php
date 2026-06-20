@@ -156,60 +156,6 @@ function kahel_asset_version( $relative_path ) {
 }
 
 /**
- * Enqueue front-end styles and scripts.
- *
- * Styles:
- * - `assets/main.css` — combined wireframe CSS (imports self-hosted fonts).
- *
- * Scripts:
- * - `assets/includes.js` — partial loader and small UI helpers from wireframes.
- *
- * Google Fonts are not enqueued; Fraunces and Source Sans 3 are self-hosted
- * under `assets/fonts/` and loaded via `@import` inside main.css.
- *
- * @since 1.0.0
- *
- * @return void
- */
-function kahel_enqueue_assets() {
-	wp_enqueue_style(
-		'kahel-main',
-		KAHEL_URI . 'assets/main.css',
-		array(),
-		kahel_asset_version( 'assets/main.css' )
-	);
-
-	wp_enqueue_script(
-		'kahel-includes',
-		KAHEL_URI . 'assets/includes.js',
-		array(),
-		kahel_asset_version( 'assets/includes.js' ),
-		array(
-			'strategy'  => 'defer',
-			'in_footer' => true,
-		)
-	);
-}
-add_action( 'wp_enqueue_scripts', 'kahel_enqueue_assets' );
-
-/**
- * Enqueue block editor styles so admin previews match the front end.
- *
- * @since 1.0.0
- *
- * @return void
- */
-function kahel_enqueue_block_editor_assets() {
-	wp_enqueue_style(
-		'kahel-editor',
-		KAHEL_URI . 'assets/main.css',
-		array(),
-		kahel_asset_version( 'assets/main.css' )
-	);
-}
-add_action( 'enqueue_block_editor_assets', 'kahel_enqueue_block_editor_assets' );
-
-/**
  * Add resource hints for performance (optional preconnect targets).
  *
  * Self-hosted fonts need no third-party hints. Hook remains for future CDN use.
