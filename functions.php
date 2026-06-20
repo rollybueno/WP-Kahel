@@ -19,7 +19,7 @@ defined( 'ABSPATH' ) || exit;
  *
  * @since 1.0.0
  */
-define( 'KAHEL_VERSION', '1.0.4' );
+define( 'KAHEL_VERSION', '1.0.5' );
 
 /**
  * Absolute path to the theme directory (trailing slash).
