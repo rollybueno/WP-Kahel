@@ -1,0 +1,101 @@
+<?php
+/**
+ * Title: Process
+ * Slug: kahel/process
+ * Categories: featured, text
+ * Description: Two-column process section with intro copy and a four-step timeline.
+ *
+ * @package Kahel
+ * @since   1.0.0
+ */
+?>
+<!-- wp:group {"tagName":"section","metadata":{"name":"Process","patternName":"kahel/process"},"align":"full","className":"process section-bordered","style":{"spacing":{"padding":{"top":"96px","bottom":"120px","left":"var:preset|spacing|xl","right":"var:preset|spacing|xl"}}},"layout":{"type":"constrained","contentSize":"1440px"}} -->
+<section class="wp-block-group alignfull process section-bordered" style="padding-top:96px;padding-right:var(--wp--preset--spacing--xl);padding-bottom:120px;padding-left:var(--wp--preset--spacing--xl)"><!-- wp:group {"metadata":{"name":"Process grid"},"className":"process-grid","layout":{"type":"default"}} -->
+<div class="wp-block-group process-grid"><!-- wp:group {"metadata":{"name":"Process intro"},"className":"process-intro","layout":{"type":"default"}} -->
+<div class="wp-block-group process-intro"><!-- wp:paragraph {"className":"section-label","fontSize":"small"} -->
+<p class="section-label has-small-font-size">Process</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading {"level":2,"className":"section-title"} -->
+<h2 class="wp-block-heading section-title">You share your angle and audience</h2>
+<!-- /wp:heading -->
+
+<!-- wp:group {"className":"button-row","layout":{"type":"flex","flexWrap":"wrap","verticalAlignment":"center"},"style":{"spacing":{"blockGap":"12px"}}} -->
+<div class="wp-block-group button-row"><!-- wp:buttons {"style":{"spacing":{"blockGap":"12px"}},"layout":{"type":"flex","flexWrap":"wrap"}} -->
+<div class="wp-block-buttons"><!-- wp:button {"className":"is-style-outline"} -->
+<div class="wp-block-button is-style-outline"><a class="wp-block-button__link wp-element-button">Start</a></div>
+<!-- /wp:button --></div>
+<!-- /wp:buttons -->
+
+<!-- wp:html -->
+<a href="#" class="text-link">Explore <span aria-hidden="true">›</span></a>
+<!-- /wp:html --></div>
+<!-- /wp:group --></div>
+<!-- /wp:group -->
+
+<!-- wp:group {"metadata":{"name":"Timeline"},"className":"timeline","layout":{"type":"default"}} -->
+<div class="wp-block-group timeline"><!-- wp:group {"className":"timeline-item","layout":{"type":"default"}} -->
+<div class="wp-block-group timeline-item"><!-- wp:html -->
+<div class="timeline-marker" aria-hidden="true"></div>
+<!-- /wp:html -->
+
+<!-- wp:group {"layout":{"type":"default"}} -->
+<div class="wp-block-group"><!-- wp:heading {"level":3,"className":"timeline-title"} -->
+<h3 class="wp-block-heading timeline-title">Subheading one</h3>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph {"className":"timeline-text text-sm","fontSize":"small"} -->
+<p class="timeline-text text-sm has-small-font-size">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique.</p>
+<!-- /wp:paragraph --></div>
+<!-- /wp:group --></div>
+<!-- /wp:group -->
+
+<!-- wp:group {"className":"timeline-item","layout":{"type":"default"}} -->
+<div class="wp-block-group timeline-item"><!-- wp:html -->
+<div class="timeline-marker" aria-hidden="true"></div>
+<!-- /wp:html -->
+
+<!-- wp:group {"layout":{"type":"default"}} -->
+<div class="wp-block-group"><!-- wp:heading {"level":3,"className":"timeline-title"} -->
+<h3 class="wp-block-heading timeline-title">Subheading two</h3>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph {"className":"timeline-text text-sm","fontSize":"small"} -->
+<p class="timeline-text text-sm has-small-font-size">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique.</p>
+<!-- /wp:paragraph --></div>
+<!-- /wp:group --></div>
+<!-- /wp:group -->
+
+<!-- wp:group {"className":"timeline-item","layout":{"type":"default"}} -->
+<div class="wp-block-group timeline-item"><!-- wp:html -->
+<div class="timeline-marker" aria-hidden="true"></div>
+<!-- /wp:html -->
+
+<!-- wp:group {"layout":{"type":"default"}} -->
+<div class="wp-block-group"><!-- wp:heading {"level":3,"className":"timeline-title"} -->
+<h3 class="wp-block-heading timeline-title">Subheading three</h3>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph {"className":"timeline-text text-sm","fontSize":"small"} -->
+<p class="timeline-text text-sm has-small-font-size">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique.</p>
+<!-- /wp:paragraph --></div>
+<!-- /wp:group --></div>
+<!-- /wp:group -->
+
+<!-- wp:group {"className":"timeline-item","layout":{"type":"default"}} -->
+<div class="wp-block-group timeline-item"><!-- wp:html -->
+<div class="timeline-marker" aria-hidden="true"></div>
+<!-- /wp:html -->
+
+<!-- wp:group {"layout":{"type":"default"}} -->
+<div class="wp-block-group"><!-- wp:heading {"level":3,"className":"timeline-title"} -->
+<h3 class="wp-block-heading timeline-title">Subheading four</h3>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph {"className":"timeline-text text-sm","fontSize":"small"} -->
+<p class="timeline-text text-sm has-small-font-size">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique.</p>
+<!-- /wp:paragraph --></div>
+<!-- /wp:group --></div>
+<!-- /wp:group --></div>
+<!-- /wp:group --></div>
+<!-- /wp:group --></section>
