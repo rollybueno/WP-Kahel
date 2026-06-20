@@ -39,23 +39,23 @@
 <!-- /wp:group --></div>
 <!-- /wp:group -->
 
-<!-- wp:group {"metadata":{"name":"Hero image large"},"className":"image-placeholder hero-image-large","layout":{"type":"flex","flexWrap":"nowrap","justifyContent":"center","verticalAlignment":"center"}} -->
-<div class="wp-block-group image-placeholder hero-image-large"><!-- wp:group {"className":"placeholder-icon","layout":{"type":"default"}} -->
-<div class="wp-block-group placeholder-icon"></div>
-<!-- /wp:group --></div>
+<!-- wp:group {"metadata":{"name":"Hero image large"},"className":"hero-image-large","layout":{"type":"default"}} -->
+<div class="wp-block-group hero-image-large"><!-- wp:image {"sizeSlug":"large","linkDestination":"none"} -->
+<figure class="wp-block-image size-large"><img alt="" /></figure>
+<!-- /wp:image --></div>
 <!-- /wp:group -->
 
 <!-- wp:group {"metadata":{"name":"Hero images stack"},"className":"hero-images-stack","style":{"spacing":{"blockGap":"40px"}},"layout":{"type":"flex","orientation":"vertical","flexWrap":"nowrap"}} -->
-<div class="wp-block-group hero-images-stack"><!-- wp:group {"className":"image-placeholder hero-image-small","layout":{"type":"flex","flexWrap":"nowrap","justifyContent":"center","verticalAlignment":"center"}} -->
-<div class="wp-block-group image-placeholder hero-image-small"><!-- wp:group {"className":"placeholder-icon placeholder-icon-sm","layout":{"type":"default"}} -->
-<div class="wp-block-group placeholder-icon placeholder-icon-sm"></div>
-<!-- /wp:group --></div>
+<div class="wp-block-group hero-images-stack"><!-- wp:group {"className":"hero-image-small","layout":{"type":"default"}} -->
+<div class="wp-block-group hero-image-small"><!-- wp:image {"sizeSlug":"large","linkDestination":"none"} -->
+<figure class="wp-block-image size-large"><img alt="" /></figure>
+<!-- /wp:image --></div>
 <!-- /wp:group -->
 
-<!-- wp:group {"className":"image-placeholder hero-image-small","layout":{"type":"flex","flexWrap":"nowrap","justifyContent":"center","verticalAlignment":"center"}} -->
-<div class="wp-block-group image-placeholder hero-image-small"><!-- wp:group {"className":"placeholder-icon placeholder-icon-sm","layout":{"type":"default"}} -->
-<div class="wp-block-group placeholder-icon placeholder-icon-sm"></div>
-<!-- /wp:group --></div>
+<!-- wp:group {"className":"hero-image-small","layout":{"type":"default"}} -->
+<div class="wp-block-group hero-image-small"><!-- wp:image {"sizeSlug":"large","linkDestination":"none"} -->
+<figure class="wp-block-image size-large"><img alt="" /></figure>
+<!-- /wp:image --></div>
 <!-- /wp:group --></div>
 <!-- /wp:group --></div>
 <!-- /wp:group --></section>
