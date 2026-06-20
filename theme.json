@@ -11,11 +11,6 @@
 			"area": "footer",
 			"name": "footer",
 			"title": "Footer"
-		},
-		{
-			"area": "uncategorized",
-			"name": "hero",
-			"title": "Hero"
 		}
 	],
 	"settings": {
