@@ -30,6 +30,12 @@
 <!-- wp:html -->
 <a href="#" class="text-link">Explore <span aria-hidden="true">›</span></a>
 <!-- /wp:html --></div>
+<!-- /wp:group -->
+
+<!-- wp:group {"metadata":{"name":"Process image"},"className":"process-image","layout":{"type":"default"}} -->
+<div class="wp-block-group process-image"><!-- wp:image {"sizeSlug":"large","linkDestination":"none"} -->
+<figure class="wp-block-image size-large"><img alt="" /></figure>
+<!-- /wp:image --></div>
 <!-- /wp:group --></div>
 <!-- /wp:group -->
 
