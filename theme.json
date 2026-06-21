@@ -485,7 +485,7 @@
 			}
 		},
 		"spacing": {
-			"blockGap": "var(--wp--preset--spacing--md)",
+			"blockGap": "0",
 			"padding": {
 				"top": "0",
 				"bottom": "0"

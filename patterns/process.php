@@ -9,8 +9,8 @@
  * @since   1.0.0
  */
 ?>
-<!-- wp:group {"tagName":"section","metadata":{"name":"Process","patternName":"kahel/process"},"align":"full","className":"process section-bordered","style":{"spacing":{"padding":{"top":"96px","bottom":"120px","left":"var:preset|spacing|xl","right":"var:preset|spacing|xl"}}},"layout":{"type":"constrained","contentSize":"1440px"}} -->
-<section class="wp-block-group alignfull process section-bordered" style="padding-top:96px;padding-right:var(--wp--preset--spacing--xl);padding-bottom:120px;padding-left:var(--wp--preset--spacing--xl)"><!-- wp:group {"metadata":{"name":"Process grid"},"className":"process-grid","layout":{"type":"default"}} -->
+<!-- wp:group {"tagName":"section","metadata":{"name":"Process","patternName":"kahel/process"},"align":"full","className":"process","style":{"spacing":{"padding":{"top":"96px","bottom":"120px","left":"var:preset|spacing|xl","right":"var:preset|spacing|xl"}}},"layout":{"type":"constrained","contentSize":"1440px"}} -->
+<section class="wp-block-group alignfull process" style="padding-top:96px;padding-right:var(--wp--preset--spacing--xl);padding-bottom:120px;padding-left:var(--wp--preset--spacing--xl)"><!-- wp:group {"metadata":{"name":"Process grid"},"className":"process-grid","layout":{"type":"default"}} -->
 <div class="wp-block-group process-grid"><!-- wp:group {"metadata":{"name":"Process intro"},"className":"process-intro","layout":{"type":"default"}} -->
 <div class="wp-block-group process-intro"><!-- wp:paragraph {"className":"section-label","fontSize":"small"} -->
 <p class="section-label has-small-font-size">Process</p>

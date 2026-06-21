@@ -9,8 +9,8 @@
  * @since   1.0.0
  */
 ?>
-<!-- wp:group {"tagName":"section","metadata":{"name":"Testimonial","patternName":"kahel/testimonial"},"align":"full","className":"testimonial section-bordered","backgroundColor":"background-accent","style":{"spacing":{"padding":{"top":"106px","bottom":"108px","left":"var:preset|spacing|xl","right":"var:preset|spacing|xl"}}},"layout":{"type":"constrained","contentSize":"1440px"}} -->
-<section class="wp-block-group alignfull testimonial section-bordered has-background-accent-background-color has-background" style="padding-top:106px;padding-right:var(--wp--preset--spacing--xl);padding-bottom:108px;padding-left:var(--wp--preset--spacing--xl)"><!-- wp:group {"metadata":{"name":"Testimonial inner"},"className":"testimonial-inner","layout":{"type":"default"}} -->
+<!-- wp:group {"tagName":"section","metadata":{"name":"Testimonial","patternName":"kahel/testimonial"},"align":"full","className":"testimonial","backgroundColor":"background-accent","style":{"spacing":{"padding":{"top":"106px","bottom":"108px","left":"var:preset|spacing|xl","right":"var:preset|spacing|xl"}}},"layout":{"type":"constrained","contentSize":"1440px"}} -->
+<section class="wp-block-group alignfull testimonial has-background-accent-background-color has-background" style="padding-top:106px;padding-right:var(--wp--preset--spacing--xl);padding-bottom:108px;padding-left:var(--wp--preset--spacing--xl)"><!-- wp:group {"metadata":{"name":"Testimonial inner"},"className":"testimonial-inner","layout":{"type":"default"}} -->
 <div class="wp-block-group testimonial-inner"><!-- wp:group {"className":"logo-row testimonial-logo","layout":{"type":"flex","flexWrap":"nowrap","justifyContent":"center"},"style":{"spacing":{"blockGap":"10px"}}} -->
 <div class="wp-block-group logo-row testimonial-logo"><!-- wp:group {"className":"logo-item","layout":{"type":"flex","flexWrap":"nowrap","verticalAlignment":"center"},"style":{"spacing":{"blockGap":"10px"}}} -->
 <div class="wp-block-group logo-item"><!-- wp:html -->

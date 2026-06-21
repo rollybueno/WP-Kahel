@@ -9,8 +9,8 @@
  * @since   1.0.0
  */
 ?>
-<!-- wp:group {"tagName":"section","metadata":{"name":"Advantage","patternName":"kahel/advantage"},"align":"full","className":"advantage section-bordered","style":{"spacing":{"padding":{"top":"96px","bottom":"94px","left":"var:preset|spacing|xl","right":"var:preset|spacing|xl"}}},"layout":{"type":"constrained","contentSize":"1440px"}} -->
-<section class="wp-block-group alignfull advantage section-bordered" style="padding-top:96px;padding-right:var(--wp--preset--spacing--xl);padding-bottom:94px;padding-left:var(--wp--preset--spacing--xl)"><!-- wp:group {"metadata":{"name":"Advantage heading"},"className":"section-heading section-heading-split","layout":{"type":"default"}} -->
+<!-- wp:group {"tagName":"section","metadata":{"name":"Advantage","patternName":"kahel/advantage"},"align":"full","className":"advantage","style":{"spacing":{"padding":{"top":"96px","bottom":"94px","left":"var:preset|spacing|xl","right":"var:preset|spacing|xl"}}},"layout":{"type":"constrained","contentSize":"1440px"}} -->
+<section class="wp-block-group alignfull advantage" style="padding-top:96px;padding-right:var(--wp--preset--spacing--xl);padding-bottom:94px;padding-left:var(--wp--preset--spacing--xl)"><!-- wp:group {"metadata":{"name":"Advantage heading"},"className":"section-heading section-heading-split","layout":{"type":"default"}} -->
 <div class="wp-block-group section-heading section-heading-split"><!-- wp:group {"layout":{"type":"default"}} -->
 <div class="wp-block-group"><!-- wp:paragraph {"className":"section-label","fontSize":"small"} -->
 <p class="section-label has-small-font-size">Advantage</p>
