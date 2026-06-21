@@ -28,32 +28,32 @@
 
 <!-- wp:group {"metadata":{"name":"Feature grid"},"className":"feature-grid feature-grid-3","layout":{"type":"default"}} -->
 <div class="wp-block-group feature-grid feature-grid-3"><!-- wp:group {"tagName":"article","className":"feature-card","layout":{"type":"default"}} -->
-<article class="wp-block-group feature-card"><!-- wp:heading {"level":3,"className":"feature-title"} -->
-<h3 class="wp-block-heading feature-title">Reporting that goes deeper than the surface</h3>
+<article class="wp-block-group feature-card"><!-- wp:heading {"level":3} -->
+<h3 class="wp-block-heading">Reporting that goes deeper than the surface</h3>
 <!-- /wp:heading -->
 
-<!-- wp:paragraph {"className":"feature-text text-sm","fontSize":"small"} -->
-<p class="feature-text text-sm has-small-font-size">We verify, cross-check, and dig until the real story emerges</p>
+<!-- wp:paragraph {"className":"feature-text text-sm","fontSize":"medium"} -->
+<p class="feature-text text-sm has-medium-font-size">We verify, cross-check, and dig until the real story emerges</p>
 <!-- /wp:paragraph --></article>
 <!-- /wp:group -->
 
 <!-- wp:group {"tagName":"article","className":"feature-card","layout":{"type":"default"}} -->
-<article class="wp-block-group feature-card"><!-- wp:heading {"level":3,"className":"feature-title"} -->
-<h3 class="wp-block-heading feature-title">Writing that readers actually finish</h3>
+<article class="wp-block-group feature-card"><!-- wp:heading {"level":3} -->
+<h3 class="wp-block-heading">Writing that readers actually finish</h3>
 <!-- /wp:heading -->
 
-<!-- wp:paragraph {"className":"feature-text text-sm","fontSize":"small"} -->
-<p class="feature-text text-sm has-small-font-size">Every paragraph pulls forward. No filler, no waste, just momentum</p>
+<!-- wp:paragraph {"className":"feature-text text-sm","fontSize":"medium"} -->
+<p class="feature-text text-sm has-medium-font-size">Every paragraph pulls forward. No filler, no waste, just momentum</p>
 <!-- /wp:paragraph --></article>
 <!-- /wp:group -->
 
 <!-- wp:group {"tagName":"article","className":"feature-card","layout":{"type":"default"}} -->
-<article class="wp-block-group feature-card"><!-- wp:heading {"level":3,"className":"feature-title"} -->
-<h3 class="wp-block-heading feature-title">Strategy that matches your audience</h3>
+<article class="wp-block-group feature-card"><!-- wp:heading {"level":3} -->
+<h3 class="wp-block-heading">Strategy that matches your audience</h3>
 <!-- /wp:heading -->
 
-<!-- wp:paragraph {"className":"feature-text text-sm","fontSize":"small"} -->
-<p class="feature-text text-sm has-small-font-size">We know who reads what and why they stay or leave</p>
+<!-- wp:paragraph {"className":"feature-text text-sm","fontSize":"medium"} -->
+<p class="feature-text text-sm has-medium-font-size">We know who reads what and why they stay or leave</p>
 <!-- /wp:paragraph --></article>
 <!-- /wp:group --></div>
 <!-- /wp:group -->

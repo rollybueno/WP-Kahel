@@ -40,12 +40,12 @@
 <!-- /wp:html -->
 
 <!-- wp:group {"layout":{"type":"default"}} -->
-<div class="wp-block-group"><!-- wp:heading {"level":3,"className":"timeline-title"} -->
-<h3 class="wp-block-heading timeline-title">Subheading one</h3>
+<div class="wp-block-group"><!-- wp:heading {"level":3} -->
+<h3 class="wp-block-heading">Subheading one</h3>
 <!-- /wp:heading -->
 
-<!-- wp:paragraph {"className":"timeline-text text-sm","fontSize":"small"} -->
-<p class="timeline-text text-sm has-small-font-size">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique.</p>
+<!-- wp:paragraph {"className":"timeline-text text-sm","fontSize":"medium"} -->
+<p class="timeline-text text-sm has-medium-font-size">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique.</p>
 <!-- /wp:paragraph --></div>
 <!-- /wp:group --></div>
 <!-- /wp:group -->
@@ -56,12 +56,12 @@
 <!-- /wp:html -->
 
 <!-- wp:group {"layout":{"type":"default"}} -->
-<div class="wp-block-group"><!-- wp:heading {"level":3,"className":"timeline-title"} -->
-<h3 class="wp-block-heading timeline-title">Subheading two</h3>
+<div class="wp-block-group"><!-- wp:heading {"level":3} -->
+<h3 class="wp-block-heading">Subheading two</h3>
 <!-- /wp:heading -->
 
-<!-- wp:paragraph {"className":"timeline-text text-sm","fontSize":"small"} -->
-<p class="timeline-text text-sm has-small-font-size">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique.</p>
+<!-- wp:paragraph {"className":"timeline-text text-sm","fontSize":"medium"} -->
+<p class="timeline-text text-sm has-medium-font-size">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique.</p>
 <!-- /wp:paragraph --></div>
 <!-- /wp:group --></div>
 <!-- /wp:group -->
@@ -72,12 +72,12 @@
 <!-- /wp:html -->
 
 <!-- wp:group {"layout":{"type":"default"}} -->
-<div class="wp-block-group"><!-- wp:heading {"level":3,"className":"timeline-title"} -->
-<h3 class="wp-block-heading timeline-title">Subheading three</h3>
+<div class="wp-block-group"><!-- wp:heading {"level":3} -->
+<h3 class="wp-block-heading">Subheading three</h3>
 <!-- /wp:heading -->
 
-<!-- wp:paragraph {"className":"timeline-text text-sm","fontSize":"small"} -->
-<p class="timeline-text text-sm has-small-font-size">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique.</p>
+<!-- wp:paragraph {"className":"timeline-text text-sm","fontSize":"medium"} -->
+<p class="timeline-text text-sm has-medium-font-size">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique.</p>
 <!-- /wp:paragraph --></div>
 <!-- /wp:group --></div>
 <!-- /wp:group -->
@@ -88,12 +88,12 @@
 <!-- /wp:html -->
 
 <!-- wp:group {"layout":{"type":"default"}} -->
-<div class="wp-block-group"><!-- wp:heading {"level":3,"className":"timeline-title"} -->
-<h3 class="wp-block-heading timeline-title">Subheading four</h3>
+<div class="wp-block-group"><!-- wp:heading {"level":3} -->
+<h3 class="wp-block-heading">Subheading four</h3>
 <!-- /wp:heading -->
 
-<!-- wp:paragraph {"className":"timeline-text text-sm","fontSize":"small"} -->
-<p class="timeline-text text-sm has-small-font-size">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique.</p>
+<!-- wp:paragraph {"className":"timeline-text text-sm","fontSize":"medium"} -->
+<p class="timeline-text text-sm has-medium-font-size">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique.</p>
 <!-- /wp:paragraph --></div>
 <!-- /wp:group --></div>
 <!-- /wp:group --></div>

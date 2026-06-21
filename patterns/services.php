@@ -28,42 +28,42 @@
 
 <!-- wp:group {"metadata":{"name":"Services grid"},"className":"services-grid","layout":{"type":"default"}} -->
 <div class="wp-block-group services-grid"><!-- wp:group {"tagName":"article","className":"service-card","layout":{"type":"default"}} -->
-<article class="wp-block-group service-card"><!-- wp:heading {"level":3,"className":"service-title"} -->
-<h3 class="wp-block-heading service-title">Editorial strategy and planning</h3>
+<article class="wp-block-group service-card"><!-- wp:heading {"level":3} -->
+<h3 class="wp-block-heading">Editorial strategy and planning</h3>
 <!-- /wp:heading -->
 
-<!-- wp:paragraph {"className":"text-sm","fontSize":"small"} -->
-<p class="text-sm has-small-font-size">We map your narrative arc before the first word lands</p>
+<!-- wp:paragraph {"className":"text-sm","fontSize":"medium"} -->
+<p class="text-sm has-medium-font-size">We map your narrative arc before the first word lands</p>
 <!-- /wp:paragraph --></article>
 <!-- /wp:group -->
 
 <!-- wp:group {"tagName":"article","className":"service-card","layout":{"type":"default"}} -->
-<article class="wp-block-group service-card"><!-- wp:heading {"level":3,"className":"service-title"} -->
-<h3 class="wp-block-heading service-title">Investigative research and reporting</h3>
+<article class="wp-block-group service-card"><!-- wp:heading {"level":3} -->
+<h3 class="wp-block-heading">Investigative research and reporting</h3>
 <!-- /wp:heading -->
 
-<!-- wp:paragraph {"className":"text-sm","fontSize":"small"} -->
-<p class="text-sm has-small-font-size">Deep dives into stories that demand precision and rigor</p>
+<!-- wp:paragraph {"className":"text-sm","fontSize":"medium"} -->
+<p class="text-sm has-medium-font-size">Deep dives into stories that demand precision and rigor</p>
 <!-- /wp:paragraph --></article>
 <!-- /wp:group -->
 
 <!-- wp:group {"tagName":"article","className":"service-card","layout":{"type":"default"}} -->
-<article class="wp-block-group service-card"><!-- wp:heading {"level":3,"className":"service-title"} -->
-<h3 class="wp-block-heading service-title">Content editing and refinement</h3>
+<article class="wp-block-group service-card"><!-- wp:heading {"level":3} -->
+<h3 class="wp-block-heading">Content editing and refinement</h3>
 <!-- /wp:heading -->
 
-<!-- wp:paragraph {"className":"text-sm","fontSize":"small"} -->
-<p class="text-sm has-small-font-size">Every sentence sharpened for clarity and impact</p>
+<!-- wp:paragraph {"className":"text-sm","fontSize":"medium"} -->
+<p class="text-sm has-medium-font-size">Every sentence sharpened for clarity and impact</p>
 <!-- /wp:paragraph --></article>
 <!-- /wp:group -->
 
 <!-- wp:group {"tagName":"article","className":"service-card","layout":{"type":"default"}} -->
-<article class="wp-block-group service-card"><!-- wp:heading {"level":3,"className":"service-title"} -->
-<h3 class="wp-block-heading service-title">Narrative architecture from ground up</h3>
+<article class="wp-block-group service-card"><!-- wp:heading {"level":3} -->
+<h3 class="wp-block-heading">Narrative architecture from ground up</h3>
 <!-- /wp:heading -->
 
-<!-- wp:paragraph {"className":"text-sm","fontSize":"small"} -->
-<p class="text-sm has-small-font-size">We build the skeleton of your story before prose begins</p>
+<!-- wp:paragraph {"className":"text-sm","fontSize":"medium"} -->
+<p class="text-sm has-medium-font-size">We build the skeleton of your story before prose begins</p>
 <!-- /wp:paragraph --></article>
 <!-- /wp:group --></div>
 <!-- /wp:group -->
