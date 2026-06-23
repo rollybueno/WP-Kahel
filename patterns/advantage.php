@@ -32,8 +32,8 @@
 <h3 class="wp-block-heading">Reporting that goes deeper than the surface</h3>
 <!-- /wp:heading -->
 
-<!-- wp:paragraph {"className":"feature-text text-sm","fontSize":"medium"} -->
-<p class="feature-text text-sm has-medium-font-size">We verify, cross-check, and dig until the real story emerges</p>
+<!-- wp:paragraph {"className":"feature-text","fontSize":"medium"} -->
+<p class="feature-text has-medium-font-size">We verify, cross-check, and dig until the real story emerges</p>
 <!-- /wp:paragraph --></article>
 <!-- /wp:group -->
 
@@ -42,8 +42,8 @@
 <h3 class="wp-block-heading">Writing that readers actually finish</h3>
 <!-- /wp:heading -->
 
-<!-- wp:paragraph {"className":"feature-text text-sm","fontSize":"medium"} -->
-<p class="feature-text text-sm has-medium-font-size">Every paragraph pulls forward. No filler, no waste, just momentum</p>
+<!-- wp:paragraph {"className":"feature-text","fontSize":"medium"} -->
+<p class="feature-text has-medium-font-size">Every paragraph pulls forward. No filler, no waste, just momentum</p>
 <!-- /wp:paragraph --></article>
 <!-- /wp:group -->
 
@@ -52,8 +52,8 @@
 <h3 class="wp-block-heading">Strategy that matches your audience</h3>
 <!-- /wp:heading -->
 
-<!-- wp:paragraph {"className":"feature-text text-sm","fontSize":"medium"} -->
-<p class="feature-text text-sm has-medium-font-size">We know who reads what and why they stay or leave</p>
+<!-- wp:paragraph {"className":"feature-text","fontSize":"medium"} -->
+<p class="feature-text has-medium-font-size">We know who reads what and why they stay or leave</p>
 <!-- /wp:paragraph --></article>
 <!-- /wp:group --></div>
 <!-- /wp:group -->

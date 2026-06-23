@@ -32,8 +32,8 @@
 <h3 class="wp-block-heading">Editorial strategy and planning</h3>
 <!-- /wp:heading -->
 
-<!-- wp:paragraph {"className":"text-sm","fontSize":"medium"} -->
-<p class="text-sm has-medium-font-size">We map your narrative arc before the first word lands</p>
+<!-- wp:paragraph {"fontSize":"medium"} -->
+<p class="has-medium-font-size">We map your narrative arc before the first word lands</p>
 <!-- /wp:paragraph --></article>
 <!-- /wp:group -->
 
@@ -42,8 +42,8 @@
 <h3 class="wp-block-heading">Investigative research and reporting</h3>
 <!-- /wp:heading -->
 
-<!-- wp:paragraph {"className":"text-sm","fontSize":"medium"} -->
-<p class="text-sm has-medium-font-size">Deep dives into stories that demand precision and rigor</p>
+<!-- wp:paragraph {"fontSize":"medium"} -->
+<p class="has-medium-font-size">Deep dives into stories that demand precision and rigor</p>
 <!-- /wp:paragraph --></article>
 <!-- /wp:group -->
 
@@ -52,8 +52,8 @@
 <h3 class="wp-block-heading">Content editing and refinement</h3>
 <!-- /wp:heading -->
 
-<!-- wp:paragraph {"className":"text-sm","fontSize":"medium"} -->
-<p class="text-sm has-medium-font-size">Every sentence sharpened for clarity and impact</p>
+<!-- wp:paragraph {"fontSize":"medium"} -->
+<p class="has-medium-font-size">Every sentence sharpened for clarity and impact</p>
 <!-- /wp:paragraph --></article>
 <!-- /wp:group -->
 
@@ -62,8 +62,8 @@
 <h3 class="wp-block-heading">Narrative architecture from ground up</h3>
 <!-- /wp:heading -->
 
-<!-- wp:paragraph {"className":"text-sm","fontSize":"medium"} -->
-<p class="text-sm has-medium-font-size">We build the skeleton of your story before prose begins</p>
+<!-- wp:paragraph {"fontSize":"medium"} -->
+<p class="has-medium-font-size">We build the skeleton of your story before prose begins</p>
 <!-- /wp:paragraph --></article>
 <!-- /wp:group --></div>
 <!-- /wp:group -->

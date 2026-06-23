@@ -39,7 +39,7 @@
 
 <!-- wp:post-title {"level":3,"isLink":true,"className":"story-title"} /-->
 
-<!-- wp:post-excerpt {"moreText":"","excerptLength":18,"className":"story-text text-sm"} /-->
+<!-- wp:post-excerpt {"moreText":"","excerptLength":18,"className":"story-text","fontSize":"medium"} /-->
 
 <!-- wp:read-more {"content":"Read more","className":"text-link"} /--></article>
 <!-- /wp:group -->

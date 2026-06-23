@@ -50,8 +50,8 @@
 <h3 class="wp-block-heading">Subheading one</h3>
 <!-- /wp:heading -->
 
-<!-- wp:paragraph {"className":"timeline-text text-sm","fontSize":"medium"} -->
-<p class="timeline-text text-sm has-medium-font-size">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique.</p>
+<!-- wp:paragraph {"className":"timeline-text","fontSize":"medium"} -->
+<p class="timeline-text has-medium-font-size">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique.</p>
 <!-- /wp:paragraph --></div>
 <!-- /wp:group --></div>
 <!-- /wp:group -->
@@ -66,8 +66,8 @@
 <h3 class="wp-block-heading">Subheading two</h3>
 <!-- /wp:heading -->
 
-<!-- wp:paragraph {"className":"timeline-text text-sm","fontSize":"medium"} -->
-<p class="timeline-text text-sm has-medium-font-size">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique.</p>
+<!-- wp:paragraph {"className":"timeline-text","fontSize":"medium"} -->
+<p class="timeline-text has-medium-font-size">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique.</p>
 <!-- /wp:paragraph --></div>
 <!-- /wp:group --></div>
 <!-- /wp:group -->
@@ -82,8 +82,8 @@
 <h3 class="wp-block-heading">Subheading three</h3>
 <!-- /wp:heading -->
 
-<!-- wp:paragraph {"className":"timeline-text text-sm","fontSize":"medium"} -->
-<p class="timeline-text text-sm has-medium-font-size">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique.</p>
+<!-- wp:paragraph {"className":"timeline-text","fontSize":"medium"} -->
+<p class="timeline-text has-medium-font-size">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique.</p>
 <!-- /wp:paragraph --></div>
 <!-- /wp:group --></div>
 <!-- /wp:group -->
@@ -98,8 +98,8 @@
 <h3 class="wp-block-heading">Subheading four</h3>
 <!-- /wp:heading -->
 
-<!-- wp:paragraph {"className":"timeline-text text-sm","fontSize":"medium"} -->
-<p class="timeline-text text-sm has-medium-font-size">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique.</p>
+<!-- wp:paragraph {"className":"timeline-text","fontSize":"medium"} -->
+<p class="timeline-text has-medium-font-size">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique.</p>
 <!-- /wp:paragraph --></div>
 <!-- /wp:group --></div>
 <!-- /wp:group --></div>
