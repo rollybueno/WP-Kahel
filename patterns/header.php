@@ -14,7 +14,7 @@
 <div class="wp-block-group alignfull header-shell"><!-- wp:group {"metadata":{"name":"Header bar"},"className":"header-bar","layout":{"type":"flex","flexWrap":"nowrap","justifyContent":"space-between","verticalAlignment":"center"},"style":{"spacing":{"blockGap":"32px","margin":{"top":"0","bottom":"0"}}}} -->
 <div class="wp-block-group header-bar"><!-- wp:site-logo {"width":48,"shouldSyncIcon":false} /-->
 
-<!-- wp:navigation {"overlayMenu":"mobile","icon":"menu","layout":{"type":"flex","justifyContent":"center"},"style":{"layout":{"selfStretch":"fill","flexSize":null}}} /-->
+<!-- wp:navigation {"overlayMenu":"mobile","icon":"menu","layout":{"type":"flex","justifyContent":"center"},"style":{"layout":{"selfStretch":"fill","flexSize":null},"spacing":{"blockGap":"34px"}}} /-->
 
 <!-- wp:group {"metadata":{"name":"Header actions"},"className":"header-actions nav-actions","layout":{"type":"flex","flexWrap":"nowrap","justifyContent":"right","verticalAlignment":"center"},"style":{"spacing":{"blockGap":"22px","margin":{"top":"0","bottom":"0"}}}} -->
 <div class="wp-block-group header-actions nav-actions"><!-- wp:paragraph {"className":"header-login"} -->

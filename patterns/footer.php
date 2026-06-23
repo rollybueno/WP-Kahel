@@ -57,7 +57,7 @@
 <p class="has-small-font-size">© Chronicle Press. All rights reserved.</p>
 <!-- /wp:paragraph -->
 
-<!-- wp:group {"className":"footer-legal","layout":{"type":"flex","flexWrap":"wrap"}} -->
+<!-- wp:group {"className":"footer-legal","layout":{"type":"flex","flexWrap":"wrap"},"style":{"spacing":{"blockGap":"32px"}}} -->
 <div class="wp-block-group footer-legal"><!-- wp:paragraph {"fontSize":"small"} -->
 <p class="has-small-font-size"><a href="#">Privacy policy</a></p>
 <!-- /wp:paragraph -->
