@@ -20,8 +20,8 @@
 <!-- /wp:paragraph -->
 
 <!-- wp:buttons {"className":"button-row cta-actions","layout":{"type":"flex","justifyContent":"center","flexWrap":"wrap"},"style":{"spacing":{"blockGap":"12px"}}} -->
-<div class="wp-block-buttons button-row cta-actions"><!-- wp:button {"className":"is-style-header-primary"} -->
-<div class="wp-block-button is-style-header-primary"><a class="wp-block-button__link wp-element-button">Start now</a></div>
+<div class="wp-block-buttons button-row cta-actions"><!-- wp:button -->
+<div class="wp-block-button"><a class="wp-block-button__link wp-element-button">Start now</a></div>
 <!-- /wp:button -->
 
 <!-- wp:button {"className":"is-style-outline"} -->

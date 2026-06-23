@@ -53,8 +53,8 @@
 <!-- /wp:query -->
 
 <!-- wp:group {"className":"center-action","layout":{"type":"flex","justifyContent":"center"}} -->
-<div class="wp-block-group center-action"><!-- wp:buttons -->
-<div class="wp-block-buttons"><!-- wp:button {"className":"is-style-outline"} -->
+<div class="wp-block-group center-action"><!-- wp:buttons {"className":"button-row","layout":{"type":"flex","justifyContent":"center","flexWrap":"wrap"},"style":{"spacing":{"blockGap":"12px"}}} -->
+<div class="wp-block-buttons button-row"><!-- wp:button {"className":"is-style-outline"} -->
 <div class="wp-block-button is-style-outline"><a class="wp-block-button__link wp-element-button">View all</a></div>
 <!-- /wp:button --></div>
 <!-- /wp:buttons --></div>
