@@ -19,7 +19,7 @@ defined( 'ABSPATH' ) || exit;
  *
  * @since 1.0.0
  */
-define( 'KAHEL_VERSION', '1.0.24' );
+define( 'KAHEL_VERSION', '1.0.26' );
 
 /**
  * Absolute path to the theme directory (trailing slash).
@@ -96,6 +96,42 @@ function kahel_setup() {
 	);
 }
 add_action( 'after_setup_theme', 'kahel_setup' );
+
+/**
+ * Register block style variations used by story query loops.
+ *
+ * Theme.json variation styles still apply; this registers the styles for the editor.
+ *
+ * @since 1.0.26
+ *
+ * @return void
+ */
+function kahel_register_block_styles() {
+	$group_styles = array(
+		'story-card'  => __( 'Story card', 'kahel' ),
+		'story-image' => __( 'Story image', 'kahel' ),
+		'story-meta'  => __( 'Story meta', 'kahel' ),
+	);
+
+	foreach ( $group_styles as $name => $label ) {
+		register_block_style(
+			'core/group',
+			array(
+				'name'  => $name,
+				'label' => $label,
+			)
+		);
+	}
+
+	register_block_style(
+		'core/post-terms',
+		array(
+			'name'  => 'story-category',
+			'label' => __( 'Story category', 'kahel' ),
+		)
+	);
+}
+add_action( 'init', 'kahel_register_block_styles' );
 
 /**
  * Set the global $content_width for embedded media and oEmbeds.

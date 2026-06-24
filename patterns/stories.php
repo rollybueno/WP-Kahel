@@ -25,24 +25,8 @@
 <!-- /wp:group -->
 
 <!-- wp:query {"queryId":4,"query":{"perPage":3,"pages":0,"offset":0,"postType":"post","order":"desc","orderBy":"date","author":"","search":"","exclude":[],"sticky":"exclude","inherit":false},"metadata":{"name":"Stories query"},"className":"stories-query","layout":{"type":"default"}} -->
-<div class="wp-block-query stories-query"><!-- wp:post-template {"className":"story-grid","layout":{"type":"grid","columnCount":3}} -->
-<!-- wp:group {"tagName":"article","metadata":{"name":"Story card"},"className":"story-card","layout":{"type":"default"}} -->
-<article class="wp-block-group story-card"><!-- wp:group {"className":"story-image","layout":{"type":"default"}} -->
-<div class="wp-block-group story-image"><!-- wp:post-featured-image {"isLink":true,"sizeSlug":"large","linkDestination":"post"} /--></div>
-<!-- /wp:group -->
-
-<!-- wp:group {"className":"story-meta","layout":{"type":"flex","flexWrap":"nowrap","verticalAlignment":"center"},"style":{"spacing":{"blockGap":"18px"}}} -->
-<div class="wp-block-group story-meta"><!-- wp:post-terms {"term":"category","separator":" ","className":"story-category"} /-->
-
-<!-- wp:post-time-to-read {"displayAsRange":false,"fontSize":"small","className":"story-read-time"} /--></div>
-<!-- /wp:group -->
-
-<!-- wp:post-title {"level":3,"isLink":true,"className":"story-title"} /-->
-
-<!-- wp:post-excerpt {"moreText":"","excerptLength":18,"className":"story-text","fontSize":"medium"} /-->
-
-<!-- wp:read-more {"content":"Read more","className":"text-link"} /--></article>
-<!-- /wp:group -->
+<div class="wp-block-query stories-query"><!-- wp:post-template {"style":{"spacing":{"blockGap":"30px","margin":{"bottom":"74px"}}},"layout":{"type":"grid","columnCount":3}} -->
+<!-- wp:pattern {"slug":"kahel/story-card"} /-->
 <!-- /wp:post-template -->
 
 <!-- wp:query-no-results -->
