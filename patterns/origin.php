@@ -33,7 +33,7 @@
 <!-- wp:group {"className":"logo-row origin-logos","layout":{"type":"flex","flexWrap":"wrap"},"style":{"spacing":{"blockGap":"28px"}}} -->
 <div class="wp-block-group logo-row origin-logos"><!-- wp:group {"className":"logo-item","layout":{"type":"flex","flexWrap":"nowrap","verticalAlignment":"center"},"style":{"spacing":{"blockGap":"10px"}}} -->
 <div class="wp-block-group logo-item"><!-- wp:html -->
-<span class="webflow-mark" aria-hidden="true"></span>
+<span class="logo-mark" aria-hidden="true"></span>
 <!-- /wp:html -->
 
 <!-- wp:paragraph -->
@@ -43,7 +43,7 @@
 
 <!-- wp:group {"className":"logo-item","layout":{"type":"flex","flexWrap":"nowrap","verticalAlignment":"center"},"style":{"spacing":{"blockGap":"10px"}}} -->
 <div class="wp-block-group logo-item"><!-- wp:html -->
-<span class="relume-mark" aria-hidden="true"></span>
+<span class="logo-mark" aria-hidden="true"></span>
 <!-- /wp:html -->
 
 <!-- wp:paragraph -->
@@ -53,7 +53,7 @@
 
 <!-- wp:group {"className":"logo-item","layout":{"type":"flex","flexWrap":"nowrap","verticalAlignment":"center"},"style":{"spacing":{"blockGap":"10px"}}} -->
 <div class="wp-block-group logo-item"><!-- wp:html -->
-<span class="webflow-mark" aria-hidden="true"></span>
+<span class="logo-mark" aria-hidden="true"></span>
 <!-- /wp:html -->
 
 <!-- wp:paragraph -->
@@ -63,7 +63,7 @@
 
 <!-- wp:group {"className":"logo-item","layout":{"type":"flex","flexWrap":"nowrap","verticalAlignment":"center"},"style":{"spacing":{"blockGap":"10px"}}} -->
 <div class="wp-block-group logo-item"><!-- wp:html -->
-<span class="relume-mark" aria-hidden="true"></span>
+<span class="logo-mark" aria-hidden="true"></span>
 <!-- /wp:html -->
 
 <!-- wp:paragraph -->

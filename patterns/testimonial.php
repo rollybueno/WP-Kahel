@@ -14,7 +14,7 @@
 <div class="wp-block-group testimonial-inner"><!-- wp:group {"className":"logo-row testimonial-logo","layout":{"type":"flex","flexWrap":"nowrap","justifyContent":"center"},"style":{"spacing":{"blockGap":"10px"}}} -->
 <div class="wp-block-group logo-row testimonial-logo"><!-- wp:group {"className":"logo-item","layout":{"type":"flex","flexWrap":"nowrap","verticalAlignment":"center"},"style":{"spacing":{"blockGap":"10px"}}} -->
 <div class="wp-block-group logo-item"><!-- wp:html -->
-<span class="webflow-mark" aria-hidden="true"></span>
+<span class="logo-mark" aria-hidden="true"></span>
 <!-- /wp:html -->
 
 <!-- wp:paragraph -->
