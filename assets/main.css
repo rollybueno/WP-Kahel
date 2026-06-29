@@ -38,6 +38,12 @@ html{overflow-x:clip}
 
 body{font-family:var(--font-body);font-size:16px;line-height:1.5;color:var(--text-primary);background:var(--bg-primary);-webkit-font-smoothing:antialiased}
 h1,h2,h3,h4,h5,h6,.brand-logo,.footer-logo,.post-title,.page-title,.archive-title,.comments-title,.not-found-title,.stat-number,.testimonial-quote{font-family:var(--font-heading);font-weight:700}
+h1{font-size:clamp(44px,4vw,60px);line-height:1.05;letter-spacing:-.03em;font-weight:800}
+h2{font-size:clamp(32px,4vw,48px);line-height:1.08;letter-spacing:-.03em;font-weight:800}
+h3{font-size:31px;line-height:1.15;letter-spacing:-.02em}
+h4{font-size:24px;line-height:1.15;letter-spacing:-.02em}
+h5{font-size:21px;line-height:1.15;letter-spacing:-.02em}
+h6{font-size:18px;line-height:1.15;letter-spacing:-.01em}
 a{color:inherit;text-decoration:none}
 a:focus-visible,.btn:focus-visible,input:focus-visible{outline:2px solid var(--focus-ring);outline-offset:2px}
 
@@ -500,8 +506,10 @@ a:focus-visible,.btn:focus-visible,input:focus-visible{outline:2px solid var(--f
 .post-layout-inner{display:grid;grid-template-columns:minmax(0,var(--content-width));justify-content:center;gap:64px}
 .entry-content{font-size:18px;line-height:1.7;color:var(--text-secondary)}
 .entry-content>*+*{margin-top:1.35em}
-.entry-content h2{font-size:clamp(28px,3vw,36px);line-height:1.15;letter-spacing:-.03em;font-weight:800;color:var(--text-primary);margin-top:2em}
-.entry-content h3{font-size:24px;line-height:1.2;font-weight:700;color:var(--text-primary);margin-top:1.75em}
+.entry-content :where(h1,h2,h3,h4,h5,h6){color:var(--text-primary)}
+.entry-content h2{margin-top:2em}
+.entry-content h3{margin-top:1.75em}
+.entry-content h4,.entry-content h5,.entry-content h6{margin-top:1.5em}
 .entry-content p{margin-top:1.35em}
 .entry-content a{color:var(--link);text-decoration:underline;text-underline-offset:3px;transition:color var(--duration-fast) var(--ease-out)}
 .entry-content a:hover{color:var(--link-hover)}
@@ -629,8 +637,10 @@ a:focus-visible,.btn:focus-visible,input:focus-visible{outline:2px solid var(--f
 .page-full-width .entry-content-full>.alignwide{max-width:var(--content-width)}
 .entry-content{font-size:18px;line-height:1.7;color:var(--text-secondary)}
 .entry-content>*+*{margin-top:1.35em}
-.entry-content h2{font-size:clamp(28px,3vw,36px);line-height:1.15;letter-spacing:-.03em;font-weight:800;color:var(--text-primary);margin-top:2em}
-.entry-content h3{font-size:24px;line-height:1.2;font-weight:700;color:var(--text-primary);margin-top:1.75em}
+.entry-content :where(h1,h2,h3,h4,h5,h6){color:var(--text-primary)}
+.entry-content h2{margin-top:2em}
+.entry-content h3{margin-top:1.75em}
+.entry-content h4,.entry-content h5,.entry-content h6{margin-top:1.5em}
 .entry-content p{margin-top:1.35em}
 .entry-content a{color:var(--link);text-decoration:underline;text-underline-offset:3px;transition:color var(--duration-fast) var(--ease-out)}
 .entry-content a:hover{color:var(--link-hover)}
