@@ -100,14 +100,18 @@ a:focus-visible,.btn:focus-visible,input:focus-visible{outline:2px solid var(--f
 
 /* Story cards (shared) */
 .story-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:30px}
-.story-card{border-radius:var(--radius-md);transition:transform var(--duration-normal) var(--ease-out),box-shadow var(--duration-normal) var(--ease-out)}
-.story-card:hover{transform:translateY(-3px);box-shadow:var(--shadow-md)}
-.story-image{height:240px;margin-bottom:22px;border-radius:var(--radius-md);overflow:hidden;transition:box-shadow var(--duration-normal) var(--ease-out)}
-.story-card:hover .story-image{box-shadow:0 8px 24px rgba(28,25,23,.1)}
-.story-meta{display:flex;align-items:center;gap:18px;font-size:12px;font-weight:600;margin-bottom:18px}
+.story-card{background:var(--bg-primary);border:1px solid var(--border-light);border-radius:var(--radius-md);overflow:hidden;transition:transform var(--duration-normal) var(--ease-out),box-shadow var(--duration-normal) var(--ease-out),border-color var(--duration-normal) var(--ease-out)}
+.story-card:hover{transform:translateY(-4px);box-shadow:0 14px 32px rgba(28,25,23,.1);border-color:var(--kahel-200)}
+.story-card>*{margin-left:24px;margin-right:24px}
+.story-card>.story-image{margin-left:0;margin-right:0}
+.story-card>*:last-child{margin-bottom:24px}
+.story-image{aspect-ratio:16/10;margin-bottom:0;border-radius:0;overflow:hidden;background:var(--bg-accent)}
+.story-meta{display:flex;align-items:center;gap:18px;font-size:12px;font-weight:600;margin-top:22px;margin-bottom:18px}
 .story-meta span:first-child{background:var(--kahel-100);color:var(--kahel-800);padding:6px 8px;border-radius:4px}
-.story-title{font-size:24px;line-height:1.15;letter-spacing:-.02em;font-weight:700;margin-bottom:16px}
+.story-title{font-size:24px;line-height:1.15;letter-spacing:-.02em;font-weight:700;margin-bottom:16px;color:var(--text-primary)}
 .story-text{margin-bottom:26px}
+.story-card .text-link{color:var(--text-primary)}
+.story-card .text-link:hover{color:var(--orange-deep)}
 .center-action{display:flex;justify-content:center}
 
 /* CTA */
