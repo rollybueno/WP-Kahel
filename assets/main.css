@@ -52,7 +52,6 @@ a:focus-visible,.btn:focus-visible,input:focus-visible{outline:2px solid var(--f
 .section{padding:100px 0}
 .section-bordered{border-top:1px solid var(--kahel-500)}
 .section-label{font-size:13px;font-weight:700;letter-spacing:.06em;margin-bottom:22px;color:var(--text-brand);text-transform:uppercase}
-.section-title{font-size:clamp(44px,4vw,60px);line-height:1.05;letter-spacing:-.03em;font-weight:800;color:var(--text-primary)}
 .section-kicker,.text-sm{font-size:14px;line-height:1.5;letter-spacing:0;color:var(--text-muted)}
 .section-kicker{font-size:16px}
 
@@ -309,7 +308,6 @@ a:focus-visible,.btn:focus-visible,input:focus-visible{outline:2px solid var(--f
   .hero-grid,.services-grid,.feature-grid-3{grid-template-columns:1fr}
   .hero-copy{gap:32px}
   .hero-title,.hero-text{max-width:none}
-  .section-title{font-size:44px}
   .hero-image-large,.hero-image-small,.story-image,.origin-image{height:360px}
   .hero-images-stack{height:auto;gap:24px}
   .hero-images-stack .hero-image-small{flex:none}
@@ -475,8 +473,6 @@ a:focus-visible,.btn:focus-visible,input:focus-visible{outline:2px solid var(--f
    ========================================================================== */
 
 /* Single post — page-specific styles */
-
-.single-page .section-title{font-size:clamp(36px,3.5vw,52px)}
 
 .post-hero{padding:56px 0 48px;background:var(--bg-accent);border-bottom:1px solid var(--border-light)}
 .post-hero-inner{max-width:var(--content-width);margin:0 auto}
@@ -653,10 +649,6 @@ a:focus-visible,.btn:focus-visible,input:focus-visible{outline:2px solid var(--f
 .entry-content .content-image{height:360px;border-radius:var(--radius-md);overflow:hidden}
 .entry-content figcaption{font-size:13px;color:var(--text-muted);margin-top:12px;text-align:center}
 .entry-content hr{border:0;border-top:1px solid var(--border-light);margin:2.5em 0}
-
-.page-split .section-title,
-.page-values .section-title,
-.page-cta .section-title{font-size:clamp(36px,3.5vw,52px)}
 
 .page-split{padding:88px 0;background:var(--bg-secondary);border-top:1px solid var(--border-light)}
 .page-split-grid{display:grid;grid-template-columns:1fr 1fr;gap:72px;align-items:center}
