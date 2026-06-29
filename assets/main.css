@@ -275,6 +275,9 @@ a:focus-visible,.btn:focus-visible,input:focus-visible{outline:2px solid var(--f
 
 .cta-actions{margin-bottom:86px}
 .cta-logos{justify-content:center;gap:44px}
+.cta-logos .logo-image{margin:0}
+.cta-logos .logo-image img{max-height:64px;width:auto;object-fit:contain;opacity:.85;transition:opacity .2s ease}
+.cta-logos .logo-image:hover img{opacity:1}
 
 @media(max-width:1024px){
   .hero-grid,.split-header,.services-header,.section-heading-split,.process-grid,.origin-grid{grid-template-columns:1fr}
