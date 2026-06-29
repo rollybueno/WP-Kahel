@@ -497,14 +497,23 @@
 				"variations": {
 					"story-card": {
 						"title": "Story card",
-						"border": {
-							"radius": "var(--wp--custom--radius--md)"
+						"color": {
+							"background": "var(--wp--preset--color--background)"
 						},
-						"css": "&{overflow:hidden;background:var(--wp--preset--color--background);border:1px solid var(--wp--preset--color--border-light);transition:transform .28s ease,box-shadow .28s ease,border-color .28s ease}&:hover{transform:translateY(-4px);box-shadow:0 14px 32px rgba(28,25,23,.1);border-color:var(--wp--preset--color--kahel-200)}&>*{margin-left:24px;margin-right:24px}&>.is-style-story-image{margin-left:0;margin-right:0}&>.is-style-story-meta{margin-top:22px}&>*:last-child{margin-bottom:24px}"
+						"border": {
+							"radius": "var(--wp--custom--radius--md)",
+							"width": "1px",
+							"style": "solid",
+							"color": "var(--wp--preset--color--border-light)"
+						},
+						"css": "&{overflow:hidden;transition:transform .28s ease,box-shadow .28s ease,border-color .28s ease}&:hover{transform:translateY(-4px);box-shadow:0 14px 32px rgba(28,25,23,.1);border-color:var(--wp--preset--color--kahel-200)}&>*{margin-left:24px;margin-right:24px}&>.is-style-story-image{margin-left:0;margin-right:0}&>.is-style-story-meta{margin-top:22px}&>*:last-child{margin-bottom:24px}"
 					},
 					"story-image": {
 						"title": "Story image",
-						"css": "&{overflow:hidden;aspect-ratio:16/10;background:var(--wp--preset--color--background-accent);border-radius:0}& .wp-block-post-featured-image,& figure{margin:0;height:100%}& img{width:100%;height:100%;object-fit:cover;display:block;border-radius:0}"
+						"color": {
+							"background": "var(--wp--preset--color--background-accent)"
+						},
+						"css": "&{overflow:hidden;aspect-ratio:16/10;border-radius:0}& .wp-block-post-featured-image,& figure{margin:0;height:100%}& img{width:100%;height:100%;object-fit:cover;display:block;border-radius:0}"
 					},
 					"story-meta": {
 						"title": "Story meta",
@@ -532,9 +541,10 @@
 								},
 								"typography": {
 									"fontSize": "12px",
-									"fontWeight": "600"
+									"fontWeight": "600",
+									"textDecoration": "none"
 								},
-								"css": "&{padding:6px 8px;border-radius:4px;text-decoration:none}"
+								"css": "&{padding:6px 8px;border-radius:4px}"
 							}
 						}
 					}
@@ -555,30 +565,45 @@
 						"color": {
 							"text": "var(--wp--preset--color--text)"
 						},
+						"typography": {
+							"textDecoration": "none"
+						},
 						":hover": {
 							"color": {
 								"text": "var(--wp--preset--color--orange-deep)"
 							}
 						},
-						"css": "&{text-decoration:none;transition:color .2s ease}"
+						"css": "&{transition:color .2s ease}"
 					}
 				}
 			},
 			"core/read-more": {
 				"typography": {
 					"fontSize": "var(--wp--preset--font-size--small)",
-					"fontWeight": "600"
+					"fontWeight": "600",
+					"textDecoration": "none"
 				},
 				"color": {
 					"text": "var(--wp--preset--color--text)"
 				},
-				"css": "&{display:inline-flex;align-items:center;gap:10px;text-decoration:none;transition:color .2s ease}&::after{content:\"\\2192\";font-size:1.05em;line-height:1;transition:transform .28s ease}&:hover{color:var(--wp--preset--color--orange-deep)}&:hover::after{transform:translateX(4px)}"
+				":hover": {
+					"color": {
+						"text": "var(--wp--preset--color--orange-deep)"
+					}
+				},
+				"css": "&{display:inline-flex;align-items:center;gap:10px;transition:color .2s ease}&::after{content:\"\\2192\";font-size:1.05em;line-height:1;transition:transform .28s ease}&:hover::after{transform:translateX(4px)}"
 			},
 			"core/post-template": {
 				"spacing": {
-					"blockGap": "30px"
+					"blockGap": "30px",
+					"padding": {
+						"top": "0",
+						"right": "0",
+						"bottom": "0",
+						"left": "0"
+					}
 				},
-				"css": "&{list-style:none;padding:0}&.is-layout-grid{gap:var(--wp--style--block-gap,30px)}@media(max-width:1024px){&.is-layout-grid{grid-template-columns:repeat(2,minmax(0,1fr))!important}}@media(max-width:768px){&.is-layout-grid{grid-template-columns:1fr!important}}"
+				"css": "&{list-style:none}&.is-layout-grid{gap:var(--wp--style--block-gap,30px)}@media(max-width:1024px){&.is-layout-grid{grid-template-columns:repeat(2,minmax(0,1fr))!important}}@media(max-width:768px){&.is-layout-grid{grid-template-columns:1fr!important}}"
 			},
 			"core/post-featured-image": {
 				"border": {
