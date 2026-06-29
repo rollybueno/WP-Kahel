@@ -87,7 +87,7 @@ function kahel_setup() {
 		)
 	);
 
-	// Navigation locations used by header.php (mega menu walker can target `primary`).
+	// Navigation locations used by header.php and footer.php.
 	register_nav_menus(
 		array(
 			'primary' => __( 'Primary Navigation', 'kahel' ),
