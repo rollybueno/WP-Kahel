@@ -276,6 +276,9 @@ a:focus-visible,.btn:focus-visible,input:focus-visible{outline:2px solid var(--f
 .origin-content .section-kicker{margin-bottom:36px;max-width:540px}
 .origin-logos{margin-bottom:42px}
 .origin-logos .logo-item{font-size:18px}
+.origin-logos .logo-image{margin:0}
+.origin-logos .logo-image img{max-height:36px;width:auto;object-fit:contain;filter:grayscale(1);opacity:.7;transition:filter .2s ease,opacity .2s ease}
+.origin-logos .logo-image:hover img{filter:grayscale(0);opacity:1}
 
 .cta-actions{margin-bottom:86px}
 .cta-logos{justify-content:center;gap:44px}

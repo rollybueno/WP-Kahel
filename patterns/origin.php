@@ -30,46 +30,22 @@
 <p class="section-kicker has-medium-font-size">Chronicle Press came from a simple frustration. Too many stories got buried under poor editing and muddled thinking. We started this to fix that. We work with newsrooms and independent publishers who refuse to settle for less than their best.</p>
 <!-- /wp:paragraph -->
 
-<!-- wp:group {"className":"logo-row origin-logos","layout":{"type":"flex","flexWrap":"wrap"},"style":{"spacing":{"blockGap":"28px"}}} -->
-<div class="wp-block-group logo-row origin-logos"><!-- wp:group {"className":"logo-item","layout":{"type":"flex","flexWrap":"nowrap","verticalAlignment":"center"},"style":{"spacing":{"blockGap":"10px"}}} -->
-<div class="wp-block-group logo-item"><!-- wp:html -->
-<span class="logo-mark" aria-hidden="true"></span>
-<!-- /wp:html -->
+<!-- wp:group {"className":"logo-row origin-logos","layout":{"type":"flex","flexWrap":"wrap","verticalAlignment":"center"},"style":{"spacing":{"blockGap":"28px"}}} -->
+<div class="wp-block-group logo-row origin-logos"><!-- wp:image {"className":"logo-image","sizeSlug":"large","linkDestination":"none"} -->
+<figure class="wp-block-image size-large logo-image"><img alt="" /></figure>
+<!-- /wp:image -->
 
-<!-- wp:paragraph -->
-<p>Webflow</p>
-<!-- /wp:paragraph --></div>
-<!-- /wp:group -->
+<!-- wp:image {"className":"logo-image","sizeSlug":"large","linkDestination":"none"} -->
+<figure class="wp-block-image size-large logo-image"><img alt="" /></figure>
+<!-- /wp:image -->
 
-<!-- wp:group {"className":"logo-item","layout":{"type":"flex","flexWrap":"nowrap","verticalAlignment":"center"},"style":{"spacing":{"blockGap":"10px"}}} -->
-<div class="wp-block-group logo-item"><!-- wp:html -->
-<span class="logo-mark" aria-hidden="true"></span>
-<!-- /wp:html -->
+<!-- wp:image {"className":"logo-image","sizeSlug":"large","linkDestination":"none"} -->
+<figure class="wp-block-image size-large logo-image"><img alt="" /></figure>
+<!-- /wp:image -->
 
-<!-- wp:paragraph -->
-<p>Relume</p>
-<!-- /wp:paragraph --></div>
-<!-- /wp:group -->
-
-<!-- wp:group {"className":"logo-item","layout":{"type":"flex","flexWrap":"nowrap","verticalAlignment":"center"},"style":{"spacing":{"blockGap":"10px"}}} -->
-<div class="wp-block-group logo-item"><!-- wp:html -->
-<span class="logo-mark" aria-hidden="true"></span>
-<!-- /wp:html -->
-
-<!-- wp:paragraph -->
-<p>Webflow</p>
-<!-- /wp:paragraph --></div>
-<!-- /wp:group -->
-
-<!-- wp:group {"className":"logo-item","layout":{"type":"flex","flexWrap":"nowrap","verticalAlignment":"center"},"style":{"spacing":{"blockGap":"10px"}}} -->
-<div class="wp-block-group logo-item"><!-- wp:html -->
-<span class="logo-mark" aria-hidden="true"></span>
-<!-- /wp:html -->
-
-<!-- wp:paragraph -->
-<p>Relume</p>
-<!-- /wp:paragraph --></div>
-<!-- /wp:group --></div>
+<!-- wp:image {"className":"logo-image","sizeSlug":"large","linkDestination":"none"} -->
+<figure class="wp-block-image size-large logo-image"><img alt="" /></figure>
+<!-- /wp:image --></div>
 <!-- /wp:group -->
 
 <!-- wp:group {"className":"button-row","layout":{"type":"flex","flexWrap":"wrap","verticalAlignment":"center"},"style":{"spacing":{"blockGap":"12px"}}} -->
