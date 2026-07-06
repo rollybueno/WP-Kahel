@@ -9,8 +9,8 @@
  * @since   1.0.0
  */
 ?>
-<!-- wp:group {"tagName":"section","metadata":{"name":"Page split","patternName":"kahel/page-split"},"align":"full","className":"page-split","backgroundColor":"background-secondary","layout":{"type":"constrained","contentSize":"1440px"}} -->
-<section class="wp-block-group alignfull page-split has-background-secondary-background-color has-background"><!-- wp:group {"metadata":{"name":"Page split grid"},"className":"page-split-grid","layout":{"type":"default"}} -->
+<!-- wp:group {"tagName":"section","metadata":{"name":"Page split","patternName":"kahel/page-split"},"align":"full","className":"page-split","backgroundColor":"background-secondary","style":{"spacing":{"padding":{"top":"88px","bottom":"88px"}}},"layout":{"type":"constrained","contentSize":"1440px"}} -->
+<section class="wp-block-group alignfull page-split has-background-secondary-background-color has-background" style="padding-top:88px;padding-bottom:88px"><!-- wp:group {"metadata":{"name":"Page split grid"},"className":"page-split-grid","layout":{"type":"default"}} -->
 <div class="wp-block-group page-split-grid"><!-- wp:group {"metadata":{"name":"Page split image"},"className":"page-split-image","layout":{"type":"default"}} -->
 <div class="wp-block-group page-split-image"><!-- wp:image {"sizeSlug":"large","linkDestination":"none"} -->
 <figure class="wp-block-image size-large"><img alt="" /></figure>

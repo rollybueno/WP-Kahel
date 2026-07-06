@@ -9,8 +9,8 @@
  * @since   1.0.0
  */
 ?>
-<!-- wp:group {"tagName":"section","metadata":{"name":"Origin","patternName":"kahel/origin"},"align":"full","className":"origin","layout":{"type":"constrained","contentSize":"1440px"}} -->
-<section class="wp-block-group alignfull origin"><!-- wp:group {"metadata":{"name":"Origin grid"},"className":"origin-grid","layout":{"type":"default"}} -->
+<!-- wp:group {"tagName":"section","metadata":{"name":"Origin","patternName":"kahel/origin"},"align":"full","className":"origin","style":{"spacing":{"padding":{"top":"88px","bottom":"88px"}}},"layout":{"type":"constrained","contentSize":"1440px"}} -->
+<section class="wp-block-group alignfull origin" style="padding-top:88px;padding-bottom:88px"><!-- wp:group {"metadata":{"name":"Origin grid"},"className":"origin-grid","layout":{"type":"default"}} -->
 <div class="wp-block-group origin-grid"><!-- wp:group {"metadata":{"name":"Origin image"},"className":"origin-image","layout":{"type":"default"}} -->
 <div class="wp-block-group origin-image"><!-- wp:image {"sizeSlug":"large","linkDestination":"none"} -->
 <figure class="wp-block-image size-large"><img alt="" /></figure>

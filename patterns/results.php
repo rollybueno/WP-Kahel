@@ -9,8 +9,8 @@
  * @since   1.0.0
  */
 ?>
-<!-- wp:group {"tagName":"section","metadata":{"name":"Results","patternName":"kahel/results"},"align":"full","className":"section results","layout":{"type":"constrained","contentSize":"1440px"}} -->
-<section class="wp-block-group alignfull section results"><!-- wp:group {"metadata":{"name":"Results header"},"className":"split-header","layout":{"type":"default"}} -->
+<!-- wp:group {"tagName":"section","metadata":{"name":"Results","patternName":"kahel/results"},"align":"full","className":"section results","style":{"spacing":{"padding":{"top":"88px","bottom":"88px"}}},"layout":{"type":"constrained","contentSize":"1440px"}} -->
+<section class="wp-block-group alignfull section results" style="padding-top:88px;padding-bottom:88px"><!-- wp:group {"metadata":{"name":"Results header"},"className":"split-header","layout":{"type":"default"}} -->
 <div class="wp-block-group split-header"><!-- wp:group {"layout":{"type":"default"}} -->
 <div class="wp-block-group"><!-- wp:paragraph {"className":"section-label","fontSize":"small"} -->
 <p class="section-label has-small-font-size">Results</p>

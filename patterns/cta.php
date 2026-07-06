@@ -9,8 +9,8 @@
  * @since   1.0.0
  */
 ?>
-<!-- wp:group {"tagName":"section","metadata":{"name":"CTA","patternName":"kahel/cta"},"align":"full","className":"cta section-bordered home-cta","backgroundColor":"orange","layout":{"type":"constrained","contentSize":"1440px"}} -->
-<section class="wp-block-group alignfull cta section-bordered home-cta has-orange-background-color has-background"><!-- wp:group {"metadata":{"name":"CTA inner"},"className":"cta-inner","layout":{"type":"default"}} -->
+<!-- wp:group {"tagName":"section","metadata":{"name":"CTA","patternName":"kahel/cta"},"align":"full","className":"cta section-bordered home-cta","backgroundColor":"orange","style":{"spacing":{"padding":{"top":"88px","bottom":"88px"}}},"layout":{"type":"constrained","contentSize":"1440px"}} -->
+<section class="wp-block-group alignfull cta section-bordered home-cta has-orange-background-color has-background" style="padding-top:88px;padding-bottom:88px"><!-- wp:group {"metadata":{"name":"CTA inner"},"className":"cta-inner","layout":{"type":"default"}} -->
 <div class="wp-block-group cta-inner"><!-- wp:heading {"textAlign":"center","level":2,"className":"section-title"} -->
 <h2 class="wp-block-heading section-title has-text-align-center">Ready to tell better stories?</h2>
 <!-- /wp:heading -->

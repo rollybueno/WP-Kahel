@@ -9,8 +9,8 @@
  * @since   1.0.0
  */
 ?>
-<!-- wp:group {"tagName":"section","metadata":{"name":"Advantage","patternName":"kahel/advantage"},"align":"full","className":"advantage","layout":{"type":"constrained","contentSize":"1440px"}} -->
-<section class="wp-block-group alignfull advantage"><!-- wp:group {"metadata":{"name":"Advantage heading"},"className":"section-heading section-heading-split","layout":{"type":"default"}} -->
+<!-- wp:group {"tagName":"section","metadata":{"name":"Advantage","patternName":"kahel/advantage"},"align":"full","className":"advantage","style":{"spacing":{"padding":{"top":"88px","bottom":"88px"}}},"layout":{"type":"constrained","contentSize":"1440px"}} -->
+<section class="wp-block-group alignfull advantage" style="padding-top:88px;padding-bottom:88px"><!-- wp:group {"metadata":{"name":"Advantage heading"},"className":"section-heading section-heading-split","layout":{"type":"default"}} -->
 <div class="wp-block-group section-heading section-heading-split"><!-- wp:group {"layout":{"type":"default"}} -->
 <div class="wp-block-group"><!-- wp:paragraph {"className":"section-label","fontSize":"small"} -->
 <p class="section-label has-small-font-size">Advantage</p>

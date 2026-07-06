@@ -9,8 +9,8 @@
  * @since   1.0.0
  */
 ?>
-<!-- wp:group {"tagName":"section","metadata":{"name":"Process","patternName":"kahel/process"},"align":"full","className":"process","backgroundColor":"background-accent","layout":{"type":"constrained","contentSize":"1440px"}} -->
-<section class="wp-block-group alignfull process has-background-accent-background-color has-background"><!-- wp:group {"metadata":{"name":"Process grid"},"className":"process-grid","layout":{"type":"default"}} -->
+<!-- wp:group {"tagName":"section","metadata":{"name":"Process","patternName":"kahel/process"},"align":"full","className":"process","backgroundColor":"background-accent","style":{"spacing":{"padding":{"top":"88px","bottom":"88px"}}},"layout":{"type":"constrained","contentSize":"1440px"}} -->
+<section class="wp-block-group alignfull process has-background-accent-background-color has-background" style="padding-top:88px;padding-bottom:88px"><!-- wp:group {"metadata":{"name":"Process grid"},"className":"process-grid","layout":{"type":"default"}} -->
 <div class="wp-block-group process-grid"><!-- wp:group {"metadata":{"name":"Process intro"},"className":"process-intro","layout":{"type":"default"}} -->
 <div class="wp-block-group process-intro"><!-- wp:paragraph {"className":"section-label","fontSize":"small"} -->
 <p class="section-label has-small-font-size">Process</p>

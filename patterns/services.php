@@ -9,8 +9,8 @@
  * @since   1.0.0
  */
 ?>
-<!-- wp:group {"tagName":"section","metadata":{"name":"Services","patternName":"kahel/services"},"align":"full","className":"services","layout":{"type":"constrained","contentSize":"1440px"}} -->
-<section class="wp-block-group alignfull services"><!-- wp:group {"metadata":{"name":"Services header"},"className":"services-header","layout":{"type":"default"}} -->
+<!-- wp:group {"tagName":"section","metadata":{"name":"Services","patternName":"kahel/services"},"align":"full","className":"services","style":{"spacing":{"padding":{"top":"88px","bottom":"88px"}}},"layout":{"type":"constrained","contentSize":"1440px"}} -->
+<section class="wp-block-group alignfull services" style="padding-top:88px;padding-bottom:88px"><!-- wp:group {"metadata":{"name":"Services header"},"className":"services-header","layout":{"type":"default"}} -->
 <div class="wp-block-group services-header"><!-- wp:group {"layout":{"type":"default"}} -->
 <div class="wp-block-group"><!-- wp:paragraph {"className":"section-label","fontSize":"small"} -->
 <p class="section-label has-small-font-size">Services</p>

@@ -9,8 +9,8 @@
  * @since   1.0.0
  */
 ?>
-<!-- wp:group {"tagName":"section","metadata":{"name":"Related posts","patternName":"kahel/single-related"},"align":"full","className":"related-posts","backgroundColor":"background-secondary","layout":{"type":"constrained","contentSize":"1440px"}} -->
-<section class="wp-block-group alignfull related-posts has-background-secondary-background-color has-background"><!-- wp:group {"metadata":{"name":"Related posts header"},"className":"related-posts-header","layout":{"type":"default"}} -->
+<!-- wp:group {"tagName":"section","metadata":{"name":"Related posts","patternName":"kahel/single-related"},"align":"full","className":"related-posts","backgroundColor":"background-secondary","style":{"spacing":{"padding":{"top":"88px","bottom":"88px"}}},"layout":{"type":"constrained","contentSize":"1440px"}} -->
+<section class="wp-block-group alignfull related-posts has-background-secondary-background-color has-background" style="padding-top:88px;padding-bottom:88px"><!-- wp:group {"metadata":{"name":"Related posts header"},"className":"related-posts-header","layout":{"type":"default"}} -->
 <div class="wp-block-group related-posts-header"><!-- wp:paragraph {"className":"section-label","fontSize":"small"} -->
 <p class="section-label has-small-font-size">Related stories</p>
 <!-- /wp:paragraph -->

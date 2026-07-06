@@ -9,8 +9,8 @@
  * @since   1.0.0
  */
 ?>
-<!-- wp:group {"tagName":"section","metadata":{"name":"Hero","categories":["featured"],"patternName":"kahel/hero"},"align":"full","className":"hero","backgroundColor":"background-accent","layout":{"type":"constrained","contentSize":"1440px"}} -->
-<section class="wp-block-group alignfull hero has-background-accent-background-color has-background"><!-- wp:group {"metadata":{"name":"Hero grid"},"className":"hero-grid","layout":{"type":"flex","flexWrap":"nowrap"}} -->
+<!-- wp:group {"tagName":"section","metadata":{"name":"Hero","categories":["featured"],"patternName":"kahel/hero"},"align":"full","className":"hero","backgroundColor":"background-accent","style":{"spacing":{"padding":{"top":"88px","bottom":"88px"}}},"layout":{"type":"constrained","contentSize":"1440px"}} -->
+<section class="wp-block-group alignfull hero has-background-accent-background-color has-background" style="padding-top:88px;padding-bottom:88px"><!-- wp:group {"metadata":{"name":"Hero grid"},"className":"hero-grid","layout":{"type":"flex","flexWrap":"nowrap"}} -->
 <div class="wp-block-group hero-grid"><!-- wp:group {"metadata":{"name":"Hero copy"},"className":"hero-copy","layout":{"type":"flex","orientation":"vertical","justifyContent":"space-between"}} -->
 <div class="wp-block-group hero-copy"><!-- wp:group {"metadata":{"name":"Hero copy top"},"className":"hero-copy-top","layout":{"type":"default"}} -->
 <div class="wp-block-group hero-copy-top"><!-- wp:paragraph {"className":"section-label","fontSize":"small"} -->

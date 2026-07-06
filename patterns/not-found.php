@@ -9,8 +9,8 @@
  * @since   1.0.22
  */
 ?>
-<!-- wp:group {"tagName":"section","metadata":{"name":"Not found","patternName":"kahel/not-found"},"align":"full","className":"not-found","layout":{"type":"constrained","contentSize":"1440px"}} -->
-<section class="wp-block-group alignfull not-found"><!-- wp:group {"metadata":{"name":"Not found inner"},"className":"not-found-inner","layout":{"type":"default"}} -->
+<!-- wp:group {"tagName":"section","metadata":{"name":"Not found","patternName":"kahel/not-found"},"align":"full","className":"not-found","style":{"spacing":{"padding":{"top":"88px","bottom":"88px"}}},"layout":{"type":"constrained","contentSize":"1440px"}} -->
+<section class="wp-block-group alignfull not-found" style="padding-top:88px;padding-bottom:88px"><!-- wp:group {"metadata":{"name":"Not found inner"},"className":"not-found-inner","layout":{"type":"default"}} -->
 <div class="wp-block-group not-found-inner"><!-- wp:paragraph {"className":"not-found-code","fontSize":"h1"} -->
 <p class="not-found-code has-h-1-font-size" aria-hidden="true">404</p>
 <!-- /wp:paragraph -->

@@ -9,8 +9,8 @@
  * @since   1.0.0
  */
 ?>
-<!-- wp:group {"tagName":"section","metadata":{"name":"Page values","patternName":"kahel/page-values"},"align":"full","className":"page-values","layout":{"type":"constrained","contentSize":"1440px"}} -->
-<section class="wp-block-group alignfull page-values"><!-- wp:group {"metadata":{"name":"Page values header"},"className":"page-values-header","layout":{"type":"default"}} -->
+<!-- wp:group {"tagName":"section","metadata":{"name":"Page values","patternName":"kahel/page-values"},"align":"full","className":"page-values","style":{"spacing":{"padding":{"top":"88px","bottom":"88px"}}},"layout":{"type":"constrained","contentSize":"1440px"}} -->
+<section class="wp-block-group alignfull page-values" style="padding-top:88px;padding-bottom:88px"><!-- wp:group {"metadata":{"name":"Page values header"},"className":"page-values-header","layout":{"type":"default"}} -->
 <div class="wp-block-group page-values-header"><!-- wp:paragraph {"align":"center","className":"section-label","fontSize":"small"} -->
 <p class="has-text-align-center section-label has-small-font-size">Values</p>
 <!-- /wp:paragraph -->

@@ -9,8 +9,8 @@
  * @since   1.0.0
  */
 ?>
-<!-- wp:group {"tagName":"section","metadata":{"name":"Stories","patternName":"kahel/stories"},"align":"full","className":"stories","layout":{"type":"constrained","contentSize":"1440px"}} -->
-<section class="wp-block-group alignfull stories"><!-- wp:group {"metadata":{"name":"Stories heading"},"className":"section-heading section-heading-center","layout":{"type":"default"}} -->
+<!-- wp:group {"tagName":"section","metadata":{"name":"Stories","patternName":"kahel/stories"},"align":"full","className":"stories","style":{"spacing":{"padding":{"top":"88px","bottom":"88px"}}},"layout":{"type":"constrained","contentSize":"1440px"}} -->
+<section class="wp-block-group alignfull stories" style="padding-top:88px;padding-bottom:88px"><!-- wp:group {"metadata":{"name":"Stories heading"},"className":"section-heading section-heading-center","layout":{"type":"default"}} -->
 <div class="wp-block-group section-heading section-heading-center"><!-- wp:paragraph {"align":"center","className":"section-label","fontSize":"small"} -->
 <p class="has-text-align-center section-label has-small-font-size">Stories</p>
 <!-- /wp:paragraph -->
