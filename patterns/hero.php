@@ -9,8 +9,8 @@
  * @since   1.0.0
  */
 ?>
-<!-- wp:group {"tagName":"section","metadata":{"name":"Hero","categories":["banner"],"patternName":"kahel/hero"},"align":"full","className":"hero","backgroundColor":"background-accent","layout":{"type":"constrained","contentSize":"1440px"}} -->
-<section class="wp-block-group alignfull hero has-background-accent-background-color has-background"><!-- wp:group {"metadata":{"name":"Hero grid"},"className":"hero-grid","layout":{"type":"default"}} -->
+<!-- wp:group {"tagName":"section","metadata":{"name":"Hero","categories":["featured"],"patternName":"kahel/hero"},"align":"full","className":"hero","backgroundColor":"background-accent","layout":{"type":"constrained","contentSize":"1440px"}} -->
+<section class="wp-block-group alignfull hero has-background-accent-background-color has-background"><!-- wp:group {"metadata":{"name":"Hero grid"},"className":"hero-grid","layout":{"type":"flex","flexWrap":"nowrap"}} -->
 <div class="wp-block-group hero-grid"><!-- wp:group {"metadata":{"name":"Hero copy"},"className":"hero-copy","layout":{"type":"flex","orientation":"vertical","justifyContent":"space-between"}} -->
 <div class="wp-block-group hero-copy"><!-- wp:group {"metadata":{"name":"Hero copy top"},"className":"hero-copy-top","layout":{"type":"default"}} -->
 <div class="wp-block-group hero-copy-top"><!-- wp:paragraph {"className":"section-label","fontSize":"small"} -->
@@ -41,21 +41,22 @@
 
 <!-- wp:group {"metadata":{"name":"Hero image large"},"className":"hero-image-large","layout":{"type":"default"}} -->
 <div class="wp-block-group hero-image-large"><!-- wp:image {"sizeSlug":"large","linkDestination":"none"} -->
-<figure class="wp-block-image size-large"><img alt="" /></figure>
+<figure class="wp-block-image size-large"><img alt=""/></figure>
 <!-- /wp:image --></div>
 <!-- /wp:group -->
 
 <!-- wp:group {"metadata":{"name":"Hero images stack"},"className":"hero-images-stack","layout":{"type":"flex","orientation":"vertical","flexWrap":"nowrap"}} -->
 <div class="wp-block-group hero-images-stack"><!-- wp:group {"className":"hero-image-small","layout":{"type":"default"}} -->
 <div class="wp-block-group hero-image-small"><!-- wp:image {"sizeSlug":"large","linkDestination":"none"} -->
-<figure class="wp-block-image size-large"><img alt="" /></figure>
+<figure class="wp-block-image size-large"><img alt=""/></figure>
 <!-- /wp:image --></div>
 <!-- /wp:group -->
 
 <!-- wp:group {"className":"hero-image-small","layout":{"type":"default"}} -->
 <div class="wp-block-group hero-image-small"><!-- wp:image {"sizeSlug":"large","linkDestination":"none"} -->
-<figure class="wp-block-image size-large"><img alt="" /></figure>
+<figure class="wp-block-image size-large"><img alt=""/></figure>
 <!-- /wp:image --></div>
 <!-- /wp:group --></div>
 <!-- /wp:group --></div>
 <!-- /wp:group --></section>
+<!-- /wp:group -->
