@@ -40,21 +40,21 @@
 <!-- /wp:group -->
 
 <!-- wp:group {"metadata":{"name":"Hero image large"},"className":"hero-image-large","layout":{"type":"default"}} -->
-<div class="wp-block-group hero-image-large"><!-- wp:image {"sizeSlug":"large","linkDestination":"none"} -->
-<figure class="wp-block-image size-large"><img alt=""/></figure>
+<div class="wp-block-group hero-image-large"><!-- wp:image {"url":"<?php echo esc_url( get_theme_file_uri( 'assets/images/kahel.jpg' ) ); ?>","sizeSlug":"large","linkDestination":"none"} -->
+<figure class="wp-block-image size-large"><img src="<?php echo esc_url( get_theme_file_uri( 'assets/images/kahel.jpg' ) ); ?>" alt=""/></figure>
 <!-- /wp:image --></div>
 <!-- /wp:group -->
 
 <!-- wp:group {"metadata":{"name":"Hero images stack"},"className":"hero-images-stack","layout":{"type":"flex","orientation":"vertical","flexWrap":"nowrap"}} -->
 <div class="wp-block-group hero-images-stack"><!-- wp:group {"className":"hero-image-small","layout":{"type":"default"}} -->
-<div class="wp-block-group hero-image-small"><!-- wp:image {"sizeSlug":"large","linkDestination":"none"} -->
-<figure class="wp-block-image size-large"><img alt=""/></figure>
+<div class="wp-block-group hero-image-small"><!-- wp:image {"url":"<?php echo esc_url( get_theme_file_uri( 'assets/images/kahel.jpg' ) ); ?>","sizeSlug":"large","linkDestination":"none"} -->
+<figure class="wp-block-image size-large"><img src="<?php echo esc_url( get_theme_file_uri( 'assets/images/kahel.jpg' ) ); ?>" alt=""/></figure>
 <!-- /wp:image --></div>
 <!-- /wp:group -->
 
 <!-- wp:group {"className":"hero-image-small","layout":{"type":"default"}} -->
-<div class="wp-block-group hero-image-small"><!-- wp:image {"sizeSlug":"large","linkDestination":"none"} -->
-<figure class="wp-block-image size-large"><img alt=""/></figure>
+<div class="wp-block-group hero-image-small"><!-- wp:image {"url":"<?php echo esc_url( get_theme_file_uri( 'assets/images/kahel.jpg' ) ); ?>","sizeSlug":"large","linkDestination":"none"} -->
+<figure class="wp-block-image size-large"><img src="<?php echo esc_url( get_theme_file_uri( 'assets/images/kahel.jpg' ) ); ?>" alt=""/></figure>
 <!-- /wp:image --></div>
 <!-- /wp:group --></div>
 <!-- /wp:group --></div>
