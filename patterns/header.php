@@ -10,8 +10,8 @@
  * @since   1.0.0
  */
 ?>
-<!-- wp:group {"metadata":{"name":"Header shell"},"className":"header-shell","align":"full","layout":{"type":"constrained","contentSize":"1440px"}} -->
-<div class="wp-block-group alignfull header-shell"><!-- wp:group {"metadata":{"name":"Header bar"},"className":"header-bar","layout":{"type":"flex","flexWrap":"nowrap","justifyContent":"space-between","verticalAlignment":"center"}} -->
+<!-- wp:group {"metadata":{"name":"Header shell"},"className":"header-shell","align":"full","backgroundColor":"orange","layout":{"type":"constrained","contentSize":"1440px"}} -->
+<div class="wp-block-group alignfull header-shell has-orange-background-color has-background"><!-- wp:group {"metadata":{"name":"Header bar"},"className":"header-bar","layout":{"type":"flex","flexWrap":"nowrap","justifyContent":"space-between","verticalAlignment":"center"}} -->
 <div class="wp-block-group header-bar"><!-- wp:site-logo {"width":48,"shouldSyncIcon":false} /-->
 
 <!-- wp:navigation {"overlayMenu":"mobile","icon":"menu","layout":{"type":"flex","justifyContent":"center"}} /-->
