@@ -9,8 +9,8 @@
  * @since   1.0.0
  */
 ?>
-<!-- wp:group {"tagName":"section","metadata":{"name":"Origin","patternName":"kahel/origin"},"align":"full","className":"origin","style":{"spacing":{"padding":{"top":"100px","bottom":"104px","left":"var:preset|spacing|xl","right":"var:preset|spacing|xl"}}},"layout":{"type":"constrained","contentSize":"1440px"}} -->
-<section class="wp-block-group alignfull origin" style="padding-top:100px;padding-right:var(--wp--preset--spacing--xl);padding-bottom:104px;padding-left:var(--wp--preset--spacing--xl)"><!-- wp:group {"metadata":{"name":"Origin grid"},"className":"origin-grid","layout":{"type":"default"}} -->
+<!-- wp:group {"tagName":"section","metadata":{"name":"Origin","patternName":"kahel/origin"},"align":"full","className":"origin","layout":{"type":"constrained","contentSize":"1440px"}} -->
+<section class="wp-block-group alignfull origin"><!-- wp:group {"metadata":{"name":"Origin grid"},"className":"origin-grid","layout":{"type":"default"}} -->
 <div class="wp-block-group origin-grid"><!-- wp:group {"metadata":{"name":"Origin image"},"className":"origin-image","layout":{"type":"default"}} -->
 <div class="wp-block-group origin-image"><!-- wp:image {"sizeSlug":"large","linkDestination":"none"} -->
 <figure class="wp-block-image size-large"><img alt="" /></figure>
@@ -30,7 +30,7 @@
 <p class="section-kicker has-medium-font-size">Chronicle Press came from a simple frustration. Too many stories got buried under poor editing and muddled thinking. We started this to fix that. We work with newsrooms and independent publishers who refuse to settle for less than their best.</p>
 <!-- /wp:paragraph -->
 
-<!-- wp:group {"className":"logo-row origin-logos","layout":{"type":"flex","flexWrap":"wrap","verticalAlignment":"center"},"style":{"spacing":{"blockGap":"28px"}}} -->
+<!-- wp:group {"className":"logo-row origin-logos","layout":{"type":"flex","flexWrap":"wrap","verticalAlignment":"center"}} -->
 <div class="wp-block-group logo-row origin-logos"><!-- wp:image {"className":"logo-image","sizeSlug":"large","linkDestination":"none"} -->
 <figure class="wp-block-image size-large logo-image"><img alt="" /></figure>
 <!-- /wp:image -->
@@ -48,8 +48,8 @@
 <!-- /wp:image --></div>
 <!-- /wp:group -->
 
-<!-- wp:group {"className":"button-row","layout":{"type":"flex","flexWrap":"wrap","verticalAlignment":"center"},"style":{"spacing":{"blockGap":"12px"}}} -->
-<div class="wp-block-group button-row"><!-- wp:buttons {"style":{"spacing":{"blockGap":"12px"}},"layout":{"type":"flex","flexWrap":"wrap"}} -->
+<!-- wp:group {"className":"button-row","layout":{"type":"flex","flexWrap":"wrap","verticalAlignment":"center"}} -->
+<div class="wp-block-group button-row"><!-- wp:buttons {"layout":{"type":"flex","flexWrap":"wrap"}} -->
 <div class="wp-block-buttons"><!-- wp:button {"className":"is-style-outline"} -->
 <div class="wp-block-button is-style-outline"><a class="wp-block-button__link wp-element-button">Learn more</a></div>
 <!-- /wp:button --></div>

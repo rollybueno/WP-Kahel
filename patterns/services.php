@@ -9,8 +9,8 @@
  * @since   1.0.0
  */
 ?>
-<!-- wp:group {"tagName":"section","metadata":{"name":"Services","patternName":"kahel/services"},"align":"full","className":"services","style":{"spacing":{"padding":{"top":"96px","bottom":"94px","left":"var:preset|spacing|xl","right":"var:preset|spacing|xl"}}},"layout":{"type":"constrained","contentSize":"1440px"}} -->
-<section class="wp-block-group alignfull services" style="padding-top:96px;padding-right:var(--wp--preset--spacing--xl);padding-bottom:94px;padding-left:var(--wp--preset--spacing--xl)"><!-- wp:group {"metadata":{"name":"Services header"},"className":"services-header","layout":{"type":"default"}} -->
+<!-- wp:group {"tagName":"section","metadata":{"name":"Services","patternName":"kahel/services"},"align":"full","className":"services","layout":{"type":"constrained","contentSize":"1440px"}} -->
+<section class="wp-block-group alignfull services"><!-- wp:group {"metadata":{"name":"Services header"},"className":"services-header","layout":{"type":"default"}} -->
 <div class="wp-block-group services-header"><!-- wp:group {"layout":{"type":"default"}} -->
 <div class="wp-block-group"><!-- wp:paragraph {"className":"section-label","fontSize":"small"} -->
 <p class="section-label has-small-font-size">Services</p>
@@ -68,8 +68,8 @@
 <!-- /wp:group --></div>
 <!-- /wp:group -->
 
-<!-- wp:group {"className":"button-row","layout":{"type":"flex","flexWrap":"wrap","verticalAlignment":"center"},"style":{"spacing":{"blockGap":"12px"}}} -->
-<div class="wp-block-group button-row"><!-- wp:buttons {"style":{"spacing":{"blockGap":"12px"}},"layout":{"type":"flex","flexWrap":"wrap"}} -->
+<!-- wp:group {"className":"button-row","layout":{"type":"flex","flexWrap":"wrap","verticalAlignment":"center"}} -->
+<div class="wp-block-group button-row"><!-- wp:buttons {"layout":{"type":"flex","flexWrap":"wrap"}} -->
 <div class="wp-block-buttons"><!-- wp:button {"className":"is-style-outline"} -->
 <div class="wp-block-button is-style-outline"><a class="wp-block-button__link wp-element-button">Learn</a></div>
 <!-- /wp:button --></div>

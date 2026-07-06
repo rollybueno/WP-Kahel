@@ -9,8 +9,8 @@
  * @since   1.0.0
  */
 ?>
-<!-- wp:group {"tagName":"section","metadata":{"name":"CTA","patternName":"kahel/cta"},"align":"full","className":"cta section-bordered home-cta","backgroundColor":"orange","style":{"spacing":{"padding":{"top":"88px","bottom":"116px","left":"var:preset|spacing|xl","right":"var:preset|spacing|xl"}}},"layout":{"type":"constrained","contentSize":"1440px"}} -->
-<section class="wp-block-group alignfull cta section-bordered home-cta has-orange-background-color has-background" style="padding-top:88px;padding-right:var(--wp--preset--spacing--xl);padding-bottom:116px;padding-left:var(--wp--preset--spacing--xl)"><!-- wp:group {"metadata":{"name":"CTA inner"},"className":"cta-inner","layout":{"type":"default"}} -->
+<!-- wp:group {"tagName":"section","metadata":{"name":"CTA","patternName":"kahel/cta"},"align":"full","className":"cta section-bordered home-cta","backgroundColor":"orange","layout":{"type":"constrained","contentSize":"1440px"}} -->
+<section class="wp-block-group alignfull cta section-bordered home-cta has-orange-background-color has-background"><!-- wp:group {"metadata":{"name":"CTA inner"},"className":"cta-inner","layout":{"type":"default"}} -->
 <div class="wp-block-group cta-inner"><!-- wp:heading {"textAlign":"center","level":2,"className":"section-title"} -->
 <h2 class="wp-block-heading section-title has-text-align-center">Ready to tell better stories?</h2>
 <!-- /wp:heading -->
@@ -19,7 +19,7 @@
 <p class="has-text-align-center section-kicker has-medium-font-size">Let&#8217;s talk about what you&#8217;re working on and how we can help you get there</p>
 <!-- /wp:paragraph -->
 
-<!-- wp:buttons {"className":"button-row cta-actions","layout":{"type":"flex","justifyContent":"center","flexWrap":"wrap"},"style":{"spacing":{"blockGap":"12px"}}} -->
+<!-- wp:buttons {"className":"button-row cta-actions","layout":{"type":"flex","justifyContent":"center","flexWrap":"wrap"}} -->
 <div class="wp-block-buttons button-row cta-actions"><!-- wp:button -->
 <div class="wp-block-button"><a class="wp-block-button__link wp-element-button">Start now</a></div>
 <!-- /wp:button -->
@@ -29,7 +29,7 @@
 <!-- /wp:button --></div>
 <!-- /wp:buttons -->
 
-<!-- wp:group {"className":"logo-row cta-logos","layout":{"type":"flex","flexWrap":"wrap","justifyContent":"center","verticalAlignment":"center"},"style":{"spacing":{"blockGap":"44px"}}} -->
+<!-- wp:group {"className":"logo-row cta-logos","layout":{"type":"flex","flexWrap":"wrap","justifyContent":"center","verticalAlignment":"center"}} -->
 <div class="wp-block-group logo-row cta-logos"><!-- wp:image {"className":"logo-image","sizeSlug":"large","linkDestination":"none"} -->
 <figure class="wp-block-image size-large logo-image"><img alt="" /></figure>
 <!-- /wp:image -->

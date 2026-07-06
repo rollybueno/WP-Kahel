@@ -9,8 +9,8 @@
  * @since   1.0.0
  */
 ?>
-<!-- wp:group {"tagName":"section","metadata":{"name":"Page values","patternName":"kahel/page-values"},"align":"full","className":"page-values","style":{"spacing":{"padding":{"top":"88px","bottom":"88px","left":"var:preset|spacing|xl","right":"var:preset|spacing|xl"}},"border":{"top":{"color":"var:preset|color|border-light","width":"1px","style":"solid"}}},"layout":{"type":"constrained","contentSize":"1440px"}} -->
-<section class="wp-block-group alignfull page-values" style="border-top-color:var(--wp--preset--color--border-light);border-top-style:solid;border-top-width:1px;padding-top:88px;padding-right:var(--wp--preset--spacing--xl);padding-bottom:88px;padding-left:var(--wp--preset--spacing--xl)"><!-- wp:group {"metadata":{"name":"Page values header"},"className":"page-values-header","layout":{"type":"default"}} -->
+<!-- wp:group {"tagName":"section","metadata":{"name":"Page values","patternName":"kahel/page-values"},"align":"full","className":"page-values","layout":{"type":"constrained","contentSize":"1440px"}} -->
+<section class="wp-block-group alignfull page-values"><!-- wp:group {"metadata":{"name":"Page values header"},"className":"page-values-header","layout":{"type":"default"}} -->
 <div class="wp-block-group page-values-header"><!-- wp:paragraph {"align":"center","className":"section-label","fontSize":"small"} -->
 <p class="has-text-align-center section-label has-small-font-size">Values</p>
 <!-- /wp:paragraph -->
