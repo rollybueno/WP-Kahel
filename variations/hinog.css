@@ -28,17 +28,12 @@ body.variation-hinog .brand-mark {
 }
 
 body.variation-hinog h1,
-body.variation-hinog .section-title,
-body.variation-hinog .footer-title,
+body.variation-hinog h2,
+body.variation-hinog h3,
 body.variation-hinog .proof-quote {
 	font-family: "Source Serif 4", Georgia, serif;
 	font-weight: 700;
 	letter-spacing: -0.055em;
-}
-
-body.variation-hinog h1 {
-	max-width: 980px;
-	line-height: 0.9;
 }
 
 body.variation-hinog h1 em {
