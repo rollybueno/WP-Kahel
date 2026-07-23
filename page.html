@@ -4,138 +4,16 @@
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>About the Journal — Kahel</title>
-<style>
-	:root {
-		--orange: #F47A1F;
-		--deep-orange: #C95212;
-		--apricot: #FFD0A6;
-		--cream: #FFF4E8;
-		--paper: #FFF8F1;
-		--leaf: #557A46;
-		--ink: #24170F;
-		--muted: #6F5949;
-		--line: rgba(36, 23, 15, 0.12);
-		--content: min(1180px, calc(100vw - 40px));
-		--reading: min(720px, calc(100vw - 40px));
-	}
-
-	* { box-sizing: border-box; }
-	html { background: var(--paper); color: var(--ink); font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; }
-	body { margin: 0; min-width: 320px; }
-	a { color: inherit; }
-
-	.site-header {
-		width: var(--content);
-		margin-inline: auto;
-		display: flex;
-		align-items: center;
-		justify-content: space-between;
-		gap: 24px;
-		padding: 22px 0 18px;
-		border-bottom: 1px solid var(--line);
-	}
-
-	.brand, .footer-brandline { display: inline-flex; align-items: center; gap: 10px; font-weight: 900; letter-spacing: -.04em; text-decoration: none; }
-	.brand-mark { position: relative; width: 22px; height: 22px; border-radius: 50% 45% 48% 52%; background: var(--orange); box-shadow: inset -3px -3px 0 rgba(0,0,0,.08); }
-	.brand-mark::after { content: ""; position: absolute; width: 8px; height: 5px; top: -3px; right: 0; border-radius: 100% 0 100% 0; background: var(--leaf); transform: rotate(-22deg); }
-	.nav { display: flex; align-items: center; gap: 28px; font-size: .9rem; }
-	.nav a { text-decoration: none; }
-	.nav .button { padding: 10px 16px; border-radius: 999px; background: var(--orange); font-weight: 850; box-shadow: 0 8px 22px rgba(201,82,18,.18); }
-
-	.page-header {
-		width: var(--content);
-		margin-inline: auto;
-		display: grid;
-		grid-template-columns: minmax(0, 1.2fr) minmax(280px, .55fr);
-		gap: clamp(48px, 9vw, 140px);
-		align-items: end;
-		padding: clamp(80px, 11vw, 150px) 0 clamp(60px, 8vw, 100px);
-	}
-
-	.page-kicker, .section-kicker { margin: 0 0 20px; color: var(--deep-orange); font-size: .78rem; font-weight: 900; letter-spacing: .13em; text-transform: uppercase; }
-	.page-kicker { display: flex; align-items: center; gap: 10px; }
-	.page-kicker::before { content: ""; width: 36px; height: 3px; border-radius: 99px; background: var(--orange); }
-
-	h1 { max-width: 9ch; margin: 0; font-size: clamp(4rem, 8vw, 8.5rem); font-weight: 850; line-height: .9; letter-spacing: -.075em; }
-	.page-intro { margin: 0 0 8px; color: var(--muted); font-size: clamp(1.08rem, 1.7vw, 1.3rem); line-height: 1.6; }
-
-	.page-visual {
-		position: relative;
-		width: var(--content);
-		min-height: clamp(420px, 52vw, 680px);
-		margin-inline: auto;
-		overflow: hidden;
-		border-radius: 30px;
-		background: linear-gradient(145deg, #ffd7b2, var(--orange) 58%, var(--deep-orange));
-		box-shadow: 0 24px 60px rgba(104,49,14,.12);
-	}
-
-	.page-visual::before, .page-visual::after { content: ""; position: absolute; border-radius: 50%; }
-	.page-visual::before { width: 38%; aspect-ratio: 1; left: 17%; top: 18%; background: var(--cream); box-shadow: 190px 120px 0 var(--ink); }
-	.page-visual::after { width: 25%; aspect-ratio: 1; right: 9%; top: -8%; border: clamp(38px, 6vw, 82px) solid var(--leaf); }
-
-	.page-content { width: var(--reading); margin: clamp(72px, 9vw, 120px) auto; font-size: clamp(1.05rem, 1.3vw, 1.18rem); line-height: 1.82; }
-	.page-content .lead { font-size: clamp(1.35rem, 2.3vw, 1.85rem); font-weight: 750; line-height: 1.4; letter-spacing: -.025em; }
-	.page-content h2 { margin: 2.4em 0 .7em; font-size: clamp(2.2rem, 4vw, 3.8rem); line-height: .98; letter-spacing: -.06em; }
-	.page-content blockquote { margin: 2.4em 0; padding: 10px 0 10px 28px; border-left: 4px solid var(--orange); font-size: clamp(1.5rem, 3vw, 2.4rem); font-weight: 800; line-height: 1.16; letter-spacing: -.045em; }
-	.page-content blockquote p { margin: 0; }
-
-	.values { padding: clamp(80px, 10vw, 140px) 0; background: #fffdf9; }
-	.values-inner { width: var(--content); margin-inline: auto; }
-	.values-head { display: grid; grid-template-columns: 1fr .7fr; gap: 50px; align-items: end; margin-bottom: 56px; }
-	.values-head h2 { max-width: 10ch; margin: 0; font-size: clamp(2.8rem, 5vw, 5.6rem); line-height: .94; letter-spacing: -.07em; }
-	.values-head p:last-child { margin: 0; color: var(--muted); line-height: 1.65; }
-	.values-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 20px; }
-	.value-card { min-height: 250px; display: flex; flex-direction: column; justify-content: space-between; padding: 28px; border-radius: 26px; background: var(--orange); }
-	.value-card:nth-child(2) { background: var(--cream); }
-	.value-card:nth-child(3) { background: var(--ink); color: var(--cream); }
-	.value-number { font-size: .78rem; font-weight: 900; letter-spacing: .12em; }
-	.value-card:nth-child(3) .value-number { color: var(--orange); }
-	.value-card h3 { margin: 0 0 8px; font-size: 1.55rem; letter-spacing: -.04em; }
-	.value-card p { margin: 0; line-height: 1.55; }
-
-	.contributors { width: var(--content); margin: clamp(90px, 11vw, 150px) auto; display: grid; grid-template-columns: .7fr 1fr; gap: clamp(50px, 9vw, 130px); align-items: start; }
-	.contributors h2 { max-width: 8ch; margin: 0; font-size: clamp(2.8rem, 5vw, 5.5rem); line-height: .94; letter-spacing: -.07em; }
-	.contributor-list { border-top: 1px solid var(--line); }
-	.contributor { display: grid; grid-template-columns: 1fr auto; gap: 20px; padding: 24px 0; border-bottom: 1px solid var(--line); }
-	.contributor h3 { margin: 0 0 5px; font-size: 1.15rem; letter-spacing: -.025em; }
-	.contributor p { margin: 0; color: var(--muted); }
-	.contributor span { color: var(--deep-orange); font-size: .76rem; font-weight: 900; letter-spacing: .08em; text-transform: uppercase; }
-
-	.site-footer { padding: 68px 0 28px; background: var(--ink); color: var(--cream); }
-	.footer-inner { width: var(--content); margin-inline: auto; }
-	.footer-top { display: flex; justify-content: space-between; gap: 40px; padding-bottom: 52px; border-bottom: 1px solid rgba(255,244,232,.14); }
-	.footer-title { max-width: 12ch; margin: 20px 0 0; font-size: clamp(2.3rem, 4vw, 4rem); line-height: .96; letter-spacing: -.06em; }
-	.footer-title span { color: var(--orange); }
-	.footer-nav { display: flex; flex-wrap: wrap; gap: 24px; align-content: start; }
-	.footer-nav a { text-decoration: none; font-weight: 700; }
-	.footer-bottom { display: flex; justify-content: space-between; gap: 20px; padding-top: 24px; color: rgba(255,244,232,.6); font-size: .82rem; }
-
-	@media (max-width: 800px) {
-		.page-header, .values-head, .contributors { grid-template-columns: 1fr; }
-		.values-grid { grid-template-columns: 1fr 1fr; }
-	}
-
-	@media (max-width: 560px) {
-		:root { --content: min(100% - 28px, 1180px); --reading: min(100% - 28px, 720px); }
-		.nav a:not(.button) { display: none; }
-		.page-header { padding-top: 60px; }
-		h1 { font-size: clamp(3.4rem, 17vw, 5.6rem); }
-		.page-visual { min-height: 360px; border-radius: 22px; }
-		.page-visual::before { width: 48%; left: 8%; box-shadow: 110px 100px 0 var(--ink); }
-		.values-grid { grid-template-columns: 1fr; }
-		.footer-top, .footer-bottom { align-items: flex-start; flex-direction: column; }
-	}
-</style>
+<link rel="stylesheet" href="style.css" />
 </head>
-<body>
+<body class="standard-page">
 	<header class="site-header">
 		<a class="brand" href="preview.html"><span class="brand-mark" aria-hidden="true"></span>Kahel</a>
 		<nav class="nav" aria-label="Primary navigation">
 			<a href="preview.html#work">Stories</a>
 			<a href="preview.html#services">Topics</a>
 			<a href="page.html" aria-current="page">About</a>
-			<a class="button" href="preview.html#journal">Latest issue</a>
+			<a class="button button-primary" href="preview.html#journal">Latest issue</a>
 		</nav>
 	</header>
 
@@ -187,7 +65,7 @@
 		<div class="footer-inner">
 			<div class="footer-top">
 				<div><a class="footer-brandline" href="preview.html"><span class="brand-mark" aria-hidden="true"></span>Kahel</a><h2 class="footer-title">Stories gathered under the <span>afternoon sun.</span></h2></div>
-				<nav class="footer-nav" aria-label="Footer navigation"><a href="preview.html#work">Stories</a><a href="preview.html#services">Topics</a><a href="page.html">About</a><a href="preview.html#journal">Journal</a></nav>
+				<nav class="footer-nav footer-nav-inline" aria-label="Footer navigation"><a href="preview.html#work">Stories</a><a href="preview.html#services">Topics</a><a href="page.html">About</a><a href="preview.html#journal">Journal</a></nav>
 			</div>
 			<div class="footer-bottom"><span>© 2026 Kahel Journal.</span><span>Privacy · Accessibility · Colophon</span></div>
 		</div>
