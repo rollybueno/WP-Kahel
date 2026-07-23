@@ -1,0 +1,200 @@
+/*
+ * Hinog — a ripe, tonal-orange variation of Kahel.
+ * Load after style.css and add .variation-hinog to the body element.
+ */
+
+body.variation-hinog {
+	--kahel-orange: #F26A1B;
+	--kahel-orange-deep: #A63D12;
+	--kahel-apricot: #FFBF7B;
+	--kahel-cream: #FFF0D8;
+	--kahel-leaf: #4D6A3A;
+	--kahel-ink: #2A140B;
+	--hero-bg: #FFF6E9;
+	--text-muted: #735442;
+	--line: rgba(91, 38, 14, 0.15);
+	background: var(--hero-bg);
+	color: var(--kahel-ink);
+}
+
+body.variation-hinog .hero {
+	background:
+		radial-gradient(circle at 84% 16%, rgba(255, 177, 91, 0.4), transparent 31%),
+		linear-gradient(180deg, #FFF8ED 0%, #FFF0D9 100%);
+}
+
+body.variation-hinog .brand-mark {
+	background: linear-gradient(145deg, #FF9B32, var(--kahel-orange));
+}
+
+body.variation-hinog h1,
+body.variation-hinog .section-title,
+body.variation-hinog .footer-title,
+body.variation-hinog .proof-quote {
+	font-family: "Source Serif 4", Georgia, serif;
+	font-weight: 700;
+	letter-spacing: -0.055em;
+}
+
+body.variation-hinog h1 {
+	max-width: 980px;
+	line-height: 0.9;
+}
+
+body.variation-hinog h1 em {
+	color: var(--kahel-orange-deep);
+	font-family: inherit;
+	font-weight: inherit;
+	font-style: italic;
+}
+
+body.variation-hinog .eyebrow,
+body.variation-hinog .section-kicker,
+body.variation-hinog .article-meta,
+body.variation-hinog .project-result {
+	color: var(--kahel-orange-deep);
+}
+
+body.variation-hinog .eyebrow::before,
+body.variation-hinog .brand-chip::before {
+	background: var(--kahel-orange-deep);
+}
+
+body.variation-hinog .button-primary,
+body.variation-hinog .nav .button,
+body.variation-hinog .footer-cta {
+	background: var(--kahel-orange-deep);
+	color: var(--kahel-cream);
+	box-shadow: 0 10px 26px rgba(166, 61, 18, 0.24);
+}
+
+body.variation-hinog .button-outline,
+body.variation-hinog .outline-button {
+	border-color: var(--kahel-orange-deep);
+	color: var(--kahel-orange-deep);
+}
+
+body.variation-hinog .card {
+	border: 0;
+	border-radius: 44px 16px 44px 16px;
+	box-shadow: 0 20px 45px rgba(112, 48, 15, 0.12);
+}
+
+body.variation-hinog .card-1 {
+	background: var(--kahel-orange-deep);
+	color: var(--kahel-cream);
+}
+
+body.variation-hinog .card-2 {
+	background: #FFD99F;
+}
+
+body.variation-hinog .card-2 .icon {
+	background: var(--kahel-orange);
+	border-color: var(--kahel-orange);
+}
+
+body.variation-hinog .card-3 {
+	background: var(--kahel-orange);
+	color: var(--kahel-ink);
+}
+
+body.variation-hinog .card-3 .card-number {
+	color: var(--kahel-ink);
+}
+
+body.variation-hinog .card-4 {
+	background: var(--kahel-apricot);
+}
+
+body.variation-hinog .icon {
+	border-radius: 50%;
+}
+
+body.variation-hinog .work-section,
+body.variation-hinog .site-footer {
+	background: #3A190D;
+}
+
+body.variation-hinog .work-header .section-kicker,
+body.variation-hinog .work-section .text-link,
+body.variation-hinog .footer-nav h3 {
+	color: var(--kahel-apricot);
+}
+
+body.variation-hinog .project-visual {
+	background: linear-gradient(145deg, #FF9A38, var(--kahel-orange-deep));
+}
+
+body.variation-hinog .project-card:nth-child(2) .project-visual {
+	background: linear-gradient(145deg, #FFD99F, var(--kahel-apricot));
+}
+
+body.variation-hinog .results-section,
+body.variation-hinog .proof-section,
+body.variation-hinog .origin-section,
+body.variation-hinog .faq-section {
+	background: #FFFCF6;
+}
+
+body.variation-hinog .process-section {
+	background: linear-gradient(180deg, #FFF1DB 0%, #FFFCF6 100%);
+}
+
+body.variation-hinog .journal-section {
+	background: #FFF1DB;
+}
+
+body.variation-hinog .proof-card,
+body.variation-hinog .brand-chip {
+	background: var(--kahel-cream);
+}
+
+body.variation-hinog .timeline::before {
+	background: linear-gradient(180deg, var(--kahel-orange-deep), rgba(166, 61, 18, 0.15));
+}
+
+body.variation-hinog .timeline-item::before {
+	border-color: var(--kahel-orange-deep);
+	background: #FFF1DB;
+	box-shadow: 0 0 0 8px rgba(242, 106, 27, 0.07);
+}
+
+body.variation-hinog .origin-visual {
+	background:
+		radial-gradient(circle at 68% 24%, rgba(255, 255, 255, 0.55), transparent 28%),
+		linear-gradient(145deg, #FFD093 0%, #F26A1B 58%, #A63D12 100%);
+}
+
+body.variation-hinog .origin-fruit {
+	background: linear-gradient(145deg, #FFA13E, var(--kahel-orange) 62%, var(--kahel-orange-deep));
+}
+
+body.variation-hinog .article-card:nth-child(1) .article-art {
+	background: #FFD09A;
+}
+
+body.variation-hinog .article-card:nth-child(2) .article-art {
+	background: var(--kahel-orange);
+}
+
+body.variation-hinog .article-card:nth-child(3) .article-art {
+	background: #3A190D;
+}
+
+body.variation-hinog .article-read-more,
+body.variation-hinog .text-link,
+body.variation-hinog .faq-item summary::after {
+	color: var(--kahel-orange-deep);
+}
+
+body.variation-hinog .work-section .text-link,
+body.variation-hinog .site-footer a {
+	color: var(--kahel-cream);
+}
+
+@media (max-width: 560px) {
+	body.variation-hinog .card {
+		border-radius: 32px 12px 32px 12px;
+	}
+}
