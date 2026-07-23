@@ -1,0 +1,629 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>What the Old Calamansi Tree Remembers — Kahel</title>
+<style>
+	:root {
+		--orange: #F47A1F;
+		--deep-orange: #C95212;
+		--apricot: #FFD0A6;
+		--cream: #FFF4E8;
+		--paper: #FFF8F1;
+		--leaf: #557A46;
+		--ink: #24170F;
+		--muted: #6F5949;
+		--line: rgba(36, 23, 15, 0.12);
+		--content: min(1180px, calc(100vw - 40px));
+		--reading: min(720px, calc(100vw - 40px));
+	}
+
+	* { box-sizing: border-box; }
+
+	html {
+		background: var(--paper);
+		color: var(--ink);
+		font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+	}
+
+	body { margin: 0; min-width: 320px; }
+	a { color: inherit; }
+
+	.site-header {
+		width: var(--content);
+		margin-inline: auto;
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		gap: 24px;
+		padding: 22px 0 18px;
+		border-bottom: 1px solid var(--line);
+	}
+
+	.brand,
+	.footer-brandline {
+		display: inline-flex;
+		align-items: center;
+		gap: 10px;
+		font-weight: 900;
+		letter-spacing: -0.04em;
+		text-decoration: none;
+	}
+
+	.brand-mark {
+		position: relative;
+		width: 22px;
+		height: 22px;
+		border-radius: 50% 45% 48% 52%;
+		background: var(--orange);
+		box-shadow: inset -3px -3px 0 rgba(0, 0, 0, 0.08);
+	}
+
+	.brand-mark::after {
+		content: "";
+		position: absolute;
+		width: 8px;
+		height: 5px;
+		top: -3px;
+		right: 0;
+		border-radius: 100% 0 100% 0;
+		background: var(--leaf);
+		transform: rotate(-22deg);
+	}
+
+	.nav { display: flex; align-items: center; gap: 28px; font-size: 0.9rem; }
+	.nav a { text-decoration: none; }
+	.nav .button {
+		padding: 10px 16px;
+		border-radius: 999px;
+		background: var(--orange);
+		font-weight: 850;
+		box-shadow: 0 8px 22px rgba(201, 82, 18, 0.18);
+	}
+
+	.post-header {
+		width: var(--content);
+		margin-inline: auto;
+		padding: clamp(72px, 10vw, 140px) 0 clamp(52px, 7vw, 90px);
+	}
+
+	.post-kicker {
+		display: flex;
+		align-items: center;
+		gap: 10px;
+		margin: 0 0 22px;
+		color: var(--deep-orange);
+		font-size: 0.78rem;
+		font-weight: 900;
+		letter-spacing: 0.13em;
+		text-transform: uppercase;
+	}
+
+	.post-kicker::before {
+		content: "";
+		width: 36px;
+		height: 3px;
+		border-radius: 99px;
+		background: var(--orange);
+	}
+
+	h1 {
+		max-width: 11ch;
+		margin: 0;
+		font-size: clamp(3.5rem, 7.5vw, 8.3rem);
+		font-weight: 850;
+		line-height: 0.9;
+		letter-spacing: -0.075em;
+	}
+
+	.post-deck {
+		max-width: 680px;
+		margin: 30px 0 0;
+		color: var(--muted);
+		font-size: clamp(1.1rem, 1.7vw, 1.35rem);
+		line-height: 1.55;
+	}
+
+	.post-meta {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 10px 28px;
+		margin-top: 34px;
+		padding-top: 22px;
+		border-top: 1px solid var(--line);
+		font-size: 0.86rem;
+		font-weight: 750;
+	}
+
+	.post-meta span:first-child { color: var(--deep-orange); }
+
+	.featured-image {
+		position: relative;
+		width: var(--content);
+		min-height: clamp(420px, 56vw, 720px);
+		margin-inline: auto;
+		overflow: hidden;
+		border-radius: 30px;
+		background:
+			radial-gradient(circle at 70% 18%, rgba(255,255,255,.55), transparent 25%),
+			linear-gradient(145deg, var(--apricot), var(--orange));
+		box-shadow: 0 24px 60px rgba(104, 49, 14, 0.12);
+	}
+
+	.featured-fruit {
+		position: absolute;
+		width: min(38%, 410px);
+		aspect-ratio: 1;
+		left: 50%;
+		top: 51%;
+		border-radius: 52% 48% 50% 50%;
+		background: linear-gradient(145deg, #ff9d37, var(--orange) 60%, var(--deep-orange));
+		box-shadow: inset -26px -20px 38px rgba(110,43,3,.2), 0 35px 70px rgba(106,45,5,.24);
+		transform: translate(-50%, -50%);
+	}
+
+	.featured-fruit::before {
+		content: "";
+		position: absolute;
+		width: 38%;
+		height: 17%;
+		top: -6%;
+		left: 55%;
+		border-radius: 100% 0 100% 0;
+		background: var(--leaf);
+		transform: rotate(-22deg);
+	}
+
+	.image-caption {
+		width: var(--content);
+		margin: 12px auto 0;
+		color: var(--muted);
+		font-size: 0.78rem;
+	}
+
+	.post-content {
+		width: var(--reading);
+		margin: clamp(70px, 9vw, 120px) auto;
+		font-size: clamp(1.05rem, 1.3vw, 1.18rem);
+		line-height: 1.82;
+	}
+
+	.post-content > p:first-child::first-letter {
+		float: left;
+		margin: 8px 10px 0 0;
+		color: var(--orange);
+		font-size: 5.2rem;
+		font-weight: 900;
+		line-height: 0.72;
+	}
+
+	.post-content h2 {
+		margin: 2.5em 0 0.7em;
+		font-size: clamp(2.1rem, 4vw, 3.7rem);
+		line-height: 0.98;
+		letter-spacing: -0.06em;
+	}
+
+	.post-content blockquote {
+		margin: 2.4em 0;
+		padding: 10px 0 10px 28px;
+		border-left: 4px solid var(--orange);
+		font-size: clamp(1.55rem, 3vw, 2.45rem);
+		font-weight: 800;
+		line-height: 1.15;
+		letter-spacing: -0.045em;
+	}
+
+	.post-content blockquote p { margin: 0; }
+
+	.inline-note {
+		margin: 2.5em 0;
+		padding: 28px;
+		border-radius: 20px;
+		background: var(--cream);
+	}
+
+	.inline-note strong { display: block; margin-bottom: 6px; }
+
+	.post-tags {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 10px;
+		margin-top: 60px;
+		padding-top: 28px;
+		border-top: 1px solid var(--line);
+	}
+
+	.post-tags a {
+		padding: 8px 12px;
+		border: 1px solid var(--line);
+		border-radius: 999px;
+		font-size: 0.78rem;
+		font-weight: 800;
+		text-decoration: none;
+	}
+
+	.author-box {
+		width: var(--content);
+		margin: 0 auto clamp(90px, 11vw, 150px);
+		display: grid;
+		grid-template-columns: auto minmax(0, 1fr);
+		gap: 24px;
+		align-items: center;
+		padding: clamp(28px, 4vw, 48px);
+		border-radius: 26px;
+		background: var(--cream);
+	}
+
+	.author-avatar {
+		width: 82px;
+		aspect-ratio: 1;
+		border-radius: 50%;
+		background: linear-gradient(145deg, var(--orange), var(--apricot));
+	}
+
+	.author-box h2 { margin: 0 0 7px; font-size: 1.3rem; letter-spacing: -0.03em; }
+	.author-box p { max-width: 64ch; margin: 0; color: var(--muted); line-height: 1.6; }
+
+	.comments {
+		padding: clamp(80px, 10vw, 130px) 0;
+		border-top: 1px solid var(--line);
+		background: var(--paper);
+	}
+
+	.comments-inner {
+		width: min(900px, calc(100vw - 40px));
+		margin-inline: auto;
+	}
+
+	.comments-title,
+	.comment-reply-title {
+		margin: 0;
+		font-size: clamp(2.5rem, 5vw, 4.8rem);
+		line-height: 0.96;
+		letter-spacing: -0.065em;
+	}
+
+	.comment-list,
+	.comment-children {
+		list-style: none;
+		margin: 0;
+		padding: 0;
+	}
+
+	.comment-list {
+		margin-top: clamp(42px, 6vw, 70px);
+	}
+
+	.comment-list > li {
+		padding: 30px 0;
+		border-top: 1px solid var(--line);
+	}
+
+	.comment-body {
+		display: grid;
+		grid-template-columns: auto minmax(0, 1fr);
+		gap: 18px;
+	}
+
+	.comment-avatar {
+		width: 52px;
+		aspect-ratio: 1;
+		border-radius: 50%;
+		background: var(--apricot);
+	}
+
+	.comment-list > li:nth-child(2) .comment-avatar {
+		background: var(--leaf);
+	}
+
+	.comment-author {
+		margin: 0;
+		font-size: 1rem;
+		letter-spacing: -0.02em;
+	}
+
+	.comment-meta {
+		margin: 4px 0 14px;
+		color: var(--muted);
+		font-size: 0.78rem;
+	}
+
+	.comment-text {
+		margin: 0;
+		line-height: 1.7;
+	}
+
+	.comment-reply-link {
+		display: inline-block;
+		margin-top: 14px;
+		color: var(--deep-orange);
+		font-size: 0.8rem;
+		font-weight: 850;
+		text-decoration: none;
+	}
+
+	.comment-children {
+		margin: 28px 0 0 70px;
+		padding-left: 24px;
+		border-left: 2px solid var(--apricot);
+	}
+
+	.comment-form-wrap {
+		margin-top: clamp(60px, 8vw, 100px);
+		padding: clamp(28px, 5vw, 56px);
+		border-radius: 28px;
+		background: var(--cream);
+	}
+
+	.comment-notes {
+		margin: 16px 0 30px;
+		color: var(--muted);
+		font-size: 0.9rem;
+		line-height: 1.55;
+	}
+
+	.comment-form {
+		display: grid;
+		grid-template-columns: repeat(2, minmax(0, 1fr));
+		gap: 20px;
+	}
+
+	.comment-field,
+	.comment-field-wide {
+		display: grid;
+		gap: 8px;
+	}
+
+	.comment-field-wide,
+	.comment-consent,
+	.form-submit {
+		grid-column: 1 / -1;
+	}
+
+	.comment-form label {
+		font-size: 0.78rem;
+		font-weight: 850;
+		letter-spacing: 0.03em;
+	}
+
+	.comment-form input[type="text"],
+	.comment-form input[type="email"],
+	.comment-form input[type="url"],
+	.comment-form textarea {
+		width: 100%;
+		border: 1px solid rgba(36, 23, 15, 0.18);
+		border-radius: 12px;
+		background: #fffdf9;
+		color: var(--ink);
+		font: inherit;
+		outline: none;
+	}
+
+	.comment-form input[type="text"],
+	.comment-form input[type="email"],
+	.comment-form input[type="url"] {
+		height: 48px;
+		padding: 0 14px;
+	}
+
+	.comment-form textarea {
+		min-height: 160px;
+		padding: 14px;
+		resize: vertical;
+	}
+
+	.comment-form input:focus,
+	.comment-form textarea:focus {
+		border-color: var(--orange);
+		box-shadow: 0 0 0 3px rgba(244, 122, 31, 0.12);
+	}
+
+	.comment-consent {
+		display: flex;
+		align-items: flex-start;
+		gap: 10px;
+		color: var(--muted);
+		font-size: 0.82rem;
+		line-height: 1.45;
+	}
+
+	.comment-consent input {
+		margin-top: 3px;
+		accent-color: var(--orange);
+	}
+
+	.submit-button {
+		min-height: 50px;
+		padding: 0 22px;
+		border: 0;
+		border-radius: 999px;
+		background: var(--orange);
+		color: var(--ink);
+		font: inherit;
+		font-weight: 900;
+		cursor: pointer;
+		box-shadow: 0 10px 24px rgba(201, 82, 18, 0.18);
+	}
+
+	.related {
+		padding: clamp(80px, 10vw, 130px) 0;
+		background: #fffdf9;
+	}
+
+	.related-inner { width: var(--content); margin-inline: auto; }
+	.section-kicker { margin: 0 0 16px; color: var(--deep-orange); font-size: .76rem; font-weight: 900; letter-spacing: .13em; text-transform: uppercase; }
+	.related h2 { max-width: 9ch; margin: 0 0 48px; font-size: clamp(2.7rem, 5vw, 5.2rem); line-height: .94; letter-spacing: -.07em; }
+	.related-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 24px; }
+	.related-card { color: inherit; text-decoration: none; }
+	.related-art { min-height: 260px; border-radius: 22px; background: var(--leaf); }
+	.related-card:nth-child(2) .related-art { background: var(--ink); }
+	.related-card p { margin: 18px 0 8px; color: var(--deep-orange); font-size: .74rem; font-weight: 900; letter-spacing: .1em; text-transform: uppercase; }
+	.related-card h3 { margin: 0; font-size: clamp(1.35rem, 2.5vw, 2.2rem); line-height: 1.05; letter-spacing: -.05em; }
+
+	.site-footer { padding: 68px 0 28px; background: var(--ink); color: var(--cream); }
+	.footer-inner { width: var(--content); margin-inline: auto; }
+	.footer-top { display: flex; justify-content: space-between; gap: 40px; padding-bottom: 52px; border-bottom: 1px solid rgba(255,244,232,.14); }
+	.footer-title { max-width: 12ch; margin: 20px 0 0; font-size: clamp(2.3rem, 4vw, 4rem); line-height: .96; letter-spacing: -.06em; }
+	.footer-title span { color: var(--orange); }
+	.footer-nav { display: flex; flex-wrap: wrap; gap: 24px; align-content: start; }
+	.footer-nav a { text-decoration: none; font-weight: 700; }
+	.footer-bottom { display: flex; justify-content: space-between; gap: 20px; padding-top: 24px; color: rgba(255,244,232,.6); font-size: .82rem; }
+
+	@media (max-width: 700px) {
+		:root { --content: min(100% - 28px, 1180px); --reading: min(100% - 28px, 720px); }
+		.nav a:not(.button) { display: none; }
+		.post-header { padding-top: 58px; }
+		h1 { font-size: clamp(3rem, 15vw, 5.2rem); }
+		.featured-image { min-height: 390px; border-radius: 22px; }
+		.featured-fruit { width: 58%; }
+		.comments-inner { width: min(100% - 28px, 900px); }
+		.comment-children { margin-left: 20px; padding-left: 16px; }
+		.comment-form { grid-template-columns: 1fr; }
+		.comment-field, .comment-field-wide, .comment-consent, .form-submit { grid-column: 1; }
+		.related-grid { grid-template-columns: 1fr; gap: 42px; }
+		.footer-top, .footer-bottom { align-items: flex-start; flex-direction: column; }
+	}
+</style>
+</head>
+<body>
+	<header class="site-header">
+		<a class="brand" href="preview.html"><span class="brand-mark" aria-hidden="true"></span>Kahel</a>
+		<nav class="nav" aria-label="Primary navigation">
+			<a href="preview.html#work">Stories</a>
+			<a href="preview.html#services">Topics</a>
+			<a href="page.html">About</a>
+			<a class="button" href="preview.html#journal">Latest issue</a>
+		</nav>
+	</header>
+
+	<main>
+		<article>
+			<header class="post-header">
+				<p class="post-kicker">Food · Field notes</p>
+				<h1>What the old calamansi tree remembers</h1>
+				<p class="post-deck">One backyard tree holds a family history of summer drinks, shared harvests, and the patient work of tending something over time.</p>
+				<div class="post-meta">
+					<span>By Mara Villanueva</span>
+					<span>July 18, 2026</span>
+					<span>6 min read</span>
+				</div>
+			</header>
+
+			<figure>
+				<div class="featured-image" role="img" aria-label="Abstract illustration of a calamansi fruit"><span class="featured-fruit" aria-hidden="true"></span></div>
+				<figcaption class="image-caption">The tree at the edge of the garden, heavy with fruit after the first rain.</figcaption>
+			</figure>
+
+			<div class="post-content">
+				<p>The tree was already taller than the roof when my grandmother moved into the house. No one remembered who planted it. Its branches leaned over the back wall, offering half their fruit to the neighbors and keeping the rest within reach of the kitchen window.</p>
+				<p>Every few weeks, someone arrived with a woven basket or an old enamel bowl. The smallest fruit went into dipping sauces. The fragrant ones were sliced into cold water. Anything left by Sunday became a jar of marmalade.</p>
+
+				<h2>A measure of the season</h2>
+				<p>There was no calendar for the harvest. We knew it was time when the branches lowered and the green skins began to hold a trace of yellow. After rain, the whole corner of the garden smelled bright and clean.</p>
+				<blockquote><p>Some trees mark time more faithfully than clocks. They remember who watered them and who returned to gather fruit.</p></blockquote>
+				<p>The work was ordinary: loosen the soil, trim a dry branch, carry water across the yard. Still, each task belonged to a longer rhythm. The tree answered care slowly, with new leaves first and blossoms much later.</p>
+
+				<aside class="inline-note"><strong>A kitchen note</strong>Roll calamansi gently beneath your palm before cutting. It releases more juice and makes the seeds easier to catch.</aside>
+
+				<h2>What we pass along</h2>
+				<p>Now the house belongs to another family, but the tree remains. Its canopy is wider, the old wall freshly painted. Once in a while, a photograph arrives: a bowl of fruit on the familiar sill, enough for everyone on both sides of the garden.</p>
+				<p>A recipe can travel on paper. A story can be repeated. A living thing asks for something else—the steady decision to return, notice what has changed, and care for what will outlast us.</p>
+
+				<div class="post-tags" aria-label="Post tags">
+					<a href="#">Calamansi</a><a href="#">Gardens</a><a href="#">Family</a><a href="#">Food</a>
+				</div>
+			</div>
+		</article>
+
+		<section class="author-box" aria-labelledby="author-name">
+			<div class="author-avatar" aria-hidden="true"></div>
+			<div><h2 id="author-name">Mara Villanueva</h2><p>Mara writes about food, family archives, and the small rituals that give places their character.</p></div>
+		</section>
+
+		<section class="comments" id="comments" aria-labelledby="comments-title">
+			<div class="comments-inner">
+				<h2 class="comments-title" id="comments-title">2 comments</h2>
+
+				<ol class="comment-list">
+					<li id="comment-1">
+						<article class="comment-body">
+							<div class="comment-avatar" aria-hidden="true"></div>
+							<div>
+								<h3 class="comment-author">Elena Cruz</h3>
+								<p class="comment-meta"><time datetime="2026-07-19T09:24:00+08:00">July 19, 2026 at 9:24 am</time></p>
+								<p class="comment-text">This brought back memories of the calamansi tree beside my grandparents’ kitchen. We always carried a small bag home after visiting.</p>
+								<a class="comment-reply-link" href="#respond">Reply</a>
+							</div>
+						</article>
+
+						<ol class="comment-children">
+							<li id="comment-2">
+								<article class="comment-body">
+									<div class="comment-avatar" aria-hidden="true"></div>
+									<div>
+										<h3 class="comment-author">Mara Villanueva</h3>
+										<p class="comment-meta"><time datetime="2026-07-19T11:08:00+08:00">July 19, 2026 at 11:08 am</time> · Author</p>
+										<p class="comment-text">Thank you for sharing that, Elena. It is wonderful how a familiar scent can bring an entire place back to us.</p>
+										<a class="comment-reply-link" href="#respond">Reply</a>
+									</div>
+								</article>
+							</li>
+						</ol>
+					</li>
+				</ol>
+
+				<div class="comment-form-wrap" id="respond">
+					<h2 class="comment-reply-title">Leave a reply</h2>
+					<p class="comment-notes">Your email address will not be published. Required fields are marked <span aria-hidden="true">*</span></p>
+					<form class="comment-form" action="#" method="post">
+						<p class="comment-field-wide">
+							<label for="comment">Comment *</label>
+							<textarea id="comment" name="comment" required></textarea>
+						</p>
+						<p class="comment-field">
+							<label for="author">Name *</label>
+							<input id="author" name="author" type="text" autocomplete="name" required />
+						</p>
+						<p class="comment-field">
+							<label for="email">Email *</label>
+							<input id="email" name="email" type="email" autocomplete="email" required />
+						</p>
+						<p class="comment-field-wide">
+							<label for="url">Website</label>
+							<input id="url" name="url" type="url" autocomplete="url" />
+						</p>
+						<label class="comment-consent" for="save-details">
+							<input id="save-details" name="save-details" type="checkbox" />
+							<span>Save my name, email, and website in this browser for the next time I comment.</span>
+						</label>
+						<p class="form-submit"><button class="submit-button" type="submit">Post comment</button></p>
+					</form>
+				</div>
+			</div>
+		</section>
+
+		<section class="related">
+			<div class="related-inner">
+				<p class="section-kicker">Continue reading</p>
+				<h2>More from the journal.</h2>
+				<div class="related-grid">
+					<a class="related-card" href="#"><div class="related-art" aria-hidden="true"></div><p>Craft · 8 min read</p><h3>A morning with the basket makers of Basey</h3></a>
+					<a class="related-card" href="#"><div class="related-art" aria-hidden="true"></div><p>Places · 5 min read</p><h3>Walking the long way home through Quiapo</h3></a>
+				</div>
+			</div>
+		</section>
+	</main>
+
+	<footer class="site-footer">
+		<div class="footer-inner">
+			<div class="footer-top">
+				<div><a class="footer-brandline" href="preview.html"><span class="brand-mark" aria-hidden="true"></span>Kahel</a><h2 class="footer-title">Stories gathered under the <span>afternoon sun.</span></h2></div>
+				<nav class="footer-nav" aria-label="Footer navigation"><a href="preview.html#work">Stories</a><a href="preview.html#services">Topics</a><a href="page.html">About</a><a href="preview.html#journal">Journal</a></nav>
+			</div>
+			<div class="footer-bottom"><span>© 2026 Kahel Journal.</span><span>Privacy · Accessibility · Colophon</span></div>
+		</div>
+	</footer>
+</body>
+</html>
