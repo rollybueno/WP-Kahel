@@ -58,16 +58,20 @@
 				<!-- /wp:paragraph -->
 			</div>
 			<!-- /wp:group -->
-			<!-- wp:buttons {"className":"kahel-home-actions"} -->
-			<div class="wp-block-buttons kahel-home-actions">
-				<!-- wp:button {"className":"kahel-button-outline"} -->
-				<div class="wp-block-button kahel-button-outline"><a class="wp-block-button__link wp-element-button" href="/about/"><?php esc_html_e( 'Our story', 'kahel' ); ?></a></div>
-				<!-- /wp:button -->
+			<!-- wp:group {"className":"kahel-home-actions","layout":{"type":"flex","flexWrap":"wrap","verticalAlignment":"center"}} -->
+			<div class="wp-block-group kahel-home-actions">
+				<!-- wp:buttons -->
+				<div class="wp-block-buttons">
+					<!-- wp:button {"className":"kahel-button-outline"} -->
+					<div class="wp-block-button kahel-button-outline"><a class="wp-block-button__link wp-element-button" href="/about/"><?php esc_html_e( 'Our story', 'kahel' ); ?></a></div>
+					<!-- /wp:button -->
+				</div>
+				<!-- /wp:buttons -->
+				<!-- wp:paragraph {"className":"kahel-home-text-link","textColor":"orange-deep","fontSize":"small"} -->
+				<p class="kahel-home-text-link has-orange-deep-color has-text-color has-small-font-size"><a href="/about/"><?php esc_html_e( 'Meet the contributors', 'kahel' ); ?> <span aria-hidden="true">→</span></a></p>
+				<!-- /wp:paragraph -->
 			</div>
-			<!-- /wp:buttons -->
-			<!-- wp:paragraph {"className":"kahel-home-text-link","textColor":"orange-deep","fontSize":"small"} -->
-			<p class="kahel-home-text-link has-orange-deep-color has-text-color has-small-font-size"><a href="/about/"><?php esc_html_e( 'Meet the contributors →', 'kahel' ); ?></a></p>
-			<!-- /wp:paragraph -->
+			<!-- /wp:group -->
 		</div>
 		<!-- /wp:column -->
 

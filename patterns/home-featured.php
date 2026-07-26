@@ -13,11 +13,11 @@
  */
 
 ?>
-<!-- wp:group {"align":"full","className":"kahel-home-section kahel-home-featured","backgroundColor":"ink","layout":{"type":"constrained"}} -->
-<div class="wp-block-group alignfull kahel-home-section kahel-home-featured has-ink-background-color has-background">
+<!-- wp:group {"align":"full","className":"kahel-home-section kahel-home-featured","backgroundColor":"ink","textColor":"cream","layout":{"type":"constrained"}} -->
+<div class="wp-block-group alignfull kahel-home-section kahel-home-featured has-cream-color has-ink-background-color has-text-color has-background">
 
-	<!-- wp:group {"align":"wide","className":"kahel-home-section-head","layout":{"type":"flex","flexWrap":"wrap","justifyContent":"space-between","verticalAlignment":"bottom"}} -->
-	<div class="wp-block-group alignwide kahel-home-section-head">
+	<!-- wp:group {"align":"wide","className":"kahel-home-featured-head","layout":{"type":"flex","flexWrap":"wrap","justifyContent":"space-between","verticalAlignment":"bottom"}} -->
+	<div class="wp-block-group alignwide kahel-home-featured-head">
 		<!-- wp:group {"layout":{"type":"constrained","justifyContent":"left"}} -->
 		<div class="wp-block-group">
 			<!-- wp:paragraph {"className":"kahel-kicker","textColor":"orange","fontSize":"caption"} -->
@@ -28,8 +28,8 @@
 			<!-- /wp:heading -->
 		</div>
 		<!-- /wp:group -->
-		<!-- wp:paragraph {"className":"kahel-home-text-link","textColor":"apricot","fontSize":"small"} -->
-		<p class="kahel-home-text-link has-apricot-color has-text-color has-small-font-size"><a href="/"><?php esc_html_e( 'Browse all stories →', 'kahel' ); ?></a></p>
+		<!-- wp:paragraph {"className":"kahel-home-text-link kahel-home-featured-link","textColor":"apricot","fontSize":"small"} -->
+		<p class="kahel-home-text-link kahel-home-featured-link has-apricot-color has-text-color has-small-font-size"><a href="/"><?php esc_html_e( 'Browse all stories', 'kahel' ); ?> <span aria-hidden="true">→</span></a></p>
 		<!-- /wp:paragraph -->
 	</div>
 	<!-- /wp:group -->
@@ -39,21 +39,23 @@
 		<!-- wp:post-template {"className":"kahel-home-featured-grid","layout":{"type":"grid","columnCount":2}} -->
 			<!-- wp:group {"className":"kahel-home-project","layout":{"type":"constrained"}} -->
 			<div class="wp-block-group kahel-home-project">
-				<!-- wp:group {"className":"kahel-home-project-visual","layout":{"type":"constrained"}} -->
-				<div class="wp-block-group kahel-home-project-visual">
-					<!-- wp:post-featured-image {"isLink":true,"className":"kahel-home-project-media"} /-->
+				<!-- wp:group {"className":"kahel-home-project-visual","layout":{"type":"default"}} -->
+				<div class="wp-block-group kahel-home-project-visual" aria-hidden="true">
+					<!-- wp:html -->
+					<span class="kahel-home-project-art"></span>
+					<!-- /wp:html -->
 				</div>
 				<!-- /wp:group -->
-				<!-- wp:group {"className":"kahel-home-project-meta","layout":{"type":"flex","flexWrap":"wrap","justifyContent":"space-between"}} -->
+				<!-- wp:group {"className":"kahel-home-project-meta","layout":{"type":"flex","flexWrap":"nowrap","justifyContent":"space-between","verticalAlignment":"top"}} -->
 				<div class="wp-block-group kahel-home-project-meta">
-					<!-- wp:group {"layout":{"type":"constrained"}} -->
-					<div class="wp-block-group">
-						<!-- wp:post-title {"isLink":true,"level":3,"className":"kahel-home-project-title","fontSize":"feature"} /-->
+					<!-- wp:group {"className":"kahel-home-project-copy","layout":{"type":"constrained"}} -->
+					<div class="wp-block-group kahel-home-project-copy">
+						<!-- wp:post-title {"isLink":true,"level":3,"className":"kahel-home-project-title"} /-->
 						<!-- wp:post-terms {"term":"category","separator":" · ","className":"kahel-home-project-terms","fontSize":"small"} /-->
 					</div>
 					<!-- /wp:group -->
-					<!-- wp:paragraph {"className":"kahel-home-project-result","textColor":"orange","fontSize":"utility"} -->
-					<p class="kahel-home-project-result has-orange-color has-text-color has-utility-font-size"><?php esc_html_e( 'Story', 'kahel' ); ?></p>
+					<!-- wp:paragraph {"className":"kahel-home-project-result"} -->
+					<p class="kahel-home-project-result"></p>
 					<!-- /wp:paragraph -->
 				</div>
 				<!-- /wp:group -->

@@ -27,16 +27,20 @@
 			<!-- wp:heading {"level":2,"className":"kahel-home-issue-title","fontSize":"section"} -->
 			<h2 class="wp-block-heading kahel-home-issue-title has-section-font-size"><?php esc_html_e( 'Four ways to follow the season.', 'kahel' ); ?></h2>
 			<!-- /wp:heading -->
-			<!-- wp:buttons {"className":"kahel-home-actions"} -->
-			<div class="wp-block-buttons kahel-home-actions">
-				<!-- wp:button {"className":"kahel-button-outline"} -->
-				<div class="wp-block-button kahel-button-outline"><a class="wp-block-button__link wp-element-button" href="/"><?php esc_html_e( 'Read the issue', 'kahel' ); ?></a></div>
-				<!-- /wp:button -->
+			<!-- wp:group {"className":"kahel-home-actions","layout":{"type":"flex","flexWrap":"wrap","verticalAlignment":"center"}} -->
+			<div class="wp-block-group kahel-home-actions">
+				<!-- wp:buttons -->
+				<div class="wp-block-buttons">
+					<!-- wp:button {"className":"kahel-button-outline"} -->
+					<div class="wp-block-button kahel-button-outline"><a class="wp-block-button__link wp-element-button" href="/"><?php esc_html_e( 'Read the issue', 'kahel' ); ?></a></div>
+					<!-- /wp:button -->
+				</div>
+				<!-- /wp:buttons -->
+				<!-- wp:paragraph {"className":"kahel-home-text-link","textColor":"orange-deep","fontSize":"small"} -->
+				<p class="kahel-home-text-link has-orange-deep-color has-text-color has-small-font-size"><a href="#journal"><?php esc_html_e( 'See all articles', 'kahel' ); ?> <span aria-hidden="true">→</span></a></p>
+				<!-- /wp:paragraph -->
 			</div>
-			<!-- /wp:buttons -->
-			<!-- wp:paragraph {"className":"kahel-home-text-link","textColor":"orange-deep","fontSize":"small"} -->
-			<p class="kahel-home-text-link has-orange-deep-color has-text-color has-small-font-size"><a href="#journal"><?php esc_html_e( 'See all articles →', 'kahel' ); ?></a></p>
-			<!-- /wp:paragraph -->
+			<!-- /wp:group -->
 		</div>
 		<!-- /wp:column -->
 

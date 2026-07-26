@@ -830,6 +830,7 @@ body.home .kahel-header {
 
 .kahel-home-featured-query .wp-block-post-template {
 	gap: var(--wp--custom--home--featured-grid-gap);
+	align-items: start;
 	grid-template-columns: var(--wp--custom--home--featured-columns);
 }
 
@@ -839,14 +840,29 @@ body.home .kahel-header {
 
 .kahel-home-featured a:where(:not(.wp-element-button)) {
 	color: inherit;
+	text-decoration: none;
 }
 
 .kahel-home-project-terms {
+	margin: 0;
 	color: rgba(255, 244, 232, 0.65);
 }
 
-.kahel-home-project-visual:not(:has(img))::before {
-	content: "";
+.kahel-home-featured-query .wp-block-post:nth-child(1) .kahel-home-project-result::before {
+	content: "City notebook";
+}
+
+.kahel-home-featured-query .wp-block-post:nth-child(2) .kahel-home-project-result::before {
+	content: "Studio visit";
+}
+
+.kahel-home-featured-query .wp-block-post:nth-child(2) .kahel-home-project-visual {
+	min-height: var(--wp--custom--home--featured-visual-min-sm);
+	background: var(--wp--preset--color--apricot);
+}
+
+/* Card 1 — browser mock (wireframe) */
+.kahel-home-featured-query .wp-block-post:nth-child(1) .kahel-home-project-art {
 	position: absolute;
 	width: 72%;
 	height: 74%;
@@ -858,32 +874,51 @@ body.home .kahel-header {
 	transform: rotate(-3deg);
 }
 
-.kahel-home-project-visual:not(:has(img))::after {
+.kahel-home-featured-query .wp-block-post:nth-child(1) .kahel-home-project-art::before {
 	content: "";
 	position: absolute;
-	inset: 18% 20% auto;
-	height: 12%;
+	inset: 8% 8% auto;
+	height: 16%;
 	border-radius: 8px;
 	background: var(--wp--preset--color--ink);
 	box-shadow:
 		0 72px 0 var(--wp--preset--color--apricot),
 		0 144px 0 #fff0df;
+}
+
+/* Card 2 — magazine mock (wireframe) */
+.kahel-home-featured-query .wp-block-post:nth-child(2) .kahel-home-project-visual::before,
+.kahel-home-featured-query .wp-block-post:nth-child(2) .kahel-home-project-visual::after {
+	content: "";
+	position: absolute;
+	border-radius: 50%;
+}
+
+.kahel-home-featured-query .wp-block-post:nth-child(2) .kahel-home-project-visual::before {
+	width: 62%;
+	aspect-ratio: 1;
+	left: -12%;
+	bottom: -28%;
+	background: var(--wp--preset--color--orange);
+}
+
+.kahel-home-featured-query .wp-block-post:nth-child(2) .kahel-home-project-visual::after {
+	width: 45%;
+	aspect-ratio: 1;
+	right: -7%;
+	top: -16%;
+	border: clamp(35px, 5vw, 70px) solid var(--wp--preset--color--leaf);
+}
+
+.kahel-home-featured-query .wp-block-post:nth-child(2) .kahel-home-project-art {
+	position: absolute;
 	z-index: 1;
-}
-
-.kahel-home-featured-query .wp-block-post:nth-child(2) .kahel-home-project-visual {
-	min-height: var(--wp--custom--home--featured-visual-min-sm);
-	background: var(--wp--preset--color--apricot);
-}
-
-.kahel-home-featured-query .wp-block-post:nth-child(2) .kahel-home-project-visual:not(:has(img))::before {
-	content: "Sari";
-	display: grid;
-	place-items: center;
 	width: 48%;
 	height: 72%;
 	left: 26%;
 	top: 14%;
+	display: grid;
+	place-items: center;
 	border: 2px solid var(--wp--preset--color--ink);
 	background: var(--wp--preset--color--cream);
 	color: var(--wp--preset--color--ink);
@@ -894,17 +929,8 @@ body.home .kahel-header {
 	box-shadow: 18px 20px 0 rgba(36, 23, 15, 0.18);
 }
 
-.kahel-home-featured-query .wp-block-post:nth-child(2) .kahel-home-project-visual:not(:has(img))::after {
-	width: 45%;
-	aspect-ratio: 1;
-	height: auto;
-	inset: auto;
-	right: -7%;
-	top: -16%;
-	border-radius: 50%;
-	border: clamp(35px, 5vw, 70px) solid var(--wp--preset--color--leaf);
-	background: transparent;
-	box-shadow: none;
+.kahel-home-featured-query .wp-block-post:nth-child(2) .kahel-home-project-art::before {
+	content: "Sari";
 }
 
 .kahel-home-project-media,
@@ -914,23 +940,15 @@ body.home .kahel-header {
 	min-height: inherit;
 }
 
-.kahel-home-project-visual:has(img),
 .kahel-home-article-art:has(img) {
 	background: transparent;
 }
 
-.kahel-home-project-visual:has(.kahel-home-project-media),
-.kahel-home-article-art:has(.kahel-home-article-media) {
-	display: block;
-}
-
-.kahel-home-project-visual:has(img) .kahel-home-project-media,
 .kahel-home-article-art:has(img) .kahel-home-article-media {
 	position: absolute;
 	inset: 0;
 }
 
-.kahel-home-project-media img,
 .kahel-home-article-media img {
 	width: 100%;
 	height: 100%;
@@ -1080,6 +1098,104 @@ body.home .kahel-header {
 	text-decoration: none;
 }
 
+/* Outline CTA — beat solid pill .wp-element-button defaults */
+.wp-block-button.kahel-button-outline .wp-block-button__link.wp-element-button {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	min-height: var(--wp--custom--button--min-height);
+	padding: 0 20px;
+	border: 1.5px solid var(--wp--preset--color--orange);
+	border-radius: var(--wp--custom--radius--md);
+	background: transparent;
+	color: var(--wp--preset--color--orange-deep);
+	box-shadow: none;
+	font-weight: 800;
+	transform: none;
+}
+
+.wp-block-button.kahel-button-outline .wp-block-button__link.wp-element-button:hover,
+.wp-block-button.kahel-button-outline .wp-block-button__link.wp-element-button:focus {
+	background: var(--wp--preset--color--orange);
+	color: var(--wp--preset--color--ink);
+	transform: none;
+}
+
+.kahel-home-actions {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	gap: 0;
+	margin-top: var(--wp--custom--home--actions-margin-top);
+}
+
+.kahel-home-actions .wp-block-buttons {
+	width: auto;
+	margin: 0;
+}
+
+.kahel-home-actions .wp-block-button {
+	margin: 0;
+}
+
+.kahel-home-actions .kahel-home-text-link {
+	display: inline-flex;
+	align-items: center;
+	gap: 8px;
+	margin: 0 0 0 var(--wp--custom--home--text-link-gap);
+}
+
+/* Match preview: proof-section sits flush under archive (no blockGap). */
+.kahel-home-archive + .kahel-home-quote {
+	margin-block-start: 0;
+}
+
+.kahel-home-quote-card {
+	display: grid;
+	grid-template-columns: var(--wp--custom--home--quote-columns);
+	gap: var(--wp--custom--home--quote-gap);
+	align-items: start;
+	padding: var(--wp--custom--home--quote-padding);
+	border-radius: var(--wp--custom--radius--default);
+	background: var(--wp--preset--color--cream);
+}
+
+.kahel-home-quote-card > * {
+	margin-block-start: 0;
+}
+
+.kahel-home-quote-mark {
+	margin: 0;
+	color: var(--wp--preset--color--orange);
+	font-size: clamp(4rem, 7vw, 7rem);
+	font-weight: 900;
+	line-height: 0.7;
+}
+
+.kahel-home-quote-text {
+	max-width: var(--wp--custom--home--quote-max);
+	margin: 0;
+	font-size: var(--wp--custom--home--quote-size);
+	font-weight: 800;
+	line-height: 1.08;
+	letter-spacing: -0.055em;
+}
+
+.kahel-home-quote-person {
+	min-width: var(--wp--custom--home--quote-person-min);
+	margin: 0;
+}
+
+.kahel-home-quote-person strong,
+.kahel-home-quote-person span {
+	display: block;
+}
+
+.kahel-home-quote-person span {
+	margin-top: 4px;
+	color: #6f5949;
+}
+
 @media (max-width: 900px) {
 	.kahel-home-hero {
 		min-height: auto;
@@ -1118,7 +1234,11 @@ body.home .kahel-header {
 	}
 
 	.kahel-home-quote-card {
-		flex-wrap: wrap;
+		grid-template-columns: auto minmax(0, 1fr);
+	}
+
+	.kahel-home-quote-person {
+		grid-column: 1 / -1;
 	}
 }
 
