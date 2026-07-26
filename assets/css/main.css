@@ -43,6 +43,14 @@
 	letter-spacing: var(--wp--custom--letter-spacing--brand);
 }
 
+.kahel-header-brand a::before {
+	transition: transform var(--wp--custom--motion--duration-fast) var(--wp--custom--motion--ease);
+}
+
+.kahel-header-brand a:hover::before {
+	transform: scale(1.08) rotate(-6deg);
+}
+
 .kahel-header-actions {
 	gap: var(--wp--custom--header--actions-gap);
 }
@@ -620,6 +628,42 @@
 	}
 }
 
+/* Motion keyframes — theme.json can reference these, not declare them */
+@keyframes kahel-rise {
+	from {
+		opacity: 0;
+		transform: translateY(var(--wp--custom--motion--enter-distance));
+	}
+
+	to {
+		opacity: 1;
+		transform: translateY(0);
+	}
+}
+
+@keyframes kahel-fruit-float {
+	0%,
+	100% {
+		transform: translate(-50%, -50%) translateY(0) rotate(-1.2deg);
+	}
+
+	50% {
+		transform: translate(-50%, -50%) translateY(-12px) rotate(1.6deg);
+	}
+}
+
+@keyframes kahel-smile {
+	from {
+		opacity: 0;
+		transform: translateX(-50%) scaleX(0.55);
+	}
+
+	to {
+		opacity: 1;
+		transform: translateX(-50%) scaleX(1);
+	}
+}
+
 /* 404 — fruit decoration + card accents theme.json cannot express */
 .kahel-404-search:focus-within {
 	border-color: var(--wp--preset--color--orange);
@@ -647,6 +691,8 @@
 		inset -22px -18px 34px rgba(110, 43, 3, 0.2),
 		0 30px 60px rgba(106, 45, 5, 0.23);
 	transform: translate(-50%, -50%);
+	animation: kahel-fruit-float var(--wp--custom--motion--duration-float)
+		var(--wp--custom--motion--ease-soft) infinite;
 }
 
 .kahel-404-fruit::before {
@@ -695,6 +741,9 @@
 		var(--wp--preset--color--ink) 59% 72%,
 		transparent 73%
 	);
+	animation: kahel-smile var(--wp--custom--motion--duration-enter)
+		var(--wp--custom--motion--ease) both;
+	animation-delay: 220ms;
 }
 
 .kahel-404-recent-meta {
@@ -742,5 +791,25 @@
 	.kahel-404-visual {
 		min-height: 360px;
 		border-radius: 22px;
+	}
+}
+
+@media (prefers-reduced-motion: reduce) {
+	.wp-element-button,
+	.wp-element-button:hover,
+	.wp-element-button:active,
+	a:where(:not(.wp-element-button)),
+	.kahel-header-brand a::before,
+	.kahel-404-search {
+		transition: none !important;
+		transform: none !important;
+	}
+
+	.kahel-404-title,
+	.kahel-404-visual,
+	.kahel-404-code,
+	.kahel-404-fruit,
+	.kahel-404-mouth {
+		animation: none !important;
 	}
 }
