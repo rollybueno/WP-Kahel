@@ -830,6 +830,7 @@ body.home .kahel-header {
 
 .kahel-home-featured-query .wp-block-post-template {
 	gap: var(--wp--custom--home--featured-grid-gap);
+	grid-template-columns: var(--wp--custom--home--featured-columns);
 }
 
 .kahel-home-featured-query .wp-block-post:nth-child(2) {
@@ -1090,6 +1091,10 @@ body.home .kahel-header {
 
 	.kahel-home-featured-query .wp-block-post:nth-child(2) {
 		margin-top: 0;
+	}
+
+	.kahel-home-featured-query .wp-block-post-template {
+		grid-template-columns: 1fr 1fr;
 	}
 
 	.kahel-home-issue-intro {

@@ -585,7 +585,8 @@
 				"latest-gap": "clamp(18px, 2.5vw, 30px)",
 				"latest-art-min": "270px",
 				"faq-gap": "clamp(50px, 9vw, 140px)",
-				"faq-title-max": "8ch"
+				"faq-title-max": "8ch",
+				"featured-columns": "minmax(0, 1.25fr) minmax(280px, 0.75fr)"
 			}
 		}
 	},
