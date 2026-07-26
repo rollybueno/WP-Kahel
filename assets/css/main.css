@@ -619,3 +619,128 @@
 		overflow-x: auto;
 	}
 }
+
+/* 404 — fruit decoration + card accents theme.json cannot express */
+.kahel-404-search:focus-within {
+	border-color: var(--wp--preset--color--orange);
+	box-shadow: var(--wp--preset--shadow--focus);
+}
+
+.kahel-404-links a {
+	text-decoration: none;
+}
+
+.kahel-404-fruit {
+	position: absolute;
+	width: 52%;
+	aspect-ratio: 1;
+	left: 50%;
+	top: 49%;
+	border-radius: 52% 48% 50% 50%;
+	background: linear-gradient(
+		145deg,
+		#ff9d37,
+		var(--wp--preset--color--orange) 60%,
+		var(--wp--preset--color--orange-deep)
+	);
+	box-shadow:
+		inset -22px -18px 34px rgba(110, 43, 3, 0.2),
+		0 30px 60px rgba(106, 45, 5, 0.23);
+	transform: translate(-50%, -50%);
+}
+
+.kahel-404-fruit::before {
+	content: "";
+	position: absolute;
+	width: 38%;
+	height: 17%;
+	top: -6%;
+	left: 55%;
+	border-radius: 100% 0 100% 0;
+	background: var(--wp--preset--color--leaf);
+	transform: rotate(-22deg);
+}
+
+.kahel-404-fruit-face::before,
+.kahel-404-fruit-face::after {
+	content: "";
+	position: absolute;
+	z-index: 1;
+	width: 12px;
+	height: 18px;
+	top: 46%;
+	border-radius: 50%;
+	background: var(--wp--preset--color--ink);
+}
+
+.kahel-404-fruit-face::before {
+	left: 38%;
+}
+
+.kahel-404-fruit-face::after {
+	right: 38%;
+}
+
+.kahel-404-mouth {
+	position: absolute;
+	z-index: 1;
+	width: 48px;
+	height: 22px;
+	left: 50%;
+	top: 60%;
+	transform: translateX(-50%);
+	background: radial-gradient(
+		ellipse 48px 40px at 50% -4px,
+		transparent 58%,
+		var(--wp--preset--color--ink) 59% 72%,
+		transparent 73%
+	);
+}
+
+.kahel-404-recent-meta {
+	font-weight: var(--wp--custom--weight--strong);
+	letter-spacing: 0.1em;
+	text-transform: uppercase;
+}
+
+.kahel-404-recent-query .wp-block-post:nth-child(2) .kahel-404-recent-card {
+	background: var(--wp--preset--color--cream);
+}
+
+.kahel-404-recent-query .wp-block-post:nth-child(3) .kahel-404-recent-card {
+	background: var(--wp--preset--color--ink);
+	color: var(--wp--preset--color--cream);
+}
+
+.kahel-404-recent-query .wp-block-post:nth-child(3) .kahel-404-recent-meta {
+	color: var(--wp--preset--color--orange);
+}
+
+.kahel-404-recent-query .wp-block-post:nth-child(3) .kahel-404-recent-card-title a {
+	color: inherit;
+}
+
+@media (max-width: 850px) {
+	.kahel-404-hero {
+		min-height: auto;
+	}
+
+	.kahel-404-visual {
+		min-height: var(--wp--custom--error--visual-min-height-mobile);
+	}
+}
+
+@media (max-width: 620px) {
+	.kahel-404-hero {
+		padding-top: 58px;
+	}
+
+	.kahel-404-search {
+		border-radius: var(--wp--custom--radius--md);
+	}
+
+	.kahel-404-visual {
+		min-height: 360px;
+		border-radius: 22px;
+	}
+}

@@ -1,0 +1,96 @@
+<!-- wp:template-part {"slug":"header","tagName":"header"} /-->
+
+<!-- wp:group {"tagName":"main","metadata":{"name":"404"},"className":"kahel-404","layout":{"type":"constrained"}} -->
+<main class="wp-block-group kahel-404">
+
+	<!-- wp:columns {"align":"wide","verticalAlignment":"center","className":"kahel-404-hero"} -->
+	<div class="wp-block-columns alignwide are-vertically-aligned-center kahel-404-hero">
+
+		<!-- wp:column {"verticalAlignment":"center","width":"55%"} -->
+		<div class="wp-block-column is-vertically-aligned-center" style="flex-basis:55%">
+
+			<!-- wp:paragraph {"className":"kahel-kicker kahel-404-kicker","textColor":"orange-deep","fontSize":"caption"} -->
+			<p class="kahel-kicker kahel-404-kicker has-orange-deep-color has-text-color has-caption-font-size">Error 404</p>
+			<!-- /wp:paragraph -->
+
+			<!-- wp:heading {"level":1,"className":"kahel-404-title","fontSize":"huge"} -->
+			<h1 class="wp-block-heading kahel-404-title has-huge-font-size">This page has wandered off.</h1>
+			<!-- /wp:heading -->
+
+			<!-- wp:paragraph {"className":"kahel-404-copy","textColor":"muted","fontSize":"lead"} -->
+			<p class="kahel-404-copy has-muted-color has-text-color has-lead-font-size">The address may have changed, or the story may have moved elsewhere in the archive. Try a search or begin again from one of the links below.</p>
+			<!-- /wp:paragraph -->
+
+			<!-- wp:search {"label":"Search the journal","showLabel":false,"placeholder":"Search stories…","buttonText":"Search","buttonPosition":"button-inside","buttonUseIcon":false,"className":"kahel-404-search"} /-->
+
+			<!-- wp:group {"className":"kahel-404-links","style":{"typography":{"fontWeight":"800","fontSize":"0.86rem"}},"textColor":"orange-deep","layout":{"type":"flex","flexWrap":"wrap"}} -->
+			<div class="wp-block-group kahel-404-links has-orange-deep-color has-text-color" style="font-size:0.86rem;font-weight:800">
+				<!-- wp:paragraph -->
+				<p><a href="/">Return home</a></p>
+				<!-- /wp:paragraph -->
+
+				<!-- wp:paragraph -->
+				<p><a href="/">Browse all stories</a></p>
+				<!-- /wp:paragraph -->
+
+				<!-- wp:paragraph -->
+				<p><a href="/about/">About the journal</a></p>
+				<!-- /wp:paragraph -->
+			</div>
+			<!-- /wp:group -->
+
+		</div>
+		<!-- /wp:column -->
+
+		<!-- wp:column {"verticalAlignment":"center","width":"45%"} -->
+		<div class="wp-block-column is-vertically-aligned-center" style="flex-basis:45%">
+
+			<!-- wp:group {"className":"kahel-404-visual","style":{"border":{"radius":"var(--wp--custom--radius--default)"}},"gradient":"fruit","layout":{"type":"default"}} -->
+			<div class="wp-block-group kahel-404-visual has-fruit-gradient-background has-background" style="border-radius:var(--wp--custom--radius--default)" aria-hidden="true">
+				<!-- wp:html -->
+				<span class="kahel-404-fruit"><span class="kahel-404-fruit-face"></span><span class="kahel-404-mouth"></span></span>
+				<!-- /wp:html -->
+
+				<!-- wp:paragraph {"className":"kahel-404-code"} -->
+				<p class="kahel-404-code">404</p>
+				<!-- /wp:paragraph -->
+			</div>
+			<!-- /wp:group -->
+
+		</div>
+		<!-- /wp:column -->
+
+	</div>
+	<!-- /wp:columns -->
+
+	<!-- wp:group {"align":"full","metadata":{"name":"Recent stories"},"className":"kahel-404-recent","backgroundColor":"surface","layout":{"type":"constrained"}} -->
+	<div class="wp-block-group alignfull kahel-404-recent has-surface-background-color has-background">
+
+		<!-- wp:paragraph {"className":"kahel-kicker","textColor":"orange-deep","fontSize":"caption"} -->
+		<p class="kahel-kicker has-orange-deep-color has-text-color has-caption-font-size">A place to continue</p>
+		<!-- /wp:paragraph -->
+
+		<!-- wp:heading {"level":2,"className":"kahel-404-recent-title","fontSize":"section"} -->
+		<h2 class="wp-block-heading kahel-404-recent-title has-section-font-size">Recent stories.</h2>
+		<!-- /wp:heading -->
+
+		<!-- wp:query {"queryId":404,"query":{"perPage":3,"pages":0,"offset":0,"postType":"post","order":"desc","orderBy":"date","author":"","search":"","exclude":[],"sticky":"exclude","inherit":false},"align":"wide","className":"kahel-404-recent-query"} -->
+		<div class="wp-block-query alignwide kahel-404-recent-query">
+			<!-- wp:post-template {"style":{"spacing":{"blockGap":"20px"}},"layout":{"type":"grid","columnCount":3}} -->
+				<!-- wp:group {"className":"kahel-404-recent-card","layout":{"type":"flex","orientation":"vertical","justifyContent":"space-between"}} -->
+				<div class="wp-block-group kahel-404-recent-card">
+					<!-- wp:post-terms {"term":"category","separator":" · ","className":"kahel-404-recent-meta","fontSize":"utility"} /-->
+					<!-- wp:post-title {"isLink":true,"level":3,"className":"kahel-404-recent-card-title","fontSize":"feature"} /-->
+				</div>
+				<!-- /wp:group -->
+			<!-- /wp:post-template -->
+		</div>
+		<!-- /wp:query -->
+
+	</div>
+	<!-- /wp:group -->
+
+</main>
+<!-- /wp:group -->
+
+<!-- wp:template-part {"slug":"footer","tagName":"footer"} /-->

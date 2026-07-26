@@ -36,25 +36,15 @@ function kahel_enqueue_styles() {
 add_action( 'wp_enqueue_scripts', 'kahel_enqueue_styles' );
 
 /**
- * Load editor styles so class overrides match the front end.
- *
- * @since 0.1.0
- *
- * @return void
- */
-function kahel_editor_style() {
-	add_editor_style( 'assets/css/main.css' );
-}
-add_action( 'after_setup_theme', 'kahel_editor_style' );
-
-/**
- * Theme supports and pattern categories.
+ * Theme supports.
  *
  * @since 0.1.0
  *
  * @return void
  */
 function kahel_setup() {
+	add_theme_support( 'editor-styles' );
+	add_editor_style( 'assets/css/main.css' );
 	add_post_type_support( 'page', 'excerpt' );
 }
 add_action( 'after_setup_theme', 'kahel_setup' );
