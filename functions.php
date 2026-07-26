@@ -48,6 +48,39 @@ function kahel_editor_style() {
 add_action( 'after_setup_theme', 'kahel_editor_style' );
 
 /**
+ * Hide the single deck excerpt unless a manual excerpt is set.
+ *
+ * Prevents auto-generated excerpts from duplicating post content.
+ *
+ * @since 0.1.0
+ *
+ * @param string   $block_content Rendered block HTML.
+ * @param array    $block         Parsed block.
+ * @return string
+ */
+function kahel_render_manual_excerpt_deck_only( $block_content, $block ) {
+	if ( ! is_singular() ) {
+		return $block_content;
+	}
+
+	$class_name = '';
+	if ( ! empty( $block['attrs']['className'] ) ) {
+		$class_name = (string) $block['attrs']['className'];
+	}
+
+	if ( ! str_contains( $class_name, 'kahel-single-deck' ) ) {
+		return $block_content;
+	}
+
+	if ( ! has_excerpt() ) {
+		return '';
+	}
+
+	return $block_content;
+}
+add_filter( 'render_block_core/post-excerpt', 'kahel_render_manual_excerpt_deck_only', 10, 2 );
+
+/**
  * Exclude the current post from related Query Loop blocks.
  *
  * Runs against the post-template block; flag via query.kahelExcludeCurrent
