@@ -1,5 +1,5 @@
 {
-	"$schema": "https://schemas.wp.org/trunk/theme.json",
+	"$schema": "https://schemas.wp.org/7.0/theme.json",
 	"version": 3,
 	"settings": {
 		"appearanceTools": true,
@@ -212,7 +212,7 @@
 							"fontStyle": "normal",
 							"fontDisplay": "swap",
 							"src": [
-								"file:./HTML/assets/fonts/inter/inter-latin-ext.woff2"
+								"file:./assets/fonts/inter/inter-latin-ext.woff2"
 							]
 						},
 						{
@@ -221,7 +221,7 @@
 							"fontStyle": "normal",
 							"fontDisplay": "swap",
 							"src": [
-								"file:./HTML/assets/fonts/inter/inter-latin.woff2"
+								"file:./assets/fonts/inter/inter-latin.woff2"
 							]
 						}
 					]
@@ -237,7 +237,7 @@
 							"fontStyle": "normal",
 							"fontDisplay": "swap",
 							"src": [
-								"file:./HTML/assets/fonts/source-serif-4/source-serif-4-latin-ext.woff2"
+								"file:./assets/fonts/source-serif-4/source-serif-4-latin-ext.woff2"
 							]
 						},
 						{
@@ -246,7 +246,7 @@
 							"fontStyle": "normal",
 							"fontDisplay": "swap",
 							"src": [
-								"file:./HTML/assets/fonts/source-serif-4/source-serif-4-latin.woff2"
+								"file:./assets/fonts/source-serif-4/source-serif-4-latin.woff2"
 							]
 						},
 						{
@@ -255,7 +255,7 @@
 							"fontStyle": "italic",
 							"fontDisplay": "swap",
 							"src": [
-								"file:./HTML/assets/fonts/source-serif-4/source-serif-4-italic-latin-ext.woff2"
+								"file:./assets/fonts/source-serif-4/source-serif-4-italic-latin-ext.woff2"
 							]
 						},
 						{
@@ -264,7 +264,7 @@
 							"fontStyle": "italic",
 							"fontDisplay": "swap",
 							"src": [
-								"file:./HTML/assets/fonts/source-serif-4/source-serif-4-italic-latin.woff2"
+								"file:./assets/fonts/source-serif-4/source-serif-4-italic-latin.woff2"
 							]
 						}
 					]
