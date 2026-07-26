@@ -488,7 +488,6 @@
 				"header-padding-top": "clamp(80px, 11vw, 150px)",
 				"header-padding-bottom": "clamp(60px, 8vw, 100px)",
 				"header-gap": "clamp(48px, 9vw, 140px)",
-				"title-max": "none",
 				"intro-max": "680px",
 				"section-title-max": "10ch",
 				"contributors-title-max": "8ch",
@@ -766,7 +765,7 @@
 					"letterSpacing": "var(--wp--custom--letter-spacing--h-1)",
 					"lineHeight": "var(--wp--custom--line-height--h-1)"
 				},
-				"css": "&.kahel-page-title { max-width: none; margin: 0; word-break: normal; overflow-wrap: normal; }"
+				"css": "&.kahel-page-title { margin-block: 0; max-width: none; word-break: normal; overflow-wrap: normal; }"
 			},
 			"core/post-excerpt": {
 				"typography": {
