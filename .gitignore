@@ -1,0 +1,13 @@
+# Impeccable design tooling (local config & cache)
+.impeccable/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Editors
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
