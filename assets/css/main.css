@@ -813,3 +813,315 @@
 		animation: none !important;
 	}
 }
+
+/* Front page — decorations & layout theme.json cannot express */
+body.home .kahel-header {
+	background: transparent;
+}
+
+.kahel-home-topic--2 .kahel-home-topic-icon {
+	background: var(--wp--preset--color--orange);
+	border-color: var(--wp--preset--color--orange);
+}
+
+.kahel-home-topics > .wp-block-column:nth-child(even) .kahel-home-topic {
+	margin-top: var(--wp--custom--home--topic-stagger);
+}
+
+.kahel-home-featured-query .wp-block-post-template {
+	gap: var(--wp--custom--home--featured-grid-gap);
+}
+
+.kahel-home-featured-query .wp-block-post:nth-child(2) {
+	margin-top: var(--wp--custom--home--featured-offset);
+}
+
+.kahel-home-featured a:where(:not(.wp-element-button)) {
+	color: inherit;
+}
+
+.kahel-home-project-terms {
+	color: rgba(255, 244, 232, 0.65);
+}
+
+.kahel-home-project-visual:not(:has(img))::before {
+	content: "";
+	position: absolute;
+	width: 72%;
+	height: 74%;
+	left: 14%;
+	top: 13%;
+	border-radius: 16px;
+	background: #fffaf4;
+	box-shadow: 0 26px 60px rgba(36, 23, 15, 0.24);
+	transform: rotate(-3deg);
+}
+
+.kahel-home-project-visual:not(:has(img))::after {
+	content: "";
+	position: absolute;
+	inset: 18% 20% auto;
+	height: 12%;
+	border-radius: 8px;
+	background: var(--wp--preset--color--ink);
+	box-shadow:
+		0 72px 0 var(--wp--preset--color--apricot),
+		0 144px 0 #fff0df;
+	z-index: 1;
+}
+
+.kahel-home-featured-query .wp-block-post:nth-child(2) .kahel-home-project-visual {
+	min-height: var(--wp--custom--home--featured-visual-min-sm);
+	background: var(--wp--preset--color--apricot);
+}
+
+.kahel-home-featured-query .wp-block-post:nth-child(2) .kahel-home-project-visual:not(:has(img))::before {
+	content: "Sari";
+	display: grid;
+	place-items: center;
+	width: 48%;
+	height: 72%;
+	left: 26%;
+	top: 14%;
+	border: 2px solid var(--wp--preset--color--ink);
+	background: var(--wp--preset--color--cream);
+	color: var(--wp--preset--color--ink);
+	font-size: clamp(2rem, 5vw, 5rem);
+	font-weight: 900;
+	letter-spacing: -0.08em;
+	transform: rotate(5deg);
+	box-shadow: 18px 20px 0 rgba(36, 23, 15, 0.18);
+}
+
+.kahel-home-featured-query .wp-block-post:nth-child(2) .kahel-home-project-visual:not(:has(img))::after {
+	width: 45%;
+	aspect-ratio: 1;
+	height: auto;
+	inset: auto;
+	right: -7%;
+	top: -16%;
+	border-radius: 50%;
+	border: clamp(35px, 5vw, 70px) solid var(--wp--preset--color--leaf);
+	background: transparent;
+	box-shadow: none;
+}
+
+.kahel-home-project-media,
+.kahel-home-article-media {
+	margin: 0;
+	height: 100%;
+	min-height: inherit;
+}
+
+.kahel-home-project-visual:has(img),
+.kahel-home-article-art:has(img) {
+	background: transparent;
+}
+
+.kahel-home-project-visual:has(.kahel-home-project-media),
+.kahel-home-article-art:has(.kahel-home-article-media) {
+	display: block;
+}
+
+.kahel-home-project-visual:has(img) .kahel-home-project-media,
+.kahel-home-article-art:has(img) .kahel-home-article-media {
+	position: absolute;
+	inset: 0;
+}
+
+.kahel-home-project-media img,
+.kahel-home-article-media img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	border-radius: inherit;
+}
+
+.kahel-home-issue-intro {
+	position: sticky;
+	top: 32px;
+	align-self: start;
+}
+
+.kahel-home-timeline {
+	position: relative;
+	padding-left: 72px;
+}
+
+.kahel-home-timeline::before {
+	content: "";
+	position: absolute;
+	left: 19px;
+	top: 20px;
+	bottom: 20px;
+	width: 2px;
+	background: linear-gradient(
+		180deg,
+		var(--wp--preset--color--orange),
+		rgba(244, 122, 31, 0.18)
+	);
+}
+
+.kahel-home-timeline-item {
+	position: relative;
+}
+
+.kahel-home-timeline-item::before {
+	content: "";
+	position: absolute;
+	left: -72px;
+	top: 0;
+	width: 34px;
+	height: 34px;
+	border: 3px solid var(--wp--preset--color--orange);
+	border-radius: 50%;
+	background: var(--wp--preset--color--base);
+	box-shadow: 0 0 0 8px rgba(244, 122, 31, 0.05);
+}
+
+.kahel-home-about-fruit {
+	position: absolute;
+	width: min(58%, 350px);
+	aspect-ratio: 1;
+	border-radius: 52% 48% 50% 50%;
+	left: 50%;
+	top: 52%;
+	transform: translate(-50%, -50%);
+	background:
+		radial-gradient(circle at 35% 28%, rgba(255, 255, 255, 0.35), transparent 18%),
+		linear-gradient(145deg, #ff9d37 0%, var(--wp--preset--color--orange) 60%, var(--wp--preset--color--orange-deep) 100%);
+	box-shadow:
+		inset -22px -18px 34px rgba(110, 43, 3, 0.2),
+		0 28px 55px rgba(106, 45, 5, 0.23);
+	animation: kahel-fruit-float var(--wp--custom--motion--duration-float)
+		var(--wp--custom--motion--ease-soft) infinite;
+}
+
+.kahel-home-about-fruit::before,
+.kahel-home-about-fruit::after {
+	content: "";
+	position: absolute;
+	background: var(--wp--preset--color--leaf);
+}
+
+.kahel-home-about-fruit::before {
+	width: 34%;
+	height: 16%;
+	border-radius: 100% 0 100% 0;
+	top: -5%;
+	left: 56%;
+	transform: rotate(-22deg);
+}
+
+.kahel-home-about-fruit::after {
+	width: 14px;
+	height: 52px;
+	border-radius: 999px;
+	top: -8%;
+	left: 48%;
+	transform: rotate(8deg);
+}
+
+.kahel-home-latest-query .wp-block-post-template {
+	gap: var(--wp--custom--home--latest-gap);
+}
+
+.kahel-home-article-art:not(:has(img))::before,
+.kahel-home-article-art:not(:has(img))::after {
+	content: "";
+	position: absolute;
+}
+
+.kahel-home-article-art:not(:has(img))::before {
+	width: 48%;
+	aspect-ratio: 1;
+	left: 13%;
+	top: 22%;
+	border-radius: 50%;
+	background: var(--wp--preset--color--orange);
+	box-shadow: 80px 46px 0 rgba(255, 244, 232, 0.85);
+}
+
+.kahel-home-article-art:not(:has(img))::after {
+	inset: auto 10% 12%;
+	height: 12px;
+	background: var(--wp--preset--color--ink);
+	box-shadow: 0 -24px 0 var(--wp--preset--color--ink);
+}
+
+.kahel-home-latest-query .wp-block-post:nth-child(2) .kahel-home-article-art {
+	background: var(--wp--preset--color--leaf);
+}
+
+.kahel-home-latest-query .wp-block-post:nth-child(3) .kahel-home-article-art {
+	background: var(--wp--preset--color--ink);
+}
+
+.kahel-home-article-meta {
+	margin: 20px 0 10px;
+	color: var(--wp--preset--color--orange-deep);
+	font-weight: var(--wp--custom--weight--strong);
+	letter-spacing: 0.1em;
+	text-transform: uppercase;
+}
+
+.kahel-home-article-excerpt {
+	margin: 14px 0 0;
+	color: var(--wp--preset--color--muted);
+}
+
+.kahel-home-article-more {
+	display: inline-flex;
+	margin-top: 18px;
+	color: var(--wp--preset--color--orange-deep);
+	font-size: 0.88rem;
+	font-weight: 850;
+	text-decoration: none;
+}
+
+@media (max-width: 900px) {
+	.kahel-home-hero {
+		min-height: auto;
+	}
+
+	.kahel-home-topics > .wp-block-column:nth-child(even) .kahel-home-topic {
+		margin-top: 28px;
+	}
+
+	.kahel-home-featured-query .wp-block-post:nth-child(2) {
+		margin-top: 0;
+	}
+
+	.kahel-home-issue-intro {
+		position: static;
+	}
+
+	.kahel-home-timeline {
+		padding-left: 58px;
+	}
+
+	.kahel-home-timeline-item::before {
+		left: -58px;
+		width: 28px;
+		height: 28px;
+	}
+}
+
+@media (max-width: 560px) {
+	.kahel-home-topics > .wp-block-column:nth-child(even) .kahel-home-topic {
+		margin-top: 0;
+	}
+
+	.kahel-home-quote-card {
+		flex-wrap: wrap;
+	}
+}
+
+@media (prefers-reduced-motion: reduce) {
+	.kahel-home-about-fruit,
+	.kahel-home-topic {
+		animation: none !important;
+		transition: none !important;
+		transform: none !important;
+	}
+}
