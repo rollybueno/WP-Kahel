@@ -2,7 +2,7 @@
 /**
  * Title: Page contributors
  * Slug: kahel/page-contributors
- * Categories: featured, text, kahel
+ * Categories: kahel
  * Description: Contributors list with names, focus areas, and roles.
  * Keywords: contributors, team, about, people
  * Viewport Width: 1180

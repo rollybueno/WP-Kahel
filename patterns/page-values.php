@@ -2,7 +2,7 @@
 /**
  * Title: Page values
  * Slug: kahel/page-values
- * Categories: featured, text, kahel
+ * Categories: kahel
  * Description: Editorial principles grid with three numbered value cards.
  * Keywords: values, principles, about, cards
  * Viewport Width: 1180
