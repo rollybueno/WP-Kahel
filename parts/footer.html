@@ -1,14 +1,87 @@
-<!-- wp:group {"style":{"spacing":{"padding":{"top":"var:preset|spacing|70","bottom":"var:preset|spacing|70"}},"border":{"top":{"color":"var:preset|color|line","width":"1px"}}},"layout":{"type":"constrained"}} -->
-<div class="wp-block-group" style="border-top-color:var(--wp--preset--color--line);border-top-width:1px;padding-top:var(--wp--preset--spacing--70);padding-bottom:var(--wp--preset--spacing--70)">
-	<!-- wp:group {"align":"wide","layout":{"type":"flex","flexWrap":"wrap","justifyContent":"space-between"}} -->
-	<div class="wp-block-group alignwide">
-		<!-- wp:paragraph {"fontSize":"small"} -->
-		<p class="has-small-font-size">© Kahel</p>
-		<!-- /wp:paragraph -->
-		<!-- wp:paragraph {"fontSize":"small"} -->
-		<p class="has-small-font-size">Stories gathered under the afternoon sun.</p>
-		<!-- /wp:paragraph -->
+<!-- wp:group {"anchor":"contact","metadata":{"name":"Footer"},"className":"kahel-footer","backgroundColor":"ink","textColor":"cream","layout":{"type":"constrained"}} -->
+<div class="wp-block-group kahel-footer has-cream-color has-ink-background-color has-text-color has-background" id="contact">
+
+	<!-- wp:group {"align":"wide","metadata":{"name":"Footer top"},"className":"kahel-footer-top","layout":{"type":"default"}} -->
+	<div class="wp-block-group alignwide kahel-footer-top">
+
+		<!-- wp:group {"metadata":{"name":"Brand"},"className":"kahel-footer-brand","layout":{"type":"default"}} -->
+		<div class="wp-block-group kahel-footer-brand">
+
+			<!-- wp:site-title {"level":0,"className":"kahel-footer-brandline","textColor":"cream","fontSize":"medium"} /-->
+
+			<!-- wp:heading {"level":2,"className":"kahel-footer-title","fontSize":"section"} -->
+			<h2 class="wp-block-heading kahel-footer-title has-section-font-size">Keep a little <span class="has-orange-color has-text-color">sunshine</span> for later.</h2>
+			<!-- /wp:heading -->
+
+			<!-- wp:paragraph {"className":"kahel-footer-copy","textColor":"cream-soft"} -->
+			<p class="kahel-footer-copy has-cream-soft-color has-text-color">Return to the archive for stories about food, craft, place, and the everyday details that are easy to miss when moving too quickly.</p>
+			<!-- /wp:paragraph -->
+
+			<!-- wp:buttons -->
+			<div class="wp-block-buttons">
+				<!-- wp:button {"className":"kahel-footer-cta","backgroundColor":"orange","textColor":"ink"} -->
+				<div class="wp-block-button kahel-footer-cta"><a class="wp-block-button__link has-ink-color has-orange-background-color has-text-color has-background wp-element-button" href="/">Browse the latest issue</a></div>
+				<!-- /wp:button -->
+			</div>
+			<!-- /wp:buttons -->
+
+		</div>
+		<!-- /wp:group -->
+
+		<!-- wp:group {"metadata":{"name":"Explore"},"className":"kahel-footer-nav","layout":{"type":"default"}} -->
+		<div class="wp-block-group kahel-footer-nav">
+
+			<!-- wp:heading {"level":6,"textColor":"orange"} -->
+			<h6 class="wp-block-heading has-orange-color has-text-color">Explore</h6>
+			<!-- /wp:heading -->
+
+			<!-- wp:navigation {"overlayMenu":"never","textColor":"cream","fontSize":"small","layout":{"type":"flex","orientation":"vertical","flexWrap":"nowrap"},"ariaLabel":"Footer primary"} -->
+				<!-- wp:navigation-link {"label":"Stories","url":"/","kind":"custom"} /-->
+				<!-- wp:navigation-link {"label":"Topics","url":"/","kind":"custom"} /-->
+				<!-- wp:navigation-link {"label":"Citrus issue","url":"/","kind":"custom"} /-->
+				<!-- wp:navigation-link {"label":"About","url":"/about/","kind":"custom"} /-->
+				<!-- wp:navigation-link {"label":"Journal","url":"/","kind":"custom"} /-->
+				<!-- wp:navigation-link {"label":"FAQ","url":"/","kind":"custom"} /-->
+			<!-- /wp:navigation -->
+
+		</div>
+		<!-- /wp:group -->
+
+		<!-- wp:group {"metadata":{"name":"Elsewhere"},"className":"kahel-footer-nav","layout":{"type":"default"}} -->
+		<div class="wp-block-group kahel-footer-nav">
+
+			<!-- wp:heading {"level":6,"textColor":"orange"} -->
+			<h6 class="wp-block-heading has-orange-color has-text-color">Elsewhere</h6>
+			<!-- /wp:heading -->
+
+			<!-- wp:navigation {"overlayMenu":"never","textColor":"cream","fontSize":"small","layout":{"type":"flex","orientation":"vertical","flexWrap":"nowrap"},"ariaLabel":"Footer secondary"} -->
+				<!-- wp:navigation-link {"label":"Contributors","url":"/","kind":"custom"} /-->
+				<!-- wp:navigation-link {"label":"Photo essays","url":"/","kind":"custom"} /-->
+				<!-- wp:navigation-link {"label":"Reading lists","url":"/","kind":"custom"} /-->
+				<!-- wp:navigation-link {"label":"Contact","url":"/#contact","kind":"custom"} /-->
+			<!-- /wp:navigation -->
+
+		</div>
+		<!-- /wp:group -->
+
 	</div>
 	<!-- /wp:group -->
+
+	<!-- wp:group {"align":"wide","metadata":{"name":"Footer bottom"},"className":"kahel-footer-bottom","textColor":"cream-faint","layout":{"type":"flex","flexWrap":"wrap","justifyContent":"space-between"}} -->
+	<div class="wp-block-group alignwide kahel-footer-bottom has-cream-faint-color has-text-color">
+
+		<!-- wp:paragraph -->
+		<p>© 2026 Kahel Journal.</p>
+		<!-- /wp:paragraph -->
+
+		<!-- wp:navigation {"overlayMenu":"never","textColor":"cream-faint","layout":{"type":"flex","flexWrap":"wrap","justifyContent":"right"},"ariaLabel":"Footer utility"} -->
+			<!-- wp:navigation-link {"label":"Privacy","url":"/privacy/","kind":"custom"} /-->
+			<!-- wp:navigation-link {"label":"Accessibility","url":"/accessibility/","kind":"custom"} /-->
+			<!-- wp:navigation-link {"label":"Colophon","url":"/colophon/","kind":"custom"} /-->
+		<!-- /wp:navigation -->
+
+	</div>
+	<!-- /wp:group -->
+
 </div>
 <!-- /wp:group -->

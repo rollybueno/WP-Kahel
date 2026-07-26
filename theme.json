@@ -68,6 +68,21 @@
 					"slug": "line-strong",
 					"name": "Line Strong",
 					"color": "rgba(36, 23, 15, 0.18)"
+				},
+				{
+					"slug": "cream-soft",
+					"name": "Cream Soft",
+					"color": "rgba(255, 244, 232, 0.72)"
+				},
+				{
+					"slug": "cream-faint",
+					"name": "Cream Faint",
+					"color": "rgba(255, 244, 232, 0.6)"
+				},
+				{
+					"slug": "line-on-ink",
+					"name": "Line on Ink",
+					"color": "rgba(255, 244, 232, 0.14)"
 				}
 			],
 			"gradients": [
@@ -439,9 +454,31 @@
 			"button": {
 				"min-height": "48px",
 				"min-height-sm": "44px"
+			},
+			"footer": {
+				"brand-max": "680px",
+				"title-max": "10ch",
+				"copy-max": "54ch",
+				"padding-top": "clamp(72px, 9vw, 120px)",
+				"padding-bottom": "28px",
+				"top-gap": "clamp(36px, 7vw, 96px)",
+				"top-padding-bottom": "clamp(52px, 7vw, 86px)",
+				"cta-min-height": "50px"
 			}
 		}
 	},
+	"templateParts": [
+		{
+			"name": "header",
+			"title": "Header",
+			"area": "header"
+		},
+		{
+			"name": "footer",
+			"title": "Footer",
+			"area": "footer"
+		}
+	],
 	"styles": {
 		"color": {
 			"background": "var(--wp--preset--color--base)",
