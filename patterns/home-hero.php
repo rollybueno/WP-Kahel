@@ -44,8 +44,8 @@
 			<div class="wp-block-column">
 				<!-- wp:group {"className":"kahel-home-topic kahel-home-topic--1","backgroundColor":"orange","layout":{"type":"flex","orientation":"vertical","justifyContent":"space-between"}} -->
 				<div class="wp-block-group kahel-home-topic kahel-home-topic--1 has-orange-background-color has-background">
-					<!-- wp:group {"layout":{"type":"flex","flexWrap":"nowrap","justifyContent":"space-between"}} -->
-					<div class="wp-block-group">
+					<!-- wp:group {"className":"kahel-home-topic-top","layout":{"type":"flex","flexWrap":"nowrap","justifyContent":"space-between"}} -->
+					<div class="wp-block-group kahel-home-topic-top">
 						<!-- wp:paragraph {"className":"kahel-home-topic-number"} -->
 						<p class="kahel-home-topic-number">01</p>
 						<!-- /wp:paragraph -->
@@ -73,8 +73,8 @@
 			<div class="wp-block-column">
 				<!-- wp:group {"className":"kahel-home-topic kahel-home-topic--2","backgroundColor":"cream","layout":{"type":"flex","orientation":"vertical","justifyContent":"space-between"}} -->
 				<div class="wp-block-group kahel-home-topic kahel-home-topic--2 has-cream-background-color has-background">
-					<!-- wp:group {"layout":{"type":"flex","flexWrap":"nowrap","justifyContent":"space-between"}} -->
-					<div class="wp-block-group">
+					<!-- wp:group {"className":"kahel-home-topic-top","layout":{"type":"flex","flexWrap":"nowrap","justifyContent":"space-between"}} -->
+					<div class="wp-block-group kahel-home-topic-top">
 						<!-- wp:paragraph {"className":"kahel-home-topic-number"} -->
 						<p class="kahel-home-topic-number">02</p>
 						<!-- /wp:paragraph -->
@@ -102,8 +102,8 @@
 			<div class="wp-block-column">
 				<!-- wp:group {"className":"kahel-home-topic kahel-home-topic--3","backgroundColor":"ink","textColor":"cream","layout":{"type":"flex","orientation":"vertical","justifyContent":"space-between"}} -->
 				<div class="wp-block-group kahel-home-topic kahel-home-topic--3 has-ink-background-color has-cream-color has-text-color has-background">
-					<!-- wp:group {"layout":{"type":"flex","flexWrap":"nowrap","justifyContent":"space-between"}} -->
-					<div class="wp-block-group">
+					<!-- wp:group {"className":"kahel-home-topic-top","layout":{"type":"flex","flexWrap":"nowrap","justifyContent":"space-between"}} -->
+					<div class="wp-block-group kahel-home-topic-top">
 						<!-- wp:paragraph {"className":"kahel-home-topic-number","textColor":"orange"} -->
 						<p class="kahel-home-topic-number has-orange-color has-text-color">03</p>
 						<!-- /wp:paragraph -->
@@ -131,8 +131,8 @@
 			<div class="wp-block-column">
 				<!-- wp:group {"className":"kahel-home-topic kahel-home-topic--4","backgroundColor":"apricot","layout":{"type":"flex","orientation":"vertical","justifyContent":"space-between"}} -->
 				<div class="wp-block-group kahel-home-topic kahel-home-topic--4 has-apricot-background-color has-background">
-					<!-- wp:group {"layout":{"type":"flex","flexWrap":"nowrap","justifyContent":"space-between"}} -->
-					<div class="wp-block-group">
+					<!-- wp:group {"className":"kahel-home-topic-top","layout":{"type":"flex","flexWrap":"nowrap","justifyContent":"space-between"}} -->
+					<div class="wp-block-group kahel-home-topic-top">
 						<!-- wp:paragraph {"className":"kahel-home-topic-number"} -->
 						<p class="kahel-home-topic-number">04</p>
 						<!-- /wp:paragraph -->
