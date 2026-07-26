@@ -455,6 +455,13 @@
 				"min-height": "48px",
 				"min-height-sm": "44px"
 			},
+			"header": {
+				"padding-y": "18px",
+				"nav-gap": "28px",
+				"actions-gap": "28px",
+				"cta-padding-x": "16px",
+				"cta-padding-y": "10px"
+			},
 			"footer": {
 				"brand-max": "680px",
 				"title-max": "10ch",

@@ -4,6 +4,60 @@
  * Values come from theme.json presets & custom tokens.
  */
 
+/* Shared fruit brand mark */
+.kahel-brandline a {
+	display: inline-flex;
+	align-items: center;
+	gap: 10px;
+	text-decoration: none;
+}
+
+.kahel-brandline a::before {
+	content: "";
+	width: 22px;
+	height: 22px;
+	flex-shrink: 0;
+	border-radius: 50% 45% 48% 52%;
+	background: var(--wp--preset--color--orange);
+	box-shadow: inset -3px -3px 0 rgba(0, 0, 0, 0.08);
+	background-image: radial-gradient(
+		circle at 78% 12%,
+		var(--wp--preset--color--leaf) 0 3.5px,
+		transparent 4px
+	);
+}
+
+/* Header */
+.kahel-header {
+	padding-top: var(--wp--custom--header--padding-y);
+	padding-bottom: var(--wp--custom--header--padding-y);
+	border-bottom: 1px solid var(--wp--preset--color--line);
+}
+
+.kahel-header-bar {
+	gap: var(--wp--preset--spacing--50);
+}
+
+.kahel-header-brand a {
+	font-weight: var(--wp--custom--weight--strong);
+	letter-spacing: var(--wp--custom--letter-spacing--brand);
+}
+
+.kahel-header-actions {
+	gap: var(--wp--custom--header--actions-gap);
+}
+
+.kahel-header-actions .wp-block-navigation__container {
+	gap: var(--wp--custom--header--nav-gap);
+}
+
+.kahel-header-cta .wp-block-button__link {
+	padding: var(--wp--custom--header--cta-padding-y) var(--wp--custom--header--cta-padding-x);
+	font-weight: 800;
+	box-shadow: var(--wp--preset--shadow--button);
+}
+
+/* Footer */
 .kahel-footer {
 	padding-top: var(--wp--custom--footer--padding-top);
 	padding-bottom: var(--wp--custom--footer--padding-bottom);
@@ -35,27 +89,9 @@
 }
 
 .kahel-footer-brandline a {
-	display: inline-flex;
-	align-items: center;
 	gap: 12px;
 	font-weight: var(--wp--custom--weight--strong);
 	letter-spacing: -0.035em;
-	text-decoration: none;
-}
-
-.kahel-footer-brandline a::before {
-	content: "";
-	width: 22px;
-	height: 22px;
-	flex-shrink: 0;
-	border-radius: 50% 45% 48% 52%;
-	background: var(--wp--preset--color--orange);
-	box-shadow: inset -3px -3px 0 rgba(0, 0, 0, 0.08);
-	background-image: radial-gradient(
-		circle at 78% 12%,
-		var(--wp--preset--color--leaf) 0 3.5px,
-		transparent 4px
-	);
 }
 
 .kahel-footer-title {
