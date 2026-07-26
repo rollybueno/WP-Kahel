@@ -484,6 +484,27 @@
 				"cell-padding": "12px 14px",
 				"font-size": "0.9rem"
 			},
+			"page": {
+				"header-padding-top": "clamp(80px, 11vw, 150px)",
+				"header-padding-bottom": "clamp(60px, 8vw, 100px)",
+				"header-gap": "clamp(48px, 9vw, 140px)",
+				"title-max": "none",
+				"intro-max": "680px",
+				"section-title-max": "10ch",
+				"contributors-title-max": "8ch",
+				"kicker-rule": "36px",
+				"visual-min-height": "clamp(420px, 52vw, 680px)",
+				"visual-min-height-mobile": "360px",
+				"content-margin-top": "clamp(72px, 9vw, 120px)",
+				"values-padding-y": "clamp(80px, 10vw, 140px)",
+				"values-head-gap": "50px",
+				"values-head-margin-bottom": "56px",
+				"value-card-min-height": "250px",
+				"value-card-padding": "28px",
+				"contributors-margin-y": "clamp(90px, 11vw, 150px)",
+				"contributors-gap": "clamp(50px, 9vw, 130px)",
+				"contributor-padding-y": "24px"
+			},
 			"footer": {
 				"brand-max": "680px",
 				"title-max": "10ch",
@@ -652,7 +673,8 @@
 			"core/paragraph": {
 				"typography": {
 					"lineHeight": "var(--wp--custom--line-height--body)"
-				}
+				},
+				"css": "&.kahel-kicker { display: flex; align-items: center; gap: 10px; margin: 0 0 20px; font-weight: var(--wp--custom--weight--strong); letter-spacing: var(--wp--custom--letter-spacing--kicker); text-transform: uppercase; } &.kahel-kicker::before { content: \"\"; width: var(--wp--custom--page--kicker-rule); height: 3px; border-radius: var(--wp--custom--radius--pill); background: var(--wp--preset--color--orange); } &.kahel-contributor-role { margin: 0; font-weight: var(--wp--custom--weight--strong); letter-spacing: 0.08em; text-transform: uppercase; white-space: nowrap; }"
 			},
 			"core/quote": {
 				"border": {
@@ -705,7 +727,8 @@
 				"border": {
 					"radius": "var(--wp--custom--radius--default)"
 				},
-				"shadow": "var(--wp--preset--shadow--media)"
+				"shadow": "var(--wp--preset--shadow--media)",
+				"css": "&.kahel-page-visual { min-height: var(--wp--custom--page--visual-min-height); } &.kahel-page-visual img { width: 100%; height: 100%; min-height: var(--wp--custom--page--visual-min-height); object-fit: cover; } @media (max-width: 560px) { &.kahel-page-visual, &.kahel-page-visual img { min-height: var(--wp--custom--page--visual-min-height-mobile); } }"
 			},
 			"core/site-title": {
 				"typography": {
@@ -741,7 +764,8 @@
 					"fontWeight": "var(--wp--custom--weight--heading)",
 					"letterSpacing": "var(--wp--custom--letter-spacing--h-1)",
 					"lineHeight": "var(--wp--custom--line-height--h-1)"
-				}
+				},
+				"css": "&.kahel-page-title { max-width: none; margin: 0; word-break: normal; overflow-wrap: normal; }"
 			},
 			"core/post-excerpt": {
 				"typography": {
@@ -750,14 +774,24 @@
 				},
 				"color": {
 					"text": "var(--wp--preset--color--muted)"
-				}
+				},
+				"css": "&.kahel-page-intro { max-width: var(--wp--custom--page--intro-max); margin: 28px 0 0; } &.kahel-page-intro .wp-block-post-excerpt__more-text { display: none; } &.kahel-page-intro .wp-block-post-excerpt__excerpt { margin: 0; }"
 			},
 			"core/post-content": {
 				"typography": {
 					"fontSize": "var(--wp--preset--font-size--prose)",
 					"lineHeight": "var(--wp--custom--line-height--prose)"
 				},
-				"css": "& > * + * { margin-block-start: 1.25em; } & ul, & ol { padding-inline-start: 1.35em; } & li + li { margin-block-start: 0.4em; } & code, & kbd, & samp { padding: 0.12em 0.4em; border-radius: var(--wp--custom--radius--md); background: var(--wp--preset--color--cream); font-size: 0.92em; } & pre { padding: 1.1rem 1.25rem; overflow-x: auto; border-radius: var(--wp--custom--radius--md); background: var(--wp--preset--color--cream); } & pre code { padding: 0; background: transparent; } & blockquote { margin: 2.4em 0; padding: 10px 0 10px 28px; border-left: 4px solid var(--wp--preset--color--orange); font-size: var(--wp--preset--font-size--quote); font-weight: 800; line-height: var(--wp--custom--line-height--quote); letter-spacing: -0.045em; } & blockquote p { margin: 0; } & hr { border: 0; height: 1px; background: var(--wp--preset--color--line); } & table { width: 100%; border-collapse: collapse; font-size: var(--wp--custom--table--font-size); } & th, & td { padding: var(--wp--custom--table--cell-padding); border: 1px solid var(--wp--preset--color--line); text-align: left; vertical-align: top; } & thead th, & thead td, & th { background: var(--wp--preset--color--cream); font-weight: 800; } & dl { margin: 1.5em 0; } & dt { font-weight: 800; margin-top: 0.85em; } & dd { margin: 0.35em 0 0; color: var(--wp--preset--color--muted); } & address { font-style: normal; } & mark { background: var(--wp--preset--color--apricot); color: var(--wp--preset--color--ink); padding: 0.05em 0.2em; }"
+				"css": "&.kahel-page-content { margin-top: var(--wp--custom--page--content-margin-top); } & > * + * { margin-block-start: 1.25em; } & ul { padding-inline-start: 1.35em; } & ol { padding-inline-start: 1.35em; } & li + li { margin-block-start: 0.4em; } & code { padding: 0.12em 0.4em; border-radius: var(--wp--custom--radius--md); background: var(--wp--preset--color--cream); font-size: 0.92em; } & kbd { padding: 0.12em 0.4em; border-radius: var(--wp--custom--radius--md); background: var(--wp--preset--color--cream); font-size: 0.92em; } & samp { padding: 0.12em 0.4em; border-radius: var(--wp--custom--radius--md); background: var(--wp--preset--color--cream); font-size: 0.92em; } & pre { padding: 1.1rem 1.25rem; overflow-x: auto; border-radius: var(--wp--custom--radius--md); background: var(--wp--preset--color--cream); } & pre code { padding: 0; background: transparent; } & blockquote { margin: 2.4em 0; padding: 10px 0 10px 28px; border-left: 4px solid var(--wp--preset--color--orange); font-size: var(--wp--preset--font-size--quote); font-weight: 800; line-height: var(--wp--custom--line-height--quote); letter-spacing: -0.045em; } & blockquote p { margin: 0; } & hr { border: 0; height: 1px; background: var(--wp--preset--color--line); } & table { width: 100%; border-collapse: collapse; font-size: var(--wp--custom--table--font-size); } & th { padding: var(--wp--custom--table--cell-padding); border: 1px solid var(--wp--preset--color--line); text-align: left; vertical-align: top; background: var(--wp--preset--color--cream); font-weight: 800; } & td { padding: var(--wp--custom--table--cell-padding); border: 1px solid var(--wp--preset--color--line); text-align: left; vertical-align: top; } & thead td { background: var(--wp--preset--color--cream); font-weight: 800; } & dl { margin: 1.5em 0; } & dt { font-weight: 800; margin-top: 0.85em; } & dd { margin: 0.35em 0 0; color: var(--wp--preset--color--muted); } & address { font-style: normal; } & mark { background: var(--wp--preset--color--apricot); color: var(--wp--preset--color--ink); padding: 0.05em 0.2em; }"
+			},
+			"core/group": {
+				"css": "&.kahel-page-header { padding-top: var(--wp--custom--page--header-padding-top); padding-bottom: var(--wp--custom--page--header-padding-bottom); } &.kahel-values { padding-top: var(--wp--custom--page--values-padding-y); padding-bottom: var(--wp--custom--page--values-padding-y); } &.kahel-value-card { min-height: var(--wp--custom--page--value-card-min-height); } &.kahel-value-card > p:first-child { margin: 0; font-weight: var(--wp--custom--weight--strong); letter-spacing: 0.12em; } &.kahel-contributors { margin-top: var(--wp--custom--page--contributors-margin-y); margin-bottom: var(--wp--custom--page--contributors-margin-y); } &.kahel-contributor-list { border-top: 1px solid var(--wp--preset--color--line); } &.kahel-contributor { padding-top: var(--wp--custom--page--contributor-padding-y); padding-bottom: var(--wp--custom--page--contributor-padding-y); border-bottom: 1px solid var(--wp--preset--color--line); }"
+			},
+			"core/heading": {
+				"css": "&.kahel-values-title { max-width: var(--wp--custom--page--section-title-max); margin: 0; } &.kahel-contributors-title { max-width: var(--wp--custom--page--contributors-title-max); margin: 0; } &.kahel-value-card-title { margin: 0 0 8px; } &.kahel-contributor-name { margin: 0 0 5px; }"
+			},
+			"core/columns": {
+				"css": "&.kahel-values-head { gap: var(--wp--custom--page--values-head-gap); align-items: end; margin-bottom: var(--wp--custom--page--values-head-margin-bottom); } &.kahel-contributors-columns { gap: var(--wp--custom--page--contributors-gap); align-items: start; }"
 			},
 			"core/list": {
 				"spacing": {

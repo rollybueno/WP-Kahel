@@ -48,9 +48,39 @@ function kahel_editor_style() {
 add_action( 'after_setup_theme', 'kahel_editor_style' );
 
 /**
+ * Theme supports and pattern categories.
+ *
+ * @since 0.1.0
+ *
+ * @return void
+ */
+function kahel_setup() {
+	add_post_type_support( 'page', 'excerpt' );
+}
+add_action( 'after_setup_theme', 'kahel_setup' );
+
+/**
+ * Register pattern categories before theme patterns load.
+ *
+ * @since 0.1.1
+ *
+ * @return void
+ */
+function kahel_register_pattern_categories() {
+	register_block_pattern_category(
+		'kahel',
+		array(
+			'label' => __( 'Kahel', 'kahel' ),
+		)
+	);
+}
+add_action( 'init', 'kahel_register_pattern_categories', 5 );
+
+/**
  * Hide the single deck excerpt unless a manual excerpt is set.
  *
  * Prevents auto-generated excerpts from duplicating post content.
+ * Also gates the page intro excerpt the same way.
  *
  * @since 0.1.0
  *
@@ -68,7 +98,10 @@ function kahel_render_manual_excerpt_deck_only( $block_content, $block ) {
 		$class_name = (string) $block['attrs']['className'];
 	}
 
-	if ( ! str_contains( $class_name, 'kahel-single-deck' ) ) {
+	$is_gated = str_contains( $class_name, 'kahel-single-deck' )
+		|| str_contains( $class_name, 'kahel-page-intro' );
+
+	if ( ! $is_gated ) {
 		return $block_content;
 	}
 

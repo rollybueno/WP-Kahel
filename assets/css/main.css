@@ -249,7 +249,8 @@
 }
 
 /* In-content heading scale (not hero/post-title sizes) */
-.kahel-single-content h1 {
+.kahel-single-content h1,
+.kahel-page-content h1 {
 	max-width: none;
 	margin: 2.2em 0 0.6em;
 	font-size: var(--wp--preset--font-size--content);
@@ -258,7 +259,8 @@
 	line-height: var(--wp--custom--line-height--content);
 }
 
-.kahel-single-content h2 {
+.kahel-single-content h2,
+.kahel-page-content h2 {
 	margin: 2.5em 0 0.7em;
 	font-size: var(--wp--preset--font-size--h-2);
 	font-weight: var(--wp--custom--weight--heading);
@@ -266,7 +268,8 @@
 	line-height: var(--wp--custom--line-height--heading);
 }
 
-.kahel-single-content h3 {
+.kahel-single-content h3,
+.kahel-page-content h3 {
 	margin: 2em 0 0.55em;
 	font-size: var(--wp--preset--font-size--h-3);
 	font-weight: var(--wp--custom--weight--heading);
@@ -276,80 +279,99 @@
 
 .kahel-single-content h4,
 .kahel-single-content h5,
-.kahel-single-content h6 {
+.kahel-single-content h6,
+.kahel-page-content h4,
+.kahel-page-content h5,
+.kahel-page-content h6 {
 	margin: 1.75em 0 0.5em;
 }
 
 /* Classic HTML polish — theme.json block css uses :where(), so UA th/code win otherwise */
 .kahel-single-content code,
 .kahel-single-content kbd,
-.kahel-single-content samp {
+.kahel-single-content samp,
+.kahel-page-content code,
+.kahel-page-content kbd,
+.kahel-page-content samp {
 	padding: 0.12em 0.4em;
 	border-radius: var(--wp--custom--radius--md);
 	background: var(--wp--preset--color--cream);
 	font-size: 0.92em;
 }
 
-.kahel-single-content pre {
+.kahel-single-content pre,
+.kahel-page-content pre {
 	padding: 1.1rem 1.25rem;
 	overflow-x: auto;
 	border-radius: var(--wp--custom--radius--md);
 	background: var(--wp--preset--color--cream);
 }
 
-.kahel-single-content pre code {
+.kahel-single-content pre code,
+.kahel-page-content pre code {
 	padding: 0;
 	background: transparent;
 }
 
-.kahel-single-content hr {
+.kahel-single-content hr,
+.kahel-page-content hr {
 	border: 0;
 	height: 1px;
 	background: var(--wp--preset--color--line);
 }
 
-.kahel-single-content mark {
+.kahel-single-content mark,
+.kahel-page-content mark {
 	background: var(--wp--preset--color--apricot);
 	color: var(--wp--preset--color--ink);
 	padding: 0.05em 0.2em;
 }
 
-.kahel-single-content dl {
+.kahel-single-content dl,
+.kahel-page-content dl {
 	margin: 1.5em 0;
 }
 
-.kahel-single-content dt {
+.kahel-single-content dt,
+.kahel-page-content dt {
 	font-weight: 800;
 	margin-top: 0.85em;
 }
 
-.kahel-single-content dd {
+.kahel-single-content dd,
+.kahel-page-content dd {
 	margin: 0.35em 0 0;
 	color: var(--wp--preset--color--muted);
 }
 
 .kahel-single-content .wp-block-table,
-.kahel-single-content table {
+.kahel-single-content table,
+.kahel-page-content .wp-block-table,
+.kahel-page-content table {
 	width: 100%;
 	max-width: 100%;
 	border-collapse: collapse;
 	font-size: var(--wp--custom--table--font-size);
 }
 
-.kahel-single-content .wp-block-table {
+.kahel-single-content .wp-block-table,
+.kahel-page-content .wp-block-table {
 	overflow-x: auto;
 	-webkit-overflow-scrolling: touch;
 	border: 1px solid var(--wp--preset--color--line);
 	border-radius: var(--wp--custom--radius--md);
 }
 
-.kahel-single-content .wp-block-table table {
+.kahel-single-content .wp-block-table table,
+.kahel-page-content .wp-block-table table {
 	margin: 0;
 	border: 0;
 }
 
 .kahel-single-content th,
-.kahel-single-content td {
+.kahel-single-content td,
+.kahel-page-content th,
+.kahel-page-content td {
 	padding: var(--wp--custom--table--cell-padding);
 	border: 1px solid var(--wp--preset--color--line);
 	text-align: left;
@@ -358,12 +380,16 @@
 
 .kahel-single-content thead th,
 .kahel-single-content thead td,
-.kahel-single-content th {
+.kahel-single-content th,
+.kahel-page-content thead th,
+.kahel-page-content thead td,
+.kahel-page-content th {
 	background: var(--wp--preset--color--cream);
 	font-weight: 800;
 }
 
-.kahel-single-content > table {
+.kahel-single-content > table,
+.kahel-page-content > table {
 	display: block;
 	overflow-x: auto;
 	-webkit-overflow-scrolling: touch;
@@ -372,22 +398,30 @@
 }
 
 .kahel-single-content > table th:first-child,
-.kahel-single-content > table td:first-child {
+.kahel-single-content > table td:first-child,
+.kahel-page-content > table th:first-child,
+.kahel-page-content > table td:first-child {
 	border-left: 0;
 }
 
 .kahel-single-content > table th:last-child,
-.kahel-single-content > table td:last-child {
+.kahel-single-content > table td:last-child,
+.kahel-page-content > table th:last-child,
+.kahel-page-content > table td:last-child {
 	border-right: 0;
 }
 
 .kahel-single-content > table tr:first-child th,
-.kahel-single-content > table tr:first-child td {
+.kahel-single-content > table tr:first-child td,
+.kahel-page-content > table tr:first-child th,
+.kahel-page-content > table tr:first-child td {
 	border-top: 0;
 }
 
 .kahel-single-content > table tr:last-child th,
-.kahel-single-content > table tr:last-child td {
+.kahel-single-content > table tr:last-child td,
+.kahel-page-content > table tr:last-child th,
+.kahel-page-content > table tr:last-child td {
 	border-bottom: 0;
 }
 
