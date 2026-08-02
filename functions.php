@@ -67,6 +67,25 @@ function kahel_register_pattern_categories() {
 add_action( 'init', 'kahel_register_pattern_categories', 5 );
 
 /**
+ * Register theme block styles.
+ *
+ * @since 0.1.5
+ *
+ * @return void
+ */
+function kahel_register_block_styles() {
+	register_block_style(
+		'core/quote',
+		array(
+			'name'         => 'accent',
+			'label'        => __( 'Accent', 'kahel' ),
+			'inline_style' => '.wp-block-quote.is-style-accent{padding:var(--wp--preset--spacing--50);border-left:4px solid var(--wp--preset--color--orange);background:var(--wp--preset--color--cream);}',
+		)
+	);
+}
+add_action( 'init', 'kahel_register_block_styles' );
+
+/**
  * Hide the single deck excerpt unless a manual excerpt is set.
  *
  * Prevents auto-generated excerpts from duplicating post content.
