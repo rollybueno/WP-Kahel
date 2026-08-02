@@ -8,11 +8,15 @@ License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 Tags: blog, news, block-patterns, block-styles, custom-colors, custom-logo, editor-style, featured-images, full-site-editing, one-column, translation-ready, wide-blocks
 
-A warm, energetic block theme with bold typography and an orange-centered editorial identity.
+Named after the Filipino word for orange, Kahel is a warm, energetic block theme with bold typography and a distinctive editorial style.
 
 == Description ==
 
-Kahel is a Full Site Editing theme designed for blogs, magazines, and editorial websites. It includes coordinated templates, template parts, block patterns, a custom color palette, and locally hosted fonts.
+Kahel takes its name from the Filipino word for orange. That connection gives the theme its warm citrus palette, energetic personality, and distinctive editorial character. It is designed for publishers, writers, creatives, and organizations that want their website to feel memorable and thoughtfully art-directed from the moment it is activated.
+
+Built as a native WordPress block theme, Kahel works with the Site Editor and core WordPress blocks without requiring a page builder or custom-block plugin. Coordinated templates, template parts, patterns, and block styles provide a polished starting point for blogs, journals, magazines, and story-driven websites, while global styles make the colors, typography, and layout easy to personalize.
+
+Kahel balances a bold visual identity with practical flexibility. Generous whitespace keeps content readable, expressive layouts create clear hierarchy, and locally hosted fonts help preserve both performance and privacy. Whether you are launching your first publication or refreshing an established editorial site, Kahel offers a focused foundation that is approachable to customize and distinctly Filipino in inspiration.
 
 == Installation ==
 
