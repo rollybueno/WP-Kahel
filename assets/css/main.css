@@ -1226,6 +1226,15 @@ body.home .kahel-header {
 		width: 28px;
 		height: 28px;
 	}
+
+	.kahel-archive-grid.wp-block-post-template {
+		grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+	}
+
+	.kahel-archive-grid > .wp-block-post:nth-child(2),
+	.kahel-archive-grid > .wp-block-post:nth-child(5) {
+		transform: none;
+	}
 }
 
 @media (max-width: 560px) {
@@ -1240,11 +1249,165 @@ body.home .kahel-header {
 	.kahel-home-quote-person {
 		grid-column: 1 / -1;
 	}
+
+	.kahel-archive-header {
+		padding-top: var(--wp--custom--stories--header-padding-top-mobile);
+	}
+
+	.kahel-archive-tools {
+		align-items: flex-start;
+		flex-direction: column;
+	}
+
+	.kahel-archive-grid.wp-block-post-template {
+		grid-template-columns: 1fr !important;
+	}
+
+	.kahel-archive-story-art {
+		min-height: var(--wp--custom--stories--art-min-height-mobile);
+	}
+}
+
+/* Stories archive — HTML/archive.html (grid stagger, filters, decorative art) */
+.kahel-archive-filters {
+	display: flex;
+	flex-wrap: wrap;
+	gap: var(--wp--custom--stories--filter-gap);
+}
+
+.kahel-archive-filter {
+	padding: var(--wp--custom--stories--filter-padding);
+	border: 1px solid var(--wp--preset--color--line);
+	border-radius: var(--wp--custom--radius--pill);
+	background: transparent;
+	color: var(--wp--preset--color--ink);
+	font-size: var(--wp--custom--stories--filter-size);
+	font-weight: 800;
+	line-height: 1.2;
+	text-decoration: none;
+}
+
+.kahel-archive-filter:hover,
+.kahel-archive-filter:focus-visible {
+	border-color: var(--wp--preset--color--orange);
+	color: var(--wp--preset--color--orange-deep);
+}
+
+.kahel-archive-filter.is-active,
+.kahel-archive-filter[aria-current="page"] {
+	border-color: var(--wp--preset--color--orange);
+	background: var(--wp--preset--color--orange);
+	color: var(--wp--preset--color--ink);
+}
+
+.kahel-archive-grid.wp-block-post-template {
+	gap: var(--wp--custom--stories--grid-row-gap) var(--wp--custom--stories--grid-column-gap);
+}
+
+.kahel-archive-grid > .wp-block-post {
+	min-width: 0;
+}
+
+.kahel-archive-grid > .wp-block-post:nth-child(2),
+.kahel-archive-grid > .wp-block-post:nth-child(5) {
+	transform: translateY(var(--wp--custom--stories--story-stagger));
+}
+
+.kahel-archive-story-media {
+	margin: 0;
+}
+
+.kahel-archive-story-media img {
+	display: block;
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+
+.kahel-archive-story-art:has(img) {
+	background: transparent;
+}
+
+.kahel-archive-story-art:has(img) .kahel-archive-story-media {
+	position: absolute;
+	inset: 0;
+}
+
+.kahel-archive-story-art:not(:has(img))::before,
+.kahel-archive-story-art:not(:has(img))::after {
+	content: "";
+	position: absolute;
+}
+
+.kahel-archive-story-art:not(:has(img))::before {
+	width: 44%;
+	aspect-ratio: 1;
+	left: 16%;
+	top: 20%;
+	border-radius: 50%;
+	background: var(--wp--preset--color--orange);
+	box-shadow: 85px 52px 0 rgba(255, 244, 232, 0.85);
+}
+
+.kahel-archive-story-art:not(:has(img))::after {
+	left: 10%;
+	right: 10%;
+	bottom: 13%;
+	height: 10px;
+	background: var(--wp--preset--color--ink);
+	box-shadow: 0 -22px 0 var(--wp--preset--color--ink);
+}
+
+.kahel-archive-grid > .wp-block-post:nth-child(2) .kahel-archive-story-art:not(:has(img)) {
+	background: var(--wp--preset--color--leaf);
+}
+
+.kahel-archive-grid > .wp-block-post:nth-child(3) .kahel-archive-story-art:not(:has(img)) {
+	background: var(--wp--preset--color--ink);
+}
+
+.kahel-archive-grid > .wp-block-post:nth-child(4) .kahel-archive-story-art:not(:has(img)) {
+	background: var(--wp--preset--color--orange);
+}
+
+.kahel-archive-grid > .wp-block-post:nth-child(5) .kahel-archive-story-art:not(:has(img)) {
+	background: var(--wp--preset--color--cream);
+	border: 1px solid var(--wp--preset--color--line);
+}
+
+.kahel-archive-grid > .wp-block-post:nth-child(6) .kahel-archive-story-art:not(:has(img)) {
+	background: var(--wp--custom--stories--art-warm);
+}
+
+.kahel-archive-grid > .wp-block-post:nth-child(even) .kahel-archive-story-art:not(:has(img))::before {
+	left: 30%;
+	border-radius: 50% 45% 48% 52%;
+	box-shadow: none;
+}
+
+.kahel-archive-grid > .wp-block-post:nth-child(3n) .kahel-archive-story-art:not(:has(img))::after {
+	inset: 15%;
+	height: auto;
+	border: 2px solid var(--wp--preset--color--apricot);
+	background: transparent;
+	box-shadow: none;
+	transform: rotate(8deg);
+}
+
+.kahel-archive .kahel-pagination {
+	margin: var(--wp--custom--pagination--margin-top) 0;
+	justify-content: center;
+}
+
+.kahel-archive .kahel-pagination .wp-block-query-pagination-next {
+	margin-left: var(--wp--custom--pagination--gap);
 }
 
 @media (prefers-reduced-motion: reduce) {
 	.kahel-home-about-fruit,
-	.kahel-home-topic {
+	.kahel-home-topic,
+	.kahel-archive-grid > .wp-block-post:nth-child(2),
+	.kahel-archive-grid > .wp-block-post:nth-child(5) {
 		animation: none !important;
 		transition: none !important;
 		transform: none !important;

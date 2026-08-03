@@ -164,3 +164,86 @@ function kahel_related_query_exclude_current( $query, $block ) {
 	return $query;
 }
 add_filter( 'query_loop_block_query_vars', 'kahel_related_query_exclude_current', 10, 2 );
+
+/**
+ * Match the archive prototype grid density (six stories per page).
+ *
+ * Inherited Query Loops use Reading Settings; this keeps the blog and
+ * taxonomy archives aligned with HTML/archive.html.
+ *
+ * @since 0.1.6
+ *
+ * @param WP_Query $query Main query.
+ * @return void
+ */
+function kahel_archive_posts_per_page( $query ) {
+	if ( is_admin() || ! $query->is_main_query() ) {
+		return;
+	}
+
+	if ( $query->is_home() || $query->is_category() || $query->is_tag() || $query->is_author() || $query->is_date() ) {
+		$query->set( 'posts_per_page', 6 );
+		$query->set( 'ignore_sticky_posts', true );
+	}
+}
+add_action( 'pre_get_posts', 'kahel_archive_posts_per_page' );
+
+/**
+ * Estimate reading time in minutes for a post.
+ *
+ * @since 0.1.6
+ *
+ * @param int $post_id Post ID.
+ * @return int
+ */
+function kahel_get_reading_time_minutes( $post_id = 0 ) {
+	$post_id = $post_id ? (int) $post_id : (int) get_the_ID();
+	$content = (string) get_post_field( 'post_content', $post_id );
+	$words   = str_word_count( wp_strip_all_tags( $content ) );
+
+	return max( 1, (int) ceil( $words / 200 ) );
+}
+
+/**
+ * Append estimated reading time to archive story meta (prototype: "Food · 6 min read").
+ *
+ * @since 0.1.6
+ *
+ * @param string $block_content Rendered HTML.
+ * @param array  $block         Parsed block.
+ * @return string
+ */
+function kahel_render_archive_story_meta( $block_content, $block ) {
+	$class_name = '';
+	if ( ! empty( $block['attrs']['className'] ) ) {
+		$class_name = (string) $block['attrs']['className'];
+	}
+
+	if ( ! str_contains( $class_name, 'kahel-archive-story-meta' ) ) {
+		return $block_content;
+	}
+
+	$minutes = kahel_get_reading_time_minutes();
+	$label   = sprintf(
+		/* translators: %d: estimated reading time in minutes */
+		_n( '%d min read', '%d min read', $minutes, 'kahel' ),
+		$minutes
+	);
+
+	$text = trim( wp_strip_all_tags( $block_content ) );
+	if ( '' === $text ) {
+		return sprintf(
+			'<p class="kahel-archive-story-meta has-utility-font-size">%s</p>',
+			esc_html( $label )
+		);
+	}
+
+	$suffix = ' · ' . esc_html( $label );
+
+	if ( preg_match( '/<\/(p|div)>\s*$/', $block_content ) ) {
+		return (string) preg_replace( '/<\/(p|div)>\s*$/', $suffix . '</$1>', $block_content, 1 );
+	}
+
+	return $block_content . $suffix;
+}
+add_filter( 'render_block_core/post-terms', 'kahel_render_archive_story_meta', 10, 2 );
