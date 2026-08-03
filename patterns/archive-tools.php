@@ -16,60 +16,44 @@ $posts_page_id = (int) get_option( 'page_for_posts' );
 $all_url       = $posts_page_id ? get_permalink( $posts_page_id ) : home_url( '/' );
 $all_active    = is_home() && ! is_category() && ! is_tag() && ! is_author() && ! is_date();
 
-$filter_defs = array(
+$filters = array(
 	array(
-		'label' => __( 'All', 'kahel' ),
-		'url'   => $all_url,
-		'active'=> $all_active,
-	),
-	array(
-		'label' => __( 'Places', 'kahel' ),
-		'slug'  => 'places',
-	),
-	array(
-		'label' => __( 'Food', 'kahel' ),
-		'slug'  => 'food',
-	),
-	array(
-		'label' => __( 'Craft', 'kahel' ),
-		'slug'  => 'craft',
-	),
-	array(
-		'label' => __( 'Field notes', 'kahel' ),
-		'slug'  => 'field-notes',
+		'label'  => __( 'All', 'kahel' ),
+		'url'    => $all_url,
+		'active' => $all_active,
 	),
 );
 
-$filters = array();
-foreach ( $filter_defs as $def ) {
-	if ( isset( $def['url'] ) ) {
-		$filters[] = $def;
-		continue;
-	}
+$categories = get_categories(
+	array(
+		'taxonomy'   => 'category',
+		'hide_empty' => true,
+		'parent'     => 0,
+		'orderby'    => 'name',
+		'order'      => 'ASC',
+	)
+);
 
-	$term = get_term_by( 'slug', $def['slug'], 'category' );
-	$url  = ( $term && ! is_wp_error( $term ) ) ? get_term_link( $term ) : $all_url;
-	if ( is_wp_error( $url ) ) {
-		$url = $all_url;
-	}
+if ( ! is_wp_error( $categories ) ) {
+	foreach ( $categories as $category ) {
+		$url = get_term_link( $category );
+		if ( is_wp_error( $url ) ) {
+			continue;
+		}
 
-	$filters[] = array(
-		'label'  => $def['label'],
-		'url'    => $url,
-		'active' => $term && ! is_wp_error( $term ) && is_category( $term->term_id ),
-	);
+		$filters[] = array(
+			'label'  => $category->name,
+			'url'    => $url,
+			'active' => is_category( $category->term_id ),
+		);
+	}
 }
 
-if ( is_category() ) {
-	$term  = get_queried_object();
-	$count = ( $term && isset( $term->count ) ) ? (int) $term->count : 0;
-} else {
-	$counts = wp_count_posts( 'post' );
-	$count  = isset( $counts->publish ) ? (int) $counts->publish : 0;
-}
+$counts = wp_count_posts( 'post' );
+$count  = ( isset( $counts->publish ) ) ? (int) $counts->publish : 0;
 
 $count_label = sprintf(
-	/* translators: %s: number of stories */
+	/* translators: %s: number of published stories */
 	_n( '%s story', '%s stories', $count, 'kahel' ),
 	number_format_i18n( $count )
 );
