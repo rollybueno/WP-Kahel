@@ -963,14 +963,17 @@ body.home .kahel-header {
 }
 
 .kahel-home-timeline {
+	--kahel-timeline-pad: 72px;
+	--kahel-timeline-dot: 34px;
+	--kahel-timeline-line: 19px;
 	position: relative;
-	padding-left: 72px;
+	padding-left: var(--kahel-timeline-pad);
 }
 
 .kahel-home-timeline::before {
 	content: "";
 	position: absolute;
-	left: 19px;
+	left: var(--kahel-timeline-line);
 	top: 20px;
 	bottom: 20px;
 	width: 2px;
@@ -988,14 +991,15 @@ body.home .kahel-header {
 .kahel-home-timeline-item::before {
 	content: "";
 	position: absolute;
-	left: -72px;
+	left: calc(-1 * var(--kahel-timeline-pad));
 	top: 0;
-	width: 34px;
-	height: 34px;
+	width: var(--kahel-timeline-dot);
+	height: var(--kahel-timeline-dot);
 	border: 3px solid var(--wp--preset--color--orange);
 	border-radius: 50%;
 	background: var(--wp--preset--color--base);
 	box-shadow: 0 0 0 8px rgba(244, 122, 31, 0.05);
+	box-sizing: border-box;
 }
 
 .kahel-home-about-fruit {
@@ -1228,16 +1232,6 @@ body.home .kahel-header {
 		position: static;
 	}
 
-	.kahel-home-timeline {
-		padding-left: 58px;
-	}
-
-	.kahel-home-timeline-item::before {
-		left: -58px;
-		width: 28px;
-		height: 28px;
-	}
-
 	.kahel-archive-grid.wp-block-post-template {
 		grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
 	}
@@ -1251,6 +1245,12 @@ body.home .kahel-header {
 @media (max-width: 560px) {
 	.kahel-home-topics > .wp-block-column:nth-child(even) .kahel-home-topic {
 		margin-top: 0;
+	}
+
+	.kahel-home-timeline {
+		--kahel-timeline-pad: 58px;
+		--kahel-timeline-dot: 30px;
+		--kahel-timeline-line: 16px;
 	}
 
 	.kahel-home-quote-card {
