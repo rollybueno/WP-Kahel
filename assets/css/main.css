@@ -1485,23 +1485,10 @@ body.home .kahel-header {
 	flex: 0 0 50px;
 }
 
-.kahel-contact-faq-section {
-	padding-top: var(--wp--custom--contact--section-padding-y);
-	padding-bottom: var(--wp--custom--contact--section-padding-y);
-}
-
-.kahel-contact-faq.wp-block-columns {
-	display: grid;
-	grid-template-columns: var(--wp--custom--contact--faq-columns);
-	gap: var(--wp--custom--contact--faq-gap);
-	align-items: start;
-}
-
 @media (max-width: 900px) {
 	.kahel-contact-hero.wp-block-columns,
 	.kahel-contact-routes-head.wp-block-columns,
-	.kahel-contact-pitch.wp-block-columns,
-	.kahel-contact-faq.wp-block-columns {
+	.kahel-contact-pitch.wp-block-columns {
 		grid-template-columns: 1fr;
 	}
 
