@@ -37,8 +37,8 @@
 
 		<!-- wp:column {"className":"kahel-contact-hero-aside-col"} -->
 		<div class="wp-block-column kahel-contact-hero-aside-col">
-			<!-- wp:group {"className":"kahel-contact-hero-aside","layout":{"type":"constrained"},"ariaLabel":"General contact details"} -->
-			<div class="wp-block-group kahel-contact-hero-aside" role="complementary" aria-label="<?php esc_attr_e( 'General contact details', 'kahel' ); ?>">
+			<!-- wp:group {"className":"kahel-contact-hero-aside","layout":{"type":"constrained"}} -->
+			<div class="wp-block-group kahel-contact-hero-aside">
 				<!-- wp:html -->
 				<span class="kahel-contact-sun" aria-hidden="true"></span>
 				<!-- /wp:html -->

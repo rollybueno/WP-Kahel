@@ -40,7 +40,7 @@
 			<!-- wp:group {"className":"kahel-home-project","layout":{"type":"constrained"}} -->
 			<div class="wp-block-group kahel-home-project">
 				<!-- wp:group {"className":"kahel-home-project-visual","layout":{"type":"default"}} -->
-				<div class="wp-block-group kahel-home-project-visual" aria-hidden="true">
+				<div class="wp-block-group kahel-home-project-visual">
 					<!-- wp:html -->
 					<span class="kahel-home-project-art"></span>
 					<!-- /wp:html -->

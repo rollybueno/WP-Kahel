@@ -1146,6 +1146,13 @@ body.home .kahel-header {
 }
 
 /* Match preview: proof-section sits flush under archive (no blockGap). */
+.kahel-home-archive-head.wp-block-columns {
+	display: grid;
+	grid-template-columns: var(--wp--custom--home--archive-columns);
+	gap: var(--wp--custom--home--archive-head-gap);
+	align-items: start;
+}
+
 .kahel-home-archive + .kahel-home-quote {
 	margin-block-start: 0;
 }
@@ -1199,6 +1206,10 @@ body.home .kahel-header {
 @media (max-width: 900px) {
 	.kahel-home-hero {
 		min-height: auto;
+	}
+
+	.kahel-home-archive-head.wp-block-columns {
+		grid-template-columns: 1fr;
 	}
 
 	.kahel-home-topics > .wp-block-column:nth-child(even) .kahel-home-topic {

@@ -38,7 +38,7 @@
 		<!-- wp:column {"className":"kahel-editorial-hero-aside"} -->
 		<div class="wp-block-column kahel-editorial-hero-aside">
 			<!-- wp:group {"className":"kahel-editorial-hero-note","layout":{"type":"constrained"}} -->
-			<div class="wp-block-group kahel-editorial-hero-note" role="note" aria-label="<?php esc_attr_e( 'Meaning of Kahel', 'kahel' ); ?>">
+			<div class="wp-block-group kahel-editorial-hero-note">
 				<!-- wp:paragraph {"className":"kahel-editorial-word"} -->
 				<p class="kahel-editorial-word"><?php esc_html_e( 'kahel', 'kahel' ); ?></p>
 				<!-- /wp:paragraph -->

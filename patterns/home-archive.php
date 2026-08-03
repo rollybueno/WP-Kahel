@@ -18,8 +18,8 @@
 
 	<!-- wp:columns {"align":"wide","className":"kahel-home-archive-head"} -->
 	<div class="wp-block-columns alignwide kahel-home-archive-head">
-		<!-- wp:column {"width":"58%"} -->
-		<div class="wp-block-column" style="flex-basis:58%">
+		<!-- wp:column {"className":"kahel-home-archive-main"} -->
+		<div class="wp-block-column kahel-home-archive-main">
 			<!-- wp:paragraph {"className":"kahel-kicker","textColor":"orange-deep","fontSize":"caption"} -->
 			<p class="kahel-kicker has-orange-deep-color has-text-color has-caption-font-size"><?php esc_html_e( 'The archive', 'kahel' ); ?></p>
 			<!-- /wp:paragraph -->
@@ -28,8 +28,8 @@
 			<!-- /wp:heading -->
 		</div>
 		<!-- /wp:column -->
-		<!-- wp:column {"width":"42%","className":"kahel-home-archive-aside"} -->
-		<div class="wp-block-column kahel-home-archive-aside" style="flex-basis:42%">
+		<!-- wp:column {"className":"kahel-home-archive-aside"} -->
+		<div class="wp-block-column kahel-home-archive-aside">
 			<!-- wp:paragraph {"className":"kahel-home-archive-copy","textColor":"muted"} -->
 			<p class="kahel-home-archive-copy has-muted-color has-text-color"><?php esc_html_e( 'Each issue brings together essays, conversations, recipes, and photographs from contributors close to home and farther afield.', 'kahel' ); ?></p>
 			<!-- /wp:paragraph -->
@@ -53,7 +53,7 @@
 	<!-- /wp:columns -->
 
 	<!-- wp:columns {"align":"wide","className":"kahel-home-stats"} -->
-	<div class="wp-block-columns alignwide kahel-home-stats" aria-label="<?php esc_attr_e( 'Archive summary', 'kahel' ); ?>">
+	<div class="wp-block-columns alignwide kahel-home-stats">
 		<!-- wp:column -->
 		<div class="wp-block-column">
 			<!-- wp:group {"className":"kahel-home-stat","layout":{"type":"constrained"}} -->
