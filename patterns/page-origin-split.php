@@ -22,12 +22,12 @@
 		<!-- wp:column {"className":"kahel-origin-visual-col"} -->
 		<div class="wp-block-column kahel-origin-visual-col">
 			<!-- wp:group {"className":"kahel-origin-visual","layout":{"type":"default"}} -->
-			<div class="wp-block-group kahel-origin-visual" role="img" aria-label="<?php esc_attr_e( 'Abstract orange fruit composition', 'kahel' ); ?>">
+			<div class="wp-block-group kahel-origin-visual">
 				<!-- wp:html -->
-				<span class="kahel-origin-fruit" aria-hidden="true"></span>
+				<div class="kahel-origin-fruit" role="img" aria-label="<?php echo esc_attr__( 'Abstract orange fruit composition', 'kahel' ); ?>"></div>
 				<!-- /wp:html -->
 				<!-- wp:paragraph {"className":"kahel-origin-label"} -->
-				<p class="kahel-origin-label" aria-hidden="true"><?php esc_html_e( '01 · Pinagmulan', 'kahel' ); ?></p>
+				<p class="kahel-origin-label"><?php esc_html_e( '01 · Pinagmulan', 'kahel' ); ?></p>
 				<!-- /wp:paragraph -->
 			</div>
 			<!-- /wp:group -->
@@ -53,7 +53,7 @@
 			<!-- /wp:paragraph -->
 
 			<!-- wp:group {"className":"kahel-origin-tags","layout":{"type":"flex","flexWrap":"wrap"}} -->
-			<div class="wp-block-group kahel-origin-tags" aria-label="<?php esc_attr_e( 'Kahel qualities', 'kahel' ); ?>">
+			<div class="wp-block-group kahel-origin-tags">
 				<!-- wp:paragraph {"className":"kahel-origin-tag"} -->
 				<p class="kahel-origin-tag"><?php esc_html_e( 'Warm', 'kahel' ); ?></p>
 				<!-- /wp:paragraph -->

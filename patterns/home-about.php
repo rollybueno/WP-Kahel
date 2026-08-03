@@ -19,20 +19,20 @@
 	<!-- wp:columns {"align":"wide","className":"kahel-home-about"} -->
 	<div class="wp-block-columns alignwide kahel-home-about">
 
-		<!-- wp:column {"width":"50%"} -->
-		<div class="wp-block-column" style="flex-basis:50%">
+		<!-- wp:column {"className":"kahel-home-about-visual-col"} -->
+		<div class="wp-block-column kahel-home-about-visual-col">
 			<!-- wp:group {"className":"kahel-home-about-visual","layout":{"type":"default"}} -->
-			<div class="wp-block-group kahel-home-about-visual" role="img" aria-label="<?php esc_attr_e( 'Abstract orange fruit illustration', 'kahel' ); ?>">
+			<div class="wp-block-group kahel-home-about-visual">
 				<!-- wp:html -->
-				<span class="kahel-home-about-fruit" aria-hidden="true"></span>
+				<div class="kahel-home-about-fruit" role="img" aria-label="<?php echo esc_attr__( 'Abstract orange fruit illustration', 'kahel' ); ?>"></div>
 				<!-- /wp:html -->
 			</div>
 			<!-- /wp:group -->
 		</div>
 		<!-- /wp:column -->
 
-		<!-- wp:column {"width":"50%","className":"kahel-home-about-copy"} -->
-		<div class="wp-block-column kahel-home-about-copy" style="flex-basis:50%">
+		<!-- wp:column {"className":"kahel-home-about-copy"} -->
+		<div class="wp-block-column kahel-home-about-copy">
 			<!-- wp:paragraph {"className":"kahel-kicker","textColor":"orange-deep","fontSize":"caption"} -->
 			<p class="kahel-kicker has-orange-deep-color has-text-color has-caption-font-size"><?php esc_html_e( 'About the journal', 'kahel' ); ?></p>
 			<!-- /wp:paragraph -->
@@ -43,7 +43,7 @@
 			<p class="kahel-home-about-copy-text has-muted-color has-text-color has-lead-font-size"><?php esc_html_e( '“Kahel” is a familiar word for orange in the Philippines. It is also our reminder to pay attention: to color, season, memory, and the quiet knowledge held in everyday routines. This journal is an open notebook for those observations.', 'kahel' ); ?></p>
 			<!-- /wp:paragraph -->
 			<!-- wp:group {"className":"kahel-home-chips","layout":{"type":"flex","flexWrap":"wrap"}} -->
-			<div class="wp-block-group kahel-home-chips" aria-label="<?php esc_attr_e( 'Kahel qualities', 'kahel' ); ?>">
+			<div class="wp-block-group kahel-home-chips">
 				<!-- wp:paragraph {"className":"kahel-home-chip"} -->
 				<p class="kahel-home-chip"><?php esc_html_e( 'Place', 'kahel' ); ?></p>
 				<!-- /wp:paragraph -->
