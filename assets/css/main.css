@@ -1528,6 +1528,159 @@ body.home .kahel-header {
 	}
 }
 
+/* Editorial / about patterns — HTML/about.html grids & decorations */
+.kahel-editorial-hero.wp-block-columns {
+	display: grid;
+	grid-template-columns: var(--wp--custom--editorial--hero-columns);
+	gap: var(--wp--custom--editorial--hero-gap);
+	align-items: end;
+}
+
+.kahel-origin-split.wp-block-columns {
+	display: grid;
+	grid-template-columns: var(--wp--custom--editorial--split-columns);
+	gap: var(--wp--custom--editorial--split-gap);
+	align-items: center;
+}
+
+.kahel-origin-fruit {
+	position: absolute;
+	left: 50%;
+	top: 52%;
+	width: min(58%, 360px);
+	aspect-ratio: 1;
+	transform: translate(-50%, -50%);
+	border-radius: 52% 48% 50% 50%;
+	background:
+		radial-gradient(circle at 35% 28%, rgba(255, 255, 255, 0.4), transparent 18%),
+		linear-gradient(145deg, #ff9d37, var(--wp--preset--color--orange) 60%, var(--wp--preset--color--orange-deep));
+	box-shadow:
+		inset -22px -18px 34px rgba(110, 43, 3, 0.2),
+		0 28px 55px rgba(106, 45, 5, 0.23);
+}
+
+.kahel-origin-fruit::before,
+.kahel-origin-fruit::after {
+	content: "";
+	position: absolute;
+	background: var(--wp--preset--color--leaf);
+}
+
+.kahel-origin-fruit::before {
+	width: 35%;
+	height: 16%;
+	top: -5%;
+	left: 56%;
+	transform: rotate(-22deg);
+	border-radius: 100% 0 100% 0;
+}
+
+.kahel-origin-fruit::after {
+	width: 14px;
+	height: 52px;
+	top: -8%;
+	left: 48%;
+	transform: rotate(8deg);
+	border-radius: 999px;
+}
+
+.kahel-purpose-inner.wp-block-columns {
+	display: grid;
+	grid-template-columns: var(--wp--custom--editorial--purpose-columns);
+	gap: var(--wp--custom--editorial--purpose-gap);
+	align-items: start;
+}
+
+.kahel-principles-head.wp-block-columns {
+	display: grid;
+	grid-template-columns: var(--wp--custom--editorial--principles-head-columns);
+	gap: var(--wp--custom--editorial--principles-head-gap);
+	align-items: end;
+	margin-bottom: var(--wp--custom--editorial--principles-head-margin-bottom);
+}
+
+.kahel-principles-grid.wp-block-columns {
+	display: grid;
+	grid-template-columns: repeat(2, minmax(0, 1fr));
+	gap: var(--wp--custom--editorial--principles-grid-gap);
+}
+
+.kahel-principle-card {
+	height: 100%;
+}
+
+.kahel-principle-card--ink .kahel-principle-number {
+	color: var(--wp--preset--color--orange);
+}
+
+.kahel-audience.wp-block-columns {
+	display: grid;
+	grid-template-columns: var(--wp--custom--editorial--audience-columns);
+	gap: var(--wp--custom--editorial--audience-gap);
+	align-items: start;
+}
+
+.kahel-audience-item {
+	display: grid;
+	grid-template-columns: 44px 1fr;
+	gap: var(--wp--custom--editorial--audience-item-gap);
+	align-items: start;
+}
+
+.kahel-cta-panel.wp-block-columns {
+	display: grid;
+	grid-template-columns: var(--wp--custom--editorial--cta-columns);
+	gap: var(--wp--custom--editorial--cta-gap);
+	align-items: end;
+}
+
+@media (max-width: 900px) {
+	.kahel-editorial-hero.wp-block-columns,
+	.kahel-origin-split.wp-block-columns,
+	.kahel-purpose-inner.wp-block-columns,
+	.kahel-principles-head.wp-block-columns,
+	.kahel-audience.wp-block-columns,
+	.kahel-cta-panel.wp-block-columns {
+		grid-template-columns: 1fr;
+	}
+
+	.kahel-editorial-hero-note {
+		max-width: 520px;
+	}
+
+	.kahel-origin-visual {
+		min-height: var(--wp--custom--editorial--split-visual-min-tablet);
+	}
+
+	.kahel-audience-intro {
+		position: static;
+	}
+}
+
+@media (max-width: 620px) {
+	.kahel-editorial-hero-section {
+		padding-top: var(--wp--custom--editorial--hero-padding-top-mobile);
+	}
+
+	.kahel-origin-visual {
+		min-height: var(--wp--custom--editorial--split-visual-min-mobile);
+		border-radius: var(--wp--custom--editorial--radius-mobile);
+	}
+
+	.kahel-principles-grid.wp-block-columns {
+		grid-template-columns: 1fr;
+	}
+
+	.kahel-principle-card {
+		min-height: var(--wp--custom--editorial--principle-card-min-height-mobile);
+	}
+
+	.kahel-editorial-quote,
+	.kahel-cta-panel {
+		border-radius: var(--wp--custom--editorial--radius-mobile);
+	}
+}
+
 @media (prefers-reduced-motion: reduce) {
 	.kahel-home-about-fruit,
 	.kahel-home-topic,
