@@ -41,8 +41,9 @@
 			<div class="wp-block-group kahel-home-project">
 				<!-- wp:group {"className":"kahel-home-project-visual","layout":{"type":"default"}} -->
 				<div class="wp-block-group kahel-home-project-visual">
+					<!-- wp:post-featured-image {"isLink":true,"className":"kahel-home-project-media"} /-->
 					<!-- wp:html -->
-					<span class="kahel-home-project-art"></span>
+					<span class="kahel-home-project-art" aria-hidden="true"></span>
 					<!-- /wp:html -->
 				</div>
 				<!-- /wp:group -->

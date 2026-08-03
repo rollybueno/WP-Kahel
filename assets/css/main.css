@@ -861,8 +861,33 @@ body.home .kahel-header {
 	background: var(--wp--preset--color--apricot);
 }
 
+/* Featured image when present; keep CSS placeholders otherwise */
+.kahel-home-featured-query .kahel-home-project-visual:has(img) {
+	background: transparent;
+}
+
+.kahel-home-featured-query .kahel-home-project-visual:has(img) .kahel-home-project-art,
+.kahel-home-featured-query .kahel-home-project-visual:has(img)::before,
+.kahel-home-featured-query .kahel-home-project-visual:has(img)::after {
+	display: none;
+}
+
+.kahel-home-featured-query .kahel-home-project-visual:has(img) .kahel-home-project-media {
+	position: absolute;
+	inset: 0;
+	margin: 0;
+	height: 100%;
+}
+
+.kahel-home-featured-query .kahel-home-project-media img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	border-radius: inherit;
+}
+
 /* Card 1 — browser mock (wireframe) */
-.kahel-home-featured-query .wp-block-post:nth-child(1) .kahel-home-project-art {
+.kahel-home-featured-query .wp-block-post:nth-child(1) .kahel-home-project-visual:not(:has(img)) .kahel-home-project-art {
 	position: absolute;
 	width: 72%;
 	height: 74%;
@@ -874,7 +899,7 @@ body.home .kahel-header {
 	transform: rotate(-3deg);
 }
 
-.kahel-home-featured-query .wp-block-post:nth-child(1) .kahel-home-project-art::before {
+.kahel-home-featured-query .wp-block-post:nth-child(1) .kahel-home-project-visual:not(:has(img)) .kahel-home-project-art::before {
 	content: "";
 	position: absolute;
 	inset: 8% 8% auto;
@@ -887,14 +912,14 @@ body.home .kahel-header {
 }
 
 /* Card 2 — magazine mock (wireframe) */
-.kahel-home-featured-query .wp-block-post:nth-child(2) .kahel-home-project-visual::before,
-.kahel-home-featured-query .wp-block-post:nth-child(2) .kahel-home-project-visual::after {
+.kahel-home-featured-query .wp-block-post:nth-child(2) .kahel-home-project-visual:not(:has(img))::before,
+.kahel-home-featured-query .wp-block-post:nth-child(2) .kahel-home-project-visual:not(:has(img))::after {
 	content: "";
 	position: absolute;
 	border-radius: 50%;
 }
 
-.kahel-home-featured-query .wp-block-post:nth-child(2) .kahel-home-project-visual::before {
+.kahel-home-featured-query .wp-block-post:nth-child(2) .kahel-home-project-visual:not(:has(img))::before {
 	width: 62%;
 	aspect-ratio: 1;
 	left: -12%;
@@ -902,7 +927,7 @@ body.home .kahel-header {
 	background: var(--wp--preset--color--orange);
 }
 
-.kahel-home-featured-query .wp-block-post:nth-child(2) .kahel-home-project-visual::after {
+.kahel-home-featured-query .wp-block-post:nth-child(2) .kahel-home-project-visual:not(:has(img))::after {
 	width: 45%;
 	aspect-ratio: 1;
 	right: -7%;
@@ -910,7 +935,7 @@ body.home .kahel-header {
 	border: clamp(35px, 5vw, 70px) solid var(--wp--preset--color--leaf);
 }
 
-.kahel-home-featured-query .wp-block-post:nth-child(2) .kahel-home-project-art {
+.kahel-home-featured-query .wp-block-post:nth-child(2) .kahel-home-project-visual:not(:has(img)) .kahel-home-project-art {
 	position: absolute;
 	z-index: 1;
 	width: 48%;
@@ -929,7 +954,7 @@ body.home .kahel-header {
 	box-shadow: 18px 20px 0 rgba(36, 23, 15, 0.18);
 }
 
-.kahel-home-featured-query .wp-block-post:nth-child(2) .kahel-home-project-art::before {
+.kahel-home-featured-query .wp-block-post:nth-child(2) .kahel-home-project-visual:not(:has(img)) .kahel-home-project-art::before {
 	content: "Sari";
 }
 
