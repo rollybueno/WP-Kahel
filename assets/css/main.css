@@ -321,11 +321,26 @@
 	background: transparent;
 }
 
-.kahel-single-content hr,
-.kahel-page-content hr {
+.kahel-single-content hr:not(.is-style-dots),
+.kahel-page-content hr:not(.is-style-dots) {
 	border: 0;
 	height: 1px;
 	background: var(--wp--preset--color--line);
+}
+
+.kahel-single-content hr.is-style-dots,
+.kahel-page-content hr.is-style-dots {
+	border: 0;
+	height: auto;
+	background: none;
+	line-height: 1;
+	text-align: center;
+	overflow: visible;
+}
+
+.kahel-single-content hr.is-style-dots::before,
+.kahel-page-content hr.is-style-dots::before {
+	color: var(--wp--preset--color--muted);
 }
 
 .kahel-single-content mark,
