@@ -575,6 +575,108 @@
 	border-top: 1px solid var(--wp--preset--color--line);
 }
 
+.kahel-single-comment > .wp-block-group {
+	flex: 1 1 auto;
+	min-width: 0;
+}
+
+/* Comment body markup must stay nested — not page-title scale. */
+.wp-block-comment-content {
+	min-width: 0;
+	overflow-wrap: break-word;
+}
+
+.wp-block-comment-content > *:first-child {
+	margin-top: 0;
+}
+
+.wp-block-comment-content h1,
+.wp-block-comment-content h2,
+.wp-block-comment-content h3,
+.wp-block-comment-content h4,
+.wp-block-comment-content h5,
+.wp-block-comment-content h6 {
+	margin: 1.1em 0 0.4em;
+	font-family: inherit;
+	font-weight: var(--wp--custom--weight--heading);
+	letter-spacing: -0.02em;
+	line-height: 1.25;
+}
+
+.wp-block-comment-content h1 {
+	font-size: 1.55em;
+}
+
+.wp-block-comment-content h2 {
+	font-size: 1.35em;
+}
+
+.wp-block-comment-content h3 {
+	font-size: 1.2em;
+}
+
+.wp-block-comment-content h4 {
+	font-size: 1.1em;
+}
+
+.wp-block-comment-content h5,
+.wp-block-comment-content h6 {
+	font-size: 1em;
+}
+
+.wp-block-comment-content blockquote {
+	margin: 1em 0;
+	padding: 0.75em 0;
+	border-top: 2px solid var(--wp--preset--color--orange);
+	border-bottom: 2px solid var(--wp--preset--color--orange);
+	font-size: 1.05em;
+	font-weight: 700;
+	letter-spacing: -0.02em;
+}
+
+.wp-block-comment-content pre {
+	max-width: 100%;
+	overflow-x: auto;
+	padding: 0.9rem 1rem;
+	border-radius: var(--wp--custom--radius--md);
+	background: var(--wp--preset--color--cream);
+}
+
+.wp-block-comment-content code,
+.wp-block-comment-content kbd {
+	padding: 0.1em 0.35em;
+	border-radius: var(--wp--custom--radius--md);
+	background: var(--wp--preset--color--cream);
+	font-size: 0.92em;
+}
+
+.wp-block-comment-content pre code {
+	padding: 0;
+	background: transparent;
+}
+
+.wp-block-comment-content img,
+.wp-block-comment-content video,
+.wp-block-comment-content iframe {
+	max-width: 100%;
+	height: auto;
+}
+
+.wp-block-comment-content table {
+	width: 100%;
+	max-width: 100%;
+	border-collapse: collapse;
+	font-size: 0.92em;
+}
+
+.wp-block-comment-content th,
+.wp-block-comment-content td {
+	padding: 0.45em 0.6em;
+	border: 1px solid var(--wp--preset--color--line);
+	text-align: left;
+	vertical-align: top;
+}
+
 .kahel-single-comments .comment-reply-title,
 .kahel-single-comments .comment-form {
 	margin-top: var(--wp--preset--spacing--70);
