@@ -1,6 +1,6 @@
 <?php
 /**
- * Title: Archive header
+ * Title: Archive · Header
  * Slug: kahel/archive-header
  * Categories: kahel
  * Description: Stories archive page header with eyebrow, title, and intro.

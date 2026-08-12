@@ -1,12 +1,12 @@
 <?php
 /**
- * Title: Editorial quote
+ * Title: About · Quote
  * Slug: kahel/page-editorial-quote
  * Categories: kahel
  * Description: Large cream pull-quote panel with caption.
  * Keywords: page, quote, editorial, about
  * Viewport Width: 1180
- * Inserter: yes
+ * Inserter: no
  *
  * @package Kahel
  * @since 0.1.8

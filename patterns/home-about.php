@@ -1,6 +1,6 @@
 <?php
 /**
- * Title: Home about
+ * Title: Home · About
  * Slug: kahel/home-about
  * Categories: kahel
  * Description: About the journal with fruit visual, chips, and links.

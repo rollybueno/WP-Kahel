@@ -1,6 +1,6 @@
 <?php
 /**
- * Title: Home hero
+ * Title: Home · Hero
  * Slug: kahel/home-hero
  * Categories: kahel
  * Description: Front-page hero with journal intro and four topic cards.

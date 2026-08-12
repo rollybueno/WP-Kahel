@@ -1,6 +1,6 @@
 <?php
 /**
- * Title: Home archive
+ * Title: Home · Archive
  * Slug: kahel/home-archive
  * Categories: kahel
  * Description: Archive intro with supporting copy, actions, and summary stats.

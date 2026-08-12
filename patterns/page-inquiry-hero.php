@@ -1,6 +1,6 @@
 <?php
 /**
- * Title: Inquiry hero
+ * Title: Contact · Inquiry hero
  * Slug: kahel/page-inquiry-hero
  * Categories: kahel
  * Description: Full-width inquiry hero with intro copy and a general email aside.

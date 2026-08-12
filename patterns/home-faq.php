@@ -1,6 +1,6 @@
 <?php
 /**
- * Title: Home FAQ
+ * Title: Home · FAQ
  * Slug: kahel/home-faq
  * Categories: kahel
  * Description: Field-guide FAQ accordion for the front page.

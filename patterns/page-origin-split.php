@@ -1,12 +1,12 @@
 <?php
 /**
- * Title: Origin split
+ * Title: About · Origin split
  * Slug: kahel/page-origin-split
  * Categories: kahel
  * Description: Story split with fruit visual, copy, and quality tags.
  * Keywords: page, origin, story, split, about
  * Viewport Width: 1180
- * Inserter: yes
+ * Inserter: no
  *
  * @package Kahel
  * @since 0.1.8

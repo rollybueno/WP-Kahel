@@ -1,12 +1,12 @@
 <?php
 /**
- * Title: CTA panel
+ * Title: About · CTA panel
  * Slug: kahel/page-cta-panel
  * Categories: kahel
  * Description: Two-column call-to-action panel with primary button and text link.
  * Keywords: page, cta, call to action, about, panel
  * Viewport Width: 1180
- * Inserter: yes
+ * Inserter: no
  *
  * @package Kahel
  * @since 0.1.8

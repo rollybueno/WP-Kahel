@@ -1,6 +1,6 @@
 <?php
 /**
- * Title: Home latest
+ * Title: Home · Latest
  * Slug: kahel/home-latest
  * Categories: kahel
  * Description: Latest stories query grid for the front page journal section.

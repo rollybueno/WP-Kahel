@@ -1,6 +1,6 @@
 <?php
 /**
- * Title: Email routes
+ * Title: Contact · Email routes
  * Slug: kahel/page-email-routes
  * Categories: kahel
  * Description: Three email desks with direct mailto routes.

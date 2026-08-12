@@ -1,6 +1,6 @@
 <?php
 /**
- * Title: Page contributors
+ * Title: Contributors list
  * Slug: kahel/page-contributors
  * Categories: kahel
  * Description: Contributors list with names, focus areas, and roles.

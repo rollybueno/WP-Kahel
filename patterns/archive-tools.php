@@ -1,6 +1,6 @@
 <?php
 /**
- * Title: Archive tools
+ * Title: Archive · Tools
  * Slug: kahel/archive-tools
  * Categories: kahel
  * Description: Category filter chips and story count for the archive page.
