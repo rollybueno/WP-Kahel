@@ -6,7 +6,7 @@ Requires PHP: 7.4
 Stable tag: 1.0.0
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
-Tags: blog, news, one-column, block-patterns, block-styles, custom-colors, custom-logo, editor-style, featured-images, full-site-editing, translation-ready, wide-blocks
+Tags: one-column, full-site-editing, wide-blocks
 
 Named after the Filipino word for orange, Kahel is a warm, energetic block theme with bold typography and a distinctive editorial style.
 
