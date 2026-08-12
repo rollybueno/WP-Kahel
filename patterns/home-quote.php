@@ -1,6 +1,6 @@
 <?php
 /**
- * Title: Home quote
+ * Title: Home · Quote
  * Slug: kahel/home-quote
  * Categories: kahel
  * Description: Featured quotation card for the front page.

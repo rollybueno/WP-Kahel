@@ -1,12 +1,12 @@
 <?php
 /**
- * Title: Purpose band
+ * Title: About · Purpose band
  * Slug: kahel/page-purpose
  * Categories: kahel
  * Description: Dark purpose band with heading and supporting copy.
  * Keywords: page, purpose, about, ink
  * Viewport Width: 1180
- * Inserter: yes
+ * Inserter: no
  *
  * @package Kahel
  * @since 0.1.8

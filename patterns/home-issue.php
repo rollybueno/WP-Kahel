@@ -1,6 +1,6 @@
 <?php
 /**
- * Title: Home issue
+ * Title: Home · Issue
  * Slug: kahel/home-issue
  * Categories: kahel
  * Description: Citrus issue intro with a four-item reading timeline.

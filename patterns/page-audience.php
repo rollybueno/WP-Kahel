@@ -1,12 +1,12 @@
 <?php
 /**
- * Title: Audience section
+ * Title: About · Audience
  * Slug: kahel/page-audience
  * Categories: kahel
  * Description: Sticky intro with numbered audience list items.
  * Keywords: page, audience, about, who
  * Viewport Width: 1180
- * Inserter: yes
+ * Inserter: no
  *
  * @package Kahel
  * @since 0.1.8

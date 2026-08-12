@@ -1,6 +1,6 @@
 <?php
 /**
- * Title: Pitch guide
+ * Title: Contact · Pitch guide
  * Slug: kahel/page-pitch-guide
  * Categories: kahel
  * Description: Contributor pitch guidance with numbered steps and CTA.

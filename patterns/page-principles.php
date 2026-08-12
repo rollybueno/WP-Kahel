@@ -1,12 +1,12 @@
 <?php
 /**
- * Title: Principles grid
+ * Title: About · Principles
  * Slug: kahel/page-principles
  * Categories: kahel
  * Description: Four numbered principle cards in a two-by-two grid.
  * Keywords: page, principles, features, cards, about
  * Viewport Width: 1180
- * Inserter: yes
+ * Inserter: no
  *
  * @package Kahel
  * @since 0.1.8

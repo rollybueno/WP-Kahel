@@ -1,12 +1,12 @@
 <?php
 /**
- * Title: Editorial hero
+ * Title: About · Editorial hero
  * Slug: kahel/page-editorial-hero
  * Categories: kahel
  * Description: Two-column editorial hero with title emphasis and a meaning note.
  * Keywords: page, hero, editorial, about
  * Viewport Width: 1180
- * Inserter: yes
+ * Inserter: no
  *
  * @package Kahel
  * @since 0.1.8

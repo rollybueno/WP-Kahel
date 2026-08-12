@@ -1,6 +1,6 @@
 <?php
 /**
- * Title: Home featured
+ * Title: Home · Featured
  * Slug: kahel/home-featured
  * Categories: kahel
  * Description: Featured stories section with a two-up query on an ink background.
