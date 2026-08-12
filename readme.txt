@@ -3,10 +3,10 @@ Contributors: rollybueno
 Requires at least: 6.7
 Tested up to: 6.8
 Requires PHP: 7.4
-Stable tag: 0.1.5
+Stable tag: 1.0.0
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
-Tags: blog, news, block-patterns, block-styles, custom-colors, custom-logo, editor-style, featured-images, full-site-editing, one-column, translation-ready, wide-blocks
+Tags: blog, news, one-column, block-patterns, block-styles, custom-colors, custom-logo, editor-style, featured-images, full-site-editing, translation-ready, wide-blocks
 
 Named after the Filipino word for orange, Kahel is a warm, energetic block theme with bold typography and a distinctive editorial style.
 
@@ -29,12 +29,24 @@ Kahel balances a bold visual identity with practical flexibility. Generous white
 Kahel WordPress Theme, Copyright 2026 Rolly Bueno.
 Kahel is distributed under the terms of the GNU General Public License v2 or later.
 
-Kahel bundles the following third-party fonts:
+== Resources ==
 
-* Inter, Copyright 2020 The Inter Project Authors, licensed under the SIL Open Font License, Version 1.1. See assets/fonts/inter/OFL.txt.
-* Source Serif 4, Copyright 2014 The Source Serif 4 Project Authors, licensed under the SIL Open Font License, Version 1.1. See assets/fonts/source-serif-4/OFL.txt.
+* Inter font
+  Copyright 2020 The Inter Project Authors
+  License: SIL Open Font License, Version 1.1
+  Source: https://fonts.google.com/specimen/Inter
+  Bundled at: assets/fonts/inter/
+
+* Source Serif 4 font
+  Copyright 2014 The Source Serif 4 Project Authors
+  License: SIL Open Font License, Version 1.1
+  Source: https://fonts.google.com/specimen/Source+Serif+4
+  Bundled at: assets/fonts/source-serif-4/
 
 == Changelog ==
 
-= 0.1.5 =
-* Current development release.
+= 1.0.0 =
+* Initial public release.
+* Sync theme metadata, tags, and resource attribution for WordPress.org review.
+* Improve keyboard focus visibility on the search control.
+* Polish core block presentation for separators, galleries, comments, and password forms.
