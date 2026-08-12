@@ -343,6 +343,85 @@
 	color: var(--wp--preset--color--muted);
 }
 
+/* Classic [gallery] shortcode — block themes skip WP's default float styles. */
+.gallery {
+	display: grid;
+	gap: 1rem;
+	margin: 0 0 1.5em;
+}
+
+.gallery-columns-1 {
+	grid-template-columns: 1fr;
+}
+
+.gallery-columns-2 {
+	grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.gallery-columns-3 {
+	grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.gallery-columns-4 {
+	grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
+.gallery-columns-5 {
+	grid-template-columns: repeat(5, minmax(0, 1fr));
+}
+
+.gallery-columns-6 {
+	grid-template-columns: repeat(6, minmax(0, 1fr));
+}
+
+.gallery-columns-7 {
+	grid-template-columns: repeat(7, minmax(0, 1fr));
+}
+
+.gallery-columns-8 {
+	grid-template-columns: repeat(8, minmax(0, 1fr));
+}
+
+.gallery-columns-9 {
+	grid-template-columns: repeat(9, minmax(0, 1fr));
+}
+
+.gallery-item {
+	margin: 0;
+	text-align: center;
+}
+
+.gallery-icon {
+	margin: 0;
+}
+
+.gallery-icon img {
+	display: block;
+	width: 100%;
+	height: auto;
+	margin: 0 auto;
+	border-radius: var(--wp--custom--radius--default);
+}
+
+.gallery-caption {
+	margin: 0.5em 0 0;
+	color: var(--wp--preset--color--muted);
+	font-size: var(--wp--preset--font-size--small);
+	line-height: 1.4;
+}
+
+@media (max-width: 600px) {
+	.gallery-columns-3,
+	.gallery-columns-4,
+	.gallery-columns-5,
+	.gallery-columns-6,
+	.gallery-columns-7,
+	.gallery-columns-8,
+	.gallery-columns-9 {
+		grid-template-columns: repeat(2, minmax(0, 1fr));
+	}
+}
+
 .kahel-single-content mark,
 .kahel-page-content mark {
 	background: var(--wp--preset--color--apricot);
