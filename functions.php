@@ -107,8 +107,8 @@ function kahel_render_manual_excerpt_deck_only( $block_content, $block ) {
 		$class_name = (string) $block['attrs']['className'];
 	}
 
-	$is_gated = str_contains( $class_name, 'kahel-single-deck' )
-		|| str_contains( $class_name, 'kahel-page-intro' );
+	$is_gated = false !== strpos( $class_name, 'kahel-single-deck' )
+		|| false !== strpos( $class_name, 'kahel-page-intro' );
 
 	if ( ! $is_gated ) {
 		return $block_content;
@@ -144,7 +144,7 @@ function kahel_related_query_exclude_current( $query, $block ) {
 	if ( ! $should_exclude ) {
 		$attrs      = is_array( $block->attributes ) ? $block->attributes : array();
 		$class_name = isset( $attrs['className'] ) ? (string) $attrs['className'] : '';
-		$should_exclude = str_contains( $class_name, 'kahel-related-query' );
+		$should_exclude = false !== strpos( $class_name, 'kahel-related-query' );
 	}
 
 	if ( ! $should_exclude ) {
@@ -219,7 +219,7 @@ function kahel_render_archive_story_meta( $block_content, $block ) {
 		$class_name = (string) $block['attrs']['className'];
 	}
 
-	if ( ! str_contains( $class_name, 'kahel-archive-story-meta' ) ) {
+	if ( false === strpos( $class_name, 'kahel-archive-story-meta' ) ) {
 		return $block_content;
 	}
 

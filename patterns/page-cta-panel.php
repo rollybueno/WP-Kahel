@@ -12,6 +12,9 @@
  * @since 0.1.8
  */
 
+$kahel_archive_url = get_post_type_archive_link( 'post' );
+$kahel_archive_url = $kahel_archive_url ? $kahel_archive_url : home_url( '/' );
+
 ?>
 <!-- wp:group {"align":"full","className":"kahel-cta-section","layout":{"type":"constrained"}} -->
 <div class="wp-block-group alignfull kahel-cta-section" id="start">
@@ -42,13 +45,13 @@
 				<!-- wp:buttons -->
 				<div class="wp-block-buttons">
 					<!-- wp:button {"backgroundColor":"ink","textColor":"cream","className":"kahel-cta-primary"} -->
-					<div class="wp-block-button kahel-cta-primary"><a class="wp-block-button__link has-cream-color has-ink-background-color has-text-color has-background wp-element-button" href="#"><?php esc_html_e( 'Download Kahel', 'kahel' ); ?></a></div>
+					<div class="wp-block-button kahel-cta-primary"><a class="wp-block-button__link has-cream-color has-ink-background-color has-text-color has-background wp-element-button" href="<?php echo esc_url( $kahel_archive_url ); ?>"><?php esc_html_e( 'Browse the journal', 'kahel' ); ?></a></div>
 					<!-- /wp:button -->
 				</div>
 				<!-- /wp:buttons -->
 
 				<!-- wp:paragraph {"className":"kahel-cta-text-link"} -->
-				<p class="kahel-cta-text-link"><a href="#"><?php echo wp_kses_post( __( 'View the demo <span aria-hidden="true">→</span>', 'kahel' ) ); ?></a></p>
+				<p class="kahel-cta-text-link"><a href="<?php echo esc_url( home_url( '/' ) ); ?>"><?php echo wp_kses_post( __( 'Return home <span aria-hidden="true">→</span>', 'kahel' ) ); ?></a></p>
 				<!-- /wp:paragraph -->
 			</div>
 			<!-- /wp:group -->

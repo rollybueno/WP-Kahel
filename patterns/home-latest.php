@@ -12,6 +12,9 @@
  * @since 0.1.4
  */
 
+$kahel_archive_url = get_post_type_archive_link( 'post' );
+$kahel_archive_url = $kahel_archive_url ? $kahel_archive_url : home_url( '/' );
+
 ?>
 <!-- wp:group {"align":"full","anchor":"journal","className":"kahel-home-section kahel-home-latest","backgroundColor":"base","layout":{"type":"constrained"}} -->
 <div class="wp-block-group alignfull kahel-home-section kahel-home-latest has-base-background-color has-background" id="journal">
@@ -29,7 +32,7 @@
 		</div>
 		<!-- /wp:group -->
 		<!-- wp:paragraph {"className":"kahel-home-text-link","textColor":"orange-deep","fontSize":"small"} -->
-		<p class="kahel-home-text-link has-orange-deep-color has-text-color has-small-font-size"><a href="/"><?php esc_html_e( 'View all stories →', 'kahel' ); ?></a></p>
+		<p class="kahel-home-text-link has-orange-deep-color has-text-color has-small-font-size"><a href="<?php echo esc_url( $kahel_archive_url ); ?>"><?php esc_html_e( 'View all stories →', 'kahel' ); ?></a></p>
 		<!-- /wp:paragraph -->
 	</div>
 	<!-- /wp:group -->

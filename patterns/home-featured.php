@@ -12,6 +12,9 @@
  * @since 0.1.4
  */
 
+$kahel_archive_url = get_post_type_archive_link( 'post' );
+$kahel_archive_url = $kahel_archive_url ? $kahel_archive_url : home_url( '/' );
+
 ?>
 <!-- wp:group {"align":"full","className":"kahel-home-section kahel-home-featured","backgroundColor":"ink","textColor":"cream","layout":{"type":"constrained"}} -->
 <div class="wp-block-group alignfull kahel-home-section kahel-home-featured has-cream-color has-ink-background-color has-text-color has-background">
@@ -29,7 +32,7 @@
 		</div>
 		<!-- /wp:group -->
 		<!-- wp:paragraph {"className":"kahel-home-text-link kahel-home-featured-link","textColor":"apricot","fontSize":"small"} -->
-		<p class="kahel-home-text-link kahel-home-featured-link has-apricot-color has-text-color has-small-font-size"><a href="/"><?php esc_html_e( 'Browse all stories', 'kahel' ); ?> <span aria-hidden="true">→</span></a></p>
+		<p class="kahel-home-text-link kahel-home-featured-link has-apricot-color has-text-color has-small-font-size"><a href="<?php echo esc_url( $kahel_archive_url ); ?>"><?php esc_html_e( 'Browse all stories', 'kahel' ); ?> <span aria-hidden="true">→</span></a></p>
 		<!-- /wp:paragraph -->
 	</div>
 	<!-- /wp:group -->

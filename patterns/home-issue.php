@@ -12,6 +12,9 @@
  * @since 0.1.4
  */
 
+$kahel_archive_url = get_post_type_archive_link( 'post' );
+$kahel_archive_url = $kahel_archive_url ? $kahel_archive_url : home_url( '/' );
+
 ?>
 <!-- wp:group {"align":"full","className":"kahel-home-section kahel-home-issue-section","layout":{"type":"constrained"}} -->
 <div class="wp-block-group alignfull kahel-home-section kahel-home-issue-section">
@@ -32,7 +35,7 @@
 				<!-- wp:buttons -->
 				<div class="wp-block-buttons">
 					<!-- wp:button {"className":"kahel-button-outline"} -->
-					<div class="wp-block-button kahel-button-outline"><a class="wp-block-button__link wp-element-button" href="/"><?php esc_html_e( 'Read the issue', 'kahel' ); ?></a></div>
+					<div class="wp-block-button kahel-button-outline"><a class="wp-block-button__link wp-element-button" href="<?php echo esc_url( $kahel_archive_url ); ?>"><?php esc_html_e( 'Read the issue', 'kahel' ); ?></a></div>
 					<!-- /wp:button -->
 				</div>
 				<!-- /wp:buttons -->
