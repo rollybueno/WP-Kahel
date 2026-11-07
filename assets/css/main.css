@@ -4,6 +4,16 @@
  * Values come from theme.json presets & custom tokens.
  */
 
+/* Core sets this from styles.spacing.blockGap. Keep root template parts flush. */
+:root :where(.wp-site-blocks) > * {
+	margin-block-start: 0;
+}
+
+/* Same block gap, applied to each front-page section. */
+:root :where(.kahel-home.is-layout-flow) > * {
+	margin-block-start: 0;
+}
+
 /* Shared fruit brand mark */
 .kahel-brandline a {
 	display: inline-flex;

@@ -23,7 +23,7 @@ function kahel_enqueue_styles() {
 	wp_enqueue_style(
 		'kahel-main',
 		get_parent_theme_file_uri( 'assets/css/main.css' ),
-		array(),
+		array( 'global-styles' ),
 		wp_get_theme()->get( 'Version' )
 	);
 
