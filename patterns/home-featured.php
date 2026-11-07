@@ -58,9 +58,6 @@ $kahel_archive_url = $kahel_archive_url ? $kahel_archive_url : home_url( '/' );
 						<!-- wp:post-terms {"term":"category","separator":" · ","className":"kahel-home-project-terms","fontSize":"small"} /-->
 					</div>
 					<!-- /wp:group -->
-					<!-- wp:paragraph {"className":"kahel-home-project-result"} -->
-					<p class="kahel-home-project-result"></p>
-					<!-- /wp:paragraph -->
 				</div>
 				<!-- /wp:group -->
 			</div>

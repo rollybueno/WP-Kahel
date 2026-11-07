@@ -36,14 +36,11 @@ Leave this identity in place across 1.1–1.4: citrus palette, kicker rule, quot
 
 Known limits, fixed in the versions below:
 
-- No `templates/search.html`. `index.html` and `archive.html` are the same file, and `patterns/archive-header.php` always says “All stories.”
-- `assets/css/main.css` prints “City notebook”, “Studio visit”, and “Sari” onto featured posts.
-- Header and footer links point at `/` or at `/about/`, `/privacy/`, `/accessibility/`, and `/colophon/`, pages the theme does not create.
 - Orange `#F47A1F` on Base `#FFF8F1` is 2.61:1. Orange Deep `#C95212` on Base is 4.25:1. The focus outline uses Orange on Base.
 
 ## 1.1.0 — The pages match the content
 
-Next release. Authors can publish pages and posts and trust the chrome.
+Implemented in the theme source. Authors can publish pages and posts and trust the chrome.
 
 ### Improvements
 
@@ -51,14 +48,13 @@ Next release. Authors can publish pages and posts and trust the chrome.
 2. **Counts for the view on screen.** `patterns/archive-tools.php` already marks the active category. Tag, author, date, and search currently fall through to `wp_count_posts()` and show the site-wide total. Count the current term, author, date query, or search `found_posts`, and mark All or the current chip.
 3. **One archive template body.** `templates/index.html` and `templates/archive.html` are duplicates. Keep two files only where the behavior differs.
 4. **Featured cards use the post.** Remove the `content: "City notebook"`, `"Studio visit"`, and `"Sari"` rules in `assets/css/main.css` (about lines 1047–1154). Delete the empty `.kahel-home-project-result` paragraph in `patterns/home-featured.php` if nothing else uses it. Image placeholders that use `content: ""` stay.
-5. **Links that resolve on this site.** Header, footer, 404, and `patterns/home-about.php` use `home_url()` or the posts-page permalink, the way `home-featured.php` and `home-latest.php` already do. Drop links to pages the theme does not ship, or label them in `README.md` as Site Editor slots. A subdirectory install keeps every theme link inside that directory. Footer Contact stops pointing at `/#contact` unless that jump is the intended contact path.
+5. **Placeholder links stay in the templates.** Header, footer, 404, and the front-page About links remain the starter paths (`/`, `/about/`, `/privacy/`, `/accessibility/`, `/colophon/`, `/#contact`). Authors edit them in the Site Editor. The theme does not generate those URLs and does not create the pages.
 6. **Latest stories continue after Featured.** Featured queries the 2 newest posts and Latest queries the 3 newest, so the same posts appear twice. Latest excludes the featured posts. A short site shows only the posts that remain.
 
 ### Changelog sketch
 
 - Search, categories, tags, authors, and date archives use a heading and count for that view.
 - Featured stories show the post’s own title and categories.
-- Default navigation stays on the site.
 - The Latest block no longer repeats the Featured posts.
 
 ### Ship check
@@ -66,7 +62,7 @@ Next release. Authors can publish pages and posts and trust the chrome.
 - Category, tag, author, month, and `/?s=orange` each name that view. An empty search offers the field again.
 - Two real posts with images show their titles in Featured, with no “City notebook”, “Studio visit”, or “Sari”.
 - One post appears once on the front page.
-- Header and footer links in a subdirectory install stay on the site.
+- Header, footer, 404, and front-page About links remain the starter placeholders.
 - `readme.txt` changelog has a `= 1.1.0 =` entry. `./build.sh` produces `dist/kahel-1.1.0.zip`.
 - Recapture `screenshot.jpg` (already 1200×900) if the front page chrome changed.
 

@@ -3,7 +3,7 @@ Contributors: rollybueno
 Requires at least: 6.7
 Tested up to: 7.1
 Requires PHP: 7.4
-Stable tag: 1.0.0
+Stable tag: 1.1.0
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 Tags: one-column, full-site-editing, wide-blocks
@@ -44,6 +44,11 @@ Kahel is distributed under the terms of the GNU General Public License v2 or lat
   Bundled at: assets/fonts/source-serif-4/
 
 == Changelog ==
+
+= 1.1.0 =
+* Search, categories, tags, authors, and date archives use a heading and count for that view.
+* Featured stories show the post’s own title and categories.
+* The Latest block no longer repeats the Featured posts.
 
 = 1.0.0 =
 * Initial public release.

@@ -3,7 +3,7 @@
  * Title: Home · Latest
  * Slug: kahel/home-latest
  * Categories: kahel
- * Description: Latest stories query grid for the front page journal section.
+ * Description: Latest stories query grid for the front page journal section. Offset skips the two posts in Featured.
  * Keywords: home, journal, latest, query
  * Viewport Width: 1180
  * Inserter: yes
@@ -37,7 +37,7 @@ $kahel_archive_url = $kahel_archive_url ? $kahel_archive_url : home_url( '/' );
 	</div>
 	<!-- /wp:group -->
 
-	<!-- wp:query {"queryId":22,"query":{"perPage":3,"pages":0,"offset":0,"postType":"post","order":"desc","orderBy":"date","author":"","search":"","exclude":[],"sticky":"exclude","inherit":false},"align":"wide","className":"kahel-home-latest-query"} -->
+	<!-- wp:query {"queryId":22,"query":{"perPage":3,"pages":0,"offset":2,"postType":"post","order":"desc","orderBy":"date","author":"","search":"","exclude":[],"sticky":"exclude","inherit":false},"align":"wide","className":"kahel-home-latest-query"} -->
 	<div class="wp-block-query alignwide kahel-home-latest-query">
 		<!-- wp:post-template {"layout":{"type":"grid","columnCount":3}} -->
 			<!-- wp:group {"className":"kahel-home-article","layout":{"type":"constrained"}} -->

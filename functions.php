@@ -23,7 +23,7 @@ function kahel_enqueue_styles() {
 	wp_enqueue_style(
 		'kahel-main',
 		get_parent_theme_file_uri( 'assets/css/main.css' ),
-		array(),
+		array( 'global-styles' ),
 		wp_get_theme()->get( 'Version' )
 	);
 
@@ -164,6 +164,173 @@ function kahel_related_query_exclude_current( $query, $block ) {
 	return $query;
 }
 add_filter( 'query_loop_block_query_vars', 'kahel_related_query_exclude_current', 10, 2 );
+
+/**
+ * Story count for the current archive, search, or posts page.
+ *
+ * Falls back to the published total when the main query is not one of those views
+ * (for example, the pattern inserter).
+ *
+ * @since 1.1.0
+ *
+ * @return int
+ */
+function kahel_get_view_story_count() {
+	global $wp_query;
+
+	if ( $wp_query instanceof WP_Query && ( is_home() || is_archive() || is_search() ) ) {
+		return (int) $wp_query->found_posts;
+	}
+
+	$counts = wp_count_posts( 'post' );
+
+	return isset( $counts->publish ) ? (int) $counts->publish : 0;
+}
+
+/**
+ * Translated story-count label.
+ *
+ * @since 1.1.0
+ *
+ * @param int $count Story count.
+ * @return string
+ */
+function kahel_get_story_count_label( $count ) {
+	$count = (int) $count;
+
+	return sprintf(
+		/* translators: %s: number of stories. */
+		_n( '%s story', '%s stories', $count, 'kahel' ),
+		number_format_i18n( $count )
+	);
+}
+
+/**
+ * Heading copy for the archive and search headers.
+ *
+ * @since 1.1.0
+ *
+ * @return array{kicker: string, title: string, intro: string, show_search: bool}
+ */
+function kahel_get_archive_header() {
+	$default = array(
+		'kicker'      => __( 'The complete archive', 'kahel' ),
+		'title'       => __( 'All stories.', 'kahel' ),
+		'intro'       => __( 'Essays, conversations, recipes, and photographs about the details that give everyday life its shape.', 'kahel' ),
+		'show_search' => false,
+	);
+
+	if ( is_search() ) {
+		$phrase = get_search_query();
+		$title  = '' !== $phrase
+			? sprintf(
+				/* translators: %s: search phrase. */
+				__( 'Results for “%s”.', 'kahel' ),
+				$phrase
+			)
+			: __( 'Search the journal.', 'kahel' );
+
+		return array(
+			'kicker'      => __( 'Search', 'kahel' ),
+			'title'       => $title,
+			'intro'       => kahel_get_story_count_label( kahel_get_view_story_count() ),
+			'show_search' => true,
+		);
+	}
+
+	if ( is_category() || is_tag() || is_tax() ) {
+		$term = get_queried_object();
+		if ( ! $term instanceof WP_Term ) {
+			return $default;
+		}
+
+		$kicker = __( 'Topic', 'kahel' );
+		if ( is_tag() ) {
+			$kicker = __( 'Tag', 'kahel' );
+		} elseif ( is_tax() && ! is_category() ) {
+			$kicker = __( 'Archive', 'kahel' );
+		}
+
+		$description = trim( wp_strip_all_tags( term_description( $term ) ) );
+
+		return array(
+			'kicker'      => $kicker,
+			'title'       => $term->name,
+			'intro'       => $description,
+			'show_search' => false,
+		);
+	}
+
+	if ( is_author() ) {
+		$author = get_queried_object();
+		if ( ! $author instanceof WP_User ) {
+			return $default;
+		}
+
+		$name = $author->display_name ? $author->display_name : $author->user_login;
+
+		return array(
+			'kicker'      => __( 'Contributor', 'kahel' ),
+			'title'       => $name,
+			'intro'       => '',
+			'show_search' => false,
+		);
+	}
+
+	if ( is_date() ) {
+		$year  = (int) get_query_var( 'year' );
+		$month = (int) get_query_var( 'monthnum' );
+		$day   = (int) get_query_var( 'day' );
+
+		if ( is_day() && $year && $month && $day ) {
+			$timestamp = mktime( 0, 0, 0, $month, $day, $year );
+			$title     = wp_date( get_option( 'date_format' ), $timestamp );
+			$kicker    = __( 'Day', 'kahel' );
+		} elseif ( is_month() && $year && $month ) {
+			$timestamp = mktime( 0, 0, 0, $month, 1, $year );
+			$title     = wp_date( _x( 'F Y', 'monthly archives date format', 'kahel' ), $timestamp );
+			$kicker    = __( 'Month', 'kahel' );
+		} elseif ( $year ) {
+			$title  = (string) $year;
+			$kicker = __( 'Year', 'kahel' );
+		} else {
+			return $default;
+		}
+
+		return array(
+			'kicker'      => $kicker,
+			'title'       => $title,
+			'intro'       => '',
+			'show_search' => false,
+		);
+	}
+
+	return $default;
+}
+
+/**
+ * Search block used on the search template.
+ *
+ * @since 1.1.0
+ *
+ * @return string
+ */
+function kahel_search_block() {
+	$attrs = wp_json_encode(
+		array(
+			'label'           => __( 'Search the journal', 'kahel' ),
+			'showLabel'       => false,
+			'placeholder'     => __( 'Search stories…', 'kahel' ),
+			'buttonText'      => __( 'Search', 'kahel' ),
+			'buttonPosition'  => 'button-inside',
+			'buttonUseIcon'   => false,
+			'className'       => 'kahel-archive-search',
+		),
+		JSON_UNESCAPED_UNICODE | JSON_UNESCAPED_SLASHES
+	);
+
+	return '<!-- wp:search ' . $attrs . ' /-->';
+}
 
 /**
  * Match the archive prototype grid density (six stories per page).
