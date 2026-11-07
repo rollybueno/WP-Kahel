@@ -49,19 +49,8 @@ if ( ! is_wp_error( $categories ) ) {
 	}
 }
 
-if ( is_category() ) {
-	$term  = get_queried_object();
-	$count = ( $term instanceof WP_Term ) ? (int) $term->count : 0;
-} else {
-	$counts = wp_count_posts( 'post' );
-	$count  = isset( $counts->publish ) ? (int) $counts->publish : 0;
-}
-
-$count_label = sprintf(
-	/* translators: %s: number of stories in the current archive view */
-	_n( '%s story', '%s stories', $count, 'kahel' ),
-	number_format_i18n( $count )
-);
+$count       = kahel_get_view_story_count();
+$count_label = kahel_get_story_count_label( $count );
 
 ?>
 <!-- wp:group {"align":"wide","className":"kahel-archive-tools","layout":{"type":"flex","flexWrap":"wrap","justifyContent":"space-between","verticalAlignment":"center"}} -->

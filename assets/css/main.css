@@ -1044,14 +1044,6 @@ body.home .kahel-header {
 	color: rgba(255, 244, 232, 0.65);
 }
 
-.kahel-home-featured-query .wp-block-post:nth-child(1) .kahel-home-project-result::before {
-	content: "City notebook";
-}
-
-.kahel-home-featured-query .wp-block-post:nth-child(2) .kahel-home-project-result::before {
-	content: "Studio visit";
-}
-
 .kahel-home-featured-query .wp-block-post:nth-child(2) .kahel-home-project-visual {
 	min-height: var(--wp--custom--home--featured-visual-min-sm);
 	background: var(--wp--preset--color--apricot);
@@ -1148,10 +1140,6 @@ body.home .kahel-header {
 	letter-spacing: -0.08em;
 	transform: rotate(5deg);
 	box-shadow: 18px 20px 0 rgba(36, 23, 15, 0.18);
-}
-
-.kahel-home-featured-query .wp-block-post:nth-child(2) .kahel-home-project-visual:not(:has(img)) .kahel-home-project-art::before {
-	content: "Sari";
 }
 
 .kahel-home-project-media,
@@ -1501,6 +1489,11 @@ body.home .kahel-header {
 }
 
 /* Stories archive — HTML/archive.html (grid stagger, filters, decorative art) */
+.kahel-archive-search {
+	max-width: var(--wp--custom--error--search-max);
+	margin-top: 28px;
+}
+
 .kahel-archive-filters {
 	display: flex;
 	flex-wrap: wrap;
